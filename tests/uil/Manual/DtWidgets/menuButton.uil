@@ -1,0 +1,162 @@
+! 
+! @OPENGROUP_COPYRIGHT@
+! COPYRIGHT NOTICE
+! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+! ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+! the full copyright text.
+! 
+! This software is subject to an open license. It may only be
+! used on, with or for operating systems which are themselves open
+! source systems. You must contact The Open Group for a license
+! allowing distribution and sublicensing of this software on, with,
+! or for operating systems which are not Open Source programs.
+! 
+! See http://www.opengroup.org/openmotif/license for full
+! details of the license agreement. Any use, reproduction, or
+! distribution of the program constitutes recipient's acceptance of
+! this agreement.
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+! OR FITNESS FOR A PARTICULAR PURPOSE
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+! POSSIBILITY OF SUCH DAMAGES.
+! 
+! 
+!******************************************************************************
+module Test
+        version = 'v1.0'
+        names = case_sensitive
+
+  procedure
+          exit_test();
+	  Report_Callback(string);
+
+  value
+	  wheat			     : color('wheat');
+	  navy			     : color('navy');
+
+  object                                  ! The main window widget.
+          S_MAIN_WIDGET : XmBulletinBoard {
+  
+              arguments {
+                  XmNx = 0;
+                  XmNy = 0;
+              };
+    	      controls {
+		  
+                  DtMenuButton			Menu_Button;
+		  unmanaged XmPopupMenu		Popup_menu;
+    	      };
+  	  };
+
+  value
+        green: color ('green');
+	forest_green:  color('forest_green');
+        MediumBlue: color ('MediumBlue');
+        black: color ('black');
+        navy_blue: color ('navy blue');
+	red: color('red');
+	bold_font: font('8x13bold');
+
+  object
+        Menu_Button :  DtMenuButton {
+            arguments {
+!                XmNborderWidth =  50;
+                XmNbackground =  green;
+		XmNwidth = 200;
+		XmNheight = 100;
+                XmNborderColor =  MediumBlue;
+!                XmNshadowThickness =  5;
+                XmNbottomShadowColor =  navy_blue;
+!		XmNmarginWidth = 10;
+!		XmNmarginHeight = 10;
+            };
+        };
+
+  object 
+	Popup_menu :  XmPopupMenu {
+       	    arguments {
+		!XmNwhichButton = 1;
+                XmNmenuPost = "<Btn1Down>";
+                XmNmenuAccelerator = "Ctrl<Key>Z";
+            };
+            controls {
+                XmPushButton push_button1;
+                XmPushButton push_button2;
+                XmSeparator {};
+                XmPushButton push_button3;
+                XmPushButton push_button4;
+            };
+        };
+
+    object
+        push_button1 :  XmPushButton {
+                arguments {
+                        XmNbackground = forest_green;
+                        XmNaccelerator = "Ctrl<Key>a";
+                        XmNacceleratorText = compound_string("<Ctrl>A");
+                        XmNfontList = bold_font;
+                };
+                callbacks {
+                        XmNactivateCallback = procedure Report_Callback
+                                ('activateCallback push_button1');
+                };
+        };
+
+object
+        push_button2 :  XmPushButton {
+                arguments {
+                        XmNbackground = forest_green;
+                        XmNaccelerator = "Ctrl<Key>b";
+                        XmNacceleratorText = compound_string("<Ctrl>B");
+                        XmNfontList = bold_font;
+                };
+                callbacks {
+                        XmNactivateCallback = procedure Report_Callback
+                                ('activateCallback push_button2');
+                };
+        };
+
+object
+        push_button3 :  XmPushButton {
+                arguments {
+                        XmNbackground = forest_green;
+                        XmNaccelerator = "Ctrl<Key>c";
+                        XmNacceleratorText = compound_string("<Ctrl>C");
+                        XmNfontList = bold_font;
+                };
+                callbacks {
+                        XmNactivateCallback = procedure Report_Callback
+                                ('activateCallback push_button3');
+                };
+        };
+
+object
+        push_button4 :  XmPushButton {
+                arguments {
+                        XmNbackground = forest_green;
+                        XmNaccelerator = "Ctrl<Key>d";
+                        XmNacceleratorText = compound_string("<Ctrl>D");
+                        XmNfontList = bold_font;
+                };
+                callbacks {
+                        XmNactivateCallback = procedure Report_Callback
+                                ('activateCallback push_button4');
+                };
+        };
+
+	
+  
+end module;

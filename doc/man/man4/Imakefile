@@ -1,0 +1,11 @@
+XCOMM $XFree86: xc/doc/man/general/Imakefile,v 1.10 2006/01/09 14:56:26 dawes Exp $
+
+MANDIR = man4
+MANSUFFIX = 4
+
+all::
+
+depend::
+
+InstallManPage(mwmrc,$(MANDIR))
+

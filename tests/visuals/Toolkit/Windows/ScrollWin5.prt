@@ -1,0 +1,101 @@
+# $XConsortium: ScrollWin5.prt /main/3 1995/07/19 20:40:14 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) CompareVisual ScrolledWindow1 
+TRACE:(2) Continue
+TRACE:(3) CompareVisual ScrolledWindow1 
+TRACE:(4) LocatePointer ScrolledWindow1 RVertScrollBarSlider 
+TRACE:(5) DragSliderValue Down Max 
+TRACE:(6) DragSliderValue Up Min 
+TRACE:(7) LocatePointer ScrolledWindow1 RHorizScrollBarSlider 
+TRACE:(8) DragSliderValue Right Max 
+TRACE:(9) DragSliderValue Left Min 
+TRACE:(10) CompareVisual ScrolledWindow1 
+TRACE:(11) Continue
+TRACE:(12) CompareVisual ScrolledWindow1 
+TRACE:(13) LocatePointer ScrolledWindow1 RVertScrollBarSlider 
+TRACE:(14) DragSliderValue Down Max 
+TRACE:(15) DragSliderValue Up Min 
+TRACE:(16) LocatePointer ScrolledWindow1 RHorizScrollBarSlider 
+TRACE:(17) DragSliderValue Right Max 
+TRACE:(18) DragSliderValue Left Min 
+TRACE:(19) CompareVisual ScrolledWindow1 
+TRACE:(20) ClickKey <Shift> KTab
+TRACE:(21) ClickKey KDown
+TRACE:(22) ClickKey KDown
+TRACE:(23) ClickKey KDown
+TRACE:(24) Continue
+TRACE:(25) CompareVisual ScrolledWindow1 
+TRACE:(26) LocatePointer ScrolledWindow1 RVertScrollBarSlider 
+TRACE:(27) DragSliderValue Down Max 
+TRACE:(28) DragSliderValue Up Min 
+TRACE:(29) LocatePointer ScrolledWindow1 RHorizScrollBarSlider 
+TRACE:(30) DragSliderValue Right Max 
+TRACE:(31) DragSliderValue Left Min 
+TRACE:(32) CompareVisual ScrolledWindow1 
+TRACE:(33) Continue
+TRACE:(34) LocatePointer ScrolledWindow1 RVertScrollBarSlider 
+TRACE:(35) DragSliderValue Down Max 
+TRACE:(36) DragSliderValue Up Min 
+TRACE:(37) LocatePointer ScrolledWindow1 RHorizScrollBarSlider 
+TRACE:(38) DragSliderValue Right Max 
+TRACE:(39) DragSliderValue Left Min 
+TRACE:(40) CompareVisual ScrolledWindow1 
+TRACE:(41) Continue
+TRACE:(42) CompareVisual ScrolledWindow1 
+TRACE:(43) Continue
+TRACE:(44) CompareVisual Form 
+TRACE:(45) LocatePointer ScrolledWindow1 RVertScrollBarSlider 
+TRACE:(46) DragSliderValue Down Max 
+TRACE:(47) DragSliderValue Up Min 
+TRACE:(48) LocatePointer ScrolledWindow1 RHorizScrollBarSlider 
+TRACE:(49) DragSliderValue Right Max 
+TRACE:(50) DragSliderValue Left Min 
+TRACE:(51) CompareVisual ScrolledWindow1 
+TRACE:(52) Continue
+TRACE:(53) CompareVisual ScrolledWindow1 
+TRACE:(54) Continue
+TRACE:(55) CompareVisual ScrolledWindow1 
+TRACE:(56) LocatePointer ScrolledWindow1 RVertScrollBarSlider 
+TRACE:(57) DragSliderValue Down Max 
+TRACE:(58) DragSliderValue Up Min 
+TRACE:(59) LocatePointer ScrolledWindow1 RHorizScrollBarSlider 
+TRACE:(60) DragSliderValue Right Max 
+TRACE:(61) DragSliderValue Left Min 
+TRACE:(62) CompareVisual ScrolledWindow1 
+TRACE:(63) Exit
+Exiting Test...Please Standby...

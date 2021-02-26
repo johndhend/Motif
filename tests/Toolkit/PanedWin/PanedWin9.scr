@@ -1,0 +1,408 @@
+# $XConsortium: PanedWin9.scr /main/4 1995/07/17 20:33:34 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# HISTORY
+
+# Note: seemingly random resizings (that don't reflect the instructions)
+# are an attempt to return the panes to reasonable sizes after 
+# resizings that obey the instructions.
+
+#  A client with a Paned Window with three pushbuttons will appear.
+#  The panes should be 100 pixels wide and 50 pixels high.
+#  No constraints have been set, so all possible resizings should
+#  be allowed.
+#  Return the panes to reasonable sizes and continue for more testing. 
+
+CompareVisual PW
+LocatePointer PW RSash 0
+DragXYRelative Up 50
+CompareVisual PW
+
+CompareVisual PW
+LocatePointer PW RSash 0
+DragXYRelative Down 100
+CompareVisual PW
+
+LocatePointer PW RSash 1
+DragXYRelative Up 100
+CompareVisual PW
+
+LocatePointer PW RSash 1
+DragXYRelative Down 100
+CompareVisual PW
+
+Continue
+
+#  The maximum size of the first pane has been set to 100 pixels.
+#  Verify this by resizing the panes.
+
+LocatePointer PW RSash 0
+DragXYRelative Down 150
+CompareVisual PW
+Continue
+
+#  The maximum size of the first pane has been reset to the default
+#  while the maximum of the second has been set to 100 pixels.
+#  Verify this by resizing the panes.
+
+LocatePointer PW RSash 0
+DragXYRelative Down 100
+CompareVisual PW
+
+LocatePointer PW RSash 1
+DragXYRelative Down 150
+CompareVisual PW
+
+Continue
+
+
+#  The maximum size of the second pane has been reset to the default
+#  while the maximum of the third has been set to 100 pixels.
+#  Verify this by resizing the panes.
+
+LocatePointer PW RSash 1
+DragXYRelative Down 150
+CompareVisual PW
+
+
+LocatePointer PW RSash 1
+DragXYRelative Up 150
+CompareVisual PW
+
+LocatePointer PW RSash 0
+DragXYRelative Down 50
+CompareVisual PW
+
+
+Continue
+
+
+#  The maximum size of the third pane has been reset to the default.
+#  The minimum value of the first pane has been reset to 100 pixels.
+#  Verify this by resizing the panes.
+
+LocatePointer PW RSash 0
+DragXYRelative Up 100
+CompareVisual PW
+
+LocatePointer PW RSash 1
+DragXYRelative Up 150
+CompareVisual PW
+
+Continue
+
+#  The minimum size of the first pane has been reset to the default
+#  while the minimum of the second has been set to 100 pixels.
+#  Verify this by resizing the panes.
+
+LocatePointer PW RSash 0
+DragXYRelative Up 100
+CompareVisual PW
+
+
+LocatePointer PW RSash 1
+DragXYRelative Up 100
+CompareVisual PW
+
+Continue
+
+
+#  The maximum size of the second pane has been reset to the default
+#  while the maximum of the third has been set to 100 pixels.
+#  Verify this by resizing the panes.
+
+LocatePointer PW RSash 0
+DragXYRelative Up 100
+CompareVisual PW
+LocatePointer PW RSash 0
+DragXYRelative Down 100
+
+LocatePointer PW RSash 1
+DragXYRelative Up 50
+CompareVisual PW
+LocatePointer PW RSash 1
+DragXYRelative Down 50
+
+Continue
+
+#  The minimum size of the third pane has been reset to the default.
+#  An attempt was made to set the minimum of the first pane to a 
+#  value less than zero.  An error message should have been displayed
+#  on the xterm window and the minimum set to the default value.
+#  Verify this by resizing the panes.
+
+LocatePointer PW RSash 0
+DragXYRelative Up 100
+CompareVisual PW
+LocatePointer PW RSash 0
+DragXYRelative Down 100
+
+LocatePointer PW RSash 1
+DragXYRelative Up 50
+CompareVisual PW
+LocatePointer PW RSash 1
+DragXYRelative Down 50
+
+Continue
+
+# An attempt was made to set the minimum of the second pane to a 
+# value less than zero.  An error message should have been displayed
+# on the xterm window and the minimum set to the default value.
+# Verify this by resizing the panes.
+
+LocatePointer PW RSash 0
+DragXYRelative Up 100
+CompareVisual PW
+
+LocatePointer PW RSash 0
+DragXYRelative Down 100
+CompareVisual PW
+
+LocatePointer PW RSash 1
+DragXYRelative Up 50
+CompareVisual PW
+
+LocatePointer PW RSash 1
+DragXYRelative Down 50
+CompareVisual PW
+
+Continue
+
+#  An attempt was made to set the minimum of the third pane to a 
+#  value less than zero.  An error message should have been displayed
+#  on the xterm window and the minimum set to the default value.
+#  Verify this by resizing the panes.
+
+LocatePointer PW RSash 1
+DragXYRelative Down 100
+CompareVisual PW
+
+LocatePointer PW RSash 1
+DragXYRelative Up 50
+
+Continue
+
+
+
+#  The maximum and minimum for the first pane were set to 200 pixels
+#  and 100 pixels respectively.
+#  Verify this by resizing the panes.
+
+LocatePointer PW RSash 0
+DragXYRelative Down 150
+CompareVisual PW
+
+LocatePointer PW RSash 0
+DragXYRelative Up 200
+CompareVisual PW
+
+Continue
+
+
+
+#  The maximum and minimum for the first pane were reset to their
+#  default values.
+#  The maximum and minimum for the second pane were set to 200 pixels
+#  and 100 pixels respectively.
+#  Verify this by resizing the panes.
+
+LocatePointer PW RSash 0
+DragXYRelative Down 150
+CompareVisual PW
+
+LocatePointer PW RSash 0
+DragXYRelative Up 150
+CompareVisual PW
+
+LocatePointer PW RSash 1
+DragXYRelative Up 150
+CompareVisual PW
+
+LocatePointer PW RSash 0
+DragXYRelative Down 200
+CompareVisual PW
+
+Continue
+
+#  The maximum and minimum for the second pane were reset to their
+#  default values.
+#  The maximum and minimum for the third pane were set to 200 pixels
+#  and 100 pixels respectively.
+#  Verify this by resizing the panes.
+
+LocatePointer PW RSash 0
+DragXYRelative Down 150
+CompareVisual PW
+
+LocatePointer PW RSash 0
+DragXYRelative Up 150
+CompareVisual PW
+
+LocatePointer PW RSash 1
+DragXYRelative Up 150
+CompareVisual PW
+
+LocatePointer PW RSash 0
+DragXYRelative Down 200
+CompareVisual PW
+
+Continue
+
+
+#  The maximum and minimum for the third pane were reset to their
+#  default values.
+#  An attempt was made to set the maximum and minimum of the first
+#  pane to 100 pixels and 200 pixels respectively.  An error message
+#  should have been displayed on the xterm window and the maximum
+#  and minimum set to their default values.
+#  Verify this by resizing the panes.
+
+LocatePointer PW RSash 0
+DragXYRelative Down 150
+CompareVisual PW
+
+LocatePointer PW RSash 0
+DragXYRelative Up 150
+CompareVisual PW
+
+LocatePointer PW RSash 1
+DragXYRelative Up 150
+CompareVisual PW
+
+LocatePointer PW RSash 0
+DragXYRelative Down 200
+CompareVisual PW
+
+Continue
+
+
+
+#  An attempt was made to set the maximum and minimum of the second
+#  pane to 100 pixels and 200 pixels respectively.  An error message
+#  should have been displayed on the xterm window and the maximum
+#  and minimum set to their default values.
+#  Verify this by resizing the panes.
+
+LocatePointer PW RSash 0
+DragXYRelative Down 150
+CompareVisual PW
+
+LocatePointer PW RSash 0
+DragXYRelative Up 150
+CompareVisual PW
+
+LocatePointer PW RSash 1
+DragXYRelative Up 150
+CompareVisual PW
+
+LocatePointer PW RSash 0
+DragXYRelative Down 200
+CompareVisual PW
+
+Continue
+
+
+
+#  An attempt was made to set the maximum and minimum of the third
+#  pane to 100 pixels and 200 pixels respectively.  An error message
+#  should have been displayed on the xterm window and the maximum
+#  and minimum set to their default values.
+#  Verify this by resizing the panes.
+
+LocatePointer PW RSash 1
+DragXYRelative Up 150
+CompareVisual PW
+
+LocatePointer PW RSash 0
+DragXYRelative Down 300
+CompareVisual PW
+
+Continue
+
+
+#  The maximum and minimum for the first pane were both set to 100 
+#  pixels.  There should be no sash on the seperator at the bottom of
+#  this pane.
+#  Verify that this pane cannot be resized.
+
+CompareVisual PW
+Continue
+
+
+#  The maximum and minimum for the first pane were reset to their
+#  default values.
+#  The maximum and minimum for the second pane were both set to 100 
+#  pixels.  There should be no sash on the seperator at the bottom of
+#  this pane.
+#  Verify that this pane cannot be resized.
+
+CompareVisual PW
+
+LocatePointer PW RSash 0
+DragXYRelative Up 150
+CompareVisual PW
+
+LocatePointer PW RSash 0
+DragXYRelative Down 300
+CompareVisual PW
+
+Continue
+
+#  The maximum and minimum for the second pane were reset to their
+#  default values.
+#  The maximum and minimum for the third pane were both set to 100 
+#  pixels.
+#  Verify that this pane cannot be resized.
+
+CompareVisual PW
+
+LocatePointer PW RSash 1
+DragXYRelative Up 150
+CompareVisual PW
+
+LocatePointer PW RSash 1
+DragXYRelative Down 300
+CompareVisual PW
+
+Continue
+
+
+#  The maximum and minimum for all the panes have been set to 100 
+#  pixels.  There should be no sash on any of the seperators.
+#  Verify that no panes can be resized.
+
+CompareVisual PW
+Exit
+

@@ -1,0 +1,25 @@
+
+@) This test measures the performance of a Scrolled XmText widget.
+   The time lapsed is measured for the following actions:
+@)  - Assigning text to an XmText widget with XmTextSetString().
+@)  - Scrolling to the end of the displayed text.
+@)  - Scrolling to the beginning of the displayed text.
+
+@) An output file, TextWorst.out, will be created in the current
+   directory.  This file will list the performance measurements made
+   throughout the test. 
+
+#) Click MB1 on the pushbutton labelled \"Fill Text\".  The widget
+   will be filled with the letter 'n'. 
+
+#) Click MB1 on the pushbutton labelled \"Scroll To End\". The text
+   widget will scroll to the end of the file.
+
+#) Click MB1 on the pushbutton labelled \"Scroll To Begin\". The text
+   widget will scroll back to the beginning of the file.
+
+#) Click MB1 on \"Quit\" to exit the test.
+
+C)
+E) 
+

@@ -1,0 +1,77 @@
+/* $XConsortium: SpinBox4.dat /main/4 1995/07/17 10:22:43 drk $ */
+/*
+ * Copyright 1989, 1990, 1991, 1992, 1993 OPEN SOFTWARE FOUNDATION, INC.
+ *  ALL RIGHTS RESERVED
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+ */
+/* 
+ * HISTORY
+ */
+
+@)  A SpinBox with four text fields should be displayed.
+    The current layout direction is RIGHT_TO_LEFT.
+    The XmNarrowLayout resource is set as XmARROWS_BEGINNING, therefore
+    the increment and decrement arrows should be displayed to the right
+    of the text fields.
+
+#)  Set focus on the first text field which displays \"Mon\".
+    Click on the left arrow button to increment the weekday to \"Fri\".
+
+#)  Move the focus to the next text field which displays \"15\".
+    Click on the right arrow button to decrement the day value
+    to \"8\".
+    
+#)  Move the focus to the next text field which displays \"Jan\".
+    Click KLeft to increment the month to \"Oct\".
+
+#)  Move focus to the last text field which displays \"1995\".
+    Click KRight to decrement the year to \"1993\". 
+
+#)  The final date should read: Fri 8 Oct 1993.
+
+C)
+
+#)  XmNdefaultArrowSensitivity is set to XmARROWS_DECREMENT_SENSITIVE.
+    Since the layout direction is RIGHT_TO_LEFT, the right-pointing
+    arrow should be sensitive.
+
+C)
+
+#)  XmNdefaultArrowSensitivity is set to XmARROWS_INCREMENT_SENSITIVE.
+    Since the layout direction is RIGHT_TO_LEFT, the left-pointing
+    arrow should be sensitive.
+
+C)
+E)

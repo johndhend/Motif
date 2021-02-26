@@ -1,0 +1,8 @@
+.TH PANED 1X "MOTIF" "\fBpaned\fR 1" "Demonstration programs"
+.SH NAME
+paned \- paned demo
+.SH SYNOPSIS
+\fBpaned\fR
+.SH DESCRIPTION
+Shows basic Motif \fBpaned\fR window options, two windows one which shows some
+pane optioned adjusted in the other.  It has help.

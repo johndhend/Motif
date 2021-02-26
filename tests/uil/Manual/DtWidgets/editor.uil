@@ -1,0 +1,117 @@
+!
+! @OPENGROUP_COPYRIGHT@
+! COPYRIGHT NOTICE
+! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+! ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+! the full copyright text.
+! 
+! This software is subject to an open license. It may only be
+! used on, with or for operating systems which are themselves open
+! source systems. You must contact The Open Group for a license
+! allowing distribution and sublicensing of this software on, with,
+! or for operating systems which are not Open Source programs.
+! 
+! See http://www.opengroup.org/openmotif/license for full
+! details of the license agreement. Any use, reproduction, or
+! distribution of the program constitutes recipient's acceptance of
+! this agreement.
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+! OR FITNESS FOR A PARTICULAR PURPOSE
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+! POSSIBILITY OF SUCH DAMAGES.
+!
+!
+! HISTORY
+! $XConsortium: editor.uil /main/1 1996/08/12 15:44:15 jakku $ 
+!******************************************************************************
+module Test
+        version = 'v1.0'
+        names = case_sensitive
+
+  procedure
+	Editor_Select();
+  value
+	  wheat			     : color('wheat');
+	  navy			     : color('navy');
+
+  object                                  ! The main window widget.
+          S_MAIN_WIDGET : XmForm {
+  
+              arguments {
+                  XmNx = 0;
+                  XmNy = 0;
+              };
+    	      controls {
+                  DtEditor    		Editor;
+   	      };
+  	  };
+
+  value
+        turquoise: color ('turquoise');
+        black: color ('black');
+        violet: color ('violet');
+	white: color ('white');
+
+  object
+         Editor :  DtEditor {
+            arguments {
+!		DtNautoShowCursorPositon = true;
+		DtNblinkRate = 500;
+		DtNcenterToggleLabel = "Center";
+		DtNchangeButtonLabel = "Change";
+		DtNchangeFieldLabel = "Replace with";
+		DtNcurrentLineLabel = "Current Line:";
+		DtNcursorPosition = 0;
+		DtNcursorPositionVisible = true;
+		DtNdialogTitle = "Editor_test";
+		DtNeditable = true;
+		DtNfindButtonLabel = "Find string:";
+		DtNfindChangeDialogTitle = "find/change string";
+		DtNfindFieldLabel = "Find String:";
+		DtNformatAllButtonLabel = "Format all"; 
+		DtNformatParagraphButtonLabel = "This paragraph";
+		DtNformatSettingsDialogTitle = "Format Settings";
+		DtNinformationDialogTitle = "Info";
+		DtNjustifyToggleLabel = "Justify";
+		DtNleftAlignToggleLabel = "LeftAlign";
+		DtNleftMarginFieldLabel = "Left Margin:";
+		DtNmisspelledListLabel = "Misspelled words:";
+		DtNoverstrikeLabel = "OverStrike";
+		DtNrightAlignToggleLabel = "Right Align";
+		DtNrightMarginFieldLabel = "Right margin";
+		DtNspellDialogTitle = "Spell dialog";
+		DtNtotalLineCountLabel = "Total Lines";
+		DtNtextBackground = black;
+		DtNtextForeground = white;	
+		DtNmaxLength = 20;
+		DtNoverstrike = false;
+		DtNscrollHorizontal = true;
+		DtNscrollLeftSide = true;
+		DtNscrollTopSide = true;
+		DtNscrollVertical = true;
+		DtNshowStatusLine = true;
+		DtNwordWrap = true;
+                XmNbackground =  turquoise;
+		XmNwidth = 300;
+		XmNheight = 300;
+            };
+	callbacks {
+		DtNtextSelectCallback = procedure Editor_Select();
+		};
+        };
+
+
+end module;

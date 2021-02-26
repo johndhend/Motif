@@ -1,0 +1,41 @@
+
+#) This is the DNDScroll test, to test auto scrolling functionality.
+   This test entails dragging and dropping within the same client.
+#) A ScrolledWindow with 15 PushButton children should appear on your screen. 
+C)
+
+#) Locate the pointer over any of the PushButtons. Press Btransfer (MB2 by
+   default) to initiate a drag. Drag to any point right of the clipwindow
+   and pause. The horizontal ScrollBar should start to scroll automatically.
+#) Release BTransfer. The drag icon should snap back to the point from
+   which the drag was initiated.
+   
+C)
+
+
+#) Locate the pointer over any of the PushButtons. Press Btransfer (MB2 by
+   default) to initiate a drag. Drag to any point below the clipwindow and
+   pause. The vertical ScrollBar should start to scroll automatically.
+#) Release BTransfer. The drag icon should snap back to the point from
+   which the drag was initiated.
+  
+C)
+
+
+#) The autoDragModel resource has been set to AUTO_DRAG_DISABLED for
+   the ScrolledWindow.
+#) Locate the pointer over any of the PushButtons. Press Btransfer (MB2 by
+   default) to initiate a drag. Drag to any point right of the clipwindow
+   and pause. No automatic scrolling should take place. 
+#) Locate the pointer over any of the PushButtons. Press Btransfer (MB2 by
+   default) to initiate a drag. Drag to any point below the clipwindow
+   pause. No automatic scrolling should take place.
+C)
+   
+E)
+
+
+
+
+
+

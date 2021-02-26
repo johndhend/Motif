@@ -1,0 +1,76 @@
+...\" @OPENGROUP_COPYRIGHT@
+...\" COPYRIGHT NOTICE
+...\" Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+...\" Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+...\" ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+...\" the full copyright text.
+...\" 
+...\" This software is subject to an open license. It may only be
+...\" used on, with or for operating systems which are themselves open
+...\" source systems. You must contact The Open Group for a license
+...\" allowing distribution and sublicensing of this software on, with,
+...\" or for operating systems which are not Open Source programs.
+...\" 
+...\" See http://www.opengroup.org/openmotif/license for full
+...\" details of the license agreement. Any use, reproduction, or
+...\" distribution of the program constitutes recipient's acceptance of
+...\" this agreement.
+...\" 
+...\" EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+...\" PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+...\" KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+...\" WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+...\" OR FITNESS FOR A PARTICULAR PURPOSE
+...\" 
+...\" EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+...\" NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+...\" INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+...\" DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+...\" AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+...\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+...\" ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+...\" EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+...\" POSSIBILITY OF SUCH DAMAGES.
+...\" 
+...\" 
+...\" HISTORY
+# $XConsortium: Manual.3X /main/4 1995/07/13 20:01:53 drk $
+...\" **
+...\" **
+...\" **  (c) Copyright 1991 by Open Software Foundation, Inc.
+...\" **      All Rights Reserved.
+...\" **
+...\" **
+.TH Manual 3X
+.SH NAME
+\fBManual \fP\(em Command to enter Manual mode.
+.SH SYNOPSIS
+\fBManual\fP
+.SH DESCRIPTION
+The
+\fBManual\fP
+command will put the test into Manual mode. Manual mode is when events
+from the actual user can be sent to the current hierarchy. When Manual
+mode is entered, an Information Dialog will be placed at (500, 0) which
+is on top of the InstructionBox. To exit Manual mode, simply click on the
+OK button of the Information Dialog, and the test will move the pointer 
+back to the location where
+it was located before Manual mode started. As soon as the OK button is
+clicked, the test will go back into Automated mode. Manual mode should be
+used as a debugging tool in conjuction with -W option. Once Automation has
+created you the xwd dumps of the failed image, you can run the previous
+version of the test (which compared properly) and use Manual to stop
+Automated processing at the point of failure.
+This way use can use xmag on the xwd dump and on the test running in Manual
+mode to identify the pixel failures.
+.SH EXAMPLE
+\fBManual\fP
+.PP
+This will put the test in Manual mode.
+.PP 
+For more information about \fBManual\fP, see
+the \fBOSF/Motif Test Suite Automation User's Guide\fP.
+.PP
+.SH "RELATED INFORMATION"
+.na
+.ad

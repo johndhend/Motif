@@ -1,0 +1,20 @@
+#ifndef XmClientLibs
+#define XmClientLibs $(XMLIB) $(XTOOLLIB) $(XLIB)
+#endif
+
+/* #include "../demos.cf" missing */
+
+      INCLUDES = -I.
+
+SRCS = multilist.c callbacks-c.c creation.c bxutil-c.c
+OBJS = multilist.o callbacks-c.o creation.o bxutil-c.o
+
+#ifndef NO_XP
+LOCAL_LIBRARIES = -lXm -lXt -lXp -lX11 -lXext
+#else
+LOCAL_LIBRARIES = -lXm -lXt -lX11 -lXext
+#endif
+
+ComplexProgramTarget(multilist);
+
+

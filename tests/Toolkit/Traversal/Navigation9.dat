@@ -1,0 +1,74 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: Navigation9.dat /main/7 1995/07/13 19:46:10 drk $"
+*/
+!) This is a simple test of traversal behaviors.  
+#) The five boxed groups of widgets are tab groups. 
+#) Put the focus on the test client by clicking on the window border.
+#) The button which is colored red should also have the focus and
+location cursor, as well as the default highlight.
+C)
+#) You can move between the groups by hitting TAB or Shift-TAB. 
+#) Each time you tab into the frame with the red button, the focus
+should go to that button, even if you use the arrow keys to move
+within that tab group.
+#) Within each group, move between the buttons by using the up/down and 
+left/right arrow keys. 
+#) Use the space key to activate (depress) the buttons. 
+#) Try moving amongst the buttons and back and forth between the tab groups. 
+#) The default button is btn1. When the focus is on a push button, that
+button will have the defaultButton shadow as well. But when the focus is
+moved to a non-push button, the defaultButton shadow moves back to btn1.
+#) Before continuing, put the focus on misc1.
+C)
+#) The red button has been set insensitive. Tab into that group.
+#) The focus should go to 3btn1.
+#) Before continuing, note which widget has the focus.
+C)
+#) A prompt dialog appears.
+#) Give the prompt dialog window the focus.
+#) The focus should be on the OK button
+#) Dismiss the prompt dialog by hitting return.
+#) Put the focus on the client window. The focus should be on the
+widget that had the focus before the prompt dialog came up.
+#) Tab through all the tab groups and back to the one with the red button.
+The focus should go to the red button when you tab into that group.
+C)
+E)

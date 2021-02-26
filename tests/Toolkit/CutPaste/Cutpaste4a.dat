@@ -1,0 +1,92 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: Cutpaste4a.dat /main/5 1995/07/13 17:56:45 drk $"
+*/
+#) Two client windows will appear.  The left client will contain a
+   paned window widget containing two bulletin board widgets.  The
+   top bulletin board will contain six label widgets, five text
+   widgets and eight pushbutton widgets.  The right client will
+   contain a paned window widget containing a pushbutton widget,
+   a label widget and a text widget. 
+#) Select "Begin Copy" in the left client with MB1. 
+#) Select "Get Values" in the right client with MB1.  The text
+   widget below the label "String" will contain the string
+   "initial text". 
+C)
+#) Select "Start Copy" in the left client with MB1. 
+#) Select "Inquire Status" in the left client with MB1.  The
+   following information will be displayed in the text widgets
+   in the left client:
+!)
+          Label        Text
+          -----        ----
+          format name: STRING
+          length:      15
+          count:       1
+          max length:  6
+          pending:     xxx  0
+@) where xxx is some (not necessarily 3 digit) number. 
+C)
+
+#) Select "Retrieve" in the left client with MB1. 
+#) Select "Get Values" in the right client with MB1.  The text
+   widget below the label "String" will contain the string
+   "recopy". 
+#) Select "Copy By Name" in the left client with MB1. 
+#) Select "Get Values" in the right client with MB1.  The text
+   widget below the label "String" will contain the string
+   "recopyrecopy". 
+#) Select "Multiple Retrieve" in the left client with MB1. 
+#) Select "Get Values" in the right client with MB1.  The text
+   widget below the label "String" will contain the string
+   "recopy". 
+C)
+#) Select "Undo Copy" in the left client with MB1. 
+#) Select "Get Values" in the right client with MB1.  The text
+   widget below the label "String" will contain the string
+   "recopyrecopy". 
+#) Move the pointer into the text widget next to the label
+   "to/from text" in the left client. 
+#) Type the phrase "What's up doc?" into the text widget. 
+#) Select "Cancel Copy" in the left client with MB1. 
+#) Select "Get Values" in the right client with MB1.  The text
+   widget below the label "String" will still contain the
+   string "recopyrecopy". 
+E)

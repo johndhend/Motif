@@ -1,0 +1,127 @@
+# $XConsortium: PerfCntnr3.scr /main/4 1995/07/17 20:04:55 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF).  See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+
+# Scroll vertically to the end using the arrow down 
+
+LocatePointer ScrolledW RVertScrollBarDownArrow
+AutoPerformMonitor On
+ClickMB Btn1 9
+AutoPerformMonitor Off
+
+# Scroll vertically to the top using the arrow up
+
+LocatePointer ScrolledW RVertScrollBarUpArrow
+AutoPerformMonitor On
+ClickMB Btn1 9
+AutoPerformMonitor Off
+
+# Scroll vertically to the end using the slider 
+
+LocatePointer ScrolledW RVertScrollBarSlider
+AutoPerformMonitor On
+DragSliderValue Down Max
+AutoPerformMonitor Off
+
+# Scroll vertically to the top using the slider
+
+LocatePointer ScrolledW RVertScrollBarSlider
+AutoPerformMonitor On
+DragSliderValue Up Min
+AutoPerformMonitor Off
+
+# Scroll horizontally to the end using the right arrow
+
+LocatePointer ScrolledW RHorizScrollBarRightArrow
+AutoPerformMonitor On
+ClickMB Btn1 9
+AutoPerformMonitor Off
+
+# Scroll horizontally to the beginning using the left arrow
+
+LocatePointer ScrolledW RHorizScrollBarLeftArrow
+AutoPerformMonitor On
+ClickMB Btn1 9
+AutoPerformMonitor Off
+
+# Scroll horizontally to the end using the slider 
+
+LocatePointer ScrolledW RHorizScrollBarSlider
+AutoPerformMonitor On
+DragSliderValue Down Max
+AutoPerformMonitor Off
+
+# Scroll horizontally to the beginning using the slider
+
+LocatePointer ScrolledW RHorizScrollBarSlider
+AutoPerformMonitor On
+DragSliderValue Up Min
+AutoPerformMonitor Off
+
+# Iconify/deiconify
+
+AutoPerformMonitor On
+WindowIconify Container
+WindowDeiconify Container
+AutoPerformMonitor Off
+
+# Resize larger
+
+AutoPerformMonitor On
+WindowResize Shell1 SouthEast 800 800
+AutoPerformMonitor Off
+
+# Resize back
+
+AutoPerformMonitor On
+WindowResize Shell1 SouthEast 340 320
+AutoPerformMonitor Off
+
+# Resize to show one more row
+
+AutoPerformMonitor On
+WindowResize Shell1 South 375
+AutoPerformMonitor Off
+ 
+# resize to show one more column
+
+AutoPerformMonitor On
+WindowResize Shell1 East 400
+AutoPerformMonitor Off
+ 
+Exit
+

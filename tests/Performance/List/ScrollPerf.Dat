@@ -1,0 +1,38 @@
+
+
+#) Create the top level shell in preparation to running the performance
+   monitor on creating a large List widget.
+
+C)
+
+#) Creating a list with a user selectable large number of items
+   (default is 5000).  Running performance monitor while creating
+   the list.
+
+C)
+
+#) Testing the performance of scrolling in the large list widget.  First
+   scroll from top to botton and then from bottom to top. 
+
+C)
+
+#) Testing the performance of adding one item to the bottom of the list
+   when the top is visable.
+
+C)
+
+#) Testing the performance of adding one item to the bottom of the list
+   when the bottom is visable.
+
+C)
+
+#) Testing the performance of deleting one item from the bottom of the
+   list when the top is visable.
+
+C)
+
+#) Testing the performance of deleting one item from the bottom of the
+   list when the bottom is visable.
+
+
+E)

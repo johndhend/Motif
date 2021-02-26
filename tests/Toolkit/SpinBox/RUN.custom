@@ -1,0 +1,61 @@
+# $XConsortium: RUN.custom /main/7 1996/08/15 14:05:16 jakku $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+# HISTORY
+
+set SpinBox1a = 'SpinBox1 -u 1 -I SpinBox1a.Dat -S SpinBox1a.Scr -V SpinBox1a.vis -O SpinBox1a.prt'
+set SpinBox1b = 'SpinBox1 -u 2 -I SpinBox1b.Dat -S SpinBox1b.Scr -V SpinBox1b.vis -O SpinBox1b.prt'
+set SpinBox1c = 'SpinBox1 -u 3 -I SpinBox1c.Dat -S SpinBox1c.Scr -V SpinBox1c.vis -O SpinBox1c.prt'
+set SpinBox1d = 'SpinBox1 -u 4 -I SpinBox1d.Dat -S SpinBox1d.Scr -V SpinBox1d.vis -O SpinBox1d.prt'
+
+set SpinBox3a = 'SpinBox3 -u XmForm,XmText -I SpinBox3.Dat -S SpinBox3.Scr -V SpinBox3.vis -O SpinBox3a.prt' 
+set SpinBox3b = 'SpinBox3 -u XmFrame,XmTextField -I SpinBox3.Dat -S SpinBox3.Scr -V SpinBox3.vis -O SpinBox3b.prt' 
+set SpinBox3c = 'SpinBox3 -u XmBulletinBoard,XmTextField -I SpinBox3.Dat -S SpinBox3.Scr -V SpinBox3.vis -O SpinBox3c.prt' 
+set SpinBox3d = 'SpinBox3 -u XmRowColumn,XmText -I SpinBox3.Dat -S SpinBox3.Scr -V SpinBox3.vis -O SpinBox3d.prt' 
+
+setenv XFILESEARCHPATH ./SpinBox.defaults
+setenv AUTOVPATH /proj/motif/tests/visuals/Toolkit/SpinBox
+
+# The following needed for Vista and Purify usage
+setenv TOP ../../..
+
+# SpinBox 2, 4, 5, 6 all take the default arguments
+foreach test ("$SpinBox1a" "$SpinBox1b" "$SpinBox1c" "$SpinBox1d" \
+              SpinBox2 \
+              "$SpinBox3a" "$SpinBox3b" "$SpinBox3c" "$SpinBox3d" \
+              SpinBox4 \
+              SpinBox5 \
+              SpinBox6 )
+              

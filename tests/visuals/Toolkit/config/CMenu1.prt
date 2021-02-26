@@ -1,0 +1,267 @@
+# $XConsortium: CMenu1.prt /main/3 1995/07/19 20:41:21 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) CompareVisual Shell1 
+TRACE:(2) Continue
+TRACE:(3) WindowFocus Shell1
+TRACE:(4) LocatePointer MenuBtn1  
+TRACE:(5) ClickKey <Alt> K1
+Widget Menu1 mapped
+TRACE:(6) CompareVisual pulldown1 
+TRACE:(7) ClickKey KDown
+TRACE:(8) ClickKey KDown
+TRACE:(9) ClickKey KUp
+TRACE:(10) ClickKey KUp
+TRACE:(11) ClickKey Kt
+Widget Menu1 unmapped
+TRACE:(12) LocatePointer MenuBtn1  
+TRACE:(13) ClickMB Btn1 
+Widget Menu1 mapped
+TRACE:(14) CompareVisual Shell1 
+TRACE:(15) ClickKey Kt
+Widget Menu1 unmapped
+TRACE:(16) Continue
+TRACE:(17) LocatePointer MenuBtn1  
+TRACE:(18) ClickMB Btn1 
+Widget Menu1 mapped
+TRACE:(19) LocatePointer pulldown1  
+TRACE:(20) ClickMB Btn1 
+Widget Menu1 unmapped
+Tear off Activate callback
+Widget Menu1 mapped
+TRACE:(21) CompareVisual pulldown1 
+TRACE:(22) LocatePointer MenuBtn1  
+TRACE:(23) PressMB Btn1 
+Widget Menu1 unmapped
+Tear off deactivate callback
+Widget Menu1 mapped
+TRACE:(24) LocatePointer pushbutton1  
+TRACE:(25) ReleaseMB Btn1 
+Widget Menu1 unmapped
+Tear off Activate callback
+Widget Menu1 mapped
+TRACE:(26) CompareVisual pulldown1 
+TRACE:(27) LocatePointer pulldown1  
+TRACE:(28) ClickKey KCancel
+Widget Menu1 unmapped
+Tear off deactivate callback
+TRACE:(29) Continue
+TRACE:(30) LocatePointer MenuBtn3  
+TRACE:(31) ClickMB Btn1 
+Widget Menu3 mapped
+TRACE:(32) LocatePointer pulldown3  
+TRACE:(33) ClickMB Btn1 
+Widget Menu3 unmapped
+Tear off Activate callback
+Widget Menu3 mapped
+TRACE:(34) CompareVisual pulldown3 
+TRACE:(35) LocatePointer pushbutton3  
+TRACE:(36) ClickMB Btn1 
+TRACE:(37) ClickKey KCancel
+Widget Menu3 unmapped
+Tear off deactivate callback
+TRACE:(38) Continue
+TRACE:(39) LocatePointer MenuBtn1  
+TRACE:(40) ClickMB Btn1 
+Widget Menu1 mapped
+TRACE:(41) LocatePointer cascade1  
+TRACE:(42) ClickMB Btn1 
+Widget Menu4 mapped
+TRACE:(43) LocatePointer Menu1  
+TRACE:(44) PressMB Btn1 
+TRACE:(45) CompareVisual pulldown1 
+TRACE:(46) ReleaseMB Btn1 
+TRACE:(47) Continue
+Widget Menu4 mapped
+Widget Menu1 unmapped
+TRACE:(48) LocatePointer MenuBtn1  
+TRACE:(49) ClickMB Btn1 
+Widget Menu1 mapped
+TRACE:(50) LocatePointer pulldown1  
+TRACE:(51) ClickMB Btn1 
+Widget Menu1 unmapped
+Tear off Activate callback
+Widget Menu1 mapped
+TRACE:(52) LocatePointer cascade1  
+TRACE:(53) ClickMB Btn1 
+Widget Menu4 mapped
+TRACE:(54) LocatePointer PullDown1A  
+TRACE:(55) ClickMB Btn1 
+Widget Menu4 mapped
+Tear off Activate callback
+Widget Menu4 mapped
+TRACE:(56) CompareVisual PullDown1A 
+TRACE:(57) LocatePointer pushbutton1A  
+TRACE:(58) ClickMB Btn1 
+TRACE:(59) CompareVisual PullDown1A 
+TRACE:(60) LocatePointer pushbutton1C  
+TRACE:(61) ClickMB Btn1 
+TRACE:(62) CompareVisual PullDown1A 
+TRACE:(63) LocatePointer PullDown1A  
+TRACE:(64) ClickKey KCancel
+Widget Menu4 mapped
+Tear off deactivate callback
+TRACE:(65) LocatePointer pulldown1  
+TRACE:(66) ClickKey KCancel
+Widget Menu1 unmapped
+Tear off deactivate callback
+TRACE:(67) Continue
+TRACE:(68) LocatePointer MenuBtn3  
+TRACE:(69) PressMB Btn1 
+Widget Menu3 mapped
+TRACE:(70) LocatePointer pulldown3  
+TRACE:(71) ReleaseMB Btn1 
+Widget Menu3 unmapped
+Tear off Activate callback
+Widget Menu3 mapped
+TRACE:(72) CompareVisual pulldown3 
+TRACE:(73) LocatePointer cascade3  
+TRACE:(74) ClickMB Btn1 
+TRACE:(75) LocatePointer cascade3A  
+TRACE:(76) ClickMB Btn1 
+TRACE:(77) LocatePointer pushbutton3AA  
+TRACE:(78) ClickMB Btn1 
+TRACE:(79) LocatePointer Menu3  
+TRACE:(80) CompareVisual pulldown3 
+TRACE:(81) LocatePointer cascade3  
+TRACE:(82) ClickMB Btn1 
+TRACE:(83) LocatePointer cascade3C  
+TRACE:(84) ClickMB Btn1 
+TRACE:(85) LocatePointer cascade3CA  
+TRACE:(86) ClickMB Btn1 
+TRACE:(87) LocatePointer Menu3CAA  
+TRACE:(88) ClickMB Btn1 
+TRACE:(89) LocatePointer Menu3  
+TRACE:(90) ClickKey KCancel
+Widget Menu3 unmapped
+Tear off deactivate callback
+TRACE:(91) Continue
+TRACE:(92) WindowFocus Shell1
+TRACE:(93) LocatePointer MenuBtn1  
+TRACE:(94) ClickKey <Alt> K1
+Widget Menu1 mapped
+TRACE:(95) CompareVisual Menu1 
+TRACE:(96) ClickKey Kc
+Widget Menu4 mapped
+TRACE:(97) ClickKey KReturn
+Widget Menu4 mapped
+Widget Menu1 unmapped
+TRACE:(98) WindowFocus Shell1
+TRACE:(99) LocatePointer MenuBtn1  
+TRACE:(100) ClickKey <Alt> K1
+Widget Menu1 mapped
+TRACE:(101) ClickKey Kc
+Widget Menu4 mapped
+TRACE:(102) ClickKey Ka
+Widget Menu4 mapped
+Widget Menu1 unmapped
+TRACE:(103) Continue
+TRACE:(104) WindowFocus Shell1
+TRACE:(105) LocatePointer MenuBtn1  
+TRACE:(106) ClickMB Btn1 
+Widget Menu1 mapped
+TRACE:(107) ClickKey KRight
+Widget Menu1 unmapped
+Widget Menu2 mapped
+TRACE:(108) ClickKey KRight
+Widget Menu2 unmapped
+Widget Menu3 mapped
+TRACE:(109) ClickKey KLeft
+Widget Menu3 unmapped
+Widget Menu2 mapped
+TRACE:(110) ClickKey KLeft
+Widget Menu2 unmapped
+Widget Menu1 mapped
+TRACE:(111) LocatePointer MenuBtn2  
+TRACE:(112) ClickMB Btn1 
+Widget Menu1 unmapped
+Widget Menu2 mapped
+TRACE:(113) ClickKey Kc
+TRACE:(114) ClickKey Kb
+Widget Menu2 unmapped
+TRACE:(115) Continue
+TRACE:(116) WindowFocus Shell1
+TRACE:(117) LocatePointer MenuBtn2  
+TRACE:(118) ClickKey <Alt> K2
+Widget Menu2 mapped
+TRACE:(119) ClickKey KRight
+Widget Menu2 unmapped
+Widget Menu3 mapped
+TRACE:(120) ClickKey KRight
+TRACE:(121) ClickKey KRight
+TRACE:(122) CompareVisual Shell1 
+TRACE:(123) ClickKey KLeft
+TRACE:(124) ClickKey KDown
+TRACE:(125) ClickKey KDown
+TRACE:(126) ClickKey KRight
+TRACE:(127) ClickKey KReturn
+TRACE:(128) CompareVisual Shell1 
+TRACE:(129) ClickKey KCancel
+TRACE:(130) ClickKey KCancel
+TRACE:(131) ClickKey KCancel
+TRACE:(132) ClickKey KCancel
+Widget Menu3 unmapped
+TRACE:(133) CompareVisual Shell1 
+TRACE:(134) Continue
+TRACE:(135) LocatePointer MenuBtn6  
+TRACE:(136) PressMB Btn1 
+Cascading Callback, add a menu
+TRACE:(137) CompareVisual pulldown6 
+TRACE:(138) ReleaseMB Btn1 
+TRACE:(139) Continue
+TRACE:(140) LocatePointer MenuBtn7  
+TRACE:(141) ClickMB Btn1 
+Activate Callback, add a menu
+TRACE:(142) PressMB Btn1 
+TRACE:(143) CompareVisual pulldown7 
+TRACE:(144) ReleaseMB Btn1 
+TRACE:(145) ClickKey KEscape
+TRACE:(146) Continue
+Warning: 
+    Name: Menu4
+    Class: XmCascadeButton
+    Illegal mnemonic character;  Could not convert X KEYSYM to a keycode
+
+TRACE:(147) Continue
+Warning: 
+    Name: Menu5
+    Class: XmCascadeButton
+    Illegal mnemonic character;  Could not convert X KEYSYM to a keycode
+
+TRACE:(148) Continue
+TRACE:(149) Exit
+Exiting Test...Please Standby...

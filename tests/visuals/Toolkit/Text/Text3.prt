@@ -1,0 +1,179 @@
+# $XConsortium: Text3.prt /main/3 1995/07/19 20:36:21 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) WindowRaise Shell1
+TRACE:(2) LocatePointer List1 RListItem 0
+TRACE:(3) ClickMB Btn1 
+TRACE:(4) LocatePointer ApplyB  
+TRACE:(5) ClickMB Btn1 
+TRACE:(6) CompareVisual Text1 
+TRACE:(7) LocatePointer Text1 RTextChar 10
+TRACE:(8) ClickMB Btn1 
+TRACE:(9) ClickKey KBackSpace
+TRACE:(10) ClickKey KBackSpace
+TRACE:(11) CompareVisual Text1 
+TRACE:(12) LocatePointer List1 RListItem 1
+TRACE:(13) ClickMB Btn1 
+TRACE:(14) LocatePointer ToggleB  
+TRACE:(15) ClickMB Btn1 
+TRACE:(16) LocatePointer ApplyB  
+TRACE:(17) ClickMB Btn1 
+TRACE:(18) CompareVisual Text1 
+TRACE:(19) LocatePointer List1 RListItem 0
+TRACE:(20) ClickMB Btn1 
+TRACE:(21) LocatePointer ApplyB  
+TRACE:(22) ClickMB Btn1 
+TRACE:(23) CompareVisual Text1 
+TRACE:(24) LocatePointer Text1 RTextChar 10
+TRACE:(25) ClickMB Btn1 
+TRACE:(26) ClickKey KBackSpace
+TRACE:(27) ClickKey KBackSpace
+TRACE:(28) CompareVisual Text1 
+TRACE:(29) LocatePointer List1 RListItem 1
+TRACE:(30) ClickMB Btn1 
+TRACE:(31) LocatePointer ToggleB  
+TRACE:(32) ClickMB Btn1 
+TRACE:(33) LocatePointer ApplyB  
+TRACE:(34) ClickMB Btn1 
+TRACE:(35) CompareVisual Text1 
+TRACE:(36) Continue
+TRACE:(37) WindowRaise Shell1
+TRACE:(38) LocatePointer List1 RListItem 0
+TRACE:(39) ClickMB Btn1 
+TRACE:(40) LocatePointer ApplyB  
+TRACE:(41) ClickMB Btn1 
+TRACE:(42) CompareVisual Text1 
+TRACE:(43) LocatePointer List1 RListItem 1
+TRACE:(44) ClickMB Btn1 
+TRACE:(45) LocatePointer Scale1 RScrollBarSlider 
+TRACE:(46) DragSliderValue Right 30 
+TRACE:(47) LocatePointer ApplyB  
+TRACE:(48) ClickMB Btn1 
+TRACE:(49) CompareVisual Text1 
+TRACE:(50) LocatePointer List1 RListItem 0
+TRACE:(51) ClickMB Btn1 
+TRACE:(52) LocatePointer ApplyB  
+TRACE:(53) ClickMB Btn1 
+TRACE:(54) CompareVisual Text1 
+TRACE:(55) LocatePointer Text1 RTextChar 20
+TRACE:(56) ClickMB Btn1 
+TRACE:(57) InputString "New text"
+TRACE:(58) CompareVisual Text1 
+TRACE:(59) LocatePointer List1 RListItem 2
+TRACE:(60) ClickMB Btn1 
+TRACE:(61) LocatePointer ApplyB  
+TRACE:(62) ClickMB Btn1 
+TRACE:(63) CompareVisual Text1 
+TRACE:(64) LocatePointer Text1 RTextChar 10
+TRACE:(65) ClickMB Btn1 
+TRACE:(66) ClickKey KBackSpace
+TRACE:(67) ClickKey KBackSpace
+TRACE:(68) CompareVisual Text1 
+TRACE:(69) LocatePointer ApplyB  
+TRACE:(70) ClickMB Btn1 
+TRACE:(71) CompareVisual Text1 
+TRACE:(72) Continue
+TRACE:(73) WindowRaise Shell1
+TRACE:(74) LocatePointer List1 RListItem 0
+TRACE:(75) ClickMB Btn1 
+TRACE:(76) LocatePointer Scale1 RScrollBarSlider 
+TRACE:(77) DragSliderValue Left 3 
+TRACE:(78) LocatePointer ApplyB  
+TRACE:(79) ClickMB Btn1 
+TRACE:(80) CompareVisual Text1 
+TRACE:(81) Continue
+TRACE:(82) WindowRaise Shell1
+TRACE:(83) LocatePointer List1 RListItem 0
+TRACE:(84) ClickMB Btn1 
+TRACE:(85) LocatePointer ApplyB  
+TRACE:(86) ClickMB Btn1 
+TRACE:(87) CompareVisual Text1 
+TRACE:(88) LocatePointer List1 RListItem 1
+TRACE:(89) ClickMB Btn1 
+TRACE:(90) LocatePointer Scale1 RScrollBarSlider 
+TRACE:(91) DragSliderValue Right 14 
+TRACE:(92) LocatePointer Scale2 RScrollBarSlider 
+TRACE:(93) DragSliderValue Right 18 
+TRACE:(94) LocatePointer ApplyB  
+TRACE:(95) ClickMB Btn1 
+TRACE:(96) CompareVisual Text1 
+TRACE:(97) LocatePointer Scale2 RScrollBarSlider 
+TRACE:(98) DragSliderValue Right 25 
+TRACE:(99) LocatePointer ApplyB  
+TRACE:(100) ClickMB Btn1 
+TRACE:(101) CompareVisual Text1 
+TRACE:(102) LocatePointer List1 RVertScrollBarUpOrLeftArrow 
+TRACE:(103) ClickMB Btn1 
+TRACE:(104) ClickMB Btn1 
+TRACE:(105) ClickMB Btn1 
+TRACE:(106) LocatePointer List1 RListItem 0
+TRACE:(107) ClickMB Btn1 
+TRACE:(108) LocatePointer ApplyB  
+TRACE:(109) ClickMB Btn1 
+TRACE:(110) CompareVisual Text1 
+TRACE:(111) LocatePointer List1 RVertScrollBarDownOrRightArrow 
+TRACE:(112) ClickMB Btn1 
+TRACE:(113) ClickMB Btn1 
+TRACE:(114) ClickMB Btn1 
+TRACE:(115) LocatePointer List1 RListItem 2
+TRACE:(116) ClickMB Btn1 
+TRACE:(117) LocatePointer Scale1 RScrollBarSlider 
+TRACE:(118) DragSliderValue Left 2 
+TRACE:(119) LocatePointer ApplyB  
+TRACE:(120) ClickMB Btn1 
+TRACE:(121) CompareVisual Text1 
+TRACE:(122) Continue
+TRACE:(123) WindowRaise Shell1
+TRACE:(124) LocatePointer List1 RListItem 0
+TRACE:(125) ClickMB Btn1 
+TRACE:(126) LocatePointer ApplyB  
+TRACE:(127) ClickMB Btn1 
+TRACE:(128) CompareVisual Text1 
+TRACE:(129) LocatePointer List1 RListItem 1
+TRACE:(130) ClickMB Btn1 
+TRACE:(131) LocatePointer Scale1 RScrollBarSlider 
+TRACE:(132) DragSliderValue Right 6 
+TRACE:(133) LocatePointer ApplyB  
+TRACE:(134) ClickMB Btn1 
+TRACE:(135) CompareVisual Text1 
+TRACE:(136) LocatePointer Scale1 RScrollBarSlider 
+TRACE:(137) DragSliderValue Left 0 
+TRACE:(138) LocatePointer ApplyB  
+TRACE:(139) ClickMB Btn1 
+TRACE:(140) CompareVisual Text1 
+TRACE:(141) Exit
+Exiting Test...Please Standby...

@@ -1,0 +1,272 @@
+Wed May  7 08:35:18 EDT 2015
+Mon Feb 22 16:20:59 EST 2021
+
+TOP NEWS
+
+  * for freeBSD 12.2 with Xorg installed sans Xprint (not in Xorg in 12.2)
+
+  * 64 bit build, remade simple 'weatherable ' Makefiles, just several seconds
+    to make + install with demos.
+
+  * panner now has zoom in/out, trimmed down, stability improved
+
+  * also has imake cf build working w/quats outside of X tree, but suggest
+    as not mainstream (not weatherable, tends to break due to OS changes)
+
+  * also "read to install" for freeBSD 12.2 amd64 (make install only)
+
+---------
+BELOW
+
+  INSTALL
+  NEWS
+  New optional panner mwmrc Xdefault settings
+  Why use mwm?
+  CHANGELOG
+  KNOWN compile warnings
+  What is non-virtual panner?
+
+---------
+  INSTALL:
+	$ make
+	$ make install        # as root
+	$ make demos          # not suggested as useful
+  
+  INSTALL:  imake  config/cf/Imake.tmpl style
+	$ sh ./motif250.sh    # fixes stuff, sets env vars, imake, make
+	$ make install        # as root
+	$ make install.man    # as root
+
+  note: if tests/ is in Imakefile quats will build too, see that file.
+	quats are not automatic to use, are unwieldy, but build and work
+
+---------
+NEWS
+
+openMotif-2.1.30
+openMotif-2.2.3  (nearly same as 2.1.30)
+openMotif-2.3.4  (some fixes from)
+openMotif-2.2.5  (per say, but name is 2.5.0, see version naming below)
+
+  Panner support is back, and is optional (can un-#define)
+
+  Panner support is back, a non-vurtual compatible panner with added feature
+    (OpenGroup deleted previous Virtual Panning before public release 2.1+)
+    See: demos/programs/panner/panner.man
+
+  * NEW panner can now Zoom in / out and resize all work together
+  * NEW panner now more stable and trim than first release
+  * panner(1) does edge panning (pan by mouse to edge of screen)
+    edge panning did not need to be in mwm and is non-virtual
+  * panner updates smoother without flashing it can animate (server side draw)
+  * mwm panner support sees/pans all trasients (popups)
+    and icons (although icon policy may change situationally)
+  * this release is intented to be "a more weather resisant release"
+    for using mwm as a window manager, meaning no cf (yet).
+    see notes on why cf is fragile in issues section.  it is NOT aimed
+    at providing a developer base.   See more below.
+  * 2.2.3 redhat bug slow help open and wrong size problem fixed.
+    it was a Xt 5 sec waiting on ICCC call due to hacked defaults.
+    Now default is "yes support".  Still off by default in many
+    automake Motif releases.  "polling" is also eliminated.
+
+  from 2.1.30 to 2.3.4 Motif has barely changed except in lib/Xm lib/Mrm
+
+  2.2.3 (thus 2.5.0) does not include the newer jpeg+fontconfig+international
+  support from 2.3.4 libXm, thus also has less "lib depends headaches"
+
+  ./localdef.h is added for making certain defaults easy to edit.  if ADD_PAN
+    is Not defined: defines reverts to verbatim motif-2.0.2 (approx. 2.3.4)
+  ./config.h is still around, side effect of autoconfig
+
+---------
+New mwmrc settings and .Xdefaults settings
+
+By default panner is "active" and uses Alt-Arrow.  Settings are optional.
+The panner demo has been re-vived and can drag windows in a view with mouse,
+also for remote desktops.
+
+FILE: .Xdefaults
+
+Mwm*panScrollX : 	25
+Mwm*panScrollY : 	25
+Mwm*usePan :		True
+Mwm*panUseX :		False  ! try True
+Mwm*panUseMwm :		False
+
+! default is use Mwm if pcd win, X if not
+! useMwm uses mwm or nothin, useX uses X on all but does use Mwm
+! useX should do all Mwm things w/o un-necessary code like resize checking
+
+FILE: .mwmrc
+! pan desktop by panScrollXY ammount
+
+Keys DefaultKeyBindings
+{
+        Alt<Key>Up              root|window|icon        f.north
+        Alt<Key>Down            root|window|icon        f.south
+        Alt<Key>Right           root|window|icon        f.east
+        Alt<Key>Left            root|window|icon        f.west
+}
+
+
+  About cf/
+    They are too old to be useful on freeBSD 12.2
+    The autoconfig release can also do imake build on linux
+    using cf Motif-X11.cf.tar.gz (using X11R6 installed not Xorg)
+
+
+
+--------------
+Why use mwm?
+
+  there's probably a book on it
+
+  * you need lightweight yet reliable yet better than twm, or for nastalgia
+  * you have lib issues and need somethig not tied into BIG TECH desktops
+
+  Mwm:
+	* well made and tested
+	* transparent remote desktop support if needed
+	* Motif has no lib dependancies outside of X11 ... better than
+          twm and seems to work when all else is broken or not installed
+	* (free) gui development toolkits for smart ui layout / application
+	  making for Motif (like java ide or xcode but not feature competitive)
+	* Motif has free + in-print books if you need help
+	* some older apps work nicer (or dont crash or fub) using Motif
+	* easier security (yet not as secure as twm)
+	* good for developers - who don't want desk clutter and do use xterm
+
+  Caveats:
+	* not easy to get a point/click developer environment that works
+	  with motif - though some old ones may exist
+	* not android emulating, though maybe one runs in a window?
+	* CDE desktop and Motif work together as a pair (not this 250 release)
+
+---------
+CHANGELOG
+
+  * tools/mwl clients/uil reworked so that changes to motif.wml "really work"
+    (automake distros use stale files and work only if never changed)
+    and a minor fix to add a ';' in Uil.y knocked out by some past patch
+    'HaL fix CR 5427' incorreclty applied, is my guess.
+
+  * panner more stable
+
+  * this is a freeBSD 12.2 release for Xorg so it is by default without
+    DtPrint as Xorg canceled libXp for freeBSD (#undef NO_XP in localdef.h
+    to enable -lXp, move directory wml.print/ to wml/ because motif.wml,
+    should work).  for config cf build also edit config/cf/host.def NO_XP.
+
+  * many very minor compilation changes, and spaces and ifdefs
+    most clang warnings handled, a few checked ones skipped
+
+  * the linux motif-2.5.0 release on www.sourceforge.org, but it is only
+    for Xfree86-4.8.0 and uil "can't be modified" but ... The pan250
+    linux versions does not rebuild uil/wml uil/callable or msg translation
+    and contains less fixes othersie; it is ok but not as good
+
+-----------
+KNOWN compile warnings:
+
+  * Many pointless clang warnings that are not true when running unix / intel.
+    Are int and pointer the same size?  They are and should be unless
+    hacking driver code - and driver hackers turn off warnings.
+  * Motif now has many spurious ones (very likey due to lack of type-casting)
+    (for linux they were all checked - for clang not yet, shoudl be same)
+  * Exm.h:16:52: warning: missing terminating ' character
+    not a parse problem: is complaining of ' in license comment of Exm.wml
+  * UilLexPars.h:222:1: warning: "VERSION" redefined
+    is complaining of intentional #undef - warning text is incorrect
+
+-----------
+KNOWN issues:
+
+  * imake build's install does not have de-install.  it is not the default
+    build however.
+
+  * there is no effort to support or suppress CDE
+
+  * no, i don't know how your existing motif apps react to 64 bit compile
+    i know the demos, 64 compiled, still work
+
+  * if you click to enable "edge panning"
+    and if leave your desk while it's panning, you'll never
+    find your windows (miles away).  just restart mwm.  see man page.
+
+  * make install-demos is not suggested - copy a few maybe if you use them.
+    the cf build can maybe make demos "buildable outside the x tree" in so
+    much as they can find their resources after being built (ie, filemanager
+    cannot, crashes silenty and why is resources not found)
+    I do not suggest attempting an "imake cf build so that demos install",
+    the reality is: a good motif app can build and find it's resources without
+    cf and still outside x-tree; crashing is a bug.
+
+  * Not aimed at developing new motif applications.  Motif is no longer
+    being developed and xorg no longer allow "imake or cf".
+
+  * to build QUATS just enter in tests/ as the last SUBDIRS = in Imakefile
+    it was tested to complete build error, yes
+
+  * Motif internally does things like cut&paste tranfers 32bit (literal in
+    many code places) though it supports 8-64 "from the outside".
+
+  * Xorg also has not released any "CARD64" "CARD128", while removing some
+    powerful X11 features and destroying compatibily (ie, XCB wrappers
+    required to be hacked in to all apps but not Motif?  hmmm)
+    This is fine for newer apps which can use new features, not good for
+    updating any older apps which ... "alredy have their ways set in"
+
+  * imake build only: be wary of depends re-build v. header changes.
+    openMotif was hacked before release to build by automake and maintainers
+    did not update imake files but also never finished quats auto makefiles.
+    .c are in imake but .h may not be, the build will work but be cautious of
+    a RE-BUILD (ie, touch *.c if you suspect it)
+
+  * the "depends" build for imake is very slow and the cf build is not
+    perfect.  better to do a whole build; much faster and more reliable.
+    (that's true for most compiling kits also microsoft; not just imake cf)
+
+---------
+What is non-virtual panner?
+
+  Sometimes virtual means "in hardware" and nasty effects of supported
+  screen video lib hacks switching displays.  This panner doesn't fuss
+  around and gets it all done by simply requesting windows move using
+  the Motif or X function for asking.  It lacks hardware acceleration
+  but that can be a good thing - less needy and buggy.
+
+
+---------
+Version naming 2.5.0 2.0.5
+Version naming : accoring to automake libtool manual and ld.so
+
+  ! DON'T FEED THE TROLLS !
+
+  libXm.so.2.0.2 , .so.2.0, .so.2
+
+    2  means the uppermost supported major number: what most apps "require"
+       current version
+    .0 means motif 1 or 0 apps are also (mostly) supported to load this
+       age (supported span span of versions)
+    .5 is an (arbitrary) revision of 2, but apps should avoid demanding it
+       revision (revisions number, not effecting version)
+
+    2.1.2 means, to ld.so, interface has changed, ld.so will refuse to load
+    apps seeking "motif 2" saying 2.0 is not supported (file renaming aside)
+
+    automake reorders this to libtool order 2.5.0 and makes 2.5.0.tar.gz,
+    creating the inner tarname motif-2.5.0.tar.gz by default
+      if you remake all: 2.5.0 is what gets made
+      but this means libMrm.so.2.0.5 will be installed (in linux)
+
+  HOWEVER - with cancel culture around, Xorg removed DtPrint so if versioning
+    wasn't wrong enough how do we notate a re-release against a non-X X?
+    My answer:  don't feed the trolls.  Leave it be.  Is small and quick
+    to install and uninstall it doesn't need poly-versional support.
+
+    added many fixes from 2.3.4 but did not include new libXm-2.3.4 
+      instead i wish to make "2.3.5" a separate release
+      because i know many apps worked with 2.1.30/2.2.3 and cannot
+      say the same for any new revision (for me 223 compiles 234 didnt)
+

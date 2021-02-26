@@ -1,0 +1,20 @@
+#ifndef XmClientLibs
+#define XmClientLibs $(XMLIB) $(XTOOLLIB) $(XLIB)
+#endif
+
+/* #include "../demos.cf" missing */
+
+      INCLUDES = -I.
+
+SRCS = bboxdemo.c 
+OBJS = bboxdemo.o
+
+#ifndef NO_XP
+LOCAL_LIBRARIES = -lXm -lXt -lXp -lX11 -lXext
+#else
+LOCAL_LIBRARIES = -lXm -lXt -lX11 -lXext
+#endif
+
+ComplexProgramTarget(bboxdemo);
+
+

@@ -1,0 +1,89 @@
+# $XConsortium: FormDia1.prt /main/3 1995/07/19 20:17:37 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) CompareVisual form 
+TRACE:(2) WindowResize form SouthEast 200 200
+TRACE:(3) CompareVisual form 
+TRACE:(4) LocatePointer push1  
+TRACE:(5) ClickMB Btn1 
+Change push2's attach widget to NULL.
+The attachment of pushbutton 2 expected 0, now 0
+TRACE:(6) CompareVisual form 
+TRACE:(7) Continue
+TRACE:(8) WindowResize form SouthEast 300 300
+TRACE:(9) CompareVisual form 
+TRACE:(10) LocatePointer push1  
+TRACE:(11) ClickMB Btn1 
+change push2's top attachment to opposite of push 1
+TRACE:(12) CompareVisual form 
+TRACE:(13) WindowResize form SouthEast 300 300
+TRACE:(14) CompareVisual form 
+TRACE:(15) Continue
+TRACE:(16) LocatePointer push1  
+TRACE:(17) ClickMB Btn1 
+Change push2's attach widget to NULL.
+Warning: 
+    Name: form
+    Class: XmForm
+    Bailed out of edge synchronization after 10,000 iterations.
+    Check for contradictory constraints on the children of this form.
+
+TRACE:(18) CompareVisual form 
+TRACE:(19) LocatePointer push1  
+TRACE:(20) ClickMB Btn1 
+change the top attachment to attach widget.
+TRACE:(21) CompareVisual form 
+TRACE:(22) WindowResize Shell1 SouthEast 200 200
+TRACE:(23) CompareVisual form 
+TRACE:(24) Continue
+TRACE:(25) LocatePointer push1  
+TRACE:(26) ClickMB Btn1 
+set resizable to False and change the width of the child.
+TRACE:(27) CompareVisual form 
+TRACE:(28) LocatePointer push1  
+TRACE:(29) ClickMB Btn1 
+Set push2 to attach opposite on left and right.
+TRACE:(30) CompareVisual form 
+TRACE:(31) WindowResize Shell1 SouthEast 200 200
+TRACE:(32) CompareVisual form 
+TRACE:(33) LocatePointer push1  
+TRACE:(34) ClickMB Btn1 
+Create a form dialog
+TRACE:(35) WindowMove form_dialog 300 300
+TRACE:(36) CompareVisual form 
+TRACE:(37) Exit
+Exiting Test...Please Standby...

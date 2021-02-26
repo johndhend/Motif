@@ -1,0 +1,37 @@
+
+
+	This test verifies Xme functions that deal with data transfer and
+specifically the "target" data handling.  Targets are data items that are
+used for widgets to understand what kind of data is being presented during
+a transfer.  The functions that are tested include: XmeStandardTargets,
+XmeStandardConvert, XmeConvertMerge and XmeTransferAddDoneProc.	 These tests
+will be validated in conjunction with a transfer operation and while the
+widgets will be updated, you will only be looking for ERROR messages to
+confirm pass or fail.
+
+C)	The first test will require a primary data transfer.  This is
+accomplished by first selecting the data then indicating a destination 
+widget.
+
+#)  Place the cursor over "Widget ONE" and click mouse Button1.  Place
+the mouse over "Widget TWO" and press Button2.  The data from the source
+widget should appear.
+
+#)  Now press the "Reset" button, to initialize the text data in the widgets.
+
+#)  Make sure that there are no error messages printed in the xterm.
+
+C)	The next test will also require a primary data transfer.  This is
+accomplished by first selecting the data, then indicating a destination 
+widget.
+
+#)  Place the cursor over "Widget ONE" and click mouse Button1.  Place
+the mouse over "Widget TWO" and press Button2.  The data in the widget
+will NOT be updated.
+
+#)  Make sure that there are no error messages printed in the xterm.
+
+C)
+	 Press Exit to end the test.  
+         Goodbye.
+E)

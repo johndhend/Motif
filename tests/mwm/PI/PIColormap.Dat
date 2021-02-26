@@ -1,0 +1,51 @@
+
+
+#) This is the PIColormap test.
+
+C)
+
+
+#) There should now be a pushbutton displayed in a window that says
+   \"TEST 1 BTN 1\". It should have red lettering on a yellow background.
+
+#) Move the pointer into the window, the colormap for the entire screen
+   should shift by 1 color value - everything should look way different.
+
+#) Click on the \"TEST 1 BTN 1\" pushbutton.  Don't be concerned if the
+   pushbutton label is all black in your particular color scheme.
+
+C)
+
+
+#) Now, there should be a second pushbutton displayed in the window that
+   says \"BTN 1 TEST 2\".  This pushbutton should have yellow lettering 
+   on a red background.
+
+#) Move the pointer into the window, the colormap for the screen should
+   shift by 2 color values and look different than either previous colormap.
+   Again, it should look very weird.
+
+#) Click on either pushbutton.
+
+C)
+
+
+#) There should still be both pushbuttons displayed in the window.
+
+#) Move the pointer into the window, the colormap should not change from
+   the original, standard colormap.
+
+#) Again, click on either pushbutton.
+
+C)
+
+#) A control panel with 3 PushButtons should have appeared : Popup, Popdown
+   and Colormap. 
+#) Click MB1 on "Popup". An OverrideShell should appear.
+#) Click MB1 on "Popdown". The OverrideShell should disappear.
+#) Click MB1 on "Colormap".
+#) Click MB1 on "Popup". The OverrideShell should reappear.
+#) ClickMB1 on "Popdown". Only the OverrideShell should disappear. If
+   the main shell containing the control panel disappears as well, 
+   CR 5183 hasn't been fixed.
+E)

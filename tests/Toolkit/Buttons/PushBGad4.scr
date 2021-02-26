@@ -1,0 +1,107 @@
+# $XConsortium: PushBGad4.scr /main/6 1995/07/17 20:06:47 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+
+# A client with a MenuBar, a PushButton, and a PushButtonGadget all
+#  contained in a Form will appear. The PushButtonGadget will have a CadetBlue
+#  background, the same as the Form. The PushButton will have a
+#  Maroon background. The MenuBar will contain a single CascadeButton
+#  labeled "Cascade1". It's background color will be the default
+#  background color. PushButton will be highlighted with an OrangeRed
+#  highlight. 
+
+CompareVisual Form1
+Continue
+
+# Click MB1 in the PushButtonGadget. The background color of the Form
+#  and the PushButtonGadget should change to yellow. The background color
+#  of the PushButton should not change. A Message to this effect will be
+#  printed in the term window. 
+
+# Click MB1 in the PushButton. The background color of the PushButton
+#  should change to Green, but the background color of the form and
+#  the PushButtonGadget should not change. A Message to this effect will
+#  be printed in the term window. 
+
+LocatePointer PBGadget1
+ClickMB Btn1
+CompareVisual Form1
+LocatePointer PushB1
+ClickMB Btn1
+CompareVisual Form1
+Continue
+
+# Click MB1 in the Menubar on the "Cascade1" button. A Pulldown
+#  menu should appear. It should contain three PushButtons. 
+
+# Select the "Destroy PushButton" button. PushButton should disappear
+#  and the highlight should now be on PushButtonGadget. 
+
+# Select the "Destroy PushButtonGadget" button from the Menu.
+#  PushButtonGadget should disappear and no highlight should be visible. 
+
+# Select the "Destroy Form" button from the Menu. The Form should be
+#  destroyed and an empty shell should be left. 
+
+LocatePointer Cascade1
+ClickMB Btn1
+CompareVisual Pulldown1
+LocatePointer PushButton1
+ClickMB Btn1
+CompareVisual Form1
+LocatePointer Cascade1
+ClickMB Btn1
+LocatePointer PushButton3
+ClickMB Btn1
+CompareVisual Form1
+LocatePointer Cascade1
+ClickMB Btn1
+LocatePointer PushButton2
+ClickMB Btn1
+CompareVisual Shell1
+
+Exit
+
+
+
+
+
+
+

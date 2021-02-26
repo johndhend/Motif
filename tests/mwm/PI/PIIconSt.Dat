@@ -1,0 +1,53 @@
+
+
+#) This is the PIIconSt test.
+
+#) Make sure that the keyboardFocusPolicy for mwm is 'pointer' before
+   continuing.
+
+C)
+
+
+#) There should now be a pushbutton displayed in a window that shows
+   a yellow background and red letters that say \"TEST 1 BTN 1\".
+
+C)
+
+
+#) The pushbutton window should now be iconified.
+
+C)
+
+
+#) The pushbutton window should now be normalized again.
+
+C)
+
+#) The pushbutton window should now be iconified again. 
+
+#) Move the pointer over to the icon (if there is iconBox, you may have
+   to scroll first to make the icon visible). When the pointer is over 
+   the icon you should see the icon label to be "TestPIR3720" with the
+   string "Test" on the top line and the string "PIR3720" on the second
+   line. This is due to the fact that a newline character is embedded 
+   in the IconName between "Test" and "PIR3720".
+
+C)
+
+#) The pushbutton window should now be deiconified and iconified again. 
+
+#) Move the pointer over to the icon (if there is iconBox, you may have
+   to scroll first to make the icon visible). When the pointer is over 
+   the icon you should see the icon label to be "TestPIR3720" on a
+   single line. In this case the IconName has a <CR> character
+   embedded within the icon label between "Test" and "PIR3720".
+
+C)
+
+#) Move the pointer over to the iconified window and click mouse button1
+   once. The window menu should get posted. Otherwise, PIR4040 has not been
+   resolved. Then hit <Esc> to unpost the menu.
+
+C)
+
+E)

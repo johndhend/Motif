@@ -1,0 +1,303 @@
+# $XConsortium: Container4b.scr /main/4 1995/07/17 20:16:20 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF).  See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+
+# #) This is the Container4 Test, run with the option 
+#    "-I Container4b.Dat -u b", testing the Container API.
+# #) The Container is created in Detail mode.
+# C)
+Continue
+ 
+# #) This panel is for testing the function XmContainerGetItemChildren.
+# #) Select a gadget and double Click Btn1.
+#    You should see information in the term window regarding the number of 
+#    children of the selected gadget, and if any, the names of the children.
+# #) Expand the children.
+#    Select some gadgets (any number) and then hit the return key. 
+#    You should see information in the term window regarding the number of 
+#    children of the selected gadgets, and if any, the names of the children.
+# C)
+
+CompareVisual Container4b
+LocatePointer IconGad3
+ClickMB Btn1 2
+CompareVisual Container4b
+LocatePointer IconGad3 ROutlineBtn
+ClickMB Btn1
+LocatePointer IconGad32 ROutlineBtn
+ClickMB Btn1
+LocatePointer IconGad321 ROutlineBtn
+ClickMB Btn1
+CompareVisual Container4b
+LocatePointer IconGad2
+PressMB Btn1
+LocatePointer IconGad3211
+ReleaseMB Btn1
+CompareVisual Container4b
+Continue
+
+# #) This panel is for testing the function XmContainerRelayout.
+# #) No change should be noticed.
+# C)
+
+CompareVisual Container4b
+Continue
+ 
+# #) This panel is for testing the function XmContainerReorder.
+# #) The order of the gadgets have changed. They should now appear in the 
+#    following order:
+# 
+# !)          IconGad5
+#           IconGad3
+#           IconGad1
+#           IconGad2
+#           IconGad4
+# C)
+
+CompareVisual Container4b
+Continue
+
+# #) The following panels are for testing the different actions with the 
+#    primary selection.
+# #) Another Container should appear. 
+# #) Select IconGad6 from the second Container. 
+# #) Click <Alt><osfInsert>. You are requesting the primary selection to be 
+#    copied to the Container. You should see the following information in your 
+#    term window:
+# !)          
+#             Destination Callback called with:
+#                     selection = PRIMARY
+#                     operation = XmCOPY
+# 
+# #) Select IconGad1 from the first Container. The second Container is loosing
+#    the primary selection and you should see the following information in
+#    your term window:
+# !) 
+#             Convert Callback called with:
+#                      selection = PRIMARY
+#                      target    = _MOTIF_LOSE_SELECTION
+#        
+# C)
+
+WindowRaise OtherContainer
+CompareVisual OtherContainer
+LocatePointer IconGad6
+ClickMB Btn1
+ClickKey <Alt> KInsert
+CompareVisual OtherContainer
+WindowRaise Container4b
+LocatePointer IconGad1
+ClickMB Btn1
+CompareVisual Container4b
+WindowRaise OtherContainer
+CompareVisual OtherContainer
+Continue
+ 
+# #) Click <Alt><Ctrl><Shift><osfInsert> in the first Container. 
+#    You are requesting the primary selection to be linked to the Container. 
+#    You should see the following information in your term window:
+# !)          
+#             Destination Callback called with:
+#                     selection = PRIMARY
+#                     operation = XmLINK
+# 
+# #) Click <Alt><Shift><osfDelete>. You are requesting the primary selection 
+#    to be copied to the Container, and deleted from the primary source. 
+#    You should see the following information in your 
+#    term window:
+# !)          
+#             Destination Callback called with:
+#                     selection = PRIMARY
+#                     operation = XmMOVE
+# 
+# C)
+
+WindowRaise Container4b
+LocatePointer Container4b
+ClickKey <Alt> <Ctrl> <Shift> KInsert
+CompareVisual Container4b
+ClickKey <Alt> <Shift> KDelete
+CompareVisual Container4b
+Continue
+
+# #) This panel tests the XmContainerCopy function.
+# #) Select one or more Icon Gadgets from a Container. 
+# #) Pulldown the Edit menu and activate the Copy button.
+# #) This routine calls multiple times the XmNconvertCallback procedure.
+#    You can see in your term window that for each call to that procedure:
+# !)
+#                   selection = CLIPBOARD
+# 
+# #) The different targets are:
+# !)
+#         _MOTIF_CLIPBOARD_TARGETS
+#         PIXMAP
+#         COMPOUND_TEXT
+#         _MOTIF_COMPOUND_STRING       
+#         _MOTIF_DEFERRED_CLIPBOARD_TARGETS
+#         
+# #) parm = XmCOPY, when the target is _MOTIF_CLIPBOARD_TARGETS or 
+#    _MOTIF_DEFERRED_CLIPBOARD_TARGETS.
+# #) You should also see the return status of the function (1 for success).
+# !)
+#       Return status of XmContainerCopy function: 1
+# C)
+
+LocatePointer IconGad5
+PressMB Btn1
+LocatePointer IconGad3
+ReleaseMB Btn1
+CompareVisual Container4b
+LocatePointer menu_btn1
+PressMB Btn1
+LocatePointer CopyPB1
+ReleaseMB Btn1
+Continue
+
+# #) This panel is for testing the XmContainerCopyLink function.
+# #) Select one or more Icon Gadgets from a Container. 
+# #) Pulldown the Edit menu and activate the Copy Link button.
+# #) This routine calls multiple times the XmNconvertCallback procedure.
+#    You can see in your term window that for each call to that procedure:
+# !)
+#                   selection = CLIPBOARD
+# 
+# #) The different targets are:
+# !)
+#         _MOTIF_CLIPBOARD_TARGETS
+#         PIXMAP
+#         COMPOUND_TEXT
+#         _MOTIF_COMPOUND_STRING       
+#         _MOTIF_DEFERRED_CLIPBOARD_TARGETS
+#         
+# #) parm = XmLINK, when the target is _MOTIF_CLIPBOARD_TARGETS or 
+#    _MOTIF_DEFERRED_CLIPBOARD_TARGETS.
+# #) You should also see the return status of the function (1 is success).
+# !)
+#      Return status of XmContainerCopyLink function: 1
+# C)
+
+LocatePointer menu_btn1
+PressMB Btn1
+LocatePointer CopyLinkPB1
+ReleaseMB Btn1
+Continue
+ 
+# #) This panel tests the XmContainerPaste function.
+# #) Pulldown the Edit menu and activate the Paste button.
+# #) This routine calls the XmNdestinationCallback procedure, with the 
+#    selection member to CLIPBOARD, and the operation member to XmCOPY.
+#    You can see in your term window:
+# !)
+#           Destination Callback called with:
+#                   selection = CLIPBOARD
+#                   operation = XmCOPY
+# 
+# #) You should also see the return status of the function (1 is success).
+# !)
+#      Return status of XmContainerPaste function: 1
+# C)
+
+LocatePointer menu_btn1
+PressMB Btn1
+LocatePointer PastePB1
+ReleaseMB Btn1
+Continue
+ 
+# #) This panel tests the XmContainerPasteLink function.
+# #) Pulldown the Edit menu and activate the Paste Link button.
+# #) This routine calls the XmNdestinationCallback procedure, with the 
+#    selection member to CLIPBOARD, and the operation member to XmLINK.
+#    You can see in your term window:
+# !)
+#           Destination Callback called with:
+#                   selection = CLIPBOARD
+#                   operation = XmLINK
+# 
+# #) You should also see the return status of the function (1 is success).
+# !)
+#      Return status of XmContainerLink function: 1
+# C)
+
+LocatePointer menu_btn1
+PressMB Btn1
+LocatePointer PasteLinkPB1
+ReleaseMB Btn1
+Continue
+
+# #) This panel tests the XmContainerCut function.
+# #) Select one or more Icon Gadgets from a Container. 
+# #) Pulldown the Edit menu and activate the Cut button.
+# #) This routine calls multiple times the XmNconvertCallback procedure.
+#    You can see in your term window that for each call to that procedure:
+# !)
+#                   selection = CLIPBOARD
+# 
+# #) The different targets are:
+# !)
+#         _MOTIF_CLIPBOARD_TARGETS
+#         PIXMAP
+#         COMPOUND_TEXT
+#         _MOTIF_COMPOUND_STRING       
+#         _MOTIF_DEFERRED_CLIPBOARD_TARGETS
+#         
+# #) parm = XmMOVE, when the target is _MOTIF_CLIPBOARD_TARGETS or 
+#    _MOTIF_DEFERRED_CLIPBOARD_TARGETS.
+# #) The convertCallback is also called with the DELETE target:
+# !)
+#           Convert Callback called with:
+#                   selection = CLIPBOARD
+#                   target    = DELETE
+# 
+# #) You should also see the return status of the function (1 for success).
+# !)
+#       Return status of XmContainerCut function: 1
+# C)
+
+WindowRaise OtherContainer
+LocatePointer IconGad6
+PressMB Btn1
+LocatePointer IconGad9
+ReleaseMB Btn1
+LocatePointer menu_btn2
+PressMB Btn1
+LocatePointer CutPB2
+ReleaseMB Btn1
+Continue
+
+# E)
+Exit

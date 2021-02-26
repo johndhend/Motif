@@ -1,0 +1,79 @@
+# $XConsortium: RepType1.prt /main/3 1995/07/19 20:14:52 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) Continue
+Testing detection of invalid representation type :    PASSED
+Representation Type = Alignment,   Test PASSED
+Representation Type = ArrowDirection,   Test PASSED
+Representation Type = Attachment,   Test PASSED
+Representation Type = AudibleWarning,   Test PASSED
+Representation Type = ChildHorizontalAlignment,   Test PASSED
+Representation Type = ChildPlacement,   Test PASSED
+Representation Type = ChildType,   Test PASSED
+Representation Type = ChildVerticalAlignment,   Test PASSED
+Representation Type = CommandWindowLocation,   Test PASSED
+Representation Type = DefaultButtonType,   Test PASSED
+Representation Type = DialogStyle,   Test PASSED
+Representation Type = DialogType,   Test PASSED
+Representation Type = EditMode,   Test PASSED
+Representation Type = FileTypeMask,   Test PASSED
+Representation Type = IndicatorType,   Test PASSED
+Representation Type = LabelType,   Test PASSED
+Representation Type = ListSizePolicy,   Test PASSED
+Representation Type = MultiClick,   Test PASSED
+Representation Type = NavigationType,   Test PASSED
+Representation Type = Orientation,   Test PASSED
+Representation Type = Packing,   Test PASSED
+Representation Type = ProcessingDirection,   Test PASSED
+Representation Type = ResizePolicy,   Test PASSED
+Representation Type = RowColumnType,   Test PASSED
+Representation Type = ScrollBarDisplayPolicy,   Test PASSED
+Representation Type = ScrollBarPlacement,   Test PASSED
+Representation Type = ScrollingPolicy,   Test PASSED
+Representation Type = SelectionPolicy,   Test PASSED
+Representation Type = SelectionType,   Test PASSED
+Representation Type = SeparatorType,   Test PASSED
+Representation Type = ShadowType,   Test PASSED
+Representation Type = StringDirection,   Test PASSED
+Representation Type = TearOffModel,   Test PASSED
+Representation Type = UnpostBehavior,   Test PASSED
+Representation Type = VerticalAlignment,   Test PASSED
+Representation Type = VisualPolicy,   Test PASSED
+TRACE:(2) LocatePointer Shell1  
+     SCRWARNING** : Can't move over object! Will ignore xisMovePointerTo()
+TRACE:(3) Exit
+Exiting Test...Please Standby...

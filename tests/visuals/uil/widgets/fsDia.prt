@@ -1,0 +1,87 @@
+# $XConsortium: fsDia.prt /main/3 1995/07/19 20:49:20 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+/*********************************************************/
+---- The uid file to be opened is fsDia.uid ---- 
+/*********************************************************/
+
+TRACE:(1) CompareVisual File_Selection_Dialog 
+TRACE:(2) LocatePointer File_Selection_Dialog RHelpButton 
+TRACE:(3) ClickMB Btn1 
+
+/*********************************************************/
+---- helpCallback callback made ----
+
+---- Reason was XmCR_HELP ----
+/*********************************************************/
+
+TRACE:(4) LocatePointer File_Selection_Dialog RFilterButton 
+TRACE:(5) ClickMB Btn1 
+TRACE:(6) CompareVisual File_Selection_Dialog 
+TRACE:(7) LocatePointer File_Selection_Dialog RFileListHorizScrollBarUpOrLeftArrow 
+TRACE:(8) ClickMB Btn1 
+TRACE:(9) CompareVisual File_Selection_Dialog 
+TRACE:(10) LocatePointer File_Selection_Dialog RFileListHorizScrollBarSlider 
+TRACE:(11) DragSliderValue Right Max 
+TRACE:(12) DragSliderValue Left Min 
+TRACE:(13) CompareVisual File_Selection_Dialog 
+TRACE:(14) LocatePointer File_Selection_Dialog RFileListVertScrollBarUpOrLeftArrow 
+TRACE:(15) ClickMB Btn1 
+TRACE:(16) CompareVisual File_Selection_Dialog 
+TRACE:(17) LocatePointer File_Selection_Dialog RFileListVertScrollBarSlider 
+TRACE:(18) DragSliderValue Up Min 
+TRACE:(19) DragSliderValue Down Max 
+TRACE:(20) CompareVisual File_Selection_Dialog 
+TRACE:(21) LocatePointer File_Selection_Dialog RDirListHorizScrollBarDownOrRightArrow 
+TRACE:(22) ClickMB Btn1 
+TRACE:(23) CompareVisual File_Selection_Dialog 
+TRACE:(24) LocatePointer File_Selection_Dialog RDirListHorizScrollBarSlider 
+TRACE:(25) DragSliderValue Right Max 
+TRACE:(26) DragSliderValue Left Min 
+TRACE:(27) CompareVisual File_Selection_Dialog 
+TRACE:(28) LocatePointer File_Selection_Dialog RDirListVertScrollBarDownOrRightArrow 
+TRACE:(29) ClickMB Btn1 
+TRACE:(30) CompareVisual File_Selection_Dialog 
+TRACE:(31) LocatePointer File_Selection_Dialog RDirListVertScrollBarSlider 
+TRACE:(32) DragSliderValue Down Max 
+TRACE:(33) DragSliderValue Up Min 
+TRACE:(34) CompareVisual File_Selection_Dialog 
+TRACE:(35) LocatePointer File_Selection_Dialog ROkButton 
+TRACE:(36) ClickMB Btn1 
+TRACE:(37) CompareVisual File_Selection_Dialog 
+TRACE:(38) Exit
+Exiting Test...Please Standby...

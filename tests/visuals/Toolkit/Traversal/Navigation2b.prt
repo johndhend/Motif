@@ -1,0 +1,88 @@
+# $XConsortium: Navigation2b.prt /main/3 1995/07/19 20:38:36 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) WindowFocus Shell1
+TRACE:(2) LocatePointer Green1  
+TRACE:(3) ClickMB Btn1 
+Focus on Green1
+TRACE:(4) CompareVisual Form2 
+TRACE:(5) ClickKey KSpace
+Focus on Green2
+TRACE:(6) ClickKey KSpace
+Focus on Green3
+TRACE:(7) ClickKey KSpace
+Focus on Green4
+TRACE:(8) CompareVisual Form2 
+TRACE:(9) ClickKey KTab
+TRACE:(10) ClickKey KDown
+TRACE:(11) ClickKey KSpace
+Focus on Blue4
+TRACE:(12) CompareVisual Form1 
+TRACE:(13) LocatePointer Magenta6  
+TRACE:(14) ClickMB Btn1 
+Focus on Magenta6
+TRACE:(15) ClickKey KSpace
+Focus on Magenta7
+TRACE:(16) ClickKey KSpace
+Focus on Magenta8
+TRACE:(17) ClickKey KSpace
+Focus on Magenta9
+TRACE:(18) ClickKey KSpace
+Focus on Magenta1
+TRACE:(19) ClickKey KSpace
+Focus on Magenta2
+TRACE:(20) ClickKey KSpace
+Focus on Magenta3
+TRACE:(21) ClickKey KSpace
+Focus on Magenta4
+TRACE:(22) ClickKey KSpace
+Focus on Magenta5
+TRACE:(23) ClickKey KSpace
+Focus on Brown1
+TRACE:(24) CompareVisual Form1 
+TRACE:(25) ClickKey KTab
+TRACE:(26) ClickKey KTab
+TRACE:(27) ClickKey KTab
+TRACE:(28) ClickKey KTab
+TRACE:(29) ClickKey KTab
+TRACE:(30) ClickKey KTab
+TRACE:(31) ClickKey KTab
+TRACE:(32) ClickKey KTab
+TRACE:(33) ClickKey <Shift> KTab
+TRACE:(34) CompareVisual Form 
+TRACE:(35) Exit
+Exiting Test...Please Standby...

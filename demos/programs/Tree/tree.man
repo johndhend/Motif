@@ -1,0 +1,9 @@
+.TH TREE 1X "MOTIF" "\fBtree\fR 1" "Demonstration programs"
+.SH NAME
+tree \- tree demo
+.SH SYNOPSIS
+\fBtree\fR
+.SH DESCRIPTION
+Tree is a an is a heirarchial data/pixmap demo with many features.
+The \fBtree\fR is more than that of \fBeditres\fR(1) withholding it has no panner/slider.
+.LP

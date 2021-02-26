@@ -1,0 +1,125 @@
+/* $XConsortium: RIPushBGad1.dat /main/4 1995/07/17 10:20:59 drk $ */
+/*
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+ */
+/*
+ * HISTORY
+ */
+/* 
+ * Original History:
+ *
+ * Revision 1.2.4.3  1992/11/09  19:10:05  shobana
+ * 	   Moved test for CR 4891 elsewhere
+ * 	[1992/11/09  19:09:50  shobana]
+ *
+ * Revision 1.2.4.2  1992/11/02  18:02:36  shobana
+ * 	Added instruction for CR 4891
+ * 	[1992/11/02  18:02:11  shobana]
+ * 
+ * Revision 1.2.2.2  1992/03/17  20:44:05  yak
+ * 	Fixed rcsid
+ * 	[1992/03/17  20:43:47  yak]
+ * 
+ * Revision 1.2  1992/03/13  16:59:03  devsrc
+ * 	Converted to ODE
+ * 
+ */ 
+
+#) Double click on the button. You should see 'Armed' and 'Activated'
+   messages, followed by the number of click counts, and 'Disarmed'.
+   There should be two sets of these, one with click count of 1
+   and one with click count of 2 
+#) Perform the same actions, with these changes:
+     leave/enter between first arm and disarm then click again
+     arm, wait several seconds, then disarm and click again. 
+C)
+
+
+#) Double click again on the button.  This time you should see 
+   'Armed' and 'Activated' messages, followed by a click count of 1,
+   and 'Disarmed'.  There should only be one set of these for every
+   multi click made.
+
+C)
+
+#) A pushbutton gadget labeled 'Push Gadget Here' should appear. 
+#) Arm the pushbutton gadget (press and hold MB1 on pushbutton gadget).
+   The gadget should appear to be pressed in and 
+   \"PushButtonGadget Armed\" should appear in the term window. 
+#) Release MB1. The gadget should appear popped out and
+   \"PushButtonGadget Activated\" and \"PushButtonGadget Disarmed\" should
+   appear in the term window. 
+#) Move, Resize, Iconify, and Normalize the client window. 
+
+C)
+
+#) The client window should have changed size and should contain the
+   image of the GNU appear in the pushbutton gadget.
+#) Arm the pushbutton gadget (press and hold MB1 on pushbutton gadget).
+   The gadget should appear to be pressed in and 
+   \"PushButtonGadget Armed\" should appear in the term window. 
+#) Release MB1. The gadget should appear popped out and
+   \"PushButtonGadget Activated\" and \"PushButtonGadget Disarmed\" should
+   appear in the term window. 
+C)
+
+#) The margin around the GNU pixmap should be 1 mm.
+#) Arm the pushbutton gadget (press and hold MB1 on pushbutton gadget).
+   The margin should change color and 
+   \"PushButtonGadget Armed\" should appear in the term window. 
+#) Move the pointer out of the client window. The margin
+   should revert back to the original color. 
+#) Move the pointer back into the window. The margin
+   should change color. 
+#) Move the pointer out of the window. The margin
+   should revert back to the original colors. 
+#) Release MB1. \"PushButtonGadget Disarmed\" should
+   appear in the term window. 
+#) Move the client window so it partially obscures the term window. 
+#) Raise the term window. 
+#) Raise the client window. 
+C)
+#) The label: 'PBG Label' should appear in the pushbutton gadget.
+   The default shadow should appear around the pushbutton gadget.
+#) Arm the pushbutton gadget (press and hold MB1 on pushbutton gadget).
+   The gadget should appear to be pressed in. 
+#) Release MB1. The gadget should appear popped out. 
+C)
+#) The window should be resized. The new size will be reported in the
+   term window.
+
+C)
+   The gadget should be destroyed.
+E)

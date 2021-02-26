@@ -1,0 +1,112 @@
+# $XConsortium: CToggleBtn1.prt /main/3 1995/07/19 20:43:25 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+Toggle1 state = 0
+Toggle1 state = 1
+Toggle Callback Structure:
+    Reason:   XmCR_VALUE_CHANGED
+Toggle1 state = 0
+TRACE:(1) LocatePointer ToggleButton1  
+TRACE:(2) ClickMB Btn1 
+Toggle Callback Structure:
+    Reason:   XmCR_ARM
+Toggle Callback Structure:
+    Reason:   XmCR_VALUE_CHANGED
+Toggle Callback Structure:
+    Reason:   XmCR_DISARM
+TRACE:(3) CompareVisual ToggleButton1 
+TRACE:(4) PressMB Btn1 
+Toggle Callback Structure:
+    Reason:   XmCR_ARM
+TRACE:(5) LocatePointer ToggleButton1  Off
+TRACE:(6) ReleaseMB Btn1 
+Toggle Callback Structure:
+    Reason:   XmCR_DISARM
+TRACE:(7) CompareVisual ToggleButton1 
+TRACE:(8) LocatePointer ToggleButton1  
+TRACE:(9) ClickKey KSpace
+Toggle Callback Structure:
+    Reason:   XmCR_ARM
+Toggle Callback Structure:
+    Reason:   XmCR_VALUE_CHANGED
+Toggle Callback Structure:
+    Reason:   XmCR_DISARM
+TRACE:(10) CompareVisual ToggleButton1 
+TRACE:(11) ClickKey KSpace
+Toggle Callback Structure:
+    Reason:   XmCR_ARM
+Toggle Callback Structure:
+    Reason:   XmCR_VALUE_CHANGED
+Toggle Callback Structure:
+    Reason:   XmCR_DISARM
+TRACE:(12) CompareVisual ToggleButton1 
+TRACE:(13) Continue
+TRACE:(14) LocatePointer ToggleButton2  
+TRACE:(15) ClickMB Btn1 
+TRACE:(16) CompareVisual ToggleButton2 
+TRACE:(17) Continue
+TRACE:(18) LocatePointer ToggleButton3  
+TRACE:(19) CompareVisual ToggleButton3 
+TRACE:(20) ClickMB Btn1 
+TRACE:(21) CompareVisual ToggleButton3 
+TRACE:(22) Continue
+TRACE:(23) LocatePointer ToggleButton4  
+TRACE:(24) CompareVisual ToggleButton4 
+TRACE:(25) ClickMB Btn1 
+TRACE:(26) CompareVisual ToggleButton4 
+TRACE:(27) LocatePointer ToggleButton5  
+TRACE:(28) CompareVisual ToggleButton5 
+TRACE:(29) ClickMB Btn1 
+TRACE:(30) CompareVisual ToggleButton5 
+TRACE:(31) Continue
+TRACE:(32) LocatePointer ToggleButton6  
+TRACE:(33) CompareVisual ToggleButton6 
+TRACE:(34) ClickMB Btn1 
+TRACE:(35) CompareVisual ToggleButton6 
+TRACE:(36) ClickMB Btn1 
+TRACE:(37) CompareVisual ToggleButton6 
+TRACE:(38) Continue
+TRACE:(39) CompareVisual ToggleButton5 
+TRACE:(40) Continue
+TRACE:(41) CompareVisual ToggleButton5 
+TRACE:(42) Continue
+TRACE:(43) CompareVisual ToggleButton5 
+TRACE:(44) Continue
+TRACE:(45) CompareVisual ToggleButton5 
+TRACE:(46) Continue
+TRACE:(47) Exit
+Exiting Test...Please Standby...

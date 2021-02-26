@@ -1,0 +1,94 @@
+# $XConsortium: ScrollWin4.prt /main/3 1995/07/19 20:40:09 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) CompareVisual ScrolledWindow1 
+TRACE:(2) LocatePointer ScrolledWindow1 RVertScrollBarSlider 
+TRACE:(3) DragSliderValue Down Max 
+TRACE:(4) ClickKey <Shift> KTab
+TRACE:(5) ClickKey <Shift> KTab
+TRACE:(6) ClickKey KSelect
+TRACE:(7) ClickKey KDown
+TRACE:(8) ClickKey KSelect
+TRACE:(9) LocatePointer ScrolledWindow1 RHorizScrollBarSlider 
+TRACE:(10) DragSliderValue Right Max 
+TRACE:(11) Continue
+TRACE:(12) CompareVisual ScrolledWindow1 
+TRACE:(13) LocatePointer ScrolledWindow1 RVertScrollBarSlider 
+TRACE:(14) DragSliderValue Down 51 
+TRACE:(15) LocatePointer ArrowButton1  
+TRACE:(16) ClickMB Btn1 
+Activate Callback made for ArrowB1
+TRACE:(17) ClickKey <Shift> KTab
+TRACE:(18) ClickKey <Shift> KTab
+TRACE:(19) ClickKey <Shift> KTab
+TRACE:(20) ClickKey KBeginData
+TRACE:(21) ClickKey KEndData
+TRACE:(22) Continue
+TRACE:(23) CompareVisual ScrolledWindow1 
+TRACE:(24) LocatePointer ScrolledWindow1 RVertScrollBarSlider 
+TRACE:(25) DragSliderValue Down Max 
+TRACE:(26) Continue
+TRACE:(27) CompareVisual ScrolledWindow1 
+TRACE:(28) Continue
+TRACE:(29) CompareVisual ScrolledWindow1 
+TRACE:(30) LocatePointer ScrolledWindow1 RHorizScrollBarSlider 
+TRACE:(31) DragSliderValue Right Max 
+TRACE:(32) LocatePointer ScrolledWindow1 RVertScrollBarSlider 
+TRACE:(33) DragSliderValue Down Max 
+TRACE:(34) ClickKey <Shift> KTab
+TRACE:(35) ClickKey <Shift> KTab
+TRACE:(36) ClickKey KPageUp
+TRACE:(37) ClickKey KPageDown
+TRACE:(38) Continue
+TRACE:(39) CompareVisual ScrolledWindow1 
+TRACE:(40) LocatePointer ScrolledWindow1 RVertScrollBarSlider 
+TRACE:(41) DragSliderValue Down Max 
+TRACE:(42) DragSliderValue Up Min 
+TRACE:(43) Continue
+TRACE:(44) CompareVisual ScrolledWindow1 
+TRACE:(45) LocatePointer ScrolledWindow1 RVertScrollBarSlider 
+TRACE:(46) DragSliderValue Down Max 
+TRACE:(47) DragSliderValue Up Min 
+TRACE:(48) LocatePointer ScrolledWindow1 RHorizScrollBarSlider 
+TRACE:(49) DragSliderValue Right Max 
+TRACE:(50) DragSliderValue Left Min 
+TRACE:(51) Continue
+TRACE:(52) CompareVisual ScrolledWindow1 
+TRACE:(53) ClickKey KSelect
+TRACE:(54) ClickKey KDown
+TRACE:(55) ClickKey KSelect
+Exiting Test...Please Standby...

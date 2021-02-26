@@ -1,0 +1,30 @@
+#define TopLevelProject	Motif
+#define ProjectRulesFile	<Motif.rules>
+#define ProjectTmplFile	<Motif.tmpl>
+#define ProjectRoot	/usr/X11
+#define X11ProjectRoot	/usr/X11
+#define VirtualBindingsPath	/usr/X11/lib/X11/bindings
+#define ImportX11	YES
+#define USE_BYACC	NO
+#define NoMessageCatalog	YES
+#define ForceNormalLib	YES
+#define DebugLibXm	NO
+#define DebugLibMrm	NO
+#define DebugLibUil	NO
+#define LexLib	-lfl
+#define ExtraWidgets	YES
+#define OSBinaryFormat	[a.out]
+#define HasDlopen	YES
+#define HasPosixThreads	YES
+#define SharedLibraryLoadFlags	-shared
+#define ThreadsLibraries	-pthread
+#define PositionIndependentCFlags	-fpic
+#define LexCmd	lex -l
+#define YaccCmd	yacc -l
+#define CppCmd	cpp
+#define UnixCpp
+#define freeBSDmake	YES
+#define MacroIncludeFile <freeBSD12.cf>
+#define MacroFile freeBSD12.cf
+#define NO_XP
+#define ADD_PAN

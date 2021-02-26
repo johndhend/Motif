@@ -1,0 +1,90 @@
+# $XConsortium: PopupMenu4.scr /main/4 1995/07/17 20:27:51 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+# HISTORY
+
+# A pushbutton will appear, labelled "Test for XmNunpostBehavior".
+
+# XmNunpostBehavior is set to XmUNPOST_AND_REPLAY.
+
+# Post "Dog Cat Bird" by selecting MB2.  Now click MB2 in the pushbutton
+# area.  The menu should unpost and be reposted where the pointer is.
+
+# Try this several times and make sure the popupmenu gets reposted every
+# time.
+
+Continue
+
+# Now post "Pink Black Red" by clicking MB3 in the pushbutton area.  
+
+# Unpost the menu by clicking MB1 in the pushbutton area.
+
+# Post "Pink Black Red" by clicking MB3 in the pushbutton area.  Click
+# MB3 in the pushbutton area.  The menu should unpost and be reposted where
+# the pointer is.
+
+# Try this several times and make sure the popup menu gets reposted every
+# time.
+
+Continue
+
+# XmNunpostBehavior is set to XmUNPOST now.  
+
+# Post "Pink Black Red" by clicking  MB3.  Now select MB3 elsewhere in the
+# pushbutton area.  The menu should be unposted from its original position.
+# It should NOT be reposted again.
+
+# Post "Pink Black Red" by clicking MB3.  Now select MB1.  The menu should
+# be unposted.
+
+Continue
+
+# MB1 will now post "Pink Black Red" instead of MB3.
+
+# XmNunpostBehavior is set to XmUNPOST.
+
+# Post "Pink Black Red" by clicking on MB1.  Click MB1 elsewhere in the
+# pushbutton area.  "Pink Black Red" should  unpost and NOT be reposted.
+
+Continue
+
+# XmNunpostBehavior is set to XmUNPOST_AND_REPLAY.
+
+# Post "Pink Black Red" by clicking on MB1.  Click MB1 in a different part
+# of the pushbutton area.  The menu should  be unposted and reposted where the
+# pointer is. Unpost the menu.
+
+Continue
+Exit

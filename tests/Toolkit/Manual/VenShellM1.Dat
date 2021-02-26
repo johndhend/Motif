@@ -1,0 +1,46 @@
+
+#) There should be several messages on the stdout window that read
+   "Substructure Notify Event Handler (Junk) called."
+
+
+#) Click MB1 on PushButton1.  The PushButton should grow to 200x200.
+   There should be a two or three messages printed in the term window. 
+   The first will say "activatePB called."  The second (and the third, 
+   if present) should read "Substructure Notify Event Handler (Junk) called."
+
+
+#) Resize the client window slightly larger.  This should generate two
+   more of the "Substructure Notify..." messages.
+
+
+C)
+
+
+#) Click MB1 on PushButton1.  The "activatePB called." message should
+   appear in the term window, but none of the "Substructure Notify..."
+   messages. The PushButton should not change.
+
+C)
+
+#) Click MB1 on the window menu button in the top left corner of the shell
+   title bar.  The Size option should be available.  
+!)
+#) Lower the window menu and click MB1 on PushButton1.  This will cause
+   the shell to be unmapped and remapped.  Place the shell.
+!)
+#) Click MB1 on the window menu button again.  The Size option will no
+   longer be available.
+
+C)
+
+#) In the next 2 panels, results from a series of tests testing the fix to 
+   CR 1684 will be output on the term window. Before continuing, resize
+   the shell.  All tests should pass.
+C)
+
+#) Output from the first 4 tests.
+C) 
+
+#) Output from the next 5 tests.
+E)
+

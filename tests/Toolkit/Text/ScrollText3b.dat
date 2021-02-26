@@ -1,0 +1,67 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: ScrollText3b.dat /main/5 1995/07/13 19:24:05 drk $"
+*/
+#) Keyboard Navigation:
+
+@)    KLeft        -- move the cursor back one character (wraps)
+@)    KRight       -- move the cursor forward one character (wraps)
+@)    Ctrl KLeft   -- move the cursor to the beginning of the word
+@)    Ctrl KRight  -- move the cursor to the beginning of the
+                   following word
+
+@)    KUp          -- move the cursor up one line
+@)    KDown        -- move the cursor down one line
+@)    Ctrl KUp     -- move the cursor to the first non-blank
+                   character in the paragraph
+@)    Ctrl KDown   -- move the cursor to the first non-blank
+                   character in the following paragraph
+
+@)    KBeginLine   -- move the cursor to the beginning of the line
+@)    KEndLine     -- move the cursor to the end of the line
+@)    KBeginData   -- move the cursor to the beginning of the file
+@)    KEndData     -- move the cursor to the end of the file
+
+#) In normal mode, the previous navigation operations clear the current
+selection, and set the insertion point at the cursor position.  The
+cursor is shown as an I-beam.
+#) In add mode, the insertion point and the selection remain unchanged during
+navigation operations.  The cursor is shown as a stippled I-beam.
+E)

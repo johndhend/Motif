@@ -1,0 +1,158 @@
+# $XConsortium: Navigation6.prt /main/3 1995/07/19 20:39:10 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) LocatePointer bb  
+TRACE:(2) WindowRaise bb
+TRACE:(3) CompareVisual bb 
+TRACE:(4) ClickKey KTab
+TRACE:(5) ClickKey KTab
+TRACE:(6) ClickKey KTab
+TRACE:(7) ClickKey KTab
+TRACE:(8) CompareVisual btn1 
+TRACE:(9) LocatePointer toggle32  
+TRACE:(10) ClickMB Btn1 
+ToggleG Callback Structure:
+    Reason:   XmCR_ARM
+ToggleG Callback Structure:
+    Reason:   XmCR_VALUE_CHANGED
+ToggleG Callback Structure:
+    Reason:   XmCR_DISARM
+TRACE:(11) Continue
+TRACE:(12) LocatePointer bb  
+TRACE:(13) WindowRaise bb
+TRACE:(14) CompareVisual btn42 
+TRACE:(15) Continue
+TRACE:(16) LocatePointer bb  
+TRACE:(17) WindowRaise bb
+TRACE:(18) CompareVisual btn1 
+TRACE:(19) Continue
+1: You didn't guess the password.
+TRACE:(20) WindowMove InstructionBox 700 5
+TRACE:(21) WindowRaise bb
+TRACE:(22) LocatePointer text1  
+TRACE:(23) InputString "random"
+TRACE:(24) ClickKey KTab
+2: You didn't guess the password.
+TRACE:(25) CompareVisual text1 
+TRACE:(26) Wait 5
+TRACE:(27) LocatePointer text1  
+TRACE:(28) ClickMB Btn1 2
+TRACE:(29) InputString "meow"
+TRACE:(30) ClickKey KTab
+TRACE:(31) CompareVisual text1 
+TRACE:(32) Wait 5
+TRACE:(33) Continue
+TRACE:(34) WindowRaise bb
+TRACE:(35) LocatePointer btn42  
+TRACE:(36) ClickMB Btn1 
+TRACE:(37) CompareVisual text1 
+TRACE:(38) LocatePointer text1  
+TRACE:(39) ClickMB Btn1 2
+TRACE:(40) InputString "insensitive"
+TRACE:(41) CompareVisual text1 
+TRACE:(42) ClickKey KTab
+3: You didn't guess the password.
+TRACE:(43) CompareVisual Form1 
+TRACE:(44) LocatePointer text1  
+TRACE:(45) ClickMB Btn1 
+TRACE:(46) CompareVisual Form1 
+TRACE:(47) Continue
+TRACE:(48) WindowRaise bb
+TRACE:(49) LocatePointer text2  Down
+TRACE:(50) ClickMB Btn1 
+TRACE:(51) CompareVisual Form1 
+TRACE:(52) LocatePointer text2  
+TRACE:(53) ClickMB Btn1 
+TRACE:(54) LocatePointer text1  
+TRACE:(55) ClickMB Btn1 
+TRACE:(56) ClickKey KReturn
+TRACE:(57) CompareVisual Form1 
+TRACE:(58) Continue
+text1 is sensitive
+TRACE:(59) WindowRaise bb
+TRACE:(60) LocatePointer Form1  
+     SCRWARNING** : Can't move over object! Will ignore xisMovePointerTo()
+TRACE:(61) CompareVisual Form1 
+TRACE:(62) LocatePointer text1  
+TRACE:(63) ClickMB Btn1 
+4: You didn't guess the password.
+Warning: focusoutCB: XmProcessTraversal failed
+TRACE:(64) ClickKey KTab
+5: You didn't guess the password.
+TRACE:(65) CompareVisual Form1 
+TRACE:(66) LocatePointer text4  
+TRACE:(67) ClickMB Btn1 
+6: You didn't guess the password.
+Warning: focusoutCB: XmProcessTraversal failed
+TRACE:(68) Wait 5
+TRACE:(69) LocatePointer text2  
+TRACE:(70) ClickMB Btn1 
+Warning: focusoutCB: XmProcessTraversal failed
+TRACE:(71) Wait 5
+TRACE:(72) LocatePointer text1  
+TRACE:(73) ClickMB Btn1 
+7: You didn't guess the password.
+Warning: focusoutCB: XmProcessTraversal failed
+TRACE:(74) LocatePointer text2  
+TRACE:(75) ClickMB Btn1 
+8: You didn't guess the password.
+Warning: focusoutCB: XmProcessTraversal failed
+TRACE:(76) CompareVisual Form1 
+TRACE:(77) InputString "foo"
+TRACE:(78) LocatePointer text4  
+TRACE:(79) ClickMB Btn1 
+9: You didn't guess the password.
+Warning: focusoutCB: XmProcessTraversal failed
+TRACE:(80) InputString "bar"
+TRACE:(81) LocatePointer text1  
+TRACE:(82) ClickMB Btn1 
+Warning: focusoutCB: XmProcessTraversal failed
+TRACE:(83) InputString " moo"
+TRACE:(84) LocatePointer text2  
+TRACE:(85) ClickMB Btn1 3
+10: You didn't guess the password.
+Warning: focusoutCB: XmProcessTraversal failed
+TRACE:(86) ClickKey KDelete
+TRACE:(87) InputString "hello"
+TRACE:(88) CompareVisual Form1 
+TRACE:(89) LocatePointer InstructionBox  
+11: You didn't guess the password.
+TRACE:(90) LocatePointer bb  
+TRACE:(91) CompareVisual Form1 
+TRACE:(92) Exit
+12: You didn't guess the password.
+Exiting Test...Please Standby...

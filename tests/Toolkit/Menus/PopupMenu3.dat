@@ -1,0 +1,77 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: PopupMenu3.dat /main/5 1995/07/13 18:52:30 drk $"
+*/
+
+#) A client containing the label \"Press MB3 to dismiss PopupMenu\"
+   will appear.  Below this window, a PopupMenu labeled \"Menu1\"
+   will appear.
+
+#) Place the pointer in \"PushButton1\".  \"PushButton1\" will
+   appear raised.
+
+#) Place the pointer in \"Toggle1\".  \"Toggle1\" will appear
+   raised.
+
+#) Click MB3.  The PopupMenu will disappear.
+
+C)
+
+#) The XToolkit warning
+           \"Widget hierarchy not appropriate for this XmRowColumnType: 
+	defaulting to WorkArea\"
+   will appear in the xterm window.  The client window will now
+   contain the label \"Menu2\", a Separator, a PushButton and a
+   ToggleButton.  \"PushButton2\" will appear raised.
+
+C)
+
+#) A Bulletin Board will appear as a child of the shell.  It will contain
+   a PushButton which has a PopupMenu associated with it.
+
+#) Use Mouse Button 3 to activate the PopupMenu.  \"PostPopup\" should 
+   appear in the terminal window. 
+C)
+
+
+#) The popup should be destroyed.
+ No errors should appear in the terminal window.
+
+E)

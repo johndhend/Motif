@@ -1,0 +1,11 @@
+#) A client with a list should appear. The list's background should
+   be white and there should be 9 items in the it.
+#) The highlight color of List should be green.
+#) Click on one item in the list. The item should highlight
+   (reverse colors).
+#) Click on another item. The item should highlight.
+#) Click Pass or Fail to have the highlight color change to red.
+C)
+#) Move the pointer into the List widget. The highlight color of the
+  list widget should have changed to red.
+E)

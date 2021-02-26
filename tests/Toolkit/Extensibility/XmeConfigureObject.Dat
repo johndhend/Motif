@@ -1,0 +1,67 @@
+
+	This test confirms the functionality of the XmeConfigureObject
+	Extensibility function.  You will need to be aware of the changes 
+	of the widget between test cases so please look at the widget
+	before continuing to the next case.
+#)
+	The first case checks that a push button widget string is created and 
+	displayed.  The string displayed on the window should read
+	"Widget".
+
+#)	Make sure that no error messages are printed in 
+	the xterm window.
+C)
+	This test confirms that the positional values may be set properly
+	for the child widget.  Make sure that the widget has moved since
+	the previous test case.
+
+#)	Make sure that no error messages are printed in 
+	the xterm window.
+
+C)
+	This test confirms that the width of the border may be updated.  Make
+	sure that the border has increased in size.
+
+#)	Make sure that no error messages are printed in 
+	the xterm window.
+C)
+	This test confirms that the overall size of the widget may be 
+	updated. (NOTE the border width has been reset)
+
+#)	Make sure that no error messages are printed in 
+	the xterm window.
+C)
+	This test confirms the functionality of the XmeConfigureObject
+	Extensibility function on gadgets.  Again, you will need to be
+	aware of the changes of the widget between test cases so please
+	look at the gadget before continuing to the next case.
+#)
+	The first case checks that a push button widget string is created and 
+	displayed.  The string displayed on the window should read
+	"Gadget".
+
+#)	Make sure that no error messages are printed in 
+	the xterm window.
+C)
+	This test confirms that the positional values may be set properly
+	for the child gadget.  Make sure that the gadget has moved since
+	the previous test case.
+
+#)	Make sure that no error messages are printed in the xterm window.
+
+C)
+	This test confirms that the width of the border may be updated.  Make
+	sure that the border has increased in size.
+
+#)	Make sure that no error messages are printed in the xterm window.
+
+C)
+	This test confirms that the overall size of the gadget may be 
+	updated. (NOTE the border width has been reset)
+
+#)	Make sure that no error messages are printed in the xterm window.
+
+C)
+	 Press Exit to end the test.  
+         Goodbye.
+E)

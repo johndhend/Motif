@@ -1,0 +1,97 @@
+# $XConsortium: CScrollText1.prt /main/3 1995/07/19 20:42:24 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) LocatePointer Text1  
+TRACE:(2) ClickKey <Shift> KPageDown
+TRACE:(3) CompareVisual Text1 
+TRACE:(4) ClickKey <Shift> KPageDown
+TRACE:(5) CompareVisual Text1 
+TRACE:(6) Continue
+TRACE:(7) LocatePointer Text1  
+TRACE:(8) ClickKey KHelp
+TRACE:(9) CompareVisual info_box 
+TRACE:(10) LocatePointer info_box ROkButton 
+TRACE:(11) ClickMB Btn1 
+TRACE:(12) Continue
+TRACE:(13) LocatePointer Text1  
+TRACE:(14) ClickMB Btn1 
+TRACE:(15) ClickKey KEndData
+TRACE:(16) ClickKey KReturn
+TRACE:(17) InputString "line 1"
+TRACE:(18) ClickKey KReturn
+TRACE:(19) InputString "line 2"
+TRACE:(20) ClickKey KReturn
+TRACE:(21) InputString "line 3"
+TRACE:(22) ClickKey KReturn
+TRACE:(23) InputString "line 4"
+TRACE:(24) ClickKey KReturn
+TRACE:(25) InputString "line 5"
+TRACE:(26) ClickKey KReturn
+TRACE:(27) InputString "line 6"
+TRACE:(28) ClickKey KReturn
+TRACE:(29) InputString "line 7"
+TRACE:(30) ClickKey KReturn
+TRACE:(31) InputString "line 8"
+TRACE:(32) ClickKey KReturn
+TRACE:(33) InputString "line 9"
+TRACE:(34) ClickKey KReturn
+TRACE:(35) InputString "line 10"
+TRACE:(36) CompareVisual Text1 
+TRACE:(37) WindowIconify Shell1
+TRACE:(38) WindowDeiconify Shell1
+TRACE:(39) CompareVisual Text1 
+TRACE:(40) Continue
+TRACE:(41) CompareVisual Text1 
+TRACE:(42) LocatePointer Text1 RTextChar 11
+TRACE:(43) ClickMB Btn1 
+TRACE:(44) InputString "   "
+TRACE:(45) CompareVisual Text1 
+TRACE:(46) Continue
+TRACE:(47) CompareVisual BBoard1 
+TRACE:(48) LocatePointer ToggleB1  
+TRACE:(49) ClickMB Btn1 
+TRACE:(50) CompareVisual BBoard1 
+TRACE:(51) LocatePointer Text2 RVertScrollBarSlider 
+TRACE:(52) DragSliderValue Down Max 
+TRACE:(53) CompareVisual BBoard1 
+TRACE:(54) DragSliderValue Up Min 
+TRACE:(55) CompareVisual BBoard1 
+TRACE:(56) LocatePointer ToggleB1  
+TRACE:(57) ClickMB Btn1 
+TRACE:(58) CompareVisual BBoard1 
+TRACE:(59) Exit
+Exiting Test...Please Standby...

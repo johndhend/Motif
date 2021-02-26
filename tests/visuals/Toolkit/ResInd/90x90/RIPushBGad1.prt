@@ -1,0 +1,145 @@
+# $XConsortium: RIPushBGad1.prt /main/3 1995/07/19 20:28:27 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) LocatePointer PBGadget  
+TRACE:(2) ClickMB Btn1 2
+PushButtonGadget Armed
+PushButtonGadget Activated
+Number of clicks is 1
+*********************
+PushButtonGadget Disarmed
+*********************
+PushButtonGadget Armed
+PushButtonGadget Activated
+Number of clicks is 2
+*********************
+PushButtonGadget Disarmed
+*********************
+TRACE:(3) LocatePointer PBGadget  
+TRACE:(4) PressMB Btn1 
+PushButtonGadget Armed
+TRACE:(5) LocatePointer PBGadget  Off
+TRACE:(6) LocatePointer PBGadget  
+TRACE:(7) ReleaseMB Btn1 
+PushButtonGadget Activated
+Number of clicks is 1
+*********************
+PushButtonGadget Disarmed
+*********************
+TRACE:(8) ClickMB Btn1 
+PushButtonGadget Armed
+PushButtonGadget Activated
+Number of clicks is 1
+*********************
+PushButtonGadget Disarmed
+*********************
+TRACE:(9) PressMB Btn1 
+PushButtonGadget Armed
+TRACE:(10) System sleep 3 
+TRACE:(11) ReleaseMB Btn1 
+PushButtonGadget Activated
+Number of clicks is 2
+*********************
+PushButtonGadget Disarmed
+*********************
+TRACE:(12) ClickMB Btn1 
+PushButtonGadget Armed
+PushButtonGadget Activated
+Number of clicks is 3
+*********************
+PushButtonGadget Disarmed
+*********************
+TRACE:(13) Continue
+TRACE:(14) LocatePointer PBGadget  
+TRACE:(15) ClickMB Btn1 2
+PushButtonGadget Armed
+PushButtonGadget Activated
+Number of clicks is 1
+*********************
+PushButtonGadget Disarmed
+*********************
+TRACE:(16) Continue
+TRACE:(17) LocatePointer PBGadget  
+TRACE:(18) CompareVisual PBGadget 
+TRACE:(19) PressMB Btn1 
+PushButtonGadget Armed
+TRACE:(20) CompareVisual PBGadget 
+TRACE:(21) ReleaseMB Btn1 
+PushButtonGadget Activated
+PushButtonGadget Disarmed
+*********************
+TRACE:(22) CompareVisual PBGadget 
+TRACE:(23) WindowMove Shell1 100 100
+TRACE:(24) WindowResize Shell1 SouthEast 150 150
+TRACE:(25) WindowIconify Shell1
+TRACE:(26) WindowDeiconify Shell1
+TRACE:(27) Continue
+TRACE:(28) CompareVisual PBGadget 
+TRACE:(29) LocatePointer PBGadget  
+TRACE:(30) PressMB Btn1 
+PushButtonGadget Armed
+TRACE:(31) ReleaseMB Btn1 
+PushButtonGadget Activated
+PushButtonGadget Disarmed
+*********************
+TRACE:(32) Continue
+TRACE:(33) CompareVisual PBGadget 
+TRACE:(34) LocatePointer PBGadget  
+TRACE:(35) PressMB Btn1 
+PushButtonGadget Armed
+TRACE:(36) LocatePointer PBGadget  Off
+TRACE:(37) LocatePointer PBGadget  
+TRACE:(38) LocatePointer PBGadget  Off
+TRACE:(39) ReleaseMB Btn1 
+PushButtonGadget Disarmed
+*********************
+TRACE:(40) Continue
+TRACE:(41) CompareVisual PBGadget 
+TRACE:(42) LocatePointer PBGadget  
+TRACE:(43) PressMB Btn1 
+PushButtonGadget Armed
+TRACE:(44) CompareVisual PBGadget 
+TRACE:(45) ReleaseMB Btn1 
+PushButtonGadget Activated
+PushButtonGadget Disarmed
+*********************
+TRACE:(46) CompareVisual PBGadget 
+TRACE:(47) Continue
+PBG width and height are : 90, 35
+TRACE:(48) Continue
+TRACE:(49) Exit
+Exiting Test...Please Standby...

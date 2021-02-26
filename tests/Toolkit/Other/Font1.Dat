@@ -1,0 +1,37 @@
+#) A window should appear with several labels.  These labels were created
+   with the font that they name.  For example, label 6x10 was created
+   with the 6x10 font.  This window should be used for comparisons during
+   this test.
+C)
+
+#) A bulletin board should appear with several children.  The labels of the
+children indicate which font they should appear with.
+#) Verify that the fonts are correct.
+C)
+
+#) A bulletin board should appear with several children.  The labels of the
+children indicate which font they should appear with.
+#) Verify that the fonts are correct.
+C)
+
+#) A new child has been added to the bulletin board.  The label of the push
+  button should indicate that it's font is 8x13bold.
+#) You may need to resize the bulletin board to see the new child.
+C)
+
+#) A Dialog Shell will appear with a label indicating there is a popupMenu
+   associated with it. 
+#) Press MB3.  A PopupMenu should appear.  The Button children should be
+   in font 10x20.  The label child should be in font 8x13bold.
+
+C)
+
+#) A menu should appear in the top left corner of the screen.  The menu items
+should reflect the font which is described in their labels.
+C)
+
+#) A Dialog Shell will appear with children whose labels indicate the font
+   they should be displayed in.
+#) Verify the fonts are correct.
+C)
+E)

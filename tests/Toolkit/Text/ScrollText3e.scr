@@ -1,0 +1,601 @@
+# $XConsortium: ScrollText3e.scr /main/5 1995/07/17 20:40:49 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+#  #) Clipboard and Primary Transfer:
+#  
+#  @)    Ctrl KInsert       -- copy primary selection to clipboard
+#  @)    KCopy              -- copy primary selection to clipboard
+#  @)    Shift KDelete      -- cut primary selection to clipboard
+#  @)    KCut               -- cut primary selection to clipboard
+#  @)    Shift KInsert      -- paste clipboard to insertion cursor
+#  @)    KPaste             -- paste clipboard to insertion cursor
+#   
+LocatePointer Text1 RTextChar 5
+ClickMB Btn1 2
+ClickKey <Ctrl> KInsert
+CompareVisual Text1
+LocatePointer Text1 RTextChar 20
+ClickMB Btn1
+ClickKey <Shift> KInsert
+CompareVisual Text1
+LocatePointer Text4 RTextChar 20
+ClickMB Btn1
+ClickKey <Shift> KInsert
+CompareVisual Text1
+CompareVisual Text4
+
+LocatePointer Text1 RTextChar 5
+ClickMB Btn1 2
+ClickKey KCopy
+CompareVisual Text1
+LocatePointer Text1 RTextChar 18
+ClickMB Btn1
+ClickKey KPaste
+CompareVisual Text1
+LocatePointer Text4 RTextChar 18
+ClickMB Btn1
+ClickKey KPaste
+CompareVisual Text1
+CompareVisual Text4
+
+LocatePointer Text1 RTextChar 5
+DragComponent Text1 RTextChar 12
+ClickKey <Shift> KDelete
+CompareVisual Text1
+LocatePointer Text1 RTextChar 16
+ClickMB Btn1
+ClickKey KPaste
+CompareVisual Text1
+LocatePointer Text4 RTextChar 16
+ClickMB Btn1
+ClickKey KPaste
+CompareVisual Text1
+CompareVisual Text4
+
+LocatePointer Text1 RTextChar 5
+DragComponent Text1 RTextChar 12
+ClickKey KCut
+CompareVisual Text1
+LocatePointer Text1 RTextChar 14
+ClickMB Btn1
+ClickKey KPaste
+CompareVisual Text1
+LocatePointer Text4 RTextChar 14
+ClickMB Btn1
+ClickKey KPaste
+CompareVisual Text1
+CompareVisual Text4
+
+LocatePointer Text2 RTextChar 5
+ClickMB Btn1 2
+ClickKey <Ctrl> KInsert
+CompareVisual Text2
+LocatePointer Text2 RTextChar 20
+ClickMB Btn1
+ClickKey <Shift> KInsert
+CompareVisual Text2
+
+LocatePointer Text2 RTextChar 5
+ClickMB Btn1 2
+ClickKey KCopy
+CompareVisual Text2
+LocatePointer Text2 RTextChar 18
+ClickMB Btn1
+ClickKey KPaste
+CompareVisual Text2
+
+LocatePointer Text2 RTextChar 5
+DragComponent Text2 RTextChar 12
+ClickKey <Shift> KDelete
+CompareVisual Text2
+LocatePointer Text2 RTextChar 16
+ClickMB Btn1
+ClickKey KPaste
+CompareVisual Text2
+
+LocatePointer Text2 RTextChar 5
+DragComponent Text2 RTextChar 12
+ClickKey KCut
+CompareVisual Text2
+LocatePointer Text2 RTextChar 14
+ClickMB Btn1
+ClickKey KPaste
+CompareVisual Text2
+
+LocatePointer Text3 RTextChar 5
+ClickMB Btn1 2
+ClickKey <Ctrl> KInsert
+CompareVisual Text3
+LocatePointer Text3 RTextChar 20
+ClickMB Btn1
+ClickKey <Shift> KInsert
+CompareVisual Text3
+
+LocatePointer Text3 RTextChar 5
+ClickMB Btn1 2
+ClickKey KCopy
+CompareVisual Text3
+LocatePointer Text3 RTextChar 18
+ClickMB Btn1
+ClickKey KPaste
+CompareVisual Text3
+
+LocatePointer Text3 RTextChar 5
+DragComponent Text3 RTextChar 12
+ClickKey <Shift> KDelete
+CompareVisual Text3
+LocatePointer Text3 RTextChar 16
+ClickMB Btn1
+ClickKey KPaste
+CompareVisual Text3
+
+LocatePointer Text3 RTextChar 5
+DragComponent Text3 RTextChar 12
+ClickKey KCut
+CompareVisual Text3
+LocatePointer Text3 RTextChar 14
+ClickMB Btn1
+ClickKey KPaste
+CompareVisual Text3
+
+## Reset Strings to original value
+LocatePointer PushB1
+ClickMB Btn1
+
+LocatePointer Text4 RTextChar 5
+ClickMB Btn1 2
+ClickKey <Ctrl> KInsert
+CompareVisual Text4
+LocatePointer Text4 RTextChar 20
+ClickMB Btn1
+ClickKey <Shift> KInsert
+CompareVisual Text4
+LocatePointer Text2 RTextChar 20
+ClickMB Btn1
+ClickKey <Shift> KInsert
+CompareVisual Text4
+CompareVisual Text2
+
+LocatePointer Text4 RTextChar 5
+ClickMB Btn1 2
+ClickKey KCopy
+CompareVisual Text4
+LocatePointer Text4 RTextChar 18
+ClickMB Btn1
+ClickKey KPaste
+CompareVisual Text4
+LocatePointer Text2 RTextChar 18
+ClickMB Btn1
+ClickKey KPaste
+CompareVisual Text4
+CompareVisual Text2
+
+LocatePointer Text4 RTextChar 5
+DragComponent Text4 RTextChar 12
+ClickKey <Shift> KDelete
+CompareVisual Text4
+LocatePointer Text4 RTextChar 16
+ClickMB Btn1
+ClickKey KPaste
+CompareVisual Text4
+LocatePointer Text2 RTextChar 16
+ClickMB Btn1
+ClickKey KPaste
+CompareVisual Text4
+CompareVisual Text2
+
+LocatePointer Text4 RTextChar 5
+DragComponent Text4 RTextChar 12
+ClickKey KCut
+CompareVisual Text4
+LocatePointer Text4 RTextChar 14
+ClickMB Btn1
+ClickKey KPaste
+CompareVisual Text4
+LocatePointer Text2 RTextChar 14
+ClickMB Btn1
+ClickKey KPaste
+CompareVisual Text4
+CompareVisual Text2
+
+#  @)    Btn2 Click         -- copy primary selection to pointer
+#  @)    Ctrl Btn2 Click    -- copy primary selection to pointer
+#  #ifdef	MOTIF1_1
+#  @)    MAlt Btn2 Click    -- cut primary selection to pointer
+#  #endif	MOTIF1_1
+#  #ifdef	MOTIF1_2
+#  @)    Shift Btn2 Click   -- cut primary selection to pointer
+#  #endif	MOTIF1_2
+## Reset Strings to original value
+LocatePointer PushB1
+ClickMB Btn1
+
+LocatePointer Text1 RTextChar 3
+DragComponent Text1 RTextChar 7
+LocatePointer Text1 RTextChar 18
+ClickMB Btn2
+CompareVisual Text1
+LocatePointer Text1 RTextChar 16
+ClickMB <Alt> Btn2
+CompareVisual Text1
+LocatePointer Text1 RTextChar 14
+ClickMB <Shift> Btn2
+CompareVisual Text1
+LocatePointer Text4 RTextChar 18
+ClickMB Btn2
+CompareVisual Text1
+CompareVisual Text4
+LocatePointer Text4 RTextChar 16
+ClickKey KPrimaryCut
+CompareVisual Text1
+CompareVisual Text4
+LocatePointer Text4 RTextChar 14
+ClickKey KPrimaryCut
+CompareVisual Text1
+CompareVisual Text4
+
+LocatePointer Text2 RTextChar 3
+DragComponent Text2 RTextChar 7
+LocatePointer Text2 RTextChar 18
+ClickMB Btn2
+CompareVisual Text2
+LocatePointer Text2 RTextChar 16
+ClickMB <Ctrl> Btn2
+CompareVisual Text2
+LocatePointer Text2 RTextChar 14
+ClickKey KPrimaryCut
+CompareVisual Text2
+
+LocatePointer Text3 RTextChar 3
+DragComponent Text3 RTextChar 7
+LocatePointer Text3 RTextChar 18
+ClickMB Btn2
+CompareVisual Text3
+LocatePointer Text3 RTextChar 16
+ClickMB <Ctrl> Btn2
+CompareVisual Text3
+LocatePointer Text3 RTextChar 14
+ClickKey KPrimaryCut
+CompareVisual Text3
+
+## Reset Strings to original value
+LocatePointer PushB1
+ClickMB Btn1
+
+LocatePointer Text4 RTextChar 3
+DragComponent Text4 RTextChar 7
+LocatePointer Text4 RTextChar 18
+ClickMB Btn2
+CompareVisual Text4
+## need to make another selection due to PIR 3768
+LocatePointer Text4 RTextChar 3
+DragComponent Text4 RTextChar 7
+## for PIR 3768
+LocatePointer Text4 RTextChar 16
+ClickMB <Ctrl> Btn2
+CompareVisual Text4
+## need to make another selection due to PIR 3768
+LocatePointer Text4 RTextChar 3
+DragComponent Text4 RTextChar 7
+## for PIR 3768
+LocatePointer Text4 RTextChar 14
+ClickKey KPrimaryCut
+CompareVisual Text4
+LocatePointer Text2 RTextChar 18
+ClickMB Btn2
+CompareVisual Text4
+CompareVisual Text2
+LocatePointer Text2 RTextChar 16
+ClickMB <Ctrl> Btn2
+CompareVisual Text4
+CompareVisual Text2
+LocatePointer Text2 RTextChar 14
+ClickKey KPrimaryCut
+CompareVisual Text4
+CompareVisual Text2
+
+#  @)    KPrimaryPaste      -- copy primary selection to cursor
+#  @)    Ctrl KPrimaryPaste -- copy primary selection to cursor
+#  @)    Alt Ctrl KInsert   -- copy primary selection to cursor
+#  @)    Alt KCopy          -- copy primary selection to cursor
+## Reset Strings to original value
+LocatePointer PushB1
+ClickMB Btn1
+
+## make a selection
+LocatePointer Text1 RTextChar 1
+ClickMB Btn1 2
+
+LocatePointer Text1 RTextChar 20
+ClickMB <Ctrl> Btn1
+ClickKey KPrimaryPaste
+CompareVisual Text1
+LocatePointer Text1 RTextChar 18
+ClickMB <Ctrl> Btn1
+ClickKey <Ctrl> KPrimaryPaste
+CompareVisual Text1
+LocatePointer Text1 RTextChar 16
+ClickMB <Ctrl> Btn1
+ClickKey <Meta> <Ctrl> KInsert
+CompareVisual Text1
+LocatePointer Text1 RTextChar 14
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> KCopy
+CompareVisual Text1
+LocatePointer Text4 RTextChar 20
+ClickMB <Ctrl> Btn1
+ClickKey KPrimaryPaste
+CompareVisual Text1
+CompareVisual Text4
+LocatePointer Text4 RTextChar 18
+ClickMB <Ctrl> Btn1
+ClickKey <Ctrl> KPrimaryPaste
+CompareVisual Text1
+CompareVisual Text4
+LocatePointer Text4 RTextChar 16
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> <Ctrl> KInsert
+CompareVisual Text1
+CompareVisual Text4
+LocatePointer Text4 RTextChar 14
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> KCopy
+CompareVisual Text1
+CompareVisual Text4
+
+## make a selection
+LocatePointer Text2 RTextChar 1
+ClickMB Btn1 2
+
+LocatePointer Text2 RTextChar 20
+ClickMB <Ctrl> Btn1
+ClickKey KPrimaryPaste
+CompareVisual Text2
+LocatePointer Text2 RTextChar 18
+ClickMB <Ctrl> Btn1
+ClickKey <Ctrl> KPrimaryPaste
+CompareVisual Text2
+LocatePointer Text2 RTextChar 16
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> <Ctrl> KInsert
+CompareVisual Text2
+LocatePointer Text2 RTextChar 14
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> KCopy
+CompareVisual Text2
+
+## make a selection
+LocatePointer Text3 RTextChar 1
+ClickMB Btn1 2
+
+LocatePointer Text3 RTextChar 20
+ClickMB <Ctrl> Btn1
+ClickKey KPrimaryPaste
+CompareVisual Text3
+LocatePointer Text3 RTextChar 18
+ClickMB <Ctrl> Btn1
+ClickKey <Ctrl> KPrimaryPaste
+CompareVisual Text3
+LocatePointer Text3 RTextChar 16
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> <Ctrl> KInsert
+CompareVisual Text3
+LocatePointer Text3 RTextChar 14
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> KCopy
+CompareVisual Text3
+
+## Reset Strings to original value
+LocatePointer PushB1
+ClickMB Btn1
+
+## make a selection
+LocatePointer Text4 RTextChar 1
+ClickMB Btn1 2
+
+LocatePointer Text4 RTextChar 20
+ClickMB <Ctrl> Btn1
+ClickKey KPrimaryPaste
+CompareVisual Text4
+LocatePointer Text4 RTextChar 18
+ClickMB <Ctrl> Btn1
+ClickKey <Ctrl> KPrimaryPaste
+CompareVisual Text4
+LocatePointer Text4 RTextChar 16
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> <Ctrl> KInsert
+CompareVisual Text4
+LocatePointer Text4 RTextChar 14
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> KCopy
+CompareVisual Text4
+LocatePointer Text2 RTextChar 20
+ClickMB <Ctrl> Btn1
+ClickKey KPrimaryPaste
+CompareVisual Text4
+CompareVisual Text2
+LocatePointer Text2 RTextChar 18
+ClickMB <Ctrl> Btn1
+ClickKey <Ctrl> KPrimaryPaste
+CompareVisual Text4
+CompareVisual Text2
+LocatePointer Text2 RTextChar 16
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> <Ctrl> KInsert
+CompareVisual Text4
+CompareVisual Text2
+LocatePointer Text2 RTextChar 14
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> KCopy
+CompareVisual Text4
+CompareVisual Text2
+
+#  @)    Alt KPrimaryPaste  -- cut primary selection to cursor
+#  @)    Alt Shift KDelete  -- cut primary selection to cursor
+#  @)    Alt KCut           -- cut primary selection to cursor
+#   
+## Reset Strings to original value
+LocatePointer PushB1
+ClickMB Btn1
+
+LocatePointer Text1 RTextChar 3
+DragComponent Text1 RTextChar 7
+LocatePointer Text1 RTextChar 20
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> KPrimaryPaste
+CompareVisual Text1
+LocatePointer Text4 RTextChar 20
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> KPrimaryPaste
+CompareVisual Text1
+CompareVisual Text4
+LocatePointer Text1 RTextChar 3
+DragComponent Text1 RTextChar 7
+LocatePointer Text1 RTextChar 18
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> <Shift> KDelete
+CompareVisual Text1
+CompareVisual Text4
+LocatePointer Text4 RTextChar 18
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> <Shift> KDelete
+CompareVisual Text1
+CompareVisual Text4
+LocatePointer Text1 RTextChar 3
+DragComponent Text1 RTextChar 7
+LocatePointer Text1 RTextChar 16
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> KCut
+CompareVisual Text1
+CompareVisual Text4
+LocatePointer Text4 RTextChar 16
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> KCut
+CompareVisual Text1
+CompareVisual Text4
+
+LocatePointer Text2 RTextChar 3
+DragComponent Text2 RTextChar 7
+LocatePointer Text2 RTextChar 20
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> KPrimaryPaste
+CompareVisual Text2
+LocatePointer Text2 RTextChar 3
+DragComponent Text2 RTextChar 7
+LocatePointer Text2 RTextChar 18
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> <Shift> KDelete
+CompareVisual Text2
+LocatePointer Text2 RTextChar 3
+DragComponent Text2 RTextChar 7
+LocatePointer Text2 RTextChar 16
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> KCut
+CompareVisual Text2
+
+LocatePointer Text3 RTextChar 3
+DragComponent Text3 RTextChar 7
+LocatePointer Text3 RTextChar 20
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> KPrimaryPaste
+CompareVisual Text3
+LocatePointer Text3 RTextChar 3
+DragComponent Text3 RTextChar 7
+LocatePointer Text3 RTextChar 18
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> <Shift> KDelete
+CompareVisual Text3
+LocatePointer Text3 RTextChar 3
+DragComponent Text3 RTextChar 7
+LocatePointer Text3 RTextChar 16
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> KCut
+CompareVisual Text3
+
+## Reset Strings to original value
+LocatePointer PushB1
+ClickMB Btn1
+
+LocatePointer Text4 RTextChar 3
+DragComponent Text4 RTextChar 7
+LocatePointer Text4 RTextChar 20
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> KPrimaryPaste
+CompareVisual Text4
+LocatePointer Text3 RTextChar 20
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> KPrimaryPaste
+CompareVisual Text4
+LocatePointer Text4 RTextChar 3
+DragComponent Text4 RTextChar 7
+LocatePointer Text4 RTextChar 18
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> <Shift> KDelete
+CompareVisual Text4
+LocatePointer Text3 RTextChar 18
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> <Shift> KDelete
+CompareVisual Text4
+CompareVisual Text3
+LocatePointer Text4 RTextChar 3
+DragComponent Text4 RTextChar 7
+LocatePointer Text4 RTextChar 16
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> KCut
+CompareVisual Text4
+CompareVisual Text3
+LocatePointer Text3 RTextChar 16
+ClickMB <Ctrl> Btn1
+ClickKey <Alt> KCut
+CompareVisual Text4
+CompareVisual Text3
+
+#  !)
+#  #) Try all the above with: 
+#  @)      - source and destination in same widget
+## Done above.
+#  @)      - source and destination in different widgets in same window
+## Done above.
+#  @)      - source and destination in different windows in same application
+## No Can Do!
+#  @)      - source and destination in different applications
+## No Can Do!
+#  C)
+Exit

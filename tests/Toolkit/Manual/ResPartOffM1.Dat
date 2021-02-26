@@ -1,0 +1,10 @@
+
+#) A client with a vertical scrollbar will appear. The scrollbar will
+   be contained in a form and attached on all sides. 
+#) The scrollbar will acutally be a new widget called foo which
+   is created using the Xm Toolkit function XmResolvePartOffsets.
+   Foo is a subclass of scrollbar, primitive and core. It inherits
+   most of it's resources from scrollbar. 
+#) Drag scrollbar slider up and down. Slider should move with drag. 
+#) Press MB1 in the down arrow. Slider should move downwards. 
+E)

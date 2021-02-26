@@ -1,0 +1,162 @@
+# $XConsortium: Text6.scr /main/6 1995/07/17 20:42:08 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+#  /* test case for PIR 3677 */
+#  @) The test window shows two text widgets in a Paned Window.
+#  Note that the Shell window size is 400W x 300H, and
+#  the top Text widget is one row high while the second fills the
+#  rest of the Shell window size.
+#  /* end of test case for PIR 3677 */
+CompareVisual Shell1
+
+
+# Give focus to the test client window. 
+#   The focus should be at the start of the text in Text1.
+# Press the Tab key twice. Focus should be in Text2.
+# Type the word 'The' and a space. The string should read \"The Sample Text2\".
+# After you press continue, the test will verify the contents of 
+#  Text2 and print out an error message if CR xxxx is still present.
+
+LocatePointer Text1 RTextChar 0
+DragComponent Text1 RTextChar 4 Btn2
+ClickKey KTab
+ClickKey KTab
+InputString "The "
+Continue
+
+#) Check the results of the previous panel for an error message.
+#) If this test failed, the results for the 
+#   remainder of this test will most likely be corrupted. 
+#   You may wish to rerun the test and skip the MB2 Drag on Panel 1.
+
+Continue
+
+#  #) Move the pointer into the top text widget and click MB1.
+#     The insertion cursor should appear.
+
+LocatePointer Text1 RTextChar 5
+ClickMB Btn1
+
+#  #) Press the return key. The text should change to
+#     "The <Return> Key was pressed." and a message indicating the
+#     callback reason should appear in the stdout window.
+ClickKey KReturn
+CompareVisual Text1
+
+#  C)
+Continue
+
+#  #) Move the pointer into the bottom text widget and click MB1.
+#     The insertion cursor should appear.
+LocatePointer Text2 RTextChar 5
+ClickMB Btn1
+CompareVisual Text2
+
+#  #) Press the return key. A newline is inserted but the message should not
+#     change. 
+ClickKey KReturn
+CompareVisual Text2
+
+#  C)
+Continue
+
+#  #) Put the pointer into the bottom text widget and press <Ctrl> r.  The text
+#     in the bottom widget should change to "Changed the string.".
+#     (Note that the bottom text widget will not get a focus highlight or
+#     respond to any other keystrokes.  The only tranlation it currently
+#     recognizes is <Ctrl> r.)
+LocatePointer Text2 RTextChar 7
+ClickKey <Ctrl> Kr
+CompareVisual Text2
+
+#  C)
+Continue
+
+#  #) Click MB1 in the top text widget.
+LocatePointer Text1 RTextChar 5
+ClickMB Btn1
+
+#  /* test case for PIR 1772, PIR 1058 */
+#  #) Type some text.
+#     For each character typed, messages indicating the callback reasons
+#     should appear in the stdout window.
+#     You should see "XmCR_MODIFYING_TEXT_VALUE" before
+#     "XmCR_VALUE_CHANGED".
+InputString "new"
+
+#  #) Select text elsewhere in the text widget.
+#     Click MB2 to paste the text.
+#     Messages indicating the callback reasons should appear in the
+#     stdout window.
+#     You should see "XmCR_MODIFYING_TEXT_VALUE" before
+#     "XmCR_VALUE_CHANGED".
+#  /* end of test case for PIR 1772, PIR 1058 */
+LocatePointer Text1 RTextChar 10
+DragComponent Text1 RTextChar 15
+LocatePointer Text1 RTextChar 2
+ClickMB Btn2
+
+# C)
+Continue
+
+# /*  Begin CR 6141 */
+# Click MB1 on the pushbutton labelled \"Set String\" to add text into the text
+# widget.
+# Move the insertion cursor to position 3, which is immediately after the
+# word \"New\".
+# Click MB1 on the pushbutton labelled \"Insert\" which will insert new
+# text at position 3.
+# Verify that the insertion cursor moved to the end of the newly
+# inserted text.
+# /* End CR 6141 */
+LocatePointer SetStringPB
+ClickMB Btn1
+
+LocatePointer Text1 RTextChar 3
+ClickMB Btn1
+LocatePointer InsertStringPB
+ClickMB Btn1
+CompareVisual Text1
+
+# C)
+Continue
+
+#  E)
+Exit

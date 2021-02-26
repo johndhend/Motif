@@ -1,0 +1,392 @@
+# $XConsortium: ScrollText3d.scr /main/5 1995/07/17 20:40:43 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+#  #ifdef	MOTIF1_1
+#  #) Mouse-based primary selection:
+#  
+#  @)    BSelect Click -- moves cursor and anchor, deselect selection
+#                      if in the same widget, does not take ownership
+#                      of the primary selection
+#  
+#  @)    BSelect Drag  -- drags cursor, selects characters between press
+#                      and cursor, places anchor at press, cursor
+#                      at release, takes ownership of primary selection
+#  
+#  #endif	MOTIF1_1
+#  #ifdef	MOTIF1_2
+#  @)    BSelect Click -- moves cursor, deselect selection if in the
+#  		    same widget, does not take ownership of the
+#  		    primary selection
+#  
+#  @)    BSelect Drag  -- drags cursor, selects characters between press
+#                      and cursor, places cursor at release, takes
+#                      ownership of primary selection
+#  #endif	MOTIF1_2
+LocatePointer Text1 RTextChar 5
+ClickMB Btn1 2
+LocatePointer Text1 RTextChar 15
+ClickMB Btn1
+CompareVisual Text1
+
+LocatePointer Text2 RTextChar 5
+ClickMB Btn1 2
+LocatePointer Text2 RTextChar 15
+ClickMB Btn1
+CompareVisual Text2
+
+LocatePointer Text3 RTextChar 5
+ClickMB Btn1 2
+LocatePointer Text3 RTextChar 15
+ClickMB Btn1
+CompareVisual Text3
+
+LocatePointer Text4 RTextChar 5
+ClickMB Btn1 2
+LocatePointer Text4 RTextChar 15
+ClickMB Btn1
+CompareVisual Text4
+
+#  #ifdef	MOTIF1_1
+#  @)    Ctrl BSelect Click  -- moves cursor, leaves anchor and primary
+#                            selection alone
+#  
+#  @)    Ctrl BSelect Drag   -- either no effect, or leaves cursor where
+#                            released
+#  #endif	MOTIF1_1
+#  #ifdef	MOTIF1_2
+#  @)    Ctrl BSelect Click  -- moves cursor, leaves primary selection
+#  		    untouched
+#  
+#  @)    Ctrl BSelect Drag   -- either no effect, or leaves cursor where
+#                      pressed
+#  #endif	MOTIF1_2
+
+LocatePointer Text1 RTextChar 5
+ClickMB Btn1 2
+LocatePointer Text1 RTextChar 15
+ClickMB <Ctrl> Btn1
+DragComponent Text1 RTextChar 10 <Ctrl> Btn1
+CompareVisual Text1
+
+LocatePointer Text2 RTextChar 5
+ClickMB Btn1 2
+LocatePointer Text2 RTextChar 15
+ClickMB <Ctrl> Btn1
+DragComponent Text2 RTextChar 10 <Ctrl> Btn1
+CompareVisual Text2
+
+LocatePointer Text3 RTextChar 5
+ClickMB Btn1 2
+LocatePointer Text3 RTextChar 15
+ClickMB <Ctrl> Btn1
+DragComponent Text3 RTextChar 10 <Ctrl> Btn1
+CompareVisual Text3
+
+LocatePointer Text4 RTextChar 5
+ClickMB Btn1 2
+LocatePointer Text4 RTextChar 15
+ClickMB <Ctrl> Btn1
+DragComponent Text4 RTextChar 10 <Ctrl> Btn1
+CompareVisual Text4
+
+#  #ifdef	MOTIF1_1
+#  @)    Shift BSelect Click -- moves the cursor as indicated, selects
+#                      the text between the anchor and the cursor,
+#                      takes ownership of primary selection
+#                      (Rebalances the anchor if necessary)
+#  #endif	MOTIF1_1
+#  #ifdef	MOTIF1_2
+#  @)    Shift BSelect Click -- moves cursor, selects the text between
+#  		    last cursor location and the cursor, takes
+#                      ownership of primary selection
+#  #endif	MOTIF1_2
+LocatePointer Text1 RTextChar 5
+ClickMB Btn1
+LocatePointer Text1 RTextChar 12
+ClickMB <Shift> Btn1
+CompareVisual Text1
+
+LocatePointer Text2 RTextChar 5
+ClickMB Btn1
+LocatePointer Text2 RTextChar 12
+ClickMB <Shift> Btn1
+CompareVisual Text2
+
+LocatePointer Text3 RTextChar 5
+ClickMB Btn1
+LocatePointer Text3 RTextChar 12
+ClickMB <Shift> Btn1
+CompareVisual Text3
+
+LocatePointer Text4 RTextChar 5
+ClickMB Btn1
+LocatePointer Text4 RTextChar 12
+ClickMB <Shift> Btn1
+CompareVisual Text4
+
+#  #ifdef	MOTIF1_1
+#  @)    Shift BSelect Drag  -- drags the cursor, selects the text
+#                            between the anchor and cursor
+#  #endif	MOTIF1_1
+#  #ifdef	MOTIF1_2
+#  @)    Shift BSelect Drag  -- drags the cursor, selects the text
+#                      between the last cursor location and cursor
+#  #endif	MOTIF1_2
+LocatePointer Text1 RTextChar 5
+DragComponent Text1 RTextChar 12
+DragComponent Text1 RTextChar 15 <Shift> Btn1
+CompareVisual Text1
+
+LocatePointer Text2 RTextChar 5
+DragComponent Text2 RTextChar 12
+DragComponent Text2 RTextChar 15 <Shift> Btn1
+CompareVisual Text2
+
+LocatePointer Text3 RTextChar 5
+DragComponent Text3 RTextChar 12
+DragComponent Text3 RTextChar 15 <Shift> Btn1
+CompareVisual Text3
+
+LocatePointer Text4 RTextChar 5
+DragComponent Text4 RTextChar 12
+DragComponent Text4 RTextChar 15 <Shift> Btn1
+CompareVisual Text4
+
+#  #ifdef	MOTIF1_1
+#  @)    BSelect(2) Click    -- selects word, places cursor at position
+#                            and anchor at end
+#  #endif	MOTIF1_1
+#  #ifdef	MOTIF1_2
+#  @)    BSelect(2) Click    -- selects word, places cursor at nearest end
+#                      of the word
+#  #endif	MOTIF1_2
+LocatePointer Text1 RTextChar 12
+ClickMB Btn1 2
+CompareVisual Text1
+
+LocatePointer Text2 RTextChar 12
+ClickMB Btn1 2
+CompareVisual Text2
+
+LocatePointer Text3 RTextChar 12
+ClickMB Btn1 2
+CompareVisual Text3
+
+LocatePointer Text4 RTextChar 12
+ClickMB Btn1 2
+CompareVisual Text4
+
+#  #ifdef	MOTIF1_1
+#  @)    BSelect(2) Drag     -- drags out the word selection,  moves
+#                            anchor to other end of word if necessary
+#                            to keep the original word selected
+#                            (Rebalances anchor if necessary)
+#  #endif	MOTIF1_1
+#  #ifdef	MOTIF1_2
+#  @)    BSelect(2) Drag     -- continues the word selection,  places
+#                      cursor at nearest end of the selection
+#  #endif	MOTIF1_2
+## No Can Do !!!
+#LocatePointer Text1 RTextChar 12
+#PressMB Btn1 2
+#LocatePointer Text1 RTextChar 5
+#ReleaseMB Btn2
+#
+#LocatePointer Text2 RTextChar 12
+#PressMB Btn1 2
+#LocatePointer Text2 RTextChar 5
+#ReleaseMB Btn2
+#
+#LocatePointer Text3 RTextChar 12
+#PressMB Btn1 2
+#LocatePointer Text3 RTextChar 5
+#ReleaseMB Btn2
+#
+#LocatePointer Text4 RTextChar 12
+#PressMB Btn1 2
+#LocatePointer Text4 RTextChar 5
+#ReleaseMB Btn2
+#
+
+#  #) Try extending the selection after a BSelect(2) with a Shift BSelect
+#  click or drag.  Try a Shift BSelect(2) Drag after a BSelect Click.
+LocatePointer Text1 RTextChar 5
+ClickMB Btn1 2
+LocatePointer Text1 RTextChar 30
+ClickMB <Shift> Btn1
+CompareVisual Text1
+LocatePointer Text1 RTextChar 5
+ClickMB Btn1 2
+LocatePointer Text1 RTextChar 30
+DragComponent Text1 RTextChar 20 <Shift> Btn1
+CompareVisual Text1
+
+LocatePointer Text2 RTextChar 5
+ClickMB Btn1 2
+LocatePointer Text2 RTextChar 15
+ClickMB <Shift> Btn1
+CompareVisual Text2
+LocatePointer Text2 RTextChar 5
+ClickMB Btn1 2
+LocatePointer Text2 RTextChar 15
+DragComponent Text2 RTextChar 18 <Shift> Btn1
+CompareVisual Text2
+
+LocatePointer Text3 RTextChar 5
+ClickMB Btn1 2
+LocatePointer Text3 RTextChar 30
+ClickMB <Shift> Btn1
+CompareVisual Text3
+LocatePointer Text3 RTextChar 5
+ClickMB Btn1 2
+LocatePointer Text3 RTextChar 30
+DragComponent Text3 RTextChar 20 <Shift> Btn1
+CompareVisual Text3
+
+LocatePointer Text4 RTextChar 5
+ClickMB Btn1 2
+LocatePointer Text4 RTextChar 15
+ClickMB <Shift> Btn1
+CompareVisual Text4
+LocatePointer Text4 RTextChar 5
+ClickMB Btn1 2
+LocatePointer Text4 RTextChar 15
+DragComponent Text4 RTextChar 18 <Shift> Btn1
+CompareVisual Text4
+
+#  #) BSelect(3) actions should work the same, but a line at a time.
+## BSelect(3) Click
+LocatePointer Text1 RTextChar 12
+ClickMB Btn1 3
+CompareVisual Text1
+
+LocatePointer Text2 RTextChar 12
+ClickMB Btn1 3
+CompareVisual Text2
+
+LocatePointer Text3 RTextChar 12
+ClickMB Btn1 3
+CompareVisual Text3
+
+LocatePointer Text4 RTextChar 12
+ClickMB Btn1 3
+CompareVisual Text4
+
+## BSelect(3) Drag
+## No Can Do !!!
+#LocatePointer Text1 RTextChar 12
+#PressMB Btn1 3
+#LocatePointer Text1 RTextChar 30
+#ReleaseMB Btn3
+#
+### can't test triple clicks in a Single Line
+#
+#LocatePointer Text3 RTextChar 12
+#PressMB Btn1 3
+#LocatePointer Text3 RTextChar 5
+#ReleaseMB Btn3
+
+## can't test triple clicks in a TextField
+
+## BSelect(3) Extended Selections
+LocatePointer Text1 RTextChar 5
+ClickMB Btn1 3
+LocatePointer Text1 RTextChar 30
+ClickMB <Shift> Btn1
+CompareVisual Text1
+LocatePointer Text1 RTextChar 5
+ClickMB Btn1 3
+LocatePointer Text1 RTextChar 30
+DragComponent Text1 RTextChar 60 <Shift> Btn1
+CompareVisual Text1
+
+## can't test triple clicks in a Single Line
+
+LocatePointer Text3 RTextChar 5
+ClickMB Btn1 3
+LocatePointer Text3 RTextChar 30
+ClickMB <Shift> Btn1
+CompareVisual Text3
+LocatePointer Text3 RTextChar 5
+ClickMB Btn1 3
+LocatePointer Text3 RTextChar 30
+DragComponent Text3 RTextChar 60 <Shift> Btn1
+CompareVisual Text3
+
+## can't test triple clicks in a TextField
+
+## new test for Motif 1.2, has to be at the end to keep visual in
+## synch.
+#  #ifdef	MOTIF1_2
+#  @)    Ctrl Shift BSelect Click -- no effect
+#  #endif	MOTIF1_2
+
+
+## Reset the strings
+LocatePointer PushB1
+ClickMB Btn1
+
+LocatePointer Text1 RTextChar 5
+ClickMB Btn1
+LocatePointer Text1 RTextChar 12
+ClickMB <Ctrl> <Shift> Btn1
+CompareVisual Text1
+
+LocatePointer Text2 RTextChar 5
+ClickMB Btn1
+LocatePointer Text2 RTextChar 12
+ClickMB <Ctrl> <Shift> Btn1
+CompareVisual Text2
+
+LocatePointer Text3 RTextChar 5
+ClickMB Btn1
+LocatePointer Text3 RTextChar 12
+ClickMB <Ctrl> <Shift> Btn1
+CompareVisual Text3
+
+LocatePointer Text4 RTextChar 5
+ClickMB Btn1
+LocatePointer Text4 RTextChar 12
+ClickMB <Ctrl> <Shift> Btn1
+CompareVisual Text4
+
+
+#  C)
+Exit

@@ -1,0 +1,144 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: Scrollbar6.dat /main/5 1995/07/13 19:15:32 drk $"
+*/
+
+#) A client with a scrollbar contained in a frame should appear.
+   The scrollbar should be horizontal with a height of 50 and
+   a width of 250. The processing direction will be reversed and
+   the slider will located 20 percent from the right. 
+#) Press MB1 in the left arrow area of the scrollbar. The callback
+   reasons (VALUE_CHANGED) and values will be printed in the term window. 
+#) Press MB1 in the right arrow area of the scrollbar. The callback
+   reasons (VALUE_CHANGED) and values will be printed in the term window. 
+#) Press the left arrow key in the scrollbar. The callback
+   reasons (VALUE_CHANGED) and values will be printed in the term window. 
+#) Press the right arrow key in the scrollbar. The callback
+   reasons (VALUE_CHANGED) and values will be printed in the term window. 
+#) Press the up arrow key in the scrollbar. Nothing should happen. 
+#) Press the down arrow key in the scrollbar. Nothing should happen. 
+C)
+
+#) Press MB1 in scrollbar area to the left of the slider. The callback
+   reasons (PAGE_INCREMENT) and values will be printed in the term window. 
+#) Press MB1 in scrollbar area to the right of the slider. The callback
+   reasons (PAGE_DECREMENT) and values will be printed in the term window. 
+#) Continue for orientation to be VERTICAL. 
+C)
+
+#) A client with a scrollbar contained in a frame should appear.
+   The scrollbar should be vertical with a height of 250 and
+   a width of 50. The processing direction will be reversed and
+   the slider will located 20 percent from the bottom. 
+#) Press MB1 in the down arrow area of the scrollbar. The callback
+   reasons (VALUE_CHANGED) and values will be printed in the term window. 
+#) Press MB1 in the up arrow area of the scrollbar. The callback
+   reasons (VALUE_CHANGED) and values will be printed in the term window. 
+#) Press the up arrow key in the scrollbar. The callback
+   reasons (VALUE_CHANGED) and values will be printed in the term window. 
+#) Press the down arrow key in the scrollbar. The callback
+   reasons (VALUE_CHANGED) and values will be printed in the term window. 
+#) Press the right arrow key in the scrollbar. Nothing should happen. 
+#) Press the left arrow key in the scrollbar. Nothing should happen. 
+C)
+
+#) Press MB1 in scrollbar area above the slider. The callback
+   reasons (PAGE_INCREMENT) and values will be printed in the top term window. 
+#) Press MB1 in scrollbar area below the slider. The callback
+   reasons (PAGE_DECREMENT) and values will be printed in the term window. 
+C)
+
+#) A control panel for testing different slider visuals will appear.
+
+#) The sliding model is XmSLIDER. Try different combinations of slider 
+   visual and slider mark.
+@) The values and their expected visual effect are listed below:
+!)   
+   slider visual         effect
+   -------------         ------
+   XmBACKGROUND_COLOR    slider in background color, 
+                         trough in trough color
+   XmFOREGROUND_COLOR    slider in foreground color, 
+                         trough in trough color
+   XmTROUGH_COLOR        slider in trough color,
+                         trough in background color
+   XmSHADOWED_BACKGROUND slider in background color, 
+                         shadowed in 3-d, trough in 
+                         trough color
+   
+   slider mark           effect
+   -------------         ------
+   XmNONE                slider is flat.
+   XmETCHED_LINE         a thin etched in separator 
+                         in the middle of the slider
+   XmTHUMB_MARK          three thin etched out separators 
+                         in the middle of the slider
+   XmROUND_MARK          a small 3-d "knob" 
+                         in the middle of the slider
+
+C)
+
+#) The sliding model is XmTHERMOMETER. Try different combinations of slider 
+   visual and slider mark.
+@) The values and their expected visual effect are listed below:
+!)      
+   slider visual         effect
+   -------------         ------
+   XmBACKGROUND_COLOR    slider in background color, 
+                         trough in trough color
+   XmFOREGROUND_COLOR    slider in foreground color, 
+                         trough in trough color
+   XmTROUGH_COLOR        slider in trough color,
+                         trough in background color
+   XmSHADOWED_BACKGROUND slider in background color, 
+                         shadowed in 3-d, trough in 
+                         trough color
+   
+   slider mark           effect
+   -------------         ------
+   XmNONE                slider surface is flat.
+   XmETCHED_LINE         a thin etched in separator 
+                         at the top of the slider
+   XmTHUMB_MARK          three thin etched out separators 
+                         at the top of the slider
+   XmROUND_MARK          a small 3-d "knob" 
+                         at the top of the slider
+C)
+E)

@@ -1,0 +1,50 @@
+
+
+#) This is a basic test for dragging from menus.
+#) A client will appear containing a tear-off Pulldown menu with a MenuBar
+   labeled "MenuBar", an Option menu with "OptionItem1" displayed in the 
+   selection area , and a label "PopupMenu" for which an event handler has
+   been set, which posts a tear-off Popup menu on pressing MB3.
+#) There will also be a Popup shell. containing a Text widget.
+C)
+
+#) Initiate Drag by pressing BTransfer (MB2 by default) with the 
+   pointer positioned on the MenuBar. 
+#) With BTransfer pressed, drag the pointer over the Text widget. 
+#) Release BTransfer. The dragIcon should melt into the background, indicating
+   a successful drop. The line "MenuBar" should appear in the Text widget.
+C)
+
+
+#) Post the Pulldown menu, by pressing MB1 on the MenuBar,
+   and tear it off by releasing MB1 on the tear-off
+   control.  The menu should have one item "PulldownMenu".
+#) Initiate Drag by pressing BTransfer (MB2 by default) with the 
+   pointer positioned on the menu item. 
+#) With BTransfer pressed, drag the pointer over the Text widget. 
+#) Release BTransfer. The dragIcon should melt into the background, indicating
+   a successful drop. The line "PulldownMenu" should appear in the Text widget.
+#) Dismiss the tear-off by choosing "Close" from the window menu.
+C)
+
+
+#) Initiate Drag by pressing BTransfer (MB2 by default) with the 
+   pointer positioned on the selection area, of the Option menu.
+#) With BTransfer pressed, drag the pointer over the Text widget. 
+#) Release BTransfer. The dragIcon should melt into the background, indicating
+   a successful drop. The line "OptionItem1" should appear in the Text widget.
+C)
+
+#) Post the Popup menu by pressing MB3 on the label, and tear it off by 
+   releasing MB3 on the tear-off control. The menu should have a single item,
+   "PopupMenu".
+#) Initiate Drag by pressing BTransfer (MB2 by default) with the 
+   pointer positioned on the menu item of the Popup.
+#) With BTransfer pressed, drag the pointer over the Text widget. 
+#) Release BTransfer. The dragIcon should melt into the background, indicating
+   a successful drop. The line "PopupMenu" should appear in the Text widget.
+C)
+
+E)   
+
+

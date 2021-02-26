@@ -1,0 +1,24 @@
+
+	This test confirms that the correct drag icon is retrieved
+	from the XmeGetTexualDragIcon call.  The test is a simple
+	comparison between the icon displayed in the window and the
+	one produced during a drag operation.  NOTE: that the icon
+	displayed in the window is only part of the entire drag icon.
+
+#)
+	Move the mouse over the icon in the window.  Press the
+	middle mouse button and start a drag operation (move the mouse
+	while keeping the button depressed).  The mouse pointer 
+	will change into the "drag icon". Move the mouse until you can
+	clearly see the drag icon.  Make sure that one of the parts is
+	indeed the original icon displayed.
+
+#)
+	Release the mouse button and the icon should "snap" back to the
+	starting point (a visual effect, ending up at the original icon).
+
+C)
+	 Press Exit to end the test.  
+         Goodbye.
+E)
+

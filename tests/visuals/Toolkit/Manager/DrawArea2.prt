@@ -1,0 +1,121 @@
+# $XConsortium: DrawArea2.prt /main/3 1995/07/19 20:20:33 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) LocatePointer BulletinBoard  
+TRACE:(2) ClickKey KTab
+TRACE:(3) ClickKey Kb
+Received keypress event for b.
+TRACE:(4) CompareVisual BulletinBoard 
+TRACE:(5) LocatePointer DrawingArea1  
+TRACE:(6) ClickMB Btn1 
+TRACE:(7) DragXYRelative Left 50 
+TRACE:(8) ClickMB Btn1 
+TRACE:(9) DragXYRelative 542 20 20 
+TRACE:(10) ClickMB Btn1 
+TRACE:(11) DragXYRelative 542 -30 25 
+TRACE:(12) ClickMB Btn1 
+TRACE:(13) DragXYRelative 542 -40 -40 
+TRACE:(14) ClickMB Btn1 
+TRACE:(15) LocatePointerXYAbs 200 200
+TRACE:(16) ClickMB Btn2 
+TRACE:(17) LocatePointerXYAbs 250 200
+TRACE:(18) ClickMB Btn1 
+TRACE:(19) LocatePointerXYAbs 250 300
+TRACE:(20) ClickMB Btn1 
+TRACE:(21) CompareVisual DrawingArea1 
+TRACE:(22) ClickKey <Shift> Kz
+Received keypress event for Z.
+TRACE:(23) ClickKey <Shift> 
+Received keypress event for .
+TRACE:(24) ClickKey Ka
+Received keypress event for a.
+TRACE:(25) ClickKey Kb
+Received keypress event for b.
+TRACE:(26) ClickKey Kc
+Received keypress event for c.
+TRACE:(27) ClickKey Kd
+Received keypress event for d.
+TRACE:(28) LocatePointerXYAbs 250 300
+TRACE:(29) ClickMB Btn1 
+TRACE:(30) ClickKey <Shift> 
+Received keypress event for .
+TRACE:(31) ClickKey Ka
+Received keypress event for a.
+TRACE:(32) ClickKey Kb
+Received keypress event for b.
+TRACE:(33) ClickKey Kc
+Received keypress event for c.
+TRACE:(34) ClickKey Kd
+Received keypress event for d.
+TRACE:(35) ClickKey KCancel
+Received keypress event for .
+TRACE:(36) ClickKey KActivate
+Received keypress event for .
+TRACE:(37) LocatePointer DrawingArea1  
+TRACE:(38) ClickMB Btn1 
+TRACE:(39) LocatePointerXYAbs 200 200
+TRACE:(40) ClickMB Btn1 
+TRACE:(41) ClickKey <Shift> KTab
+Received keypress event for 	.
+TRACE:(42) ClickKey KSpace
+The resizeCallback was called.
+The event is NULL. This is expected.
+The widget value is not NULL. This is expected.
+An expose event has been generated
+An expose event has been generated
+TRACE:(43) Continue
+TRACE:(44) LocatePointer BulletinBoard  
+TRACE:(45) ClickKey KTab
+TRACE:(46) ClickKey Kb
+Received keypress event for b.
+TRACE:(47) CompareVisual BulletinBoard 
+TRACE:(48) LocatePointer DrawingArea1  
+TRACE:(49) ClickMB Btn1 
+TRACE:(50) DragXYRelative Right 50 
+TRACE:(51) ClickMB Btn1 
+TRACE:(52) DragXYRelative 542 -10 -10 
+TRACE:(53) ClickMB Btn1 
+TRACE:(54) DragXYRelative 542 20 20 
+TRACE:(55) ClickMB Btn1 
+TRACE:(56) DragXYRelative 542 -30 25 
+TRACE:(57) ClickMB Btn1 
+TRACE:(58) CompareVisual DrawingArea1 
+TRACE:(59) Continue
+TRACE:(60) LocatePointer DrawingArea2  
+TRACE:(61) CompareVisual DrawingArea2 
+TRACE:(62) Exit
+Exiting Test...Please Standby...

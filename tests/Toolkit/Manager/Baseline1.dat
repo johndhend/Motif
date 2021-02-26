@@ -1,0 +1,89 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: Baseline1.dat /main/5 1995/07/13 18:28:22 drk $"
+*/
+#) A client which contains a Frame with a label as the title child
+   should appear. The full labelString \"Alignment String\" should
+   be visible.
+C)
+#) A new label with the labelString \"Another Label\" should 
+   appear. This is an now the title_child be use as the 
+   Frame's title. This label should be layered on top
+   on the original title child which is now set as 
+   generic child (done by toolkit).
+C)
+#) The first label should again be use as the title child.
+#) A ScrolledText widget with text should appear. The shadowThickness
+   on the Frame should be 10, and the title labelString should be
+   \"Alignment String\". It should centered both within the window
+   and within the Frame.
+C)
+#) The marginWidth and marginHeight of the Frame should now change to
+   be 20.
+C)
+#) A BulletinBoard dialog with three RadioBoxs and a Scale for 
+   shadowThickness should appear. 
+#) Type a multiple line string into the Text widget in the control panel, and click the \"Apply String\" button.
+#) Use the first RadioBox to change the Label's childVerticalAlignment.
+#) Use the second RadioBox to change the Frames's shadowType.
+#) Use the the third RadioBox to change the Label's 
+   childHorizontalAlignment.
+#) Use the Scale to change the Frame's shadowThickness.
+C)
+#) The Font of the Label should change to be 9x15bold.
+#) Use the control panel to change all of the resources.
+C)
+#) The labelString of the Frame title should change to
+   \"Motif\\n Scrolled Text Widget\" it should appear on two lines.
+   It should be centered within the Frame.
+#) Use the control panel to change all of the resources.
+C)
+#) The Label's childType resources should change to FRAME_GENERIC_CHILD.
+   This will make the cause the Label not to be a title for the Frame.
+#) Use the control panel to change all of the resources. This should
+   have no effect (except shadowThickness and shadowType).
+C)
+#) The Label will be destroyed, and a text widget with the string
+   \"You can even use a Text Widget\" will now be created with its
+   childType being FRAME_TITLE_CHILD. The Text widget will be aligned
+   at the end of the Frame.
+#) Use the control panel to change all of the resources, which are now
+   applicable to the Text widget and the Frame.
+E)

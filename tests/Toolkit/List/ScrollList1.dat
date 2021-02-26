@@ -1,0 +1,90 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: ScrollList1.dat /main/5 1995/07/13 18:22:58 drk $"
+*/
+#) A client with a scrolled list should appear. The list should have
+   a white background and should have 20 items visible.
+#) Press and hold MB1 on scrollbar slider and drag pointer up
+   and down to scroll through the list.
+#) Click on one item in the list. The item should be highlighted
+   and a message should appear in the term window.
+#) Click on another item. The same characteristics should apply.
+#) Continue to have selection mode become MULTIPLE_SELECT.
+C)
+#) Click on several items in the list. All items selected should
+   be highlighted and a message should appear after each selection.
+#) Click on a highlighted item. The item should be unselected
+   and a message should appear.
+#) Continue to have selection mode become BROWSE_SELECT.
+C)
+#) Browse select an item (press and hold MB1, drag pointer
+   through selections, then release on desired item), the highlight should
+   follow the pointer through the list and stay on the selected item.
+#) Press and hold MB1 in the client window. Drag the pointer
+   outside of the client window to the left or the right.
+   Drag the pointer up and down, the selection should follow the
+   pointer. Drag the pointer below the client window, the list
+   should scroll down if not at the end. Release MB1.
+#) Continue to have selection mode become EXTENDED_SELECT.
+C)
+#) Drag select first three items (move pointer to first item, press
+   and hold on MB1 and drag pointer through the first three items
+   then release MB1. The first three items should be highlighted
+   and a message should appear in the term window.
+#) Unselect all items (press and hold <ctrl> key, and MB1 and drag pointer
+   across all selected items). No items should be highlighted.
+#) Select an item (move pointer to desired item and click MB1).
+   The selected item should be highlighted and a message should appear.
+#) Move pointer to the another item, press and hold <shift> key and click MB1.
+   All items between these items selected should become selected and
+   a message should appear.
+#) Move the pointer to the another item, press and hold <ctrl> key and click
+   MB1. The selected item should be added to the items selected
+   and a message should appear.
+#) Unselect all items (press and hold <ctrl> key, and MB1 and drag
+   the pointer across all selected items). No items should be highlighted and
+   a message should appear.
+C)
+#) Move the list down one position by clicking once on the down arrow of
+   the vertical scroll bar. Item "btest1b" must be the first visible item.
+#) Double click on any visible list entry.
+#) This should not result in a core dump. But, the vertical scrollbar 
+   should disappear and only the first 20 items must be visible.
+E)

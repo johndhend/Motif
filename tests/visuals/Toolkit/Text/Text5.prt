@@ -1,0 +1,126 @@
+# $XConsortium: Text5.prt /main/3 1995/07/19 20:36:31 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) LocatePointer Text1 RTextChar 5
+TRACE:(2) ClickMB Btn1 
+TRACE:(3) InputString "Here is some new\ntext that has\nbeen inserted."
+     SCRWARNING** : InputString: Key . is not supported
+TRACE:(4) CompareVisual Text1 
+TRACE:(5) ClickKey KBackSpace
+TRACE:(6) ClickKey KBackSpace
+TRACE:(7) ClickKey KBackSpace
+TRACE:(8) ClickKey KBackSpace
+TRACE:(9) ClickKey KBackSpace
+TRACE:(10) ClickKey KBackSpace
+TRACE:(11) ClickKey KBackSpace
+TRACE:(12) ClickKey KBackSpace
+TRACE:(13) ClickKey KBackSpace
+TRACE:(14) ClickKey KBackSpace
+TRACE:(15) ClickKey KBackSpace
+TRACE:(16) ClickKey KBackSpace
+TRACE:(17) ClickKey KBackSpace
+TRACE:(18) ClickKey KBackSpace
+TRACE:(19) ClickKey KBackSpace
+TRACE:(20) ClickKey KBackSpace
+TRACE:(21) ClickKey KBackSpace
+TRACE:(22) ClickKey KBackSpace
+TRACE:(23) ClickKey KBackSpace
+TRACE:(24) ClickKey KBackSpace
+TRACE:(25) ClickKey KBackSpace
+TRACE:(26) ClickKey KBackSpace
+TRACE:(27) ClickKey KBackSpace
+TRACE:(28) ClickKey KBackSpace
+TRACE:(29) ClickKey KBackSpace
+TRACE:(30) ClickKey KBackSpace
+TRACE:(31) ClickKey KBackSpace
+TRACE:(32) ClickKey KBackSpace
+TRACE:(33) ClickKey KBackSpace
+TRACE:(34) ClickKey KBackSpace
+TRACE:(35) ClickKey KBackSpace
+TRACE:(36) ClickKey KBackSpace
+TRACE:(37) ClickKey KBackSpace
+TRACE:(38) ClickKey KBackSpace
+TRACE:(39) ClickKey KBackSpace
+TRACE:(40) ClickKey KBackSpace
+TRACE:(41) ClickKey KBackSpace
+TRACE:(42) ClickKey KBackSpace
+TRACE:(43) CompareVisual Text1 
+TRACE:(44) Continue
+TRACE:(45) LocatePointer Text1 RTextChar 5
+TRACE:(46) ClickMB Btn1 
+TRACE:(47) ClickKey KReturn
+TRACE:(48) CompareVisual Text1 
+TRACE:(49) Continue
+TRACE:(50) LocatePointer Text1 RTextChar 5
+TRACE:(51) ClickKey Kr
+TRACE:(52) CompareVisual Text1 
+TRACE:(53) ClickKey Kp
+TRACE:(54) CompareVisual Text1 
+TRACE:(55) InputString "this text will never appear"
+TRACE:(56) CompareVisual Text1 
+TRACE:(57) Continue
+TRACE:(58) WindowRaise Shell1
+TRACE:(59) LocatePointer Text1 RTextChar 5
+TRACE:(60) ClickKey KReturn
+TRACE:(61) CompareVisual Text1 
+TRACE:(62) Continue
+TRACE:(63) WindowRaise Shell1
+TRACE:(64) LocatePointer Text1 RTextChar 5
+TRACE:(65) ClickKey Kp
+TRACE:(66) CompareVisual Text1 
+TRACE:(67) ClickKey Kr
+TRACE:(68) CompareVisual Text1 
+TRACE:(69) InputString "no show"
+TRACE:(70) CompareVisual Text1 
+TRACE:(71) Continue
+TRACE:(72) LocatePointer get_values  
+TRACE:(73) ClickMB Btn1 
+20 columns, width 178
+TRACE:(74) LocatePointer scale RScrollBarSlider 
+TRACE:(75) DragSliderValue Left 24 
+TRACE:(76) LocatePointer set_string  
+TRACE:(77) ClickMB Btn1 
+TRACE:(78) LocatePointer scale RScrollBarSlider 
+TRACE:(79) DragSliderValue Right 27 
+TRACE:(80) LocatePointer Text1  
+TRACE:(81) InputString "new text"
+TRACE:(82) LocatePointer scale RScrollBarSlider 
+TRACE:(83) DragSliderValue Right Max 
+TRACE:(84) DragSliderValue Left Min 
+TRACE:(85) Continue
+TRACE:(86) Exit
+Exiting Test...Please Standby...

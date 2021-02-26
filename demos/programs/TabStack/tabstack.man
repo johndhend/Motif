@@ -1,0 +1,7 @@
+.TH TABSTACK 1X "MOTIF" "\fBtabstack\fR 1X" "Demonstration programs"
+.SH NAME
+tabstack \- tabstack demo
+.SH SYNOPSIS
+\fBtabstack\fR
+.SH DESCRIPTION
+Shows Tabs with pixmaps and buttons, and has a usage explanation window.

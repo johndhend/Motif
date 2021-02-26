@@ -1,0 +1,87 @@
+! $XConsortium: Text.defaults /main/4 1996/07/23 13:52:11 drk $
+! @OPENGROUP_COPYRIGHT@
+! COPYRIGHT NOTICE
+! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+! ALL RIGHTS RESERVED (MOTIF).  See the file named COPYRIGHT.MOTIF for
+! the full copyright text.
+! 
+! This software is subject to an open license. It may only be
+! used on, with or for operating systems which are themselves open
+! source systems. You must contact The Open Group for a license
+! allowing distribution and sublicensing of this software on, with,
+! or for operating systems which are not Open Source programs.
+! 
+! See http://www.opengroup.org/openmotif/license for full
+! details of the license agreement. Any use, reproduction, or
+! distribution of the program constitutes recipient's acceptance of
+! this agreement.
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+! OR FITNESS FOR A PARTICULAR PURPOSE
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+! POSSIBILITY OF SUCH DAMAGES.
+! 
+! 
+! HISTORY
+
+! This is the defaults file for the Text directory.
+
+! Defaults for CSText14
+
+*CSText14.Shell1.layoutDirection: LEFT_TO_RIGHT
+
+CSText14.Parent1.layoutDirection: RIGHT_TO_LEFT
+
+CSText14.Parent3.layoutDirection: RIGHT_TO_LEFT
+
+CSText14*ScrollCSText6.layoutDirection: LEFT_TO_RIGHT
+CSText14*CSText6.layoutDirection: RIGHT_TO_LEFT
+
+CSText14*ScrollCSText7.layoutDirection: RIGHT_TO_LEFT
+CSText14*CSText7.layoutDirection: RIGHT_TO_LEFT
+ 
+# Resource definitions _MOTIF_DEFAULT_LOCALE rendition.
+CSText16*renderTable.fontName: 8x13bold
+CSText16*renderTable.fontType: FONT_IS_FONT
+
+# Resource definitions for Label1.
+CSText16*Label1.labelString: Hello World
+CSText16*Label1.renderTable: first second third
+CSText16*Label1.renderTable.first.renditionForeground: red
+CSText16*Label1.renderTable.first.underlineType: DOUBLE_LINE
+CSText16*Label1.renderTable.first.tabList: 1in, +2.5in  
+CSText16*Label1.renderTable.second.renditionForeground: purple
+CSText16*Label1.renderTable.second.underlineType: NO_LINE
+CSText16*Label1.renderTable.second.strikethruType: SINGLE_DASHED_LINE
+CSText16*Label1.renderTable.second.tabList: 1cm, +2in  
+CSText16*Label1.renderTable.third.renditionForeground: green
+CSText16*Label1.renderTable.third.underlineType: AS_IS
+CSText16*Label1.renderTable.third.strikethruType: SINGLE_LINE
+CSText16*Label1.renderTable.third.tabList: 0in, +100pixels
+
+# Resource definitions for CSText1.
+CSText16*CSText1.cstextValue: Hello World 
+CSText16*CSText1.renderTable: first second third 
+CSText16*CSText1.renderTable.first.renditionForeground: red
+CSText16*CSText1.renderTable.first.underlineType: DOUBLE_LINE
+CSText16*CSText1.renderTable.first.tabList: 1in, +2.5in  
+CSText16*CSText1.renderTable.second.renditionForeground: purple
+CSText16*CSText1.renderTable.second.underlineType: NO_LINE
+CSText16*CSText1.renderTable.second.strikethruType: SINGLE_DASHED_LINE
+CSText16*CSText1.renderTable.second.tabList: 1cm, +2in  
+CSText16*CSText1.renderTable.third.renditionForeground: green
+CSText16*CSText1.renderTable.third.underlineType: AS_IS
+CSText16*CSText1.renderTable.third.strikethruType: SINGLE_LINE
+CSText16*CSText1.renderTable.third.tabList: 0in, +100pixels

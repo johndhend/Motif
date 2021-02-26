@@ -1,0 +1,101 @@
+# $XConsortium: CScrollbar1.prt /main/3 1995/07/19 20:42:40 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) LocatePointer ScrollBar1 RDownOrRightArrow 
+TRACE:(2) PressMB Btn1 
+TRACE:(3) Wait 10
+TRACE:(4) ReleaseMB Btn1 
+TRACE:(5) CompareVisual ScrollBar1 
+TRACE:(6) LocatePointer ScrollBar1 RUpOrLeftArrow 
+TRACE:(7) PressMB Btn1 
+TRACE:(8) Wait 10
+TRACE:(9) ReleaseMB Btn1 
+TRACE:(10) CompareVisual ScrollBar1 
+TRACE:(11) LocatePointer ScrollBar1 RDownOrRightSliderArea 
+TRACE:(12) PressMB Btn1 
+TRACE:(13) Wait 5
+TRACE:(14) ReleaseMB Btn1 
+TRACE:(15) CompareVisual ScrollBar1 
+TRACE:(16) LocatePointer ScrollBar1 RUpOrLeftSliderArea 
+TRACE:(17) PressMB Btn1 
+TRACE:(18) Wait 5
+TRACE:(19) ReleaseMB Btn1 
+TRACE:(20) CompareVisual ScrollBar1 
+TRACE:(21) LocatePointer ScrollBar1 RSlider 
+TRACE:(22) DragSliderValue Down Max Btn1
+TRACE:(23) CompareVisual ScrollBar1 
+TRACE:(24) DragSliderValue Up Min Btn1
+TRACE:(25) CompareVisual ScrollBar1 
+TRACE:(26) LocatePointer ScrollBar1 RDownOrRightSliderArea 
+TRACE:(27) ClickMB Btn2 
+TRACE:(28) CompareVisual ScrollBar1 
+TRACE:(29) Continue
+TRACE:(30) CompareVisual ScrollBar1 
+TRACE:(31) Continue
+TRACE:(32) CompareVisual BulletinBoard1 
+TRACE:(33) LocatePointer ScrollBar2 RDownOrRightArrow 
+TRACE:(34) PressMB Btn1 
+TRACE:(35) Wait 10
+TRACE:(36) ReleaseMB Btn1 
+TRACE:(37) CompareVisual ScrollBar2 
+TRACE:(38) LocatePointer ScrollBar2 RUpOrLeftArrow 
+TRACE:(39) PressMB Btn1 
+TRACE:(40) Wait 10
+TRACE:(41) ReleaseMB Btn1 
+TRACE:(42) CompareVisual ScrollBar2 
+TRACE:(43) LocatePointer ScrollBar2 RDownOrRightSliderArea 
+TRACE:(44) PressMB Btn1 
+TRACE:(45) Wait 5
+TRACE:(46) ReleaseMB Btn1 
+TRACE:(47) CompareVisual ScrollBar2 
+TRACE:(48) LocatePointer ScrollBar2 RUpOrLeftSliderArea 
+TRACE:(49) PressMB Btn1 
+TRACE:(50) Wait 5
+TRACE:(51) ReleaseMB Btn1 
+TRACE:(52) CompareVisual ScrollBar2 
+TRACE:(53) LocatePointer ScrollBar2 RSlider 
+TRACE:(54) DragSliderValue Right Max Btn1
+TRACE:(55) CompareVisual ScrollBar2 
+TRACE:(56) DragSliderValue Left Min Btn1
+TRACE:(57) CompareVisual ScrollBar2 
+TRACE:(58) Continue
+TRACE:(59) CompareVisual BulletinBoard1 
+TRACE:(60) Continue
+TRACE:(61) CompareVisual BulletinBoard1 
+TRACE:(62) Continue
+TRACE:(63) Exit
+Exiting Test...Please Standby...

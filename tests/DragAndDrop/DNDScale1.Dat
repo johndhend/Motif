@@ -1,0 +1,22 @@
+
+@) Test case for CR 4846
+
+@) STRING has been set as the valid import target for the Text widget.
+#) Press MB2 on the value displayed above the Scale widget to start
+a drag operation.
+#) Drag MB2 over the Text widget and release MB2 there (drop it.)
+#) A message should be printed out indicating a STRING target is
+supported by the Scale widget.
+
+C)
+
+@) COMPOUND_TEXT has been set as the valid import target for the Text widget.
+#) Press MB2 on the value displayed above the Scale widget to start
+another drag operation.
+#) Drag MB2 over the Text widget and relase MB2 there (drop it.)
+#) If a message is printed out indicating that STRING and COMPOUND_TEXT
+targets are supported by the Scale widget CR 4846 is not fixed.
+
+@) End test case for CR 4846
+E)
+

@@ -1,0 +1,33 @@
+.ta 8n 16n 24n 32n 40n 48n 56n 64n 72n 
+.TH "XmDropDownGetValue" "library call"
+.SH "NAME"
+\fBXmDropDownGetValue\fP \(em retrieve the value from the DropDown
+.SH "SYNOPSIS"
+.PP
+.nf
+#include <Xm/DropDown\&.h>
+\fBXmString \fBXmDropDownGetValue\fP\fR(
+\fBWidget \fBw\fR\fR);
+.fi
+.SH "DESCRIPTION"
+.PP
+.PP
+The
+\fIw\fP argument specifies the XmDropDown widget ID\&.
+.PP
+The \fBXmDropDownGetValue\fP function returns the string contained within
+the text widget of the DropDown widget. This string has been allocated with
+XtMalloc() and most be freed by the application with XtFree(). Always leave
+the specified margin between its edge and the nearest child. A new String to
+fillOption resource converter has been registered to convert the following
+strings to fill options: "none", "major", "minor", "all." This resource can
+therefore be set in an application defaults file.
+.PP
+.SH "RETURN VALUE"
+.PP
+The
+\fBXmDropDownGetValue\fP function returns the string contained within
+the text widget of the DropDown widget.
+.SH "SEE ALSO"
+.PP
+\fBXmDropDown\fP(3)\&.

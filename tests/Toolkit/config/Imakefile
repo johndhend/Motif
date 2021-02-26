@@ -1,0 +1,169 @@
+XCOMM $XConsortium: Imakefile /main/5 1995/07/14 17:36:52 drk $
+XCOMM @OPENGROUP_COPYRIGHT@
+XCOMM COPYRIGHT NOTICE
+XCOMM Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+XCOMM Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+XCOMM ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+XCOMM the full copyright text.
+XCOMM 
+XCOMM This software is subject to an open license. It may only be
+XCOMM used on, with or for operating systems which are themselves open
+XCOMM source systems. You must contact The Open Group for a license
+XCOMM allowing distribution and sublicensing of this software on, with,
+XCOMM or for operating systems which are not Open Source programs.
+XCOMM 
+XCOMM See http://www.opengroup.org/openmotif/license for full
+XCOMM details of the license agreement. Any use, reproduction, or
+XCOMM distribution of the program constitutes recipient's acceptance of
+XCOMM this agreement.
+XCOMM 
+XCOMM EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+XCOMM PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+XCOMM KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+XCOMM WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+XCOMM OR FITNESS FOR A PARTICULAR PURPOSE
+XCOMM 
+XCOMM EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+XCOMM NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+XCOMM INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+XCOMM DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+XCOMM AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+XCOMM LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+XCOMM ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+XCOMM EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+XCOMM POSSIBILITY OF SUCH DAMAGES.
+XCOMM 
+XCOMM HISTORY
+INCLUDES 	= -I. -I../bitmaps -I.. -I../Text/lib -I$(TESTCOMSRC)
+DEFINES         = TestDefines
+DEPLIBS         = TestClientDepLibs
+
+#ifdef Automation
+#if 0 /* moved ? */
+LOCAL_LIBRARIES = $(TESTSRC)/Toolkit/Text/lib/Auto/libTextA.a TestClientLibs
+#endif
+LOCAL_LIBRARIES = $(TESTSRC)/Toolkit/Text/lib/libTextA.a TestClientLibs
+#else
+#if 0 /* moved ? */
+LOCAL_LIBRARIES = $(TESTSRC)/Toolkit/Text/lib/Manual/libTextM.a TestClientLibs
+#endif
+LOCAL_LIBRARIES = $(TESTSRC)/Toolkit/Text/lib/libTextM.a TestClientLibs
+#endif
+
+NormalLibraryObjectRule()
+
+RunTarget()
+MSimpleProgramTarget(CMenu1)
+TestPPTarget(CMenu1)
+MSimpleProgramTarget(CMenuBar1)
+TestPPTarget(CMenuBar1)
+MSimpleProgramTarget(CNavigation3)
+TestPPTarget(CNavigation3)
+MSimpleProgramTarget(CNavigation12)
+TestPPTarget(CNavigation12)
+MSimpleProgramTarget(COptionMenu1)
+TestPPTarget(COptionMenu1)
+MSimpleProgramTarget(CPopupMenu1)
+TestPPTarget(CPopupMenu1)
+MSimpleProgramTarget(CScrollText1)
+TestPPTarget(CScrollText1)
+MSimpleProgramTarget(CScrollText2)
+TestPPTarget(CScrollText2)
+MSimpleProgramTarget(CText1)
+TestPPTarget(CText1)
+MSimpleProgramTarget(CText2)
+TestPPTarget(CText2)
+MSimpleProgramTarget(CTextField2)
+TestPPTarget(CTextField2)
+MSimpleProgramTarget(CTextField3)
+TestPPTarget(CTextField3)
+MSimpleProgramTarget(CList1)
+TestPPTarget(CList1)
+MSimpleProgramTarget(CList2)
+TestPPTarget(CList2)
+MSimpleProgramTarget(CArrowBGad1)
+TestPPTarget(CArrowBGad1)
+MSimpleProgramTarget(CPushBGad2)
+TestPPTarget(CPushBGad2)
+MSimpleProgramTarget(CToggleBGad1)
+TestPPTarget(CToggleBGad1)
+MSimpleProgramTarget(CArrowBtn1)
+TestPPTarget(CArrowBtn1)
+MSimpleProgramTarget(CPushBtn1)
+TestPPTarget(CPushBtn1)
+MSimpleProgramTarget(CToggleBtn1)
+TestPPTarget(CToggleBtn1)
+MSimpleProgramTarget(CCommand2)
+TestPPTarget(CCommand2)
+MSimpleProgramTarget(CFileSelect2)
+TestPPTarget(CFileSelect2)
+MSimpleProgramTarget(CPromptDia1)
+TestPPTarget(CPromptDia1)
+MSimpleProgramTarget(CSelectBox2)
+TestPPTarget(CSelectBox2)
+MSimpleProgramTarget(CLabel1)
+TestPPTarget(CLabel1)
+MSimpleProgramTarget(CLabelGad1)
+TestPPTarget(CLabelGad1)
+MSimpleProgramTarget(CScale1)
+TestPPTarget(CScale1)
+MSimpleProgramTarget(CScale3)
+TestPPTarget(CScale3)
+MSimpleProgramTarget(CScrollbar1)
+TestPPTarget(CScrollbar1)
+MSimpleProgramTarget(CScrollbar2)
+TestPPTarget(CScrollbar2)
+MSimpleProgramTarget(CDiaShell1)
+TestPPTarget(CDiaShell1)
+MSimpleProgramTarget(CProtocol)
+TestPPTarget(CProtocol)
+MSimpleProgramTarget(CMainWin2)
+TestPPTarget(CMainWin2)
+MSimpleProgramTarget(CScrollWin1)
+TestPPTarget(CScrollWin1)
+
+SRCS=  \
+	CMenu1.c \
+	CMenuBar1.c \
+	CNavigation3.c \
+	CNavigation12.c \
+	COptionMenu1.c \
+	CPopupMenu1.c \
+	CScrollText1.c \
+	CScrollText2.c \
+	CText1.c \
+	CText2.c \
+	CTextField2.c \
+	CTextField3.c \
+	CList1.c \
+	CList2.c \
+	CArrowBGad1.c \
+	CPushBGad2.c \
+	CToggleBGad1.c \
+	CArrowBtn1.c \
+	CPushBtn1.c \
+	CToggleBtn1.c \
+	CCommand2.c \
+	CFileSelect2.c \
+	CPromptDia1.c \
+	CSelectBox2.c \
+	CLabel1.c \
+	CLabelGad1.c \
+	CScale1.c \
+	CScale3.c \
+	CScrollbar1.c \
+	CScrollbar2.c \
+	CDiaShell1.c \
+	CProtocol.c \
+	CMainWin2.c \
+	CScrollWin1.c
+		  
+includes:: $(SRCS)
+
+DependTarget () 
+
+$(SRCS):
+	csh ./MK_LINKS
+
+clean::
+	csh ./MK_LINKS -undo

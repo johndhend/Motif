@@ -1,0 +1,33 @@
+
+#) This is the OpenH test.
+
+#) There should now be four label widgets.The first should say:
+	"OpenH_vh is completed."
+   The next three should say
+	"OpenH_mf1 is completed."
+	"OpenH_mf2 is completed."
+	"OpenH_mf3 is completed."
+C)
+
+#) There should now be two new label widgets.The first should say:
+	"OpenH_vhev is completed."
+   The second should say:
+	OpenH_vhws is completed.
+   The other three label widgets should remain unchanged.
+   They should say:
+	OpenH_mf1 is completed.
+	OpenH_mf2 is completed.
+	OpenH_mf3 is completed.
+
+#) The following messages should be printed to stdout:
+Warning: I18NOpenFile: Could not open file OpenH_nef - MrmNOT_FOUND
+Warning: Idb__BM_GetRecord: Get block failed - MrmFAILURE
+Warning: I18NOpenFile: Could not open file OpenH_if - MrmFAILURE
+Warning: I18NOpenFile: Could not open file OpenH_mf1 - MrmNOT_FOUND
+Warning: I18NOpenFile: Could not open file OpenH_mf1 - MrmNOT_FOUND
+
+C)
+
+
+#) A summary message should be printed on stdout.
+E)

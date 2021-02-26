@@ -1,0 +1,219 @@
+XCOMM 
+XCOMM @OPENGROUP_COPYRIGHT@
+XCOMM COPYRIGHT NOTICE
+XCOMM Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+XCOMM Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+XCOMM ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+XCOMM the full copyright text.
+XCOMM 
+XCOMM This software is subject to an open license. It may only be
+XCOMM used on, with or for operating systems which are themselves open
+XCOMM source systems. You must contact The Open Group for a license
+XCOMM allowing distribution and sublicensing of this software on, with,
+XCOMM or for operating systems which are not Open Source programs.
+XCOMM 
+XCOMM See http://www.opengroup.org/openmotif/license for full
+XCOMM details of the license agreement. Any use, reproduction, or
+XCOMM distribution of the program constitutes recipient's acceptance of
+XCOMM this agreement.
+XCOMM 
+XCOMM EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+XCOMM PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+XCOMM KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+XCOMM WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+XCOMM OR FITNESS FOR A PARTICULAR PURPOSE
+XCOMM 
+XCOMM EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+XCOMM NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+XCOMM INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+XCOMM DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+XCOMM AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+XCOMM LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+XCOMM ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+XCOMM EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+XCOMM POSSIBILITY OF SUCH DAMAGES.
+XCOMM 
+XCOMM 
+XCOMM HISTORY
+XCOMM 
+XCOMM   $TOG: Imakefile /main/22 1999/05/19 17:00:13 mgreess $
+
+#define IHaveSubdirs
+#define PassCDebugFlags CDEBUGFLAGS="$(CDEBUGFLAGS)"
+
+RELEASE = "Release 2.2.0"
+PRODUCT = "Motif"
+#ifndef NoBuildMotifDemos
+#define BuildMotifDemos
+      DEMOSDIRECTORY = demos
+#endif
+      SUBDIRS = config localized lib tools/wml clients $(DEMOSDIRECTORY) \
+        bitmaps bindings doc/man
+      CDE_SUBDIRS = lib clients/uil clients/xmbind
+
+MakeSubdirs($(SUBDIRS))
+DependSubdirs($(SUBDIRS))
+
+/*
+#define IHaveSpecialMakefileTarget
+Makefile:: xmakefile
+ImakeDependency(xmakefile)
+xmakefile:: Imakefile
+	RMoveToBakFile(xmakefile)
+	$(IMAKE_CMD) -s xmakefile -DTOPDIR=$(TOP) -DCURDIR=$(CURRENT_DIR)
+*/
+
+
+VerifyOS::
+	@echo ""
+	@echo Building on OSName.
+	@echo ""
+
+includes::
+	MakeDir($(BUILDINCDIR))
+	MakeDir($(BUILDLIBDIR))
+	MakeDir($(BUILDDOCDIR))
+	MakeDir($(BUILDLOCDIR))
+
+XCOMM
+XCOMM Watch out!!!  Make sure you do make includes after removing X11....
+XCOMM
+
+clean::
+	$(RM) -r $(BUILDINCDIR)
+	$(RM) -r $(BUILDLIBDIR)
+	$(RM) -r $(BUILDDOCDIR)
+	$(RM) -r $(BUILDLOCDIR)
+
+
+/*
+  -k or (worse, -i) only if you need to skip things that aren't building
+      WORLDOPTS = -k
+  no need to rename Imakefile for TOP dir
+      MAKE_OPTS = -f xmakefile
+*/
+
+XCOMM 
+XCOMM install; create the directories that we're going to need
+XCOMM 
+
+#ifdef UseInstalled
+TESTS_IMAKE = $(IMAKE) $(IMAKE_FLAGS) -DUseInstalled
+#else
+TESTS_IMAKE = ../$(IMAKE) $(IMAKE_FLAGS)
+#endif
+DIRS_TO_CREATE = $(USRLIBDIR) $(BINDIR) $(INCDIR) $(USRINCDIR) $(LIBDIR) $(XAPPLOADDIR)
+CDE_DIRS_TO_CREATE = $(USRLIBDIR) $(BINDIR) $(PROJECTROOT)/share/include
+
+MakeDirectories(install, $(DIRS_TO_CREATE))
+MakeDirectories(install.cde, $(CDE_DIRS_TO_CREATE))
+
+LinkFileList(install.cde,include,$(PROJECTROOT),share)
+
+NamedTargetSubdirs(install.cde,$(CDE_SUBDIRS),"installing",DESTDIR=$(DESTDIR),install)
+
+/*
+ * dont forget to $(MAKE) $(MFLAGS) $(MAKE_OPTS) clean || true for rebuilds
+ */
+
+Everything::
+	@echo ""
+	@echo "Rebuilding $(RELEASE) of $(PRODUCT)"
+	@echo ""
+	@date
+	@echo ""
+	$(MAKE) $(MFLAGS) $(MAKE_OPTS) byacc-or-bison
+	cd $(IMAKESRC) && if [ -f Makefile ]; then $(MAKE) $(MFLAGS) BOOTSTRAPCFLAGS="$(BOOTSTRAPCFLAGS)"; else $(MAKE) $(MFLAGS) -f Makefile.ini BOOTSTRAPCFLAGS="$(BOOTSTRAPCFLAGS)"; fi
+	$(MAKE) $(MFLAGS) $(MAKE_OPTS) VerifyOS
+	$(MAKE) $(MFLAGS) $(MAKE_OPTS) Makefiles
+	$(MAKE) $(MFLAGS) $(MAKE_OPTS) includes
+	$(MAKE) $(MFLAGS) $(MAKE_OPTS) detour
+	$(MAKE) $(MFLAGS) $(MAKE_OPTS) $(WORLDOPTS)
+	@echo ""
+	@date
+	@echo ""
+	@echo "Rebuild of $(RELEASE) of $(PRODUCT) complete."
+	@echo ""
+
+XCOMM
+XCOMM   put after includes if you want depends make (slow, unreliable)
+XCOMM      supposedly allows partial building after changes
+XCOMM   my advice is always clean and rebuilt everything
+XCOMM	$(MAKE) $(MFLAGS) $(MAKE_OPTS) depend
+XCOMM
+
+
+XCOMM clean out link tree looking for stuff that should get checked in
+
+dangerous_strip_clean::
+	make -k clean
+	find . -type l -exec rm {} \;
+	find . \( \! \( -type d -o -name Makefile \) \) -print
+
+
+XCOMM Bootstrap the toplevel Makefile in tests subdirectory.
+
+/* manpages were - lets say altered */
+
+detour::
+	mkdir -p exports/include/Dt/ ; [ ! -d exports/include/Dt/ ] && $(CP) -r include/Dt/ exports/include/ || true
+	cd doc/man/man1/ ; for x in `ls *.1` ; do y="$${x%.1}" ; [ ! -f $$y.man ] && $(LN) $$x $$y.man ; done ; true
+	cd doc/man/man3/ ; for x in `ls *.3` ; do y="$${x%.3}" ; [ ! -f $$y.man ] && $(LN) $$x $$y.man ; done ; true
+	cd doc/man/man4/ ; for x in `ls *.4` ; do y="$${x%.4}" ; [ ! -f $$y.man ] && $(LN) $$x $$y.man ; done ; true
+	cd doc/man/man5/ ; for x in `ls *.5` ; do y="$${x%.5}" ; [ ! -f $$y.man ] && $(LN) $$x $$y.man ; done ; true
+	$(LN) doc/man/man1/xmbind.man $$PWD/clients/xmbind/xmbind.man || true
+	$(LN) $$PWD/doc/man/man1/mwm.man $$PWD/clients/mwm/mwm.man || true
+	$(LN) $$PWD/doc/man/man4/mwmrc.man $$PWD/clients/mwm/mwmrc.man4 || true
+	$(LN) $$PWD/doc/man/man5/UIL.man $$PWD/clients/uil/UIL.man || true
+
+/* apparently needed by "pure" build - makes only 1 Makefile top of tests
+  $(MAKE) $(MFLAGS) $(MAKE_OPTS) testsMakefile
+*/
+
+/*
+testsMakefile::
+	if [ -d tests ] ; then \
+  cd tests; if [ -f Makefile ] ; then set -x; \
+  $(RM) Makefile.bak; $(MV) Makefile Makefile.bak; \
+  fi; \
+  $(TESTS_IMAKE) -I../$(IRULESRC) $(IMAKE_DEFINES) -DTOPDIR=../. -DCURDIR=$(CURRENT_DIR)/tests ; fi
+*/
+
+/*
+XCOMM special target to determine if the xmakefile exists. 
+XCOMM Works on both Unix and NMAKE.EXE
+xmakefile-exists::
+*/
+
+/* for Makefile.imake-pure , should already be right not using imake-pure
+   but keep anyway just incase cf/ does not do it
+*/
+
+byacc-or-bison::
+	which bison && ! grep -q "USE_BYACC.*NO" config/cf/host.def && \
+  { \
+    echo "#undef  USE_BYACC           " >> config/cf/host.def ; \
+    echo "#define USE_BYACC         NO" >> config/cf/host.def ; \
+    echo "#undef  YaccCmd             " >> config/cf/host.def ; \
+    echo "#define YaccCmd           bison" >> config/cf/host.def ; \
+    echo "#undef  YaccFlags           " >> config/cf/host.def ; \
+    echo "#define YaccFlags         -y" >> config/cf/host.def ; \
+  } || true
+  
+/* 
+   there's a pinch , if new cf are used (ie, YaccCmd) will be right
+   but the "new cf" are missing macros Motif needs
+     the above tries to use older config/cf alone and hopes that
+     since Motif doesn't use it too harshly, bison changes aside, it will work
+*/
+
+/*
+
+fix-linux-cf::
+	! grep -q "#ifndef DefaultGcc2i386Opt" config/cf/linux.cf && \
+  { \
+    echo "#ifndef DefaultGcc2i386Opt" >> config/cf/host.def ; \
+    echo "#define DefaultGcc2i386Opt" >> config/cf/host.def ; \
+    echo "#endif"                     >> config/cf/host.def ; \
+  } || true
+*/

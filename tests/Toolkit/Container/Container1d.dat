@@ -1,0 +1,82 @@
+/* $XConsortium: Container1d.dat /main/4 1995/07/17 10:10:31 drk $ */
+/*
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+ */
+/*
+ * HISTORY
+ */
+#) This is the Container1 Test run with option "-I Container1d.Dat -u d".
+C)
+
+#) The container widget should be displayed in its SMALL_ICON view.
+#) Four IconGadgets with the pixmap part displaying a "S" within
+   a black box, and the label part displaying the strings "IconGad1",
+   "IconGad2", "IconGad3" and "IconGad4" respectively should be visible.
+   The label "IconGad2" should be truncated.
+#) The layoutType is XmSPATIAL, the spatialStyle is XmNONE, and
+   the spatialSnapModel is XmNONE.
+#) "IconGad1" should be placed at (100, 100), "IconGad2" should be
+   placed at (200, 200), "IconGad3" should be placed at (300, 100) and
+   "IconGad4" should be placed at (50, 400), with a marginWidth of 20
+   and a marginHeight of 20 for each of the items.
+C)
+
+#) The selectionPolicy is the default EXTENDED_SELECT and the
+   selectionTechnique is the TOUCH_ONLY.
+#) Click BSelect in the background of Container where there is no item.
+   All selected items should get deselected. You should also see the
+   following message in the term window:
+!)
+      Reason for SelectionCallback: CR_EXTENDED_SELECT
+      Number of items selected: 0
+      Names of items selected:
+
+#) Press BSelect on "IconGad1"
+#) "IconGad1" gets selected.
+#) With BSelect pressed, drag the pointer over item "IconGad4", touching
+   "IconGad3" on the way, without touching "IconGad2".
+#) Release BSelect. Only "IconGad1", "IconGad3", and "IconGad4"
+   should get selected.
+#) You should also see the following message on the term window:
+!)
+      Reason for SelectionCallback: CR_EXTENDED_SELECT
+      Number of items selected: 3
+      Names of items selected: IconGad1 IconGad3 IconGad4
+
+#) Click BSelect in the background of Container where there is no item.
+   All selected items should get deselected.
+C)
+
+E)

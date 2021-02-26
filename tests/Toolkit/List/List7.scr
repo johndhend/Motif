@@ -1,0 +1,284 @@
+# $XConsortium: List7.scr /main/5 1995/07/17 20:22:09 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+# OSF/Motif: @(#)List7.scr	1.1  91/10/14
+
+# A client with two lists, two push buttons, and a scale should appear.
+# The list on the far left should have a list of function names, and the
+# list on the far right should have a list of items (1 - 9)
+
+LocatePointer List2 RListItem 0
+CompareVisual List2
+
+# Select XmListAddItems() from the Functions list, and then select Item1,
+# Item2, and Item3 from the Action List.
+
+LocatePointer List1 RListItem 0
+ClickMB Btn1
+
+LocatePointer List2 RListItem 0
+ClickMB Btn1
+LocatePointer List2 RListItem 1
+ClickMB Btn1
+LocatePointer List2 RListItem 2
+ClickMB Btn1
+
+# Click MB1 in the Call Function push button. The Action list should
+# now contain vertical scrollbars, and Item1, Item2, and Item3 should be
+# appended (selected) the end of the Action List.
+
+LocatePointer ApplyB
+ClickMB Btn1
+
+CompareVisual List2
+
+# C)
+
+Continue
+
+# Click MB1 in the Clear Args push button.
+
+LocatePointer ClearB
+ClickMB Btn1
+
+# Select XmListDeleteItems() from the Functions list, and then
+# select Item4, Item5, and Item6 from the Action List.
+
+LocatePointer List1 RListItem 4
+ClickMB Btn1
+
+LocatePointer List2 RListItem 3
+ClickMB Btn1
+LocatePointer List2 RListItem 4
+ClickMB Btn1
+LocatePointer List2 RListItem 5
+ClickMB Btn1
+
+# Click MB1 in the Call Funtion push button. Item4, Item5, and Item6
+# should be deleted from the Action List, and the vertical scrollbar
+# should disappear.
+
+LocatePointer ApplyB
+ClickMB Btn1
+
+CompareVisual List2
+
+# Click MB1 in the Call Function push button again. Three warning messages
+# should be printed in the term window.
+
+ClickMB Btn1
+
+CompareVisual List2
+
+# C)
+
+Continue
+
+# Click MB1 in the Clear Args push button.
+
+LocatePointer ClearB
+ClickMB Btn1
+
+# Select XmListDeleteItemsPos() from the Functions List, and then select
+# Item1 from the Action List.
+
+LocatePointer List1 RListItem 5
+ClickMB Btn1
+
+LocatePointer List2 RListItem 0
+ClickMB Btn1
+
+# Move the slider on the scale till the scale reads 2.
+
+LocatePointer Scale RScaleSlider
+DragSliderValue Right 2
+
+# Click MB1 in the Call Function push button. Item1 and Item2 should be
+# deleted from the Action List.
+
+LocatePointer ApplyB
+ClickMB Btn1
+
+CompareVisual List2
+
+# Click MB1 in the last item in the Action List (Item3).
+
+LocatePointer List2 RListItem 12
+ClickMB Btn1
+
+# Click MB1 in the Call Funtion push button. The last item (Item3) should
+# be deleted from the list.
+
+LocatePointer ApplyB 
+ClickMB Btn1
+
+CompareVisual List2
+
+# Click MB1 in the Call Funtion push button again. A warning message
+# should be printed in the term window.
+
+LocatePointer ApplyB 
+ClickMB Btn1
+
+CompareVisual List2
+
+# Move the slider scale to 0.
+
+LocatePointer Scale RScaleSlider
+DragSliderValue Left 0
+
+# Click MB1 in the Call Function push button. No change will be visible.
+
+LocatePointer ApplyB 
+ClickMB Btn1
+
+CompareVisual List2
+
+# C)
+
+Continue
+
+# Click MB1 in the Clear Args push button.
+
+LocatePointer ClearB
+ClickMB Btn1
+
+# Select XmListAddItem() from the Functions List, and then select Item7
+# from the Action List.
+
+LocatePointer List1 RListItem 1
+ClickMB Btn1
+
+LocatePointer List2 RListItem 1
+ClickMB Btn1
+
+# Move the Scale slider to 6.
+
+LocatePointer Scale RScaleSlider 
+DragSliderValue Right 6
+
+# Click MB1 in the Call Function push button, Item7 should be added (selected)
+# in the sixth position in the List.
+
+LocatePointer ApplyB
+ClickMB Btn1
+
+CompareVisual List2
+
+# Move the Scale slider to 0.
+
+LocatePointer Scale RScaleSlider
+DragSliderValue Left 0
+
+# Click MB1 in the Call Funtion push button. Item7 should be added (selected)
+# to the end of the list.
+
+LocatePointer ApplyB
+ClickMB Btn1
+
+CompareVisual List2
+
+# C)
+
+Continue
+
+# Click MB1 in the Clear Args push button.
+
+LocatePointer ClearB 
+ClickMB Btn1
+
+# Select XmListDeleteItem() from the Functions List, and then select
+# Item9 in the Action List.
+
+LocatePointer List1 RListItem 3
+ClickMB Btn1
+
+LocatePointer List2 RListItem 3
+ClickMB Btn1
+
+# Click MB1 in the Call Function push button, Item9 should be deleted
+# from the Action List.
+
+LocatePointer ApplyB 
+ClickMB Btn1
+
+CompareVisual List2
+
+# Click MB1 in the Call Function push button again. A warning message should
+# be printed in the term window.
+
+LocatePointer ApplyB 
+ClickMB Btn1
+
+CompareVisual List2
+
+# C)
+
+Continue
+
+# Click MB1 in the Clear Args push button.
+
+LocatePointer ClearB
+ClickMB Btn1
+
+# Select XmListDeleteAllItems() from the Functions List.
+
+LocatePointer List1 RListItem 7
+ClickMB Btn1
+
+# Click MB1 in the Call Function push button, all Items should be
+# deleted and the List should be empty. The list should not increase in size.
+
+LocatePointer ApplyB
+ClickMB Btn1
+
+CompareVisual List1
+
+# Click MB1 in the Call Function push button. There should be no visible
+# change.
+
+LocatePointer ApplyB
+ClickMB Btn1
+
+CompareVisual List1
+
+# E)
+
+Exit

@@ -1,0 +1,213 @@
+# $XConsortium: ScrollText3g.scr /main/5 1995/07/17 20:41:01 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+#  #) Other Behavior:
+#  @) Space just inserts a space.
+LocatePointer Text1 RTextChar 10
+ClickMB Btn1
+ClickKey KSpace
+ClickKey KSpace
+CompareVisual Text1
+LocatePointer Text2 RTextChar 10
+ClickMB Btn1
+ClickKey KSpace
+ClickKey KSpace
+CompareVisual Text2
+LocatePointer Text3 RTextChar 10
+ClickMB Btn1
+ClickKey KSpace
+ClickKey KSpace
+CompareVisual Text3
+LocatePointer Text4 RTextChar 10
+ClickMB Btn1
+ClickKey KSpace
+ClickKey KSpace
+CompareVisual Text4
+
+#  @) Return does a carriage return in multi-line.
+LocatePointer Text1 RTextChar 35
+ClickMB Btn1
+ClickKey KReturn
+CompareVisual Text1
+LocatePointer Text3 RTextChar 35
+ClickMB Btn1
+ClickKey KReturn
+CompareVisual Text3
+
+#  @) Tab inserts a tab in multi-line.
+LocatePointer Text1 RTextChar 11
+ClickMB Btn1
+ClickKey KTab
+CompareVisual Text1
+LocatePointer Text2 RTextChar 11
+ClickMB Btn1
+ClickKey KTab
+CompareVisual Text2
+LocatePointer Text3 RTextChar 11
+ClickMB Btn1
+ClickKey KTab
+CompareVisual Text3
+LocatePointer Text4 RTextChar 11
+ClickMB Btn1
+ClickKey KTab
+CompareVisual Text4
+
+#  #) Check that if pending delete enabled, typing a character or doing
+#     any kind of paste deletes the text only if the cursor is within
+#     the bounds of the selected area.
+#
+LocatePointer Text1 RTextChar 45
+DragComponent Text1 RTextChar 48
+LocatePointer Text1 RTextChar 50
+ClickMB <Ctrl> Btn1
+ClickKey Ka
+LocatePointer Text1 RTextChar 45
+DragComponent Text1 RTextChar 48
+LocatePointer Text1 RTextChar 46
+ClickMB <Ctrl> Btn1
+ClickKey Ka
+CompareVisual Text1
+
+LocatePointer Text2 RTextChar 15
+DragComponent Text2 RTextChar 18
+LocatePointer Text2 RTextChar 20
+ClickMB <Ctrl> Btn1
+ClickKey Ka
+LocatePointer Text2 RTextChar 15
+DragComponent Text2 RTextChar 18
+LocatePointer Text2 RTextChar 16
+ClickMB <Ctrl> Btn1
+ClickKey Ka
+CompareVisual Text2
+
+LocatePointer Text3 RTextChar 45
+DragComponent Text3 RTextChar 48
+LocatePointer Text3 RTextChar 50
+ClickMB <Ctrl> Btn1
+ClickKey Ka
+LocatePointer Text3 RTextChar 45
+DragComponent Text3 RTextChar 48
+LocatePointer Text3 RTextChar 46
+ClickMB <Ctrl> Btn1
+ClickKey Ka
+CompareVisual Text3
+
+LocatePointer Text4 RTextChar 15
+DragComponent Text4 RTextChar 18
+LocatePointer Text4 RTextChar 20
+ClickMB <Ctrl> Btn1
+ClickKey Ka
+LocatePointer Text4 RTextChar 15
+DragComponent Text4 RTextChar 18
+LocatePointer Text4 RTextChar 16
+ClickMB <Ctrl> Btn1
+ClickKey Ka
+CompareVisual Text4
+
+#  #) Check that KClear clears the selected area (fills it with spaces).
+#     Use a fixed font, and try a multi-line selected region.
+LocatePointer Text1 RTextChar 30
+DragComponent Text1 RTextChar 46
+ClickKey KClear
+CompareVisual Text1
+
+LocatePointer Text2 RTextChar 13
+DragComponent Text2 RTextChar 16
+ClickKey KClear
+CompareVisual Text2
+
+LocatePointer Text3 RTextChar 30
+DragComponent Text3 RTextChar 46
+ClickKey KClear
+CompareVisual Text3
+
+LocatePointer Text4 RTextChar 13
+DragComponent Text4 RTextChar 16
+ClickKey KClear
+CompareVisual Text4
+
+#  #) Check that Ctrl KDelete erases text between the cursor and the
+#     end of line.
+LocatePointer Text1 RTextChar 50
+ClickMB Btn1
+ClickKey <Ctrl> KDelete
+CompareVisual Text1
+
+LocatePointer Text2 RTextChar 20
+ClickMB Btn1
+ClickKey <Ctrl> KDelete
+CompareVisual Text2
+
+LocatePointer Text3 RTextChar 50
+ClickMB Btn1
+ClickKey <Ctrl> KDelete
+CompareVisual Text3
+
+LocatePointer Text4 RTextChar 20
+ClickMB Btn1
+ClickKey <Ctrl> KDelete
+CompareVisual Text4
+
+
+#  Shift Space also just inserts a space.
+LocatePointer Text1 RTextChar 10
+ClickMB Btn1
+ClickKey <Shift> KSpace
+ClickKey <Shift> KSpace
+CompareVisual Text1
+LocatePointer Text2 RTextChar 10
+ClickMB Btn1
+ClickKey <Shift> KSpace
+ClickKey <Shift> KSpace
+CompareVisual Text2
+LocatePointer Text3 RTextChar 10
+ClickMB Btn1
+ClickKey <Shift> KSpace
+ClickKey <Shift> KSpace
+CompareVisual Text3
+LocatePointer Text4 RTextChar 10
+ClickMB Btn1
+ClickKey <Shift> KSpace
+ClickKey <Shift> KSpace
+CompareVisual Text4
+
+
+#  E)
+Exit

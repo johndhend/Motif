@@ -1,0 +1,171 @@
+! $XConsortium: TranslationsUil.uil /main/4 1996/07/15 15:11:15 drk $
+!
+! @OPENGROUP_COPYRIGHT@
+! COPYRIGHT NOTICE
+! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+! ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+! the full copyright text.
+! 
+! This software is subject to an open license. It may only be
+! used on, with or for operating systems which are themselves open
+! source systems. You must contact The Open Group for a license
+! allowing distribution and sublicensing of this software on, with,
+! or for operating systems which are not Open Source programs.
+! 
+! See http://www.opengroup.org/openmotif/license for full
+! details of the license agreement. Any use, reproduction, or
+! distribution of the program constitutes recipient's acceptance of
+! this agreement.
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+! OR FITNESS FOR A PARTICULAR PURPOSE
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+! POSSIBILITY OF SUCH DAMAGES.
+!
+!
+! HISTORY
+!
+
+!
+! TranslationsUil.uil
+!
+
+
+module test
+    version = 'v1.0'
+    names = case_sensitive
+    character_set=iso_latin1
+    objects = { }
+
+procedure
+        quit(string);
+
+list 
+  button_translations:
+  arguments
+  {
+     XmNtranslations =
+      translation_table
+      (
+       '#override',
+       '<Btn1Down>, <Btn1Up>: actSetTextCb()',
+        'Ctrl<Key>q: actquit()'
+      );
+     XmNaccelerators =
+      translation_table
+      (
+       '#override',
+       'Ctrl<Key>a: actSetTextCb()'
+      );
+  };
+  done_translations:
+  arguments
+  {
+     XmNtranslations =
+      translation_table
+      (
+       '#override',
+       '<Btn1Down>: actquit()',
+        'Ctrl<Key>q: actquit()'
+      );
+  };
+  appMain_translations:
+  arguments
+  {
+     XmNtranslations =
+      translation_table
+      (
+       '#override',
+       'Ctrl<Key>q: actquit()'
+      );
+  };
+  text_translations:
+  arguments
+  {
+     XmNtranslations =
+      translation_table
+      (
+       '#override',
+       'Ctrl<Key>q: actquit()',
+       'Ctrl<Key>b: beginning-of-line()',
+       'Ctrl<Key>e: end-of-line()'
+      );
+  };
+
+
+object appMain : XmForm {
+    arguments {
+
+        arguments appMain_translations;
+
+        XmNdefaultButton = XmPushButton squeeze;
+    }; 
+    controls {
+        XmTextField text;
+        XmPushButton squeeze;
+        XmPushButton done; 
+    };
+};
+
+object text : XmTextField {
+    arguments {
+
+        arguments text_translations;
+
+        XmNtopAttachment = XmATTACH_POSITION; XmNtopPosition = 0;
+        XmNbottomAttachment = XmATTACH_POSITION; XmNbottomPosition = 100;
+        XmNleftAttachment = XmATTACH_POSITION; XmNleftPosition = 10;
+        XmNrightAttachment = XmATTACH_POSITION; XmNrightPosition = 40;
+    };
+};
+
+
+object squeeze : XmPushButton {
+
+
+    arguments {
+
+        arguments button_translations;
+
+        XmNtopAttachment = XmATTACH_POSITION; XmNtopPosition = 0;
+        XmNbottomAttachment = XmATTACH_POSITION; XmNbottomPosition = 100;
+        XmNleftAttachment = XmATTACH_POSITION; XmNleftPosition = 50;
+        XmNrightAttachment = XmATTACH_POSITION; XmNrightPosition = 80;
+
+        XmNlabelString = "Change My Label";
+     };
+};
+
+
+object done : XmPushButton {
+
+    arguments {
+
+        arguments done_translations;
+
+        XmNtopAttachment = XmATTACH_POSITION; XmNtopPosition = 0;
+        XmNbottomAttachment = XmATTACH_POSITION; XmNbottomPosition = 100;
+        XmNleftAttachment = XmATTACH_POSITION; XmNleftPosition = 85;
+        XmNrightAttachment = XmATTACH_POSITION; XmNrightPosition = 95;
+
+        XmNlabelString = "Done";
+    };
+};
+
+end module;
+
+
+
+

@@ -1,0 +1,68 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: Baseline2.dat /main/5 1995/07/13 18:29:11 drk $"
+*/
+#) A test with a two RowColumns will appear. The rightmost RowColumn
+   will contain 11 widgets consisting of Label and LabelGadget subclasses,
+   and a Text and TextField widget. The leftmost RowColumn contains
+   a scale and a RadioBox. The RadioBox will contain the various allowable
+   setting for the resources XmNentryVerticalAlignment in RowColumn.
+#) Click Mouse Button on XmALIGNMENT_BASELINE_BOTTOM. The RowColumn on
+   the right should reize it children for this alignment. All widgets
+   should be visible.
+#) Click Mouse Button on XmALIGNMENT_BASELINE_TOP. The RowColumn on
+   the right should reize it children for this alignment. 
+#) Click Mouse Button on XmALIGNMENT_CONTENTS_BOTTOM. The RowColumn on
+   the right should reize it children for this alignment. 
+#) Click Mouse Button on XmALIGNMENT_CONTENTS_TOP. The RowColumn on
+   the right should reize it children for this alignment. 
+#) Click Mouse Button on XmALIGNMENT_CENTER. The RowColumn on
+   the right should reize it children for this alignment. 
+C)
+#) Move the scale associated labeled \" Number of Columns\" to
+   values greater than 2 and try setting the Alignments again.
+#) Move the associated labeled \" Number of Columns\" to
+   6, you should be able to see all the widgets in 6 separate columns.
+C)
+#) Packing has now changed to XmPACK_TIGHT, and a height of 250 has
+   been imposed on the RowColumn. This should force the RowColumn
+   to wrap into 2 columns.
+#) Try all settings for Baseline alignment.
+E)

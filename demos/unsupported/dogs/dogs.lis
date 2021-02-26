@@ -1,0 +1,2360 @@
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 1
+Module: squares 	 Version: v1.0
+
+    1 (0)	! 
+    2 (0)	! @OPENGROUP_COPYRIGHT@
+    3 (0)	! COPYRIGHT NOTICE
+    4 (0)	! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+    5 (0)	! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+    6 (0)	! ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+    7 (0)	! the full copyright text.
+    8 (0)	! 
+    9 (0)	! This software is subject to an open license. It may only be
+   10 (0)	! used on, with or for operating systems which are themselves open
+   11 (0)	! source systems. You must contact The Open Group for a license
+   12 (0)	! allowing distribution and sublicensing of this software on, with,
+   13 (0)	! or for operating systems which are not Open Source programs.
+   14 (0)	! 
+   15 (0)	! See http://www.opengroup.org/openmotif/license for full
+   16 (0)	! details of the license agreement. Any use, reproduction, or
+   17 (0)	! distribution of the program constitutes recipient's acceptance of
+   18 (0)	! this agreement.
+   19 (0)	! 
+   20 (0)	! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+   21 (0)	! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   22 (0)	! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+   23 (0)	! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+   24 (0)	! OR FITNESS FOR A PARTICULAR PURPOSE
+   25 (0)	! 
+   26 (0)	! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+   27 (0)	! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+   28 (0)	! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+   29 (0)	! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+   30 (0)	! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+   31 (0)	! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+   32 (0)	! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+   33 (0)	! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+   34 (0)	! POSSIBILITY OF SUCH DAMAGES.
+   35 (0)	! 
+   36 (0)	! 
+   37 (0)	! HISTORY
+   38 (0)	! 
+   39 (0)	!   $XConsortium: dogs.uil /main/5 1995/07/14 10:07:35 drk $
+   40 (0)	!******************************************************************************
+   41 (0)	
+   42 (0)	!******************************************************************************
+   43 (0)	!* 
+   44 (0)	!*  dogs.uil - Square & Dog widget demo, application UIL file.
+   45 (0)	!* 
+   46 (0)	!******************************************************************************
+   47 (0)	
+   48 (0)	module squares
+   49 (0)	    version = 'v1.0'
+   50 (0)	    names = case_sensitive
+   51 (0)	    character_set=iso_latin1
+   52 (0)	    objects = { XmPushButton = gadget; XmToggleButton = gadget; }
+   53 (0)	
+   54 (0)	include file 'Square.uil';
+                                                               18581BB7   0000   module record 
+                                                                   0001   0004   topmost count: 1 
+                                                       6E69616D5F707061   0018   (0) app_main 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 2
+Module: squares 	 Version: v1.0
+
+ 
+    1 (1)	! 
+    2 (1)	! @OPENGROUP_COPYRIGHT@
+    3 (1)	! COPYRIGHT NOTICE
+    4 (1)	! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+    5 (1)	! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+    6 (1)	! ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+    7 (1)	! the full copyright text.
+    8 (1)	! 
+    9 (1)	! This software is subject to an open license. It may only be
+   10 (1)	! used on, with or for operating systems which are themselves open
+   11 (1)	! source systems. You must contact The Open Group for a license
+   12 (1)	! allowing distribution and sublicensing of this software on, with,
+   13 (1)	! or for operating systems which are not Open Source programs.
+   14 (1)	! 
+   15 (1)	! See http://www.opengroup.org/openmotif/license for full
+   16 (1)	! details of the license agreement. Any use, reproduction, or
+   17 (1)	! distribution of the program constitutes recipient's acceptance of
+   18 (1)	! this agreement.
+   19 (1)	! 
+   20 (1)	! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+   21 (1)	! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   22 (1)	! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+   23 (1)	! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+   24 (1)	! OR FITNESS FOR A PARTICULAR PURPOSE
+   25 (1)	! 
+   26 (1)	! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+   27 (1)	! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+   28 (1)	! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+   29 (1)	! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+   30 (1)	! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+   31 (1)	! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+   32 (1)	! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+   33 (1)	! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+   34 (1)	! POSSIBILITY OF SUCH DAMAGES.
+   35 (1)	! 
+   36 (1)	! 
+   37 (1)	! HISTORY
+   38 (1)	! 
+   39 (1)	!   $XConsortium: Square.uil /main/5 1995/07/14 10:06:54 drk $
+   40 (1)	!******************************************************************************
+   41 (1)	
+   42 (1)	!****************************************************************************
+   43 (1)	!*
+   44 (1)	!*  Square.uil - Square widget UIL header file
+   45 (1)	!*  
+   46 (1)	!****************************************************************************
+   47 (1)	
+   48 (1)	! resources
+   49 (1)	
+   50 (1)	value
+   51 (1)	    SquareNmajorDimension : private argument ('majorDimension', integer);
+   52 (1)	    SquareNmakeSquare : private argument ('makeSquare', boolean);
+   53 (1)	
+   54 (1)	! resource values
+   55 (1)	
+   56 (1)	value
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 3
+Module: squares 	 Version: v1.0
+
+   57 (1)	    SquareWIDTH : 0;
+   58 (1)	    SquareHEIGHT : 1;
+   59 (1)	
+   60 (1)	! widget create procedure
+   61 (1)	
+   62 (1)	procedure SquareCreate();
+   55 (0)	include file 'Dog.uil';
+    1 (2)	! 
+    2 (2)	! @OPENGROUP_COPYRIGHT@
+    3 (2)	! COPYRIGHT NOTICE
+    4 (2)	! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+    5 (2)	! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+    6 (2)	! ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+    7 (2)	! the full copyright text.
+    8 (2)	! 
+    9 (2)	! This software is subject to an open license. It may only be
+   10 (2)	! used on, with or for operating systems which are themselves open
+   11 (2)	! source systems. You must contact The Open Group for a license
+   12 (2)	! allowing distribution and sublicensing of this software on, with,
+   13 (2)	! or for operating systems which are not Open Source programs.
+   14 (2)	! 
+   15 (2)	! See http://www.opengroup.org/openmotif/license for full
+   16 (2)	! details of the license agreement. Any use, reproduction, or
+   17 (2)	! distribution of the program constitutes recipient's acceptance of
+   18 (2)	! this agreement.
+   19 (2)	! 
+   20 (2)	! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+   21 (2)	! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   22 (2)	! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+   23 (2)	! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+   24 (2)	! OR FITNESS FOR A PARTICULAR PURPOSE
+   25 (2)	! 
+   26 (2)	! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+   27 (2)	! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+   28 (2)	! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+   29 (2)	! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+   30 (2)	! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+   31 (2)	! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+   32 (2)	! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+   33 (2)	! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+   34 (2)	! POSSIBILITY OF SUCH DAMAGES.
+   35 (2)	! 
+   36 (2)	! 
+   37 (2)	! HISTORY
+   38 (2)	! 
+   39 (2)	!   $XConsortium: Dog.uil /main/5 1995/07/14 10:05:51 drk $
+   40 (2)	!******************************************************************************
+   41 (2)	
+   42 (2)	!****************************************************************************
+   43 (2)	!*
+   44 (2)	!*  Dog.uil - Dog widget UIL header file
+   45 (2)	!*  
+   46 (2)	!****************************************************************************
+   47 (2)	
+   48 (2)	! resources
+   49 (2)	
+   50 (2)	value
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 4
+Module: squares 	 Version: v1.0
+
+   51 (2)	    DogNwagTime : private argument ('wagTime', integer);
+   52 (2)	    DogNbarkTime : private argument ('barkTime', integer);
+   53 (2)	    DogNbarkCallback : reason ('barkCallback');
+   54 (2)	
+   55 (2)	! widget create procedure
+   56 (2)	
+   57 (2)	procedure DogCreate();
+   56 (0)	
+   57 (0)	procedure
+   58 (0)		create_cb(integer);
+   59 (0)		bark_cb(integer);
+   60 (0)		tb_cb(integer);
+   61 (0)		scale_cb(integer);	
+   62 (0)		help_cb(compound_string);
+   63 (0)		exit_cb();
+   64 (0)	
+   65 (0)	value
+   66 (0)		k_dog1_id : 1;
+   67 (0)		k_dog2_id : 2;
+   68 (0)		k_dog3_id : 3;
+   69 (0)		k_help_id : 4;
+   70 (0)	
+   71 (0)	value
+   72 (0)		dog1_bark_volume : 90;
+   73 (0)		dog1_bark_time : 1100;
+   74 (0)		dog1_wag_time : 100;
+   75 (0)		dog1_square : false;
+   76 (0)	
+   77 (0)		dog2_bark_volume : 40;
+   78 (0)		dog2_bark_time : 400;
+   79 (0)		dog2_wag_time : 100;
+   80 (0)		dog2_square : false;
+   81 (0)	
+   82 (0)		dog3_bark_volume : 70;
+   83 (0)		dog3_bark_time : 700;
+   84 (0)		dog3_wag_time : 100;
+   85 (0)		dog3_square : false;
+   86 (0)	
+   87 (0)	value help_text :
+   88 (0)	        compound_string(" ", separate=true) &
+   89 (0)	        compound_string(" ", separate=true) &
+   90 (0)	        compound_string("osfActivate/MB1 = Bark.", separate=true) &
+   91 (0)	        compound_string("W/MB2 = Wag tail.", separate=true) &
+   92 (0)	        compound_string("S/Shift-MB2 = Stop.", separate=true) &
+   93 (0)	        compound_string("osfHelp = Help.", separate=true) &
+   94 (0)	        compound_string("");
+   95 (0)	
+   96 (0)	
+   97 (0)	object app_main : XmMainWindow {
+   98 (0)	    controls {
+   99 (0)		XmMenuBar bar;
+  100 (0)		XmForm work;
+  101 (0)	        unmanaged XmInformationDialog help_box;
+  102 (0)	    };
+  103 (0)	    callbacks {
+  104 (0)		XmNhelpCallback=procedure help_cb(compound_string("Dogs") & help_text);
+                                                                          0000   Resource ID: 00000001 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 5
+Module: squares 	 Version: v1.0
+
+                                                                          0000   size: 124, group: literal 
+                                                                          0000   type: compound_string, access: private, locked: false 
+    4200102000420
+    4D2F57110200042E 6B726142203D2031 424D2F6574617669 74634166736F1702   0020   ??osfActivate/MB1 = Bark.????W/M
+    203D2032424D2D74 666968532F531302 42E6C69617420
+            00020004 2E706C6548203D20 706C654866736F0F 200042E706F7453
+ 
+  105 (0)	    };
+  106 (0)	};
+                                                                          0000   Resource index: app_main 
+                                                               1649F7E2   0000   widget record 
+                                                                   0140   0004   size: 320 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   0006   000A   type: XmMainWindow 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0000   000E   class: builtin 
+                                                                   0038   0010   argument list offset: 38 (hex) 
+                                                                   00C8   0012   children list offset: C8 (hex) 
+                                                                   0000   0014   no comment specified 
+                                                                   0000   0016   no creation callback 
+                                                    00 6E69616D5F707061   0028   app_main?
+                                                                   0001   0038   argument count: 1 
+                                                                   0000   003A   related argument count: 0 
+                                                                   0027   0048   (0) arg type: XmNhelpCallback 
+                                                                   0000   004A   (0) no tag offset 
+                                                                   0009   004C   (0) type: callback 
+                                                               00000058   0050   (0) offset: 58 (hex) 
+                                                               0666C168   0058   callback descriptor 
+                                                                   0001   005C   callback count: 1 
+                                                                   00A8   0068   (0) routine name offset: A8 (hex) 
+                                                                   000C   006A   (0) routine tag type: resource 
+                                                               000000B0   006C   (0) value:  
+                                                       62635F706C6568
+                                                                   0003   00C8   Children count: 3 
+                                                                     01   00D8   (0) managed 
+                                                                     01   00D9   (0) access: public 
+                                                    00 1
+                                                                     01   00F0   (1) managed 
+                                                                     01   00F1   (1) access: public 
+                                                    00 1
+                                                                     00   0108   (2) unmanaged 
+                                                                     01   0109   (2) access: public 
+                                                    00 1
+                                                    00 786F625F706C6568   0120   help_box?
+                                                             006B726F77   0130   work?
+                                                               00726162   0138   bar?
+ 
+  107 (0)	
+  108 (0)	object help_box : XmInformationDialog {
+  109 (0)	    arguments {
+  110 (0)	        XmNmessageAlignment = XmALIGNMENT_BEGINNING;
+  111 (0)	        XmNdialogTitle = "Help";
+  112 (0)	        XmNokLabelString = "Dismiss";
+  113 (0)	    };
+  114 (0)	    callbacks {
+  115 (0)	        MrmNcreateCallback = procedure create_cb(k_help_id);
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 6
+Module: squares 	 Version: v1.0
+
+  116 (0)	    };
+  117 (0)	};
+                                                                          0000   Resource index: help_box 
+                                                               1649F7E2   0000   widget record 
+                                                                   0100   0004   size: 256 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   0005   000A   type: XmInformationDialog 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0000   000E   class: builtin 
+                                                                   0098   0010   argument list offset: 98 (hex) 
+                                                                   0000   0012   no children 
+                                                                   0000   0014   no comment specified 
+                                                                   0038   0016   creation callback offset: 38 (hex) 
+                                                    00 786F625F706C6568   0028   help_box?
+                                                               0666C168   0038   callback descriptor 
+                                                                   0001   003C   callback count: 1 
+                                                                   0088   0048   (0) routine name offset: 88 (hex) 
+                                                                   0001   004A   (0) routine tag type: integer 
+                                                               00000004   004C   (0) value:  
+                                                  0062 635F657461657263   0088   create_cb?
+                                                                   0003   0098   argument count: 3 
+                                                                   0000   009A   related argument count: 0 
+                                                                   000F   00A8   (0) arg type: XmNmessageAlignment 
+                                                                   0000   00AA   (0) no tag offset 
+                                                                   0001   00AC   (0) type: integer 
+                                                               00000000   00B0   (0) value: 0 
+                                                                   0006   00B4   (1) arg type: XmNdialogTitle 
+                                                                   0000   00B6   (1) no tag offset 
+                                                                   000C   00B8   (1) type: resource 
+                                                               000000E8   00BC   (1) offset: E8 (hex) 
+                                                                   0012   00C0   (2) arg type: XmNokLabelString 
+                                                                   0000   00C2   (2) no tag offset 
+                                                                   000C   00C4   (2) type: resource 
+                                                               000000D0   00C8   (2) offset: D0 (hex) 
+                                                                   0018   00D0   resource descriptor, size: 24 
+                                                                     02   00D2   access: private 
+                                                                     02   00D3   resource ID, offset: E0 (hex) 
+                                                                     02   00D4   resource group: literal 
+                                                                     05   00D5   resource type: compound_string 
+                                                       1E0003
+                                                                   0018   00E8   resource descriptor, size: 24 
+                                                                     02   00EA   access: private 
+                                                                     02   00EB   resource ID, offset: F8 (hex) 
+                                                                     02   00EC   resource group: literal 
+                                                                     05   00ED   resource type: compound_string 
+                                                       1F0003
+ 
+  118 (0)	
+  119 (0)	object bar : XmMenuBar {
+  120 (0)	    arguments {
+  121 (0)		XmNmenuHelpWidget = XmCascadeButton help;
+  122 (0)	    };
+  123 (0)	    controls {
+  124 (0)		XmCascadeButton file;
+  125 (0)		XmCascadeButton help;
+  126 (0)	    };
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 7
+Module: squares 	 Version: v1.0
+
+  127 (0)	};
+                                                                          0000   Resource index: bar 
+                                                               1649F7E2   0000   widget record 
+                                                                   00C0   0004   size: 192 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   0007   000A   type: XmMenuBar 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0000   000E   class: builtin 
+                                                                   0030   0010   argument list offset: 30 (hex) 
+                                                                   0070   0012   children list offset: 70 (hex) 
+                                                                   0000   0014   no comment specified 
+                                                                   0000   0016   no creation callback 
+                                                               00726162   0028   bar?
+                                                                   0001   0030   argument count: 1 
+                                                                   0000   0032   related argument count: 0 
+                                                                   000E   0040   (0) arg type: XmNmenuHelpWidget 
+                                                                   0000   0042   (0) no tag offset 
+                                                                   000C   0044   (0) type: resource 
+                                                               00000050   0048   (0) offset: 50 (hex) 
+                                                                   001C   0050   resource descriptor, size: 28 
+                                                                     01   0052   access: public 
+                                                                     01   0053   index, offset: 60 (hex) 
+                                                                     01   0054   resource group: widget 
+                                                                     E9   0055   resource type: unknown 
+                                                             00706C6568   0060   help?
+                                                                   0002   0070   Children count: 2 
+                                                                     01   0080   (0) managed 
+                                                                     01   0081   (0) access: public 
+                                                    00 1
+                                                                     01   0098   (1) managed 
+                                                                     01   0099   (1) access: public 
+                                                    00 1
+                                                             00706C6568   00B0   help?
+                                                             00656C6966   00B8   file?
+ 
+  128 (0)	
+  129 (0)	object file : XmCascadeButton {
+  130 (0)	    arguments { XmNlabelString = "File"; XmNmnemonic = keysym('F'); };
+                                                                          0000   Resource ID: 00010001 
+                                                                          0000   size: 2, group: literal 
+                                                                          0000   type: keysym, access: private, locked: false 
+                                                                   0046   0000   F?
+ 
+  131 (0)	    controls { XmPulldownMenu file_pd; };
+  132 (0)	};
+                                                                          0000   Resource index: file 
+                                                               1649F7E2   0000   widget record 
+                                                                   00B8   0004   size: 184 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   0002   000A   type: XmCascadeButton 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0000   000E   class: builtin 
+                                                                   0030   0010   argument list offset: 30 (hex) 
+                                                                   0000   0012   no children 
+                                                                   0000   0014   no comment specified 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 8
+Module: squares 	 Version: v1.0
+
+                                                                   0000   0016   no creation callback 
+                                                             00656C6966   0028   file?
+                                                                   0003   0030   argument count: 3 
+                                                                   0000   0032   related argument count: 0 
+                                                                   001B   0040   (0) arg type: XmNsubMenuId 
+                                                                   0000   0042   (0) no tag offset 
+                                                                   000C   0044   (0) type: resource 
+                                                               00000098   0048   (0) offset: 98 (hex) 
+                                                                   0009   004C   (1) arg type: XmNlabelString 
+                                                                   0000   004E   (1) no tag offset 
+                                                                   000C   0050   (1) type: resource 
+                                                               00000080   0054   (1) offset: 80 (hex) 
+                                                                   0011   0058   (2) arg type: XmNmnemonic 
+                                                                   0000   005A   (2) no tag offset 
+                                                                   000C   005C   (2) type: resource 
+                                                               00000068   0060   (2) offset: 68 (hex) 
+                                                                   0018   0068   resource descriptor, size: 24 
+                                                                     02   006A   access: private 
+                                                                     02   006B   resource ID, offset: 78 (hex) 
+                                                                     02   006C   resource group: literal 
+                                                                     1A   006D   resource type: keysym 
+                                                       10001
+                                                                   0018   0080   resource descriptor, size: 24 
+                                                                     02   0082   access: private 
+                                                                     02   0083   resource ID, offset: 90 (hex) 
+                                                                     02   0084   resource group: literal 
+                                                                     05   0085   resource type: compound_string 
+                                                       20001
+                                                                   001F   0098   resource descriptor, size: 31 
+                                                                     01   009A   access: public 
+                                                                     01   009B   index, offset: A8 (hex) 
+                                                                     01   009C   resource group: widget 
+                                                                     EA   009D   resource type: unknown 
+                                                       64705F656C6966
+ 
+  133 (0)	object file_pd : XmPulldownMenu {
+  134 (0)	    controls {
+  135 (0)		XmPushButton exit_pb;
+  136 (0)	    };
+  137 (0)	};
+                                                                          0000   Resource index: file_pd 
+                                                               1649F7E2   0000   widget record 
+                                                                   0060   0004   size: 96 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   0008   000A   type: XmPulldownMenu 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0000   000E   class: builtin 
+                                                                   0000   0010   no argument list 
+                                                                   0030   0012   children list offset: 30 (hex) 
+                                                                   0000   0014   no comment specified 
+                                                                   0000   0016   no creation callback 
+                                                       64705F656C6966
+                                                                   0001   0030   Children count: 1 
+                                                                     01   0040   (0) managed 
+                                                                     01   0041   (0) access: public 
+                                                    00 C01
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 9
+Module: squares 	 Version: v1.0
+
+                                                       62705F74697865
+ 
+  138 (0)	object exit_pb : XmPushButton {
+  139 (0)	    arguments { XmNlabelString = "Exit"; XmNmnemonic = keysym('E');};
+                                                                          0000   Resource ID: 00030001 
+                                                                          0000   size: 2, group: literal 
+                                                                          0000   type: keysym, access: private, locked: false 
+                                                                   0045   0000   E?
+ 
+  140 (0)	    callbacks { XmNactivateCallback = procedure exit_cb(); };
+  141 (0)	};
+                                                                          0000   Resource index: exit_pb 
+                                                               1649F7E2   0000   widget record 
+                                                                   00F0   0004   size: 240 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   000A   000A   type: XmPushButtonGadget 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0000   000E   class: builtin 
+                                                                   0030   0010   argument list offset: 30 (hex) 
+                                                                   0000   0012   no children 
+                                                                   0000   0014   no comment specified 
+                                                                   0000   0016   no creation callback 
+                                                       62705F74697865
+                                                                   0003   0030   argument count: 3 
+                                                                   0000   0032   related argument count: 0 
+                                                                   0009   0040   (0) arg type: XmNlabelString 
+                                                                   0000   0042   (0) no tag offset 
+                                                                   000C   0044   (0) type: resource 
+                                                               000000D8   0048   (0) offset: D8 (hex) 
+                                                                   0011   004C   (1) arg type: XmNmnemonic 
+                                                                   0000   004E   (1) no tag offset 
+                                                                   000C   0050   (1) type: resource 
+                                                               000000C0   0054   (1) offset: C0 (hex) 
+                                                                   0025   0058   (2) arg type: XmNactivateCallback 
+                                                                   0000   005A   (2) no tag offset 
+                                                                   0009   005C   (2) type: callback 
+                                                               00000068   0060   (2) offset: 68 (hex) 
+                                                               0666C168   0068   callback descriptor 
+                                                                   0001   006C   callback count: 1 
+                                                                   00B8   0078   (0) routine name offset: B8 (hex) 
+                                                                   000D   007A   (0) routine tag type: unknown 
+                                                               00000000   007C   (0) value:  
+                                                       62635F74697865
+                                                                   0018   00C0   resource descriptor, size: 24 
+                                                                     02   00C2   access: private 
+                                                                     02   00C3   resource ID, offset: D0 (hex) 
+                                                                     02   00C4   resource group: literal 
+                                                                     1A   00C5   resource type: keysym 
+                                                       30001
+                                                                   0018   00D8   resource descriptor, size: 24 
+                                                                     02   00DA   access: private 
+                                                                     02   00DB   resource ID, offset: E8 (hex) 
+                                                                     02   00DC   resource group: literal 
+                                                                     05   00DD   resource type: compound_string 
+                                                       40001
+ 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 10
+Module: squares 	 Version: v1.0
+
+  142 (0)	
+  143 (0)	object help : XmCascadeButton {
+  144 (0)	    arguments { XmNlabelString = "Help"; XmNmnemonic = keysym('H'); };
+                                                                          0000   Resource ID: 00050001 
+                                                                          0000   size: 2, group: literal 
+                                                                          0000   type: keysym, access: private, locked: false 
+                                                                   0048   0000   H?
+ 
+  145 (0)	    controls { XmPulldownMenu help_pd; };
+  146 (0)	};
+                                                                          0000   Resource index: help 
+                                                               1649F7E2   0000   widget record 
+                                                                   00B8   0004   size: 184 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   0002   000A   type: XmCascadeButton 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0000   000E   class: builtin 
+                                                                   0030   0010   argument list offset: 30 (hex) 
+                                                                   0000   0012   no children 
+                                                                   0000   0014   no comment specified 
+                                                                   0000   0016   no creation callback 
+                                                             00706C6568   0028   help?
+                                                                   0003   0030   argument count: 3 
+                                                                   0000   0032   related argument count: 0 
+                                                                   001B   0040   (0) arg type: XmNsubMenuId 
+                                                                   0000   0042   (0) no tag offset 
+                                                                   000C   0044   (0) type: resource 
+                                                               00000098   0048   (0) offset: 98 (hex) 
+                                                                   0009   004C   (1) arg type: XmNlabelString 
+                                                                   0000   004E   (1) no tag offset 
+                                                                   000C   0050   (1) type: resource 
+                                                               00000080   0054   (1) offset: 80 (hex) 
+                                                                   0011   0058   (2) arg type: XmNmnemonic 
+                                                                   0000   005A   (2) no tag offset 
+                                                                   000C   005C   (2) type: resource 
+                                                               00000068   0060   (2) offset: 68 (hex) 
+                                                                   0018   0068   resource descriptor, size: 24 
+                                                                     02   006A   access: private 
+                                                                     02   006B   resource ID, offset: 78 (hex) 
+                                                                     02   006C   resource group: literal 
+                                                                     1A   006D   resource type: keysym 
+                                                       50001
+                                                                   0018   0080   resource descriptor, size: 24 
+                                                                     02   0082   access: private 
+                                                                     02   0083   resource ID, offset: 90 (hex) 
+                                                                     02   0084   resource group: literal 
+                                                                     05   0085   resource type: compound_string 
+                                                       60001
+                                                                   001F   0098   resource descriptor, size: 31 
+                                                                     01   009A   access: public 
+                                                                     01   009B   index, offset: A8 (hex) 
+                                                                     01   009C   resource group: widget 
+                                                                     EA   009D   resource type: unknown 
+                                                       64705F706C6568
+ 
+  147 (0)	object help_pd : XmPulldownMenu {
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 11
+Module: squares 	 Version: v1.0
+
+  148 (0)	    arguments { XmNtearOffModel = XmTEAR_OFF_ENABLED; };
+  149 (0)	    controls {
+  150 (0)		XmPushButton help_pb;
+  151 (0)	    };
+  152 (0)	};
+                                                                          0000   Resource index: help_pd 
+                                                               1649F7E2   0000   widget record 
+                                                                   0080   0004   size: 128 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   0008   000A   type: XmPulldownMenu 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0000   000E   class: builtin 
+                                                                   0030   0010   argument list offset: 30 (hex) 
+                                                                   0050   0012   children list offset: 50 (hex) 
+                                                                   0000   0014   no comment specified 
+                                                                   0000   0016   no creation callback 
+                                                       64705F706C6568
+                                                                   0001   0030   argument count: 1 
+                                                                   0000   0032   related argument count: 0 
+                                                                   001C   0040   (0) arg type: XmNtearOffModel 
+                                                                   0000   0042   (0) no tag offset 
+                                                                   0001   0044   (0) type: integer 
+                                                               00000000   0048   (0) value: 0 
+                                                                   0001   0050   Children count: 1 
+                                                                     01   0060   (0) managed 
+                                                                     01   0061   (0) access: public 
+                                                    00 1
+                                                       62705F706C6568
+ 
+  153 (0)	object help_pb : XmPushButton {
+  154 (0)	    arguments { XmNlabelString = "On Dogs"; XmNmnemonic = keysym('D');};
+                                                                          0000   Resource ID: 00080001 
+                                                                          0000   size: 2, group: literal 
+                                                                          0000   type: keysym, access: private, locked: false 
+                                                                   0044   0000   D?
+ 
+  155 (0)	    callbacks { XmNactivateCallback = procedure help_cb
+  156 (0)			(compound_string("Dogs") & help_text); };
+                                                                          0000   Resource ID: 00070001 
+                                                                          0000   size: 124, group: literal 
+                                                                          0000   type: compound_string, access: private, locked: false 
+    4200102000420
+    4D2F57110200042E 6B726142203D2031 424D2F6574617669 74634166736F1702   0020   ??osfActivate/MB1 = Bark.????W/M
+    203D2032424D2D74 666968532F531302 42E6C69617420
+            00020004 2E706C6548203D20 706C654866736F0F 200042E706F7453
+ 
+  157 (0)	};
+                                                                          0000   Resource index: help_pb 
+                                                               1649F7E2   0000   widget record 
+                                                                   0108   0004   size: 264 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   000A   000A   type: XmPushButtonGadget 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0000   000E   class: builtin 
+                                                                   0030   0010   argument list offset: 30 (hex) 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 12
+Module: squares 	 Version: v1.0
+
+                                                                   0000   0012   no children 
+                                                                   0000   0014   no comment specified 
+                                                                   0000   0016   no creation callback 
+                                                       62705F706C6568
+                                                                   0003   0030   argument count: 3 
+                                                                   0000   0032   related argument count: 0 
+                                                                   0009   0040   (0) arg type: XmNlabelString 
+                                                                   0000   0042   (0) no tag offset 
+                                                                   000C   0044   (0) type: resource 
+                                                               000000F0   0048   (0) offset: F0 (hex) 
+                                                                   0011   004C   (1) arg type: XmNmnemonic 
+                                                                   0000   004E   (1) no tag offset 
+                                                                   000C   0050   (1) type: resource 
+                                                               000000D8   0054   (1) offset: D8 (hex) 
+                                                                   0025   0058   (2) arg type: XmNactivateCallback 
+                                                                   0000   005A   (2) no tag offset 
+                                                                   0009   005C   (2) type: callback 
+                                                               00000068   0060   (2) offset: 68 (hex) 
+                                                               0666C168   0068   callback descriptor 
+                                                                   0001   006C   callback count: 1 
+                                                                   00B8   0078   (0) routine name offset: B8 (hex) 
+                                                                   000C   007A   (0) routine tag type: resource 
+                                                               000000C0   007C   (0) value:  
+                                                       62635F706C6568
+                                                                   0018   00D8   resource descriptor, size: 24 
+                                                                     02   00DA   access: private 
+                                                                     02   00DB   resource ID, offset: E8 (hex) 
+                                                                     02   00DC   resource group: literal 
+                                                                     1A   00DD   resource type: keysym 
+                                                       80001
+                                                                   0018   00F0   resource descriptor, size: 24 
+                                                                     02   00F2   access: private 
+                                                                     02   00F3   resource ID, offset: 100 (hex) 
+                                                                     02   00F4   resource group: literal 
+                                                                     05   00F5   resource type: compound_string 
+                                                       90001
+ 
+  158 (0)	
+  159 (0)	
+  160 (0)	object work : XmForm {
+  161 (0)	    controls {
+  162 (0)		XmFrame frame;
+  163 (0)		XmScale scale1;
+  164 (0)		XmScale scale2;
+  165 (0)		XmScale scale3;
+  166 (0)		XmSeparator sep;
+  167 (0)		XmToggleButton tb1;
+  168 (0)		XmToggleButton tb2;
+  169 (0)		XmToggleButton tb3;
+  170 (0)	    };
+  171 (0)	};
+                                                                          0000   Resource index: work 
+                                                               1649F7E2   0000   widget record 
+                                                                   0140   0004   size: 320 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   0003   000A   type: XmForm 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 13
+Module: squares 	 Version: v1.0
+
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0000   000E   class: builtin 
+                                                                   0000   0010   no argument list 
+                                                                   0030   0012   children list offset: 30 (hex) 
+                                                                   0000   0014   no comment specified 
+                                                                   0000   0016   no creation callback 
+                                                             006B726F77   0028   work?
+                                                                   0008   0030   Children count: 8 
+                                                                     01   0040   (0) managed 
+                                                                     01   0041   (0) access: public 
+                                                    00 6761572001
+                                                                     01   0058   (1) managed 
+                                                                     01   0059   (1) access: public 
+                                                    00 203D203201
+                                                                     01   0070   (2) managed 
+                                                                     01   0071   (2) access: public 
+                                                    00 2E706C6501
+                                                                     01   0088   (3) managed 
+                                                                     01   0089   (3) access: public 
+                                                    00 1
+                                                                     01   00A0   (4) managed 
+                                                                     01   00A1   (4) access: public 
+                                                    00 1
+                                                                     01   00B8   (5) managed 
+                                                                     01   00B9   (5) access: public 
+                                                    00 62635F01
+                                                                     01   00D0   (6) managed 
+                                                                     01   00D1   (6) access: public 
+                                                    00 1
+                                                                     01   00E8   (7) managed 
+                                                                     01   00E9   (7) access: public 
+                                                    00 1
+                                                               00336274   0100   tb3?
+                                                               00326274   0108   tb2?
+                                                               00316274   0110   tb1?
+                                                               00706573   0118   sep?
+                                                         0033656C616373   0120   scale3?
+                                                         0032656C616373   0128   scale2?
+                                                         0031656C616373   0130   scale1?
+                                                           00656D617266   0138   frame?
+ 
+  172 (0)	
+  173 (0)	object frame : XmFrame {
+  174 (0)	    arguments {
+  175 (0)		XmNrightAttachment = XmATTACH_FORM; XmNrightOffset = 5;
+                                                                          0000   Resource ID: 000D0001 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: horizontal_dimension_float, access: private, locked: false 
+                     0
+ 
+  176 (0)		XmNleftAttachment = XmATTACH_FORM; XmNleftOffset = 5;
+                                                                          0000   Resource ID: 000C0001 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: horizontal_dimension_float, access: private, locked: false 
+                     0
+ 
+  177 (0)		XmNtopAttachment = XmATTACH_FORM; XmNtopOffset = 5;
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 14
+Module: squares 	 Version: v1.0
+
+                                                                          0000   Resource ID: 000B0001 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: vertical_dimension_float, access: private, locked: false 
+                     0
+ 
+  178 (0)		XmNbottomAttachment = XmATTACH_WIDGET; XmNbottomOffset = 10;
+                                                                          0000   Resource ID: 000A0001 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: vertical_dimension_float, access: private, locked: false 
+                     0
+ 
+  179 (0)		XmNbottomWidget = XmScale scale1;
+  180 (0)	    };
+  181 (0)	    controls {
+  182 (0)		user_defined square;
+  183 (0)	    };
+  184 (0)	};
+                                                                          0000   Resource index: frame 
+                                                               1649F7E2   0000   widget record 
+                                                                   0160   0004   size: 352 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   0004   000A   type: XmFrame 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0000   000E   class: builtin 
+                                                                   0030   0010   argument list offset: 30 (hex) 
+                                                                   0130   0012   children list offset: 130 (hex) 
+                                                                   0000   0014   no comment specified 
+                                                                   0000   0016   no creation callback 
+                                                           00656D617266   0028   frame?
+                                                                   0009   0030   argument count: 9 
+                                                                   0000   0032   related argument count: 0 
+                                                                   0016   0040   (0) arg type: XmNrightAttachment 
+                                                                   0000   0042   (0) no tag offset 
+                                                                   0001   0044   (0) type: integer 
+                                                               00000001   0048   (0) value: 1 
+                                                                   0017   004C   (1) arg type: XmNrightOffset 
+                                                                   0000   004E   (1) no tag offset 
+                                                                   000C   0050   (1) type: resource 
+                                                               00000118   0054   (1) offset: 118 (hex) 
+                                                                   000A   0058   (2) arg type: XmNleftAttachment 
+                                                                   0000   005A   (2) no tag offset 
+                                                                   0001   005C   (2) type: integer 
+                                                               00000001   0060   (2) value: 1 
+                                                                   000B   0064   (3) arg type: XmNleftOffset 
+                                                                   0000   0066   (3) no tag offset 
+                                                                   000C   0068   (3) type: resource 
+                                                               00000100   006C   (3) offset: 100 (hex) 
+                                                                   001E   0070   (4) arg type: XmNtopAttachment 
+                                                                   0000   0072   (4) no tag offset 
+                                                                   0001   0074   (4) type: integer 
+                                                               00000001   0078   (4) value: 1 
+                                                                   001F   007C   (5) arg type: XmNtopOffset 
+                                                                   0000   007E   (5) no tag offset 
+                                                                   000C   0080   (5) type: resource 
+                                                               000000E8   0084   (5) offset: E8 (hex) 
+                                                                   0003   0088   (6) arg type: XmNbottomAttachment 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 15
+Module: squares 	 Version: v1.0
+
+                                                                   0000   008A   (6) no tag offset 
+                                                                   0001   008C   (6) type: integer 
+                                                               00000003   0090   (6) value: 3 
+                                                                   0004   0094   (7) arg type: XmNbottomOffset 
+                                                                   0000   0096   (7) no tag offset 
+                                                                   000C   0098   (7) type: resource 
+                                                               000000D0   009C   (7) offset: D0 (hex) 
+                                                                   0005   00A0   (8) arg type: XmNbottomWidget 
+                                                                   0000   00A2   (8) no tag offset 
+                                                                   000C   00A4   (8) type: resource 
+                                                               000000B0   00A8   (8) offset: B0 (hex) 
+                                                                   001E   00B0   resource descriptor, size: 30 
+                                                                     01   00B2   access: public 
+                                                                     01   00B3   index, offset: C0 (hex) 
+                                                                     01   00B4   resource group: widget 
+                                                                     E9   00B5   resource type: unknown 
+                                                         0031656C616373   00C0   scale1?
+                                                                   0018   00D0   resource descriptor, size: 24 
+                                                                     02   00D2   access: private 
+                                                                     02   00D3   resource ID, offset: E0 (hex) 
+                                                                     02   00D4   resource group: literal 
+                                                                     21   00D5   resource type: vertical_dimension_float 
+                                                       A0001
+                                                                   0018   00E8   resource descriptor, size: 24 
+                                                                     02   00EA   access: private 
+                                                                     02   00EB   resource ID, offset: F8 (hex) 
+                                                                     02   00EC   resource group: literal 
+                                                                     21   00ED   resource type: vertical_dimension_float 
+                                                       B0001
+                                                                   0018   0100   resource descriptor, size: 24 
+                                                                     02   0102   access: private 
+                                                                     02   0103   resource ID, offset: 110 (hex) 
+                                                                     02   0104   resource group: literal 
+                                                                     20   0105   resource type: horizontal_dimension_float 
+                                                       C0001
+                                                                   0018   0118   resource descriptor, size: 24 
+                                                                     02   011A   access: private 
+                                                                     02   011B   resource ID, offset: 128 (hex) 
+                                                                     02   011C   resource group: literal 
+                                                                     20   011D   resource type: horizontal_dimension_float 
+                                                       D0001
+                                                                   0001   0130   Children count: 1 
+                                                                     01   0140   (0) managed 
+                                                                     01   0141   (0) access: public 
+                                                    00 1
+                                                         00657261757173   0158   square?
+ 
+  185 (0)	
+  186 (0)	object square : user_defined procedure SquareCreate {
+  187 (0)	    arguments {
+  188 (0)		XmNwidth = 600;
+                                                                          0000   Resource ID: 000F0001 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: horizontal_dimension_float, access: private, locked: false 
+                     0
+ 
+  189 (0)		XmNheight = 220;
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 16
+Module: squares 	 Version: v1.0
+
+                                                                          0000   Resource ID: 000E0001 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: vertical_dimension_float, access: private, locked: false 
+                     0
+ 
+  190 (0)		XmNresizePolicy = XmRESIZE_GROW;
+  191 (0)		SquareNmajorDimension = SquareWIDTH;
+  192 (0)	    };
+  193 (0)	    controls {
+  194 (0)		user_defined dog1;
+  195 (0)		user_defined dog2;
+  196 (0)		user_defined dog3;
+  197 (0)	    };
+  198 (0)	};
+                                                                          0000   Resource index: square 
+                                                               1649F7E2   0000   widget record 
+                                                                   0138   0004   size: 312 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   0001   000A   type: unknown 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0030   000E   class: offset 30 (hex) 
+                                                                   0040   0010   argument list offset: 40 (hex) 
+                                                                   00C8   0012   children list offset: C8 (hex) 
+                                                                   0000   0014   no comment specified 
+                                                                   0000   0016   no creation callback 
+                                                         00657261757173   0028   square?
+                                            0065746165 7243657261757153   0030   SquareCreate?
+                                                                   0004   0040   argument count: 4 
+                                                                   0000   0042   related argument count: 0 
+                                                                   0021   0050   (0) arg type: XmNwidth 
+                                                                   0000   0052   (0) no tag offset 
+                                                                   000C   0054   (0) type: resource 
+                                                               000000B0   0058   (0) offset: B0 (hex) 
+                                                                   0008   005C   (1) arg type: XmNheight 
+                                                                   0000   005E   (1) no tag offset 
+                                                                   000C   0060   (1) type: resource 
+                                                               00000098   0064   (1) offset: 98 (hex) 
+                                                                   0015   0068   (2) arg type: XmNresizePolicy 
+                                                                   0000   006A   (2) no tag offset 
+                                                                   0001   006C   (2) type: integer 
+                                                               00000001   0070   (2) value: 1 
+                                                                   0001   0074   (3) arg type: majorDimension (user defined) 
+                                                                   0088   0076   (3) tag offset: 88 (hex) 
+                                                                   0001   0078   (3) type: integer 
+                                                               00000000   007C   (3) value: 0 
+                                        006E6F69736E65 6D6944726F6A616D   0088   majorDimension?
+                                                                   0018   0098   resource descriptor, size: 24 
+                                                                     02   009A   access: private 
+                                                                     02   009B   resource ID, offset: A8 (hex) 
+                                                                     02   009C   resource group: literal 
+                                                                     21   009D   resource type: vertical_dimension_float 
+                                                       E0001
+                                                                   0018   00B0   resource descriptor, size: 24 
+                                                                     02   00B2   access: private 
+                                                                     02   00B3   resource ID, offset: C0 (hex) 
+                                                                     02   00B4   resource group: literal 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 17
+Module: squares 	 Version: v1.0
+
+                                                                     20   00B5   resource type: horizontal_dimension_float 
+                                                       F0001
+                                                                   0003   00C8   Children count: 3 
+                                                                     01   00D8   (0) managed 
+                                                                     01   00D9   (0) access: public 
+                                                    00 1
+                                                                     01   00F0   (1) managed 
+                                                                     01   00F1   (1) access: public 
+                                                    00 1
+                                                                     01   0108   (2) managed 
+                                                                     01   0109   (2) access: public 
+                                                    00 1
+                                                             0033676F64   0120   dog3?
+                                                             0032676F64   0128   dog2?
+                                                             0031676F64   0130   dog1?
+ 
+  199 (0)	
+  200 (0)	object dog1 : user_defined procedure DogCreate {
+  201 (0)	    arguments {
+  202 (0)		SquareNmakeSquare = dog1_square;
+  203 (0)		XmNx = 20;
+                                                                          0000   Resource ID: 00010003 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: horizontal_dimension_float, access: private, locked: false 
+                     0
+ 
+  204 (0)		XmNy = 20;
+                                                                          0000   Resource ID: 00000003 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: vertical_dimension_float, access: private, locked: false 
+                     0
+ 
+  205 (0)		XmNforeground = color('red', foreground);
+                                                                          0000   Resource ID: 00130001 
+                                                                          0000   size: 11, group: literal 
+                                                                          0000   type: color, access: private, locked: false 
+                                                000000 6465720102
+ 
+  206 (0)		XmNbackground = color('lightblue', background);
+                                                                          0000   Resource ID: 00120001 
+                                                                          0000   size: 17, group: literal 
+                                                                          0000   type: color, access: private, locked: false 
+                                   00 65756C
+ 
+  207 (0)	        XmNshadowThickness = 12;
+                                                                          0000   Resource ID: 00110001 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: horizontal_dimension_float, access: private, locked: false 
+                     0
+ 
+  208 (0)		DogNwagTime = dog1_wag_time;
+  209 (0)		DogNbarkTime = dog1_bark_time;
+  210 (0)	    };
+  211 (0)	    callbacks {
+  212 (0)	        MrmNcreateCallback = procedure create_cb(k_dog1_id);
+  213 (0)		DogNbarkCallback = procedure bark_cb(dog1_bark_volume);
+  214 (0)	        XmNhelpCallback = procedure help_cb
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 18
+Module: squares 	 Version: v1.0
+
+  215 (0)	                        (compound_string("Rover") & help_text);
+                                                                          0000   Resource ID: 00100001 
+                                                                          0000   size: 125, group: literal 
+                                                                          0000   type: compound_string, access: private, locked: false 
+    420010200042072
+    2F57110200042E6B 726142203D203142 4D2F657461766974 634166736F170200   0020   ???osfActivate/MB1 = Bark.????W/
+    3D2032424D2D7466 6968532F53130200 42E6C6961742067
+          000200042E 706C6548203D2070 6C654866736F0F02 42E706F745320
+ 
+  216 (0)	    };
+  217 (0)	};
+                                                                          0000   Resource index: dog1 
+                                                               1649F7E2   0000   widget record 
+                                                                   02A8   0004   size: 680 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   0001   000A   type: unknown 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0030   000E   class: offset 30 (hex) 
+                                                                   00A0   0010   argument list offset: A0 (hex) 
+                                                                   0000   0012   no children 
+                                                                   0000   0014   no comment specified 
+                                                                   0040   0016   creation callback offset: 40 (hex) 
+                                                             0031676F64   0028   dog1?
+                                                  0065 7461657243676F44   0030   DogCreate?
+                                                               0666C168   0040   callback descriptor 
+                                                                   0001   0044   callback count: 1 
+                                                                   0090   0050   (0) routine name offset: 90 (hex) 
+                                                                   0001   0052   (0) routine tag type: integer 
+                                                               00000001   0054   (0) value:  
+                                                  0062 635F657461657263   0090   create_cb?
+                                                                   000A   00A0   argument count: 10 
+                                                                   0000   00A2   related argument count: 0 
+                                                                   0001   00B0   (0) arg type: makeSquare (user defined) 
+                                                                   0298   00B2   (0) tag offset: 298 (hex) 
+                                                                   0002   00B4   (0) type: boolean 
+                                                               00000000   00B8   (0) value: false 
+                                                                   0022   00BC   (1) arg type: XmNx 
+                                                                   0000   00BE   (1) no tag offset 
+                                                                   000C   00C0   (1) type: resource 
+                                                               00000280   00C4   (1) offset: 280 (hex) 
+                                                                   0023   00C8   (2) arg type: XmNy 
+                                                                   0000   00CA   (2) no tag offset 
+                                                                   000C   00CC   (2) type: resource 
+                                                               00000268   00D0   (2) offset: 268 (hex) 
+                                                                   0007   00D4   (3) arg type: XmNforeground 
+                                                                   0000   00D6   (3) no tag offset 
+                                                                   000C   00D8   (3) type: resource 
+                                                               00000250   00DC   (3) offset: 250 (hex) 
+                                                                   0002   00E0   (4) arg type: XmNbackground 
+                                                                   0000   00E2   (4) no tag offset 
+                                                                   000C   00E4   (4) type: resource 
+                                                               00000238   00E8   (4) offset: 238 (hex) 
+                                                                   001A   00EC   (5) arg type: XmNshadowThickness 
+                                                                   0000   00EE   (5) no tag offset 
+                                                                   000C   00F0   (5) type: resource 
+                                                               00000220   00F4   (5) offset: 220 (hex) 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 19
+Module: squares 	 Version: v1.0
+
+                                                                   0001   00F8   (6) arg type: wagTime (user defined) 
+                                                                   0218   00FA   (6) tag offset: 218 (hex) 
+                                                                   0001   00FC   (6) type: integer 
+                                                               00000064   0100   (6) value: 100 
+                                                                   0001   0104   (7) arg type: barkTime (user defined) 
+                                                                   0208   0106   (7) tag offset: 208 (hex) 
+                                                                   0001   0108   (7) type: integer 
+                                                               0000044C   010C   (7) value: 1100 
+                                                                   0001   0110   (8) arg type: barkCallback (user defined) 
+                                                                   01A0   0112   (8) tag offset: 1A0 (hex) 
+                                                                   0009   0114   (8) type: callback 
+                                                               000001B0   0118   (8) offset: 1B0 (hex) 
+                                                                   0027   011C   (9) arg type: XmNhelpCallback 
+                                                                   0000   011E   (9) no tag offset 
+                                                                   0009   0120   (9) type: callback 
+                                                               00000130   0124   (9) offset: 130 (hex) 
+                                                               0666C168   0130   callback descriptor 
+                                                                   0001   0134   callback count: 1 
+                                                                   0180   0140   (0) routine name offset: 180 (hex) 
+                                                                   000C   0142   (0) routine tag type: resource 
+                                                               00000188   0144   (0) value:  
+                                                       62635F706C6568
+                                            006B636162 6C6C61436B726162   01A0   barkCallback?
+                                                               0666C168   01B0   callback descriptor 
+                                                                   0001   01B4   callback count: 1 
+                                                                   0200   01C0   (0) routine name offset: 200 (hex) 
+                                                                   0001   01C2   (0) routine tag type: integer 
+                                                               0000005A   01C4   (0) value:  
+                                                       62635F6B726162
+                                                    00 656D69546B726162   0208   barkTime?
+                                                       656D6954676177
+                                                                   0018   0220   resource descriptor, size: 24 
+                                                                     02   0222   access: private 
+                                                                     02   0223   resource ID, offset: 230 (hex) 
+                                                                     02   0224   resource group: literal 
+                                                                     20   0225   resource type: horizontal_dimension_float 
+                                                       110001
+                                                                   0018   0238   resource descriptor, size: 24 
+                                                                     02   023A   access: private 
+                                                                     02   023B   resource ID, offset: 248 (hex) 
+                                                                     02   023C   resource group: literal 
+                                                                     12   023D   resource type: color 
+                                                       120001
+                                                                   0018   0250   resource descriptor, size: 24 
+                                                                     02   0252   access: private 
+                                                                     02   0253   resource ID, offset: 260 (hex) 
+                                                                     02   0254   resource group: literal 
+                                                                     12   0255   resource type: color 
+                                                       130001
+                                                                   0018   0268   resource descriptor, size: 24 
+                                                                     02   026A   access: private 
+                                                                     02   026B   resource ID, offset: 278 (hex) 
+                                                                     02   026C   resource group: literal 
+                                                                     21   026D   resource type: vertical_dimension_float 
+                                                       3
+                                                                   0018   0280   resource descriptor, size: 24 
+                                                                     02   0282   access: private 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 20
+Module: squares 	 Version: v1.0
+
+                                                                     02   0283   resource ID, offset: 290 (hex) 
+                                                                     02   0284   resource group: literal 
+                                                                     20   0285   resource type: horizontal_dimension_float 
+                                                       10003
+                                                006572 61757153656B616D   0298   makeSquare?
+ 
+  218 (0)	
+  219 (0)	object dog2 : user_defined procedure DogCreate {
+  220 (0)	    arguments {
+  221 (0)		SquareNmakeSquare = dog2_square;
+  222 (0)		XmNx = 220;
+                                                                          0000   Resource ID: 00070003 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: horizontal_dimension_float, access: private, locked: false 
+                     0
+ 
+  223 (0)		XmNy = 20;
+                                                                          0000   Resource ID: 00060003 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: vertical_dimension_float, access: private, locked: false 
+                     0
+ 
+  224 (0)		XmNforeground = color('black', foreground);
+                                                                          0000   Resource ID: 00050003 
+                                                                          0000   size: 13, group: literal 
+                                                                          0000   type: color, access: private, locked: false 
+                                            0000000000 6B63616C620102
+ 
+  225 (0)		XmNbackground = color('lightblue', background);
+                                                                          0000   Resource ID: 00040003 
+                                                                          0000   size: 17, group: literal 
+                                                                          0000   type: color, access: private, locked: false 
+                                   00 65756C
+ 
+  226 (0)	        XmNshadowThickness = 4;
+                                                                          0000   Resource ID: 00030003 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: horizontal_dimension_float, access: private, locked: false 
+                     0
+ 
+  227 (0)		DogNwagTime = dog2_wag_time;
+  228 (0)		DogNbarkTime = dog2_bark_time;
+  229 (0)	    };
+  230 (0)	    callbacks {
+  231 (0)	        MrmNcreateCallback = procedure create_cb(k_dog2_id);
+  232 (0)		DogNbarkCallback = procedure bark_cb(dog2_bark_volume);
+  233 (0)	        XmNhelpCallback = procedure help_cb
+  234 (0)	                        (compound_string("Spot") & help_text);
+                                                                          0000   Resource ID: 00020003 
+                                                                          0000   size: 124, group: literal 
+                                                                          0000   type: compound_string, access: private, locked: false 
+    4200102000420
+    4D2F57110200042E 6B726142203D2031 424D2F6574617669 74634166736F1702   0020   ??osfActivate/MB1 = Bark.????W/M
+    203D2032424D2D74 666968532F531302 42E6C69617420
+            00020004 2E706C6548203D20 706C654866736F0F 200042E706F7453
+ 
+  235 (0)	    };
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 21
+Module: squares 	 Version: v1.0
+
+  236 (0)	};
+                                                                          0000   Resource index: dog2 
+                                                               1649F7E2   0000   widget record 
+                                                                   02A8   0004   size: 680 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   0001   000A   type: unknown 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0030   000E   class: offset 30 (hex) 
+                                                                   00A0   0010   argument list offset: A0 (hex) 
+                                                                   0000   0012   no children 
+                                                                   0000   0014   no comment specified 
+                                                                   0040   0016   creation callback offset: 40 (hex) 
+                                                             0032676F64   0028   dog2?
+                                                  0065 7461657243676F44   0030   DogCreate?
+                                                               0666C168   0040   callback descriptor 
+                                                                   0001   0044   callback count: 1 
+                                                                   0090   0050   (0) routine name offset: 90 (hex) 
+                                                                   0001   0052   (0) routine tag type: integer 
+                                                               00000002   0054   (0) value:  
+                                                  0062 635F657461657263   0090   create_cb?
+                                                                   000A   00A0   argument count: 10 
+                                                                   0000   00A2   related argument count: 0 
+                                                                   0001   00B0   (0) arg type: makeSquare (user defined) 
+                                                                   0298   00B2   (0) tag offset: 298 (hex) 
+                                                                   0002   00B4   (0) type: boolean 
+                                                               00000000   00B8   (0) value: false 
+                                                                   0022   00BC   (1) arg type: XmNx 
+                                                                   0000   00BE   (1) no tag offset 
+                                                                   000C   00C0   (1) type: resource 
+                                                               00000280   00C4   (1) offset: 280 (hex) 
+                                                                   0023   00C8   (2) arg type: XmNy 
+                                                                   0000   00CA   (2) no tag offset 
+                                                                   000C   00CC   (2) type: resource 
+                                                               00000268   00D0   (2) offset: 268 (hex) 
+                                                                   0007   00D4   (3) arg type: XmNforeground 
+                                                                   0000   00D6   (3) no tag offset 
+                                                                   000C   00D8   (3) type: resource 
+                                                               00000250   00DC   (3) offset: 250 (hex) 
+                                                                   0002   00E0   (4) arg type: XmNbackground 
+                                                                   0000   00E2   (4) no tag offset 
+                                                                   000C   00E4   (4) type: resource 
+                                                               00000238   00E8   (4) offset: 238 (hex) 
+                                                                   001A   00EC   (5) arg type: XmNshadowThickness 
+                                                                   0000   00EE   (5) no tag offset 
+                                                                   000C   00F0   (5) type: resource 
+                                                               00000220   00F4   (5) offset: 220 (hex) 
+                                                                   0001   00F8   (6) arg type: wagTime (user defined) 
+                                                                   0218   00FA   (6) tag offset: 218 (hex) 
+                                                                   0001   00FC   (6) type: integer 
+                                                               00000064   0100   (6) value: 100 
+                                                                   0001   0104   (7) arg type: barkTime (user defined) 
+                                                                   0208   0106   (7) tag offset: 208 (hex) 
+                                                                   0001   0108   (7) type: integer 
+                                                               00000190   010C   (7) value: 400 
+                                                                   0001   0110   (8) arg type: barkCallback (user defined) 
+                                                                   01A0   0112   (8) tag offset: 1A0 (hex) 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 22
+Module: squares 	 Version: v1.0
+
+                                                                   0009   0114   (8) type: callback 
+                                                               000001B0   0118   (8) offset: 1B0 (hex) 
+                                                                   0027   011C   (9) arg type: XmNhelpCallback 
+                                                                   0000   011E   (9) no tag offset 
+                                                                   0009   0120   (9) type: callback 
+                                                               00000130   0124   (9) offset: 130 (hex) 
+                                                               0666C168   0130   callback descriptor 
+                                                                   0001   0134   callback count: 1 
+                                                                   0180   0140   (0) routine name offset: 180 (hex) 
+                                                                   000C   0142   (0) routine tag type: resource 
+                                                               00000188   0144   (0) value:  
+                                                       62635F706C6568
+                                            006B636162 6C6C61436B726162   01A0   barkCallback?
+                                                               0666C168   01B0   callback descriptor 
+                                                                   0001   01B4   callback count: 1 
+                                                                   0200   01C0   (0) routine name offset: 200 (hex) 
+                                                                   0001   01C2   (0) routine tag type: integer 
+                                                               00000028   01C4   (0) value:  
+                                                       62635F6B726162
+                                                    00 656D69546B726162   0208   barkTime?
+                                                       656D6954676177
+                                                                   0018   0220   resource descriptor, size: 24 
+                                                                     02   0222   access: private 
+                                                                     02   0223   resource ID, offset: 230 (hex) 
+                                                                     02   0224   resource group: literal 
+                                                                     20   0225   resource type: horizontal_dimension_float 
+                                                       30003
+                                                                   0018   0238   resource descriptor, size: 24 
+                                                                     02   023A   access: private 
+                                                                     02   023B   resource ID, offset: 248 (hex) 
+                                                                     02   023C   resource group: literal 
+                                                                     12   023D   resource type: color 
+                                                       40003
+                                                                   0018   0250   resource descriptor, size: 24 
+                                                                     02   0252   access: private 
+                                                                     02   0253   resource ID, offset: 260 (hex) 
+                                                                     02   0254   resource group: literal 
+                                                                     12   0255   resource type: color 
+                                                       50003
+                                                                   0018   0268   resource descriptor, size: 24 
+                                                                     02   026A   access: private 
+                                                                     02   026B   resource ID, offset: 278 (hex) 
+                                                                     02   026C   resource group: literal 
+                                                                     21   026D   resource type: vertical_dimension_float 
+                                                       60003
+                                                                   0018   0280   resource descriptor, size: 24 
+                                                                     02   0282   access: private 
+                                                                     02   0283   resource ID, offset: 290 (hex) 
+                                                                     02   0284   resource group: literal 
+                                                                     20   0285   resource type: horizontal_dimension_float 
+                                                       70003
+                                                006572 61757153656B616D   0298   makeSquare?
+ 
+  237 (0)	
+  238 (0)	object dog3 : user_defined procedure DogCreate {
+  239 (0)	    arguments {
+  240 (0)		SquareNmakeSquare = dog3_square;
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 23
+Module: squares 	 Version: v1.0
+
+  241 (0)		XmNx = 420;
+                                                                          0000   Resource ID: 000D0003 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: horizontal_dimension_float, access: private, locked: false 
+                     0
+ 
+  242 (0)		XmNy = 20;
+                                                                          0000   Resource ID: 000C0003 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: vertical_dimension_float, access: private, locked: false 
+                     0
+ 
+  243 (0)		XmNforeground = color('Brown', foreground);
+                                                                          0000   Resource ID: 000B0003 
+                                                                          0000   size: 13, group: literal 
+                                                                          0000   type: color, access: private, locked: false 
+                                            0000000000 6E776F72420102
+ 
+  244 (0)		XmNbackground = color('lightblue', background);
+                                                                          0000   Resource ID: 000A0003 
+                                                                          0000   size: 17, group: literal 
+                                                                          0000   type: color, access: private, locked: false 
+                                   00 65756C
+ 
+  245 (0)	        XmNshadowThickness = 10;
+                                                                          0000   Resource ID: 00090003 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: horizontal_dimension_float, access: private, locked: false 
+                     0
+ 
+  246 (0)		DogNwagTime = dog3_wag_time;
+  247 (0)		DogNbarkTime = dog3_bark_time;
+  248 (0)	    };
+  249 (0)	    callbacks {
+  250 (0)	        MrmNcreateCallback = procedure create_cb(k_dog3_id);
+  251 (0)		DogNbarkCallback = procedure bark_cb(dog3_bark_volume);
+  252 (0)	        XmNhelpCallback = procedure help_cb
+  253 (0)	                        (compound_string("Fido") & help_text);
+                                                                          0000   Resource ID: 00080003 
+                                                                          0000   size: 124, group: literal 
+                                                                          0000   type: compound_string, access: private, locked: false 
+    4200102000420
+    4D2F57110200042E 6B726142203D2031 424D2F6574617669 74634166736F1702   0020   ??osfActivate/MB1 = Bark.????W/M
+    203D2032424D2D74 666968532F531302 42E6C69617420
+            00020004 2E706C6548203D20 706C654866736F0F 200042E706F7453
+ 
+  254 (0)	    };
+  255 (0)	};
+                                                                          0000   Resource index: dog3 
+                                                               1649F7E2   0000   widget record 
+                                                                   02A8   0004   size: 680 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   0001   000A   type: unknown 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0030   000E   class: offset 30 (hex) 
+                                                                   00A0   0010   argument list offset: A0 (hex) 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 24
+Module: squares 	 Version: v1.0
+
+                                                                   0000   0012   no children 
+                                                                   0000   0014   no comment specified 
+                                                                   0040   0016   creation callback offset: 40 (hex) 
+                                                             0033676F64   0028   dog3?
+                                                  0065 7461657243676F44   0030   DogCreate?
+                                                               0666C168   0040   callback descriptor 
+                                                                   0001   0044   callback count: 1 
+                                                                   0090   0050   (0) routine name offset: 90 (hex) 
+                                                                   0001   0052   (0) routine tag type: integer 
+                                                               00000003   0054   (0) value:  
+                                                  0062 635F657461657263   0090   create_cb?
+                                                                   000A   00A0   argument count: 10 
+                                                                   0000   00A2   related argument count: 0 
+                                                                   0001   00B0   (0) arg type: makeSquare (user defined) 
+                                                                   0298   00B2   (0) tag offset: 298 (hex) 
+                                                                   0002   00B4   (0) type: boolean 
+                                                               00000000   00B8   (0) value: false 
+                                                                   0022   00BC   (1) arg type: XmNx 
+                                                                   0000   00BE   (1) no tag offset 
+                                                                   000C   00C0   (1) type: resource 
+                                                               00000280   00C4   (1) offset: 280 (hex) 
+                                                                   0023   00C8   (2) arg type: XmNy 
+                                                                   0000   00CA   (2) no tag offset 
+                                                                   000C   00CC   (2) type: resource 
+                                                               00000268   00D0   (2) offset: 268 (hex) 
+                                                                   0007   00D4   (3) arg type: XmNforeground 
+                                                                   0000   00D6   (3) no tag offset 
+                                                                   000C   00D8   (3) type: resource 
+                                                               00000250   00DC   (3) offset: 250 (hex) 
+                                                                   0002   00E0   (4) arg type: XmNbackground 
+                                                                   0000   00E2   (4) no tag offset 
+                                                                   000C   00E4   (4) type: resource 
+                                                               00000238   00E8   (4) offset: 238 (hex) 
+                                                                   001A   00EC   (5) arg type: XmNshadowThickness 
+                                                                   0000   00EE   (5) no tag offset 
+                                                                   000C   00F0   (5) type: resource 
+                                                               00000220   00F4   (5) offset: 220 (hex) 
+                                                                   0001   00F8   (6) arg type: wagTime (user defined) 
+                                                                   0218   00FA   (6) tag offset: 218 (hex) 
+                                                                   0001   00FC   (6) type: integer 
+                                                               00000064   0100   (6) value: 100 
+                                                                   0001   0104   (7) arg type: barkTime (user defined) 
+                                                                   0208   0106   (7) tag offset: 208 (hex) 
+                                                                   0001   0108   (7) type: integer 
+                                                               000002BC   010C   (7) value: 700 
+                                                                   0001   0110   (8) arg type: barkCallback (user defined) 
+                                                                   01A0   0112   (8) tag offset: 1A0 (hex) 
+                                                                   0009   0114   (8) type: callback 
+                                                               000001B0   0118   (8) offset: 1B0 (hex) 
+                                                                   0027   011C   (9) arg type: XmNhelpCallback 
+                                                                   0000   011E   (9) no tag offset 
+                                                                   0009   0120   (9) type: callback 
+                                                               00000130   0124   (9) offset: 130 (hex) 
+                                                               0666C168   0130   callback descriptor 
+                                                                   0001   0134   callback count: 1 
+                                                                   0180   0140   (0) routine name offset: 180 (hex) 
+                                                                   000C   0142   (0) routine tag type: resource 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 25
+Module: squares 	 Version: v1.0
+
+                                                               00000188   0144   (0) value:  
+                                                       62635F706C6568
+                                            006B636162 6C6C61436B726162   01A0   barkCallback?
+                                                               0666C168   01B0   callback descriptor 
+                                                                   0001   01B4   callback count: 1 
+                                                                   0200   01C0   (0) routine name offset: 200 (hex) 
+                                                                   0001   01C2   (0) routine tag type: integer 
+                                                               00000046   01C4   (0) value:  
+                                                       62635F6B726162
+                                                    00 656D69546B726162   0208   barkTime?
+                                                       656D6954676177
+                                                                   0018   0220   resource descriptor, size: 24 
+                                                                     02   0222   access: private 
+                                                                     02   0223   resource ID, offset: 230 (hex) 
+                                                                     02   0224   resource group: literal 
+                                                                     20   0225   resource type: horizontal_dimension_float 
+                                                       90003
+                                                                   0018   0238   resource descriptor, size: 24 
+                                                                     02   023A   access: private 
+                                                                     02   023B   resource ID, offset: 248 (hex) 
+                                                                     02   023C   resource group: literal 
+                                                                     12   023D   resource type: color 
+                                                       A0003
+                                                                   0018   0250   resource descriptor, size: 24 
+                                                                     02   0252   access: private 
+                                                                     02   0253   resource ID, offset: 260 (hex) 
+                                                                     02   0254   resource group: literal 
+                                                                     12   0255   resource type: color 
+                                                       B0003
+                                                                   0018   0268   resource descriptor, size: 24 
+                                                                     02   026A   access: private 
+                                                                     02   026B   resource ID, offset: 278 (hex) 
+                                                                     02   026C   resource group: literal 
+                                                                     21   026D   resource type: vertical_dimension_float 
+                                                       C0003
+                                                                   0018   0280   resource descriptor, size: 24 
+                                                                     02   0282   access: private 
+                                                                     02   0283   resource ID, offset: 290 (hex) 
+                                                                     02   0284   resource group: literal 
+                                                                     20   0285   resource type: horizontal_dimension_float 
+                                                       D0003
+                                                006572 61757153656B616D   0298   makeSquare?
+ 
+  256 (0)	
+  257 (0)	object scale1 : XmScale {
+  258 (0)	    arguments {
+  259 (0)		XmNleftAttachment = XmATTACH_FORM; XmNleftOffset = 5;
+                                                                          0000   Resource ID: 00100003 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: horizontal_dimension_float, access: private, locked: false 
+                     0
+ 
+  260 (0)		XmNrightAttachment = XmATTACH_POSITION; XmNrightPosition = 30;
+  261 (0)		XmNbottomAttachment = XmATTACH_WIDGET; XmNbottomOffset = 5;
+                                                                          0000   Resource ID: 000F0003 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: vertical_dimension_float, access: private, locked: false 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 26
+Module: squares 	 Version: v1.0
+
+                     0
+ 
+  262 (0)		XmNbottomWidget = XmSeparator sep;
+  263 (0)		XmNminimum = 1;
+  264 (0)		XmNmaximum = 200;
+  265 (0)		XmNtitleString = 'Wag Rate';
+  266 (0)		XmNorientation = XmHORIZONTAL;
+  267 (0)		XmNprocessingDirection = XmMAX_ON_LEFT;
+  268 (0)		XmNvalue = dog1_wag_time;
+  269 (0)	    };
+  270 (0)	    callbacks {
+  271 (0)		XmNvalueChangedCallback = procedure scale_cb(1);
+  272 (0)		XmNdragCallback = procedure scale_cb(1);
+  273 (0)	    };
+  274 (0)	};
+                                                                          0000   Resource index: scale1 
+                                                               1649F7E2   0000   widget record 
+                                                                   0220   0004   size: 544 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   000B   000A   type: XmScale 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0000   000E   class: builtin 
+                                                                   0030   0010   argument list offset: 30 (hex) 
+                                                                   0000   0012   no children 
+                                                                   0000   0014   no comment specified 
+                                                                   0000   0016   no creation callback 
+                                                         0031656C616373   0028   scale1?
+                                                                   000F   0030   argument count: 15 
+                                                                   0000   0032   related argument count: 0 
+                                                                   000A   0040   (0) arg type: XmNleftAttachment 
+                                                                   0000   0042   (0) no tag offset 
+                                                                   0001   0044   (0) type: integer 
+                                                               00000001   0048   (0) value: 1 
+                                                                   000B   004C   (1) arg type: XmNleftOffset 
+                                                                   0000   004E   (1) no tag offset 
+                                                                   000C   0050   (1) type: resource 
+                                                               00000208   0054   (1) offset: 208 (hex) 
+                                                                   0016   0058   (2) arg type: XmNrightAttachment 
+                                                                   0000   005A   (2) no tag offset 
+                                                                   0001   005C   (2) type: integer 
+                                                               00000005   0060   (2) value: 5 
+                                                                   0018   0064   (3) arg type: XmNrightPosition 
+                                                                   0000   0066   (3) no tag offset 
+                                                                   0001   0068   (3) type: integer 
+                                                               0000001E   006C   (3) value: 30 
+                                                                   0003   0070   (4) arg type: XmNbottomAttachment 
+                                                                   0000   0072   (4) no tag offset 
+                                                                   0001   0074   (4) type: integer 
+                                                               00000003   0078   (4) value: 3 
+                                                                   0004   007C   (5) arg type: XmNbottomOffset 
+                                                                   0000   007E   (5) no tag offset 
+                                                                   000C   0080   (5) type: resource 
+                                                               000001F0   0084   (5) offset: 1F0 (hex) 
+                                                                   0005   0088   (6) arg type: XmNbottomWidget 
+                                                                   0000   008A   (6) no tag offset 
+                                                                   000C   008C   (6) type: resource 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 27
+Module: squares 	 Version: v1.0
+
+                                                               000001D0   0090   (6) offset: 1D0 (hex) 
+                                                                   0010   0094   (7) arg type: XmNminimum 
+                                                                   0000   0096   (7) no tag offset 
+                                                                   0001   0098   (7) type: integer 
+                                                               00000001   009C   (7) value: 1 
+                                                                   000D   00A0   (8) arg type: XmNmaximum 
+                                                                   0000   00A2   (8) no tag offset 
+                                                                   0001   00A4   (8) type: integer 
+                                                               000000C8   00A8   (8) value: 200 
+                                                                   001D   00AC   (9) arg type: XmNtitleString 
+                                                                   0000   00AE   (9) no tag offset 
+                                                                   000C   00B0   (9) type: resource 
+                                                               000001B8   00B4   (9) offset: 1B8 (hex) 
+                                                                   0013   00B8   (10) arg type: XmNorientation 
+                                                                   0000   00BA   (10) no tag offset 
+                                                                   0001   00BC   (10) type: integer 
+                                                               00000002   00C0   (10) value: 2 
+                                                                   0014   00C4   (11) arg type: XmNprocessingDirection 
+                                                                   0000   00C6   (11) no tag offset 
+                                                                   0001   00C8   (11) type: integer 
+                                                               00000002   00CC   (11) value: 2 
+                                                                   0020   00D0   (12) arg type: XmNvalue 
+                                                                   0000   00D2   (12) no tag offset 
+                                                                   0001   00D4   (12) type: integer 
+                                                               00000064   00D8   (12) value: 100 
+                                                                   0028   00DC   (13) arg type: XmNvalueChangedCallback 
+                                                                   0000   00DE   (13) no tag offset 
+                                                                   0009   00E0   (13) type: callback 
+                                                               00000158   00E4   (13) offset: 158 (hex) 
+                                                                   0026   00E8   (14) arg type: XmNdragCallback 
+                                                                   0000   00EA   (14) no tag offset 
+                                                                   0009   00EC   (14) type: callback 
+                                                               000000F8   00F0   (14) offset: F8 (hex) 
+                                                               0666C168   00F8   callback descriptor 
+                                                                   0001   00FC   callback count: 1 
+                                                                   0148   0108   (0) routine name offset: 148 (hex) 
+                                                                   0001   010A   (0) routine tag type: integer 
+                                                               00000001   010C   (0) value:  
+                                                    00 62635F656C616373   0148   scale_cb?
+                                                               0666C168   0158   callback descriptor 
+                                                                   0001   015C   callback count: 1 
+                                                                   01A8   0168   (0) routine name offset: 1A8 (hex) 
+                                                                   0001   016A   (0) routine tag type: integer 
+                                                               00000001   016C   (0) value:  
+                                                    00 62635F656C616373   01A8   scale_cb?
+                                                                   0018   01B8   resource descriptor, size: 24 
+                                                                     02   01BA   access: private 
+                                                                     02   01BB   resource ID, offset: 1C8 (hex) 
+                                                                     02   01BC   resource group: literal 
+                                                                     05   01BD   resource type: compound_string 
+                                                       E0003
+                                                                   001B   01D0   resource descriptor, size: 27 
+                                                                     01   01D2   access: public 
+                                                                     01   01D3   index, offset: 1E0 (hex) 
+                                                                     01   01D4   resource group: widget 
+                                                                     E9   01D5   resource type: unknown 
+                                                               00706573   01E0   sep?
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 28
+Module: squares 	 Version: v1.0
+
+                                                                   0018   01F0   resource descriptor, size: 24 
+                                                                     02   01F2   access: private 
+                                                                     02   01F3   resource ID, offset: 200 (hex) 
+                                                                     02   01F4   resource group: literal 
+                                                                     21   01F5   resource type: vertical_dimension_float 
+                                                       F0003
+                                                                   0018   0208   resource descriptor, size: 24 
+                                                                     02   020A   access: private 
+                                                                     02   020B   resource ID, offset: 218 (hex) 
+                                                                     02   020C   resource group: literal 
+                                                                     20   020D   resource type: horizontal_dimension_float 
+                                                       100003
+ 
+  275 (0)	
+  276 (0)	object scale2 : XmScale {
+  277 (0)	    arguments {
+  278 (0)		XmNleftAttachment = XmATTACH_POSITION; XmNleftPosition = 36;
+  279 (0)		XmNrightAttachment = XmATTACH_POSITION; XmNrightPosition = 63;
+  280 (0)		XmNbottomAttachment = XmATTACH_WIDGET; XmNbottomOffset = 5;
+                                                                          0000   Resource ID: 00120003 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: vertical_dimension_float, access: private, locked: false 
+                     0
+ 
+  281 (0)		XmNbottomWidget = XmSeparator sep;
+  282 (0)		XmNminimum = 1;
+  283 (0)		XmNmaximum = 200;
+  284 (0)		XmNtitleString = 'Wag Rate';
+  285 (0)		XmNorientation = XmHORIZONTAL;
+  286 (0)		XmNprocessingDirection = XmMAX_ON_LEFT;
+  287 (0)		XmNvalue = dog2_wag_time;
+  288 (0)	    };
+  289 (0)	    callbacks {
+  290 (0)		XmNvalueChangedCallback = procedure scale_cb(2);
+  291 (0)		XmNdragCallback = procedure scale_cb(2);
+  292 (0)	    };
+  293 (0)	};
+                                                                          0000   Resource index: scale2 
+                                                               1649F7E2   0000   widget record 
+                                                                   0208   0004   size: 520 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   000B   000A   type: XmScale 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0000   000E   class: builtin 
+                                                                   0030   0010   argument list offset: 30 (hex) 
+                                                                   0000   0012   no children 
+                                                                   0000   0014   no comment specified 
+                                                                   0000   0016   no creation callback 
+                                                         0032656C616373   0028   scale2?
+                                                                   000F   0030   argument count: 15 
+                                                                   0000   0032   related argument count: 0 
+                                                                   000A   0040   (0) arg type: XmNleftAttachment 
+                                                                   0000   0042   (0) no tag offset 
+                                                                   0001   0044   (0) type: integer 
+                                                               00000005   0048   (0) value: 5 
+                                                                   000C   004C   (1) arg type: XmNleftPosition 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 29
+Module: squares 	 Version: v1.0
+
+                                                                   0000   004E   (1) no tag offset 
+                                                                   0001   0050   (1) type: integer 
+                                                               00000024   0054   (1) value: 36 
+                                                                   0016   0058   (2) arg type: XmNrightAttachment 
+                                                                   0000   005A   (2) no tag offset 
+                                                                   0001   005C   (2) type: integer 
+                                                               00000005   0060   (2) value: 5 
+                                                                   0018   0064   (3) arg type: XmNrightPosition 
+                                                                   0000   0066   (3) no tag offset 
+                                                                   0001   0068   (3) type: integer 
+                                                               0000003F   006C   (3) value: 63 
+                                                                   0003   0070   (4) arg type: XmNbottomAttachment 
+                                                                   0000   0072   (4) no tag offset 
+                                                                   0001   0074   (4) type: integer 
+                                                               00000003   0078   (4) value: 3 
+                                                                   0004   007C   (5) arg type: XmNbottomOffset 
+                                                                   0000   007E   (5) no tag offset 
+                                                                   000C   0080   (5) type: resource 
+                                                               000001F0   0084   (5) offset: 1F0 (hex) 
+                                                                   0005   0088   (6) arg type: XmNbottomWidget 
+                                                                   0000   008A   (6) no tag offset 
+                                                                   000C   008C   (6) type: resource 
+                                                               000001D0   0090   (6) offset: 1D0 (hex) 
+                                                                   0010   0094   (7) arg type: XmNminimum 
+                                                                   0000   0096   (7) no tag offset 
+                                                                   0001   0098   (7) type: integer 
+                                                               00000001   009C   (7) value: 1 
+                                                                   000D   00A0   (8) arg type: XmNmaximum 
+                                                                   0000   00A2   (8) no tag offset 
+                                                                   0001   00A4   (8) type: integer 
+                                                               000000C8   00A8   (8) value: 200 
+                                                                   001D   00AC   (9) arg type: XmNtitleString 
+                                                                   0000   00AE   (9) no tag offset 
+                                                                   000C   00B0   (9) type: resource 
+                                                               000001B8   00B4   (9) offset: 1B8 (hex) 
+                                                                   0013   00B8   (10) arg type: XmNorientation 
+                                                                   0000   00BA   (10) no tag offset 
+                                                                   0001   00BC   (10) type: integer 
+                                                               00000002   00C0   (10) value: 2 
+                                                                   0014   00C4   (11) arg type: XmNprocessingDirection 
+                                                                   0000   00C6   (11) no tag offset 
+                                                                   0001   00C8   (11) type: integer 
+                                                               00000002   00CC   (11) value: 2 
+                                                                   0020   00D0   (12) arg type: XmNvalue 
+                                                                   0000   00D2   (12) no tag offset 
+                                                                   0001   00D4   (12) type: integer 
+                                                               00000064   00D8   (12) value: 100 
+                                                                   0028   00DC   (13) arg type: XmNvalueChangedCallback 
+                                                                   0000   00DE   (13) no tag offset 
+                                                                   0009   00E0   (13) type: callback 
+                                                               00000158   00E4   (13) offset: 158 (hex) 
+                                                                   0026   00E8   (14) arg type: XmNdragCallback 
+                                                                   0000   00EA   (14) no tag offset 
+                                                                   0009   00EC   (14) type: callback 
+                                                               000000F8   00F0   (14) offset: F8 (hex) 
+                                                               0666C168   00F8   callback descriptor 
+                                                                   0001   00FC   callback count: 1 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 30
+Module: squares 	 Version: v1.0
+
+                                                                   0148   0108   (0) routine name offset: 148 (hex) 
+                                                                   0001   010A   (0) routine tag type: integer 
+                                                               00000002   010C   (0) value:  
+                                                    00 62635F656C616373   0148   scale_cb?
+                                                               0666C168   0158   callback descriptor 
+                                                                   0001   015C   callback count: 1 
+                                                                   01A8   0168   (0) routine name offset: 1A8 (hex) 
+                                                                   0001   016A   (0) routine tag type: integer 
+                                                               00000002   016C   (0) value:  
+                                                    00 62635F656C616373   01A8   scale_cb?
+                                                                   0018   01B8   resource descriptor, size: 24 
+                                                                     02   01BA   access: private 
+                                                                     02   01BB   resource ID, offset: 1C8 (hex) 
+                                                                     02   01BC   resource group: literal 
+                                                                     05   01BD   resource type: compound_string 
+                                                       110003
+                                                                   001B   01D0   resource descriptor, size: 27 
+                                                                     01   01D2   access: public 
+                                                                     01   01D3   index, offset: 1E0 (hex) 
+                                                                     01   01D4   resource group: widget 
+                                                                     E9   01D5   resource type: unknown 
+                                                               00706573   01E0   sep?
+                                                                   0018   01F0   resource descriptor, size: 24 
+                                                                     02   01F2   access: private 
+                                                                     02   01F3   resource ID, offset: 200 (hex) 
+                                                                     02   01F4   resource group: literal 
+                                                                     21   01F5   resource type: vertical_dimension_float 
+                                                       120003
+ 
+  294 (0)	
+  295 (0)	object scale3 : XmScale {
+  296 (0)	    arguments {
+  297 (0)		XmNleftAttachment = XmATTACH_POSITION; XmNleftPosition = 69;
+  298 (0)		XmNrightAttachment = XmATTACH_FORM; XmNrightOffset = 5;
+                                                                          0000   Resource ID: 00150003 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: horizontal_dimension_float, access: private, locked: false 
+                     0
+ 
+  299 (0)		XmNbottomAttachment = XmATTACH_WIDGET; XmNbottomOffset = 5;
+                                                                          0000   Resource ID: 00140003 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: vertical_dimension_float, access: private, locked: false 
+                     0
+ 
+  300 (0)		XmNbottomWidget = XmSeparator sep;
+  301 (0)		XmNminimum = 1;
+  302 (0)		XmNmaximum = 200;
+  303 (0)		XmNtitleString = 'Wag Rate';
+  304 (0)		XmNorientation = XmHORIZONTAL;
+  305 (0)		XmNprocessingDirection = XmMAX_ON_LEFT;
+  306 (0)		XmNvalue = dog3_wag_time;
+  307 (0)	    };
+  308 (0)	    callbacks {
+  309 (0)		XmNvalueChangedCallback = procedure scale_cb(3);
+  310 (0)		XmNdragCallback = procedure scale_cb(3);
+  311 (0)	    };
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 31
+Module: squares 	 Version: v1.0
+
+  312 (0)	};
+                                                                          0000   Resource index: scale3 
+                                                               1649F7E2   0000   widget record 
+                                                                   0220   0004   size: 544 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   000B   000A   type: XmScale 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0000   000E   class: builtin 
+                                                                   0030   0010   argument list offset: 30 (hex) 
+                                                                   0000   0012   no children 
+                                                                   0000   0014   no comment specified 
+                                                                   0000   0016   no creation callback 
+                                                         0033656C616373   0028   scale3?
+                                                                   000F   0030   argument count: 15 
+                                                                   0000   0032   related argument count: 0 
+                                                                   000A   0040   (0) arg type: XmNleftAttachment 
+                                                                   0000   0042   (0) no tag offset 
+                                                                   0001   0044   (0) type: integer 
+                                                               00000005   0048   (0) value: 5 
+                                                                   000C   004C   (1) arg type: XmNleftPosition 
+                                                                   0000   004E   (1) no tag offset 
+                                                                   0001   0050   (1) type: integer 
+                                                               00000045   0054   (1) value: 69 
+                                                                   0016   0058   (2) arg type: XmNrightAttachment 
+                                                                   0000   005A   (2) no tag offset 
+                                                                   0001   005C   (2) type: integer 
+                                                               00000001   0060   (2) value: 1 
+                                                                   0017   0064   (3) arg type: XmNrightOffset 
+                                                                   0000   0066   (3) no tag offset 
+                                                                   000C   0068   (3) type: resource 
+                                                               00000208   006C   (3) offset: 208 (hex) 
+                                                                   0003   0070   (4) arg type: XmNbottomAttachment 
+                                                                   0000   0072   (4) no tag offset 
+                                                                   0001   0074   (4) type: integer 
+                                                               00000003   0078   (4) value: 3 
+                                                                   0004   007C   (5) arg type: XmNbottomOffset 
+                                                                   0000   007E   (5) no tag offset 
+                                                                   000C   0080   (5) type: resource 
+                                                               000001F0   0084   (5) offset: 1F0 (hex) 
+                                                                   0005   0088   (6) arg type: XmNbottomWidget 
+                                                                   0000   008A   (6) no tag offset 
+                                                                   000C   008C   (6) type: resource 
+                                                               000001D0   0090   (6) offset: 1D0 (hex) 
+                                                                   0010   0094   (7) arg type: XmNminimum 
+                                                                   0000   0096   (7) no tag offset 
+                                                                   0001   0098   (7) type: integer 
+                                                               00000001   009C   (7) value: 1 
+                                                                   000D   00A0   (8) arg type: XmNmaximum 
+                                                                   0000   00A2   (8) no tag offset 
+                                                                   0001   00A4   (8) type: integer 
+                                                               000000C8   00A8   (8) value: 200 
+                                                                   001D   00AC   (9) arg type: XmNtitleString 
+                                                                   0000   00AE   (9) no tag offset 
+                                                                   000C   00B0   (9) type: resource 
+                                                               000001B8   00B4   (9) offset: 1B8 (hex) 
+                                                                   0013   00B8   (10) arg type: XmNorientation 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 32
+Module: squares 	 Version: v1.0
+
+                                                                   0000   00BA   (10) no tag offset 
+                                                                   0001   00BC   (10) type: integer 
+                                                               00000002   00C0   (10) value: 2 
+                                                                   0014   00C4   (11) arg type: XmNprocessingDirection 
+                                                                   0000   00C6   (11) no tag offset 
+                                                                   0001   00C8   (11) type: integer 
+                                                               00000002   00CC   (11) value: 2 
+                                                                   0020   00D0   (12) arg type: XmNvalue 
+                                                                   0000   00D2   (12) no tag offset 
+                                                                   0001   00D4   (12) type: integer 
+                                                               00000064   00D8   (12) value: 100 
+                                                                   0028   00DC   (13) arg type: XmNvalueChangedCallback 
+                                                                   0000   00DE   (13) no tag offset 
+                                                                   0009   00E0   (13) type: callback 
+                                                               00000158   00E4   (13) offset: 158 (hex) 
+                                                                   0026   00E8   (14) arg type: XmNdragCallback 
+                                                                   0000   00EA   (14) no tag offset 
+                                                                   0009   00EC   (14) type: callback 
+                                                               000000F8   00F0   (14) offset: F8 (hex) 
+                                                               0666C168   00F8   callback descriptor 
+                                                                   0001   00FC   callback count: 1 
+                                                                   0148   0108   (0) routine name offset: 148 (hex) 
+                                                                   0001   010A   (0) routine tag type: integer 
+                                                               00000003   010C   (0) value:  
+                                                    00 62635F656C616373   0148   scale_cb?
+                                                               0666C168   0158   callback descriptor 
+                                                                   0001   015C   callback count: 1 
+                                                                   01A8   0168   (0) routine name offset: 1A8 (hex) 
+                                                                   0001   016A   (0) routine tag type: integer 
+                                                               00000003   016C   (0) value:  
+                                                    00 62635F656C616373   01A8   scale_cb?
+                                                                   0018   01B8   resource descriptor, size: 24 
+                                                                     02   01BA   access: private 
+                                                                     02   01BB   resource ID, offset: 1C8 (hex) 
+                                                                     02   01BC   resource group: literal 
+                                                                     05   01BD   resource type: compound_string 
+                                                       130003
+                                                                   001B   01D0   resource descriptor, size: 27 
+                                                                     01   01D2   access: public 
+                                                                     01   01D3   index, offset: 1E0 (hex) 
+                                                                     01   01D4   resource group: widget 
+                                                                     E9   01D5   resource type: unknown 
+                                                               00706573   01E0   sep?
+                                                                   0018   01F0   resource descriptor, size: 24 
+                                                                     02   01F2   access: private 
+                                                                     02   01F3   resource ID, offset: 200 (hex) 
+                                                                     02   01F4   resource group: literal 
+                                                                     21   01F5   resource type: vertical_dimension_float 
+                                                       140003
+                                                                   0018   0208   resource descriptor, size: 24 
+                                                                     02   020A   access: private 
+                                                                     02   020B   resource ID, offset: 218 (hex) 
+                                                                     02   020C   resource group: literal 
+                                                                     20   020D   resource type: horizontal_dimension_float 
+                                                       150003
+ 
+  313 (0)	
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 33
+Module: squares 	 Version: v1.0
+
+  314 (0)	object sep : XmSeparator {
+  315 (0)	    arguments {
+  316 (0)		XmNleftAttachment = XmATTACH_FORM;
+  317 (0)		XmNrightAttachment = XmATTACH_FORM;
+  318 (0)		XmNbottomAttachment = XmATTACH_WIDGET; XmNbottomOffset = 5;
+                                                                          0000   Resource ID: 00160003 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: vertical_dimension_float, access: private, locked: false 
+                     0
+ 
+  319 (0)		XmNbottomWidget = XmToggleButton tb1;
+  320 (0)	    };
+  321 (0)	};
+                                                                          0000   Resource index: sep 
+                                                               1649F7E2   0000   widget record 
+                                                                   00B8   0004   size: 184 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   000C   000A   type: XmSeparator 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0000   000E   class: builtin 
+                                                                   0030   0010   argument list offset: 30 (hex) 
+                                                                   0000   0012   no children 
+                                                                   0000   0014   no comment specified 
+                                                                   0000   0016   no creation callback 
+                                                               00706573   0028   sep?
+                                                                   0005   0030   argument count: 5 
+                                                                   0000   0032   related argument count: 0 
+                                                                   000A   0040   (0) arg type: XmNleftAttachment 
+                                                                   0000   0042   (0) no tag offset 
+                                                                   0001   0044   (0) type: integer 
+                                                               00000001   0048   (0) value: 1 
+                                                                   0016   004C   (1) arg type: XmNrightAttachment 
+                                                                   0000   004E   (1) no tag offset 
+                                                                   0001   0050   (1) type: integer 
+                                                               00000001   0054   (1) value: 1 
+                                                                   0003   0058   (2) arg type: XmNbottomAttachment 
+                                                                   0000   005A   (2) no tag offset 
+                                                                   0001   005C   (2) type: integer 
+                                                               00000003   0060   (2) value: 3 
+                                                                   0004   0064   (3) arg type: XmNbottomOffset 
+                                                                   0000   0066   (3) no tag offset 
+                                                                   000C   0068   (3) type: resource 
+                                                               000000A0   006C   (3) offset: A0 (hex) 
+                                                                   0005   0070   (4) arg type: XmNbottomWidget 
+                                                                   0000   0072   (4) no tag offset 
+                                                                   000C   0074   (4) type: resource 
+                                                               00000080   0078   (4) offset: 80 (hex) 
+                                                                   001B   0080   resource descriptor, size: 27 
+                                                                     01   0082   access: public 
+                                                                     01   0083   index, offset: 90 (hex) 
+                                                                     01   0084   resource group: widget 
+                                                                     E9   0085   resource type: unknown 
+                                                               00316274   0090   tb1?
+                                                                   0018   00A0   resource descriptor, size: 24 
+                                                                     02   00A2   access: private 
+                                                                     02   00A3   resource ID, offset: B0 (hex) 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 34
+Module: squares 	 Version: v1.0
+
+                                                                     02   00A4   resource group: literal 
+                                                                     21   00A5   resource type: vertical_dimension_float 
+                                                       160003
+ 
+  322 (0)	
+  323 (0)	object tb1 : XmToggleButton {
+  324 (0)	    arguments {
+  325 (0)		XmNleftAttachment = XmATTACH_FORM; XmNleftOffset = 5;
+                                                                          0000   Resource ID: 00190003 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: horizontal_dimension_float, access: private, locked: false 
+                     0
+ 
+  326 (0)		XmNbottomAttachment = XmATTACH_FORM; XmNbottomOffset = 5;
+                                                                          0000   Resource ID: 00180003 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: vertical_dimension_float, access: private, locked: false 
+                     0
+ 
+  327 (0)	
+  328 (0)		XmNset = dog1_square;
+  329 (0)		XmNlabelString = 'Make Square';
+  330 (0)	    };
+  331 (0)	    callbacks {
+  332 (0)		XmNvalueChangedCallback = procedure tb_cb(1);
+  333 (0)	    };
+  334 (0)	};
+                                                                          0000   Resource index: tb1 
+                                                               1649F7E2   0000   widget record 
+                                                                   0138   0004   size: 312 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   000E   000A   type: XmToggleButtonGadget 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0000   000E   class: builtin 
+                                                                   0030   0010   argument list offset: 30 (hex) 
+                                                                   0000   0012   no children 
+                                                                   0000   0014   no comment specified 
+                                                                   0000   0016   no creation callback 
+                                                               00316274   0028   tb1?
+                                                                   0007   0030   argument count: 7 
+                                                                   0000   0032   related argument count: 0 
+                                                                   000A   0040   (0) arg type: XmNleftAttachment 
+                                                                   0000   0042   (0) no tag offset 
+                                                                   0001   0044   (0) type: integer 
+                                                               00000001   0048   (0) value: 1 
+                                                                   000B   004C   (1) arg type: XmNleftOffset 
+                                                                   0000   004E   (1) no tag offset 
+                                                                   000C   0050   (1) type: resource 
+                                                               00000120   0054   (1) offset: 120 (hex) 
+                                                                   0003   0058   (2) arg type: XmNbottomAttachment 
+                                                                   0000   005A   (2) no tag offset 
+                                                                   0001   005C   (2) type: integer 
+                                                               00000001   0060   (2) value: 1 
+                                                                   0004   0064   (3) arg type: XmNbottomOffset 
+                                                                   0000   0066   (3) no tag offset 
+                                                                   000C   0068   (3) type: resource 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 35
+Module: squares 	 Version: v1.0
+
+                                                               00000108   006C   (3) offset: 108 (hex) 
+                                                                   0019   0070   (4) arg type: XmNset 
+                                                                   0000   0072   (4) no tag offset 
+                                                                   0002   0074   (4) type: boolean 
+                                                               00000000   0078   (4) value: false 
+                                                                   0009   007C   (5) arg type: XmNlabelString 
+                                                                   0000   007E   (5) no tag offset 
+                                                                   000C   0080   (5) type: resource 
+                                                               000000F0   0084   (5) offset: F0 (hex) 
+                                                                   0028   0088   (6) arg type: XmNvalueChangedCallback 
+                                                                   0000   008A   (6) no tag offset 
+                                                                   0009   008C   (6) type: callback 
+                                                               00000098   0090   (6) offset: 98 (hex) 
+                                                               0666C168   0098   callback descriptor 
+                                                                   0001   009C   callback count: 1 
+                                                                   00E8   00A8   (0) routine name offset: E8 (hex) 
+                                                                   0001   00AA   (0) routine tag type: integer 
+                                                               00000001   00AC   (0) value:  
+                                                           0062635F6274   00E8   tb_cb?
+                                                                   0018   00F0   resource descriptor, size: 24 
+                                                                     02   00F2   access: private 
+                                                                     02   00F3   resource ID, offset: 100 (hex) 
+                                                                     02   00F4   resource group: literal 
+                                                                     05   00F5   resource type: compound_string 
+                                                       170003
+                                                                   0018   0108   resource descriptor, size: 24 
+                                                                     02   010A   access: private 
+                                                                     02   010B   resource ID, offset: 118 (hex) 
+                                                                     02   010C   resource group: literal 
+                                                                     21   010D   resource type: vertical_dimension_float 
+                                                       180003
+                                                                   0018   0120   resource descriptor, size: 24 
+                                                                     02   0122   access: private 
+                                                                     02   0123   resource ID, offset: 130 (hex) 
+                                                                     02   0124   resource group: literal 
+                                                                     20   0125   resource type: horizontal_dimension_float 
+                                                       190003
+ 
+  335 (0)	
+  336 (0)	object tb2 : XmToggleButton {
+  337 (0)	    arguments {
+  338 (0)		XmNleftAttachment = XmATTACH_POSITION; XmNleftPosition = 36;
+  339 (0)		XmNbottomAttachment = XmATTACH_FORM; XmNbottomOffset = 5;
+                                                                          0000   Resource ID: 001B0003 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: vertical_dimension_float, access: private, locked: false 
+                     0
+ 
+  340 (0)	
+  341 (0)		XmNset = dog2_square;
+  342 (0)		XmNlabelString = 'Make Square';
+  343 (0)	    };
+  344 (0)	    callbacks {
+  345 (0)		XmNvalueChangedCallback = procedure tb_cb(2);
+  346 (0)	    };
+  347 (0)	};
+                                                                          0000   Resource index: tb2 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 36
+Module: squares 	 Version: v1.0
+
+                                                               1649F7E2   0000   widget record 
+                                                                   0120   0004   size: 288 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   000E   000A   type: XmToggleButtonGadget 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0000   000E   class: builtin 
+                                                                   0030   0010   argument list offset: 30 (hex) 
+                                                                   0000   0012   no children 
+                                                                   0000   0014   no comment specified 
+                                                                   0000   0016   no creation callback 
+                                                               00326274   0028   tb2?
+                                                                   0007   0030   argument count: 7 
+                                                                   0000   0032   related argument count: 0 
+                                                                   000A   0040   (0) arg type: XmNleftAttachment 
+                                                                   0000   0042   (0) no tag offset 
+                                                                   0001   0044   (0) type: integer 
+                                                               00000005   0048   (0) value: 5 
+                                                                   000C   004C   (1) arg type: XmNleftPosition 
+                                                                   0000   004E   (1) no tag offset 
+                                                                   0001   0050   (1) type: integer 
+                                                               00000024   0054   (1) value: 36 
+                                                                   0003   0058   (2) arg type: XmNbottomAttachment 
+                                                                   0000   005A   (2) no tag offset 
+                                                                   0001   005C   (2) type: integer 
+                                                               00000001   0060   (2) value: 1 
+                                                                   0004   0064   (3) arg type: XmNbottomOffset 
+                                                                   0000   0066   (3) no tag offset 
+                                                                   000C   0068   (3) type: resource 
+                                                               00000108   006C   (3) offset: 108 (hex) 
+                                                                   0019   0070   (4) arg type: XmNset 
+                                                                   0000   0072   (4) no tag offset 
+                                                                   0002   0074   (4) type: boolean 
+                                                               00000000   0078   (4) value: false 
+                                                                   0009   007C   (5) arg type: XmNlabelString 
+                                                                   0000   007E   (5) no tag offset 
+                                                                   000C   0080   (5) type: resource 
+                                                               000000F0   0084   (5) offset: F0 (hex) 
+                                                                   0028   0088   (6) arg type: XmNvalueChangedCallback 
+                                                                   0000   008A   (6) no tag offset 
+                                                                   0009   008C   (6) type: callback 
+                                                               00000098   0090   (6) offset: 98 (hex) 
+                                                               0666C168   0098   callback descriptor 
+                                                                   0001   009C   callback count: 1 
+                                                                   00E8   00A8   (0) routine name offset: E8 (hex) 
+                                                                   0001   00AA   (0) routine tag type: integer 
+                                                               00000002   00AC   (0) value:  
+                                                           0062635F6274   00E8   tb_cb?
+                                                                   0018   00F0   resource descriptor, size: 24 
+                                                                     02   00F2   access: private 
+                                                                     02   00F3   resource ID, offset: 100 (hex) 
+                                                                     02   00F4   resource group: literal 
+                                                                     05   00F5   resource type: compound_string 
+                                                       1A0003
+                                                                   0018   0108   resource descriptor, size: 24 
+                                                                     02   010A   access: private 
+                                                                     02   010B   resource ID, offset: 118 (hex) 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 37
+Module: squares 	 Version: v1.0
+
+                                                                     02   010C   resource group: literal 
+                                                                     21   010D   resource type: vertical_dimension_float 
+                                                       1B0003
+ 
+  348 (0)	
+  349 (0)	object tb3 : XmToggleButton {
+  350 (0)	    arguments {
+  351 (0)		XmNleftAttachment = XmATTACH_POSITION; XmNleftPosition = 69;
+  352 (0)		XmNbottomAttachment = XmATTACH_FORM; XmNbottomOffset = 5;
+                                                                          0000   Resource ID: 001D0003 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: vertical_dimension_float, access: private, locked: false 
+                     0
+ 
+  353 (0)	
+  354 (0)		XmNset = dog3_square;
+  355 (0)		XmNlabelString = 'Make Square';
+  356 (0)	    };
+  357 (0)	    callbacks {
+  358 (0)		XmNvalueChangedCallback = procedure tb_cb(3);
+  359 (0)	    };
+  360 (0)	};
+                                                                          0000   Resource index: tb3 
+                                                               1649F7E2   0000   widget record 
+                                                                   0120   0004   size: 288 
+                                                                   0001   0006   access: public 
+                                                                   0000   0008   locked: false 
+                                                                   000E   000A   type: XmToggleButtonGadget 
+                                                                   0028   000C   name: offset 28 (hex) 
+                                                                   0000   000E   class: builtin 
+                                                                   0030   0010   argument list offset: 30 (hex) 
+                                                                   0000   0012   no children 
+                                                                   0000   0014   no comment specified 
+                                                                   0000   0016   no creation callback 
+                                                               00336274   0028   tb3?
+                                                                   0007   0030   argument count: 7 
+                                                                   0000   0032   related argument count: 0 
+                                                                   000A   0040   (0) arg type: XmNleftAttachment 
+                                                                   0000   0042   (0) no tag offset 
+                                                                   0001   0044   (0) type: integer 
+                                                               00000005   0048   (0) value: 5 
+                                                                   000C   004C   (1) arg type: XmNleftPosition 
+                                                                   0000   004E   (1) no tag offset 
+                                                                   0001   0050   (1) type: integer 
+                                                               00000045   0054   (1) value: 69 
+                                                                   0003   0058   (2) arg type: XmNbottomAttachment 
+                                                                   0000   005A   (2) no tag offset 
+                                                                   0001   005C   (2) type: integer 
+                                                               00000001   0060   (2) value: 1 
+                                                                   0004   0064   (3) arg type: XmNbottomOffset 
+                                                                   0000   0066   (3) no tag offset 
+                                                                   000C   0068   (3) type: resource 
+                                                               00000108   006C   (3) offset: 108 (hex) 
+                                                                   0019   0070   (4) arg type: XmNset 
+                                                                   0000   0072   (4) no tag offset 
+                                                                   0002   0074   (4) type: boolean 
+                                                               00000000   0078   (4) value: false 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 38
+Module: squares 	 Version: v1.0
+
+                                                                   0009   007C   (5) arg type: XmNlabelString 
+                                                                   0000   007E   (5) no tag offset 
+                                                                   000C   0080   (5) type: resource 
+                                                               000000F0   0084   (5) offset: F0 (hex) 
+                                                                   0028   0088   (6) arg type: XmNvalueChangedCallback 
+                                                                   0000   008A   (6) no tag offset 
+                                                                   0009   008C   (6) type: callback 
+                                                               00000098   0090   (6) offset: 98 (hex) 
+                                                               0666C168   0098   callback descriptor 
+                                                                   0001   009C   callback count: 1 
+                                                                   00E8   00A8   (0) routine name offset: E8 (hex) 
+                                                                   0001   00AA   (0) routine tag type: integer 
+                                                               00000003   00AC   (0) value:  
+                                                           0062635F6274   00E8   tb_cb?
+                                                                   0018   00F0   resource descriptor, size: 24 
+                                                                     02   00F2   access: private 
+                                                                     02   00F3   resource ID, offset: 100 (hex) 
+                                                                     02   00F4   resource group: literal 
+                                                                     05   00F5   resource type: compound_string 
+                                                       1C0003
+                                                                   0018   0108   resource descriptor, size: 24 
+                                                                     02   010A   access: private 
+                                                                     02   010B   resource ID, offset: 118 (hex) 
+                                                                     02   010C   resource group: literal 
+                                                                     21   010D   resource type: vertical_dimension_float 
+                                                       1D0003
+ 
+  361 (0)	
+  362 (0)	end module;
+                                                                          0000   Resource ID: 00040001 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: compound_string, access: private, locked: false 
+                     7469784504020001 3312D393538384F
+ 
+                                                                          0000   Resource ID: 00020001 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: compound_string, access: private, locked: false 
+                     656C694604020001 3312D393538384F
+ 
+                                                                          0000   Resource ID: 00090001 
+                                                                          0000   size: 27, group: literal 
+                                                                          0000   type: compound_string, access: private, locked: false 
+              73676F 44206E4F07020001 3312D393538384F
+ 
+                                                                          0000   Resource ID: 00060001 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: compound_string, access: private, locked: false 
+                     706C654804020001 3312D393538384F
+ 
+                                                                          0000   Resource ID: 000E0003 
+                                                                          0000   size: 28, group: literal 
+                                                                          0000   type: compound_string, access: private, locked: false 
+            65746152 2067615708020001 3312D393538384F
+ 
+                                                                          0000   Resource ID: 00110003 
+                                                                          0000   size: 28, group: literal 
+                                                                          0000   type: compound_string, access: private, locked: false 
+
+Motif Uil Compiler V2.0-000 	Wed Feb 24 16:10:12 2021		 Page 39
+Module: squares 	 Version: v1.0
+
+            65746152 2067615708020001 3312D393538384F
+ 
+                                                                          0000   Resource ID: 00130003 
+                                                                          0000   size: 28, group: literal 
+                                                                          0000   type: compound_string, access: private, locked: false 
+            65746152 2067615708020001 3312D393538384F
+ 
+                                                                          0000   Resource ID: 00170003 
+                                                                          0000   size: 31, group: literal 
+                                                                          0000   type: compound_string, access: private, locked: false 
+      65726175715320 656B614D0B020001 3312D393538384F
+ 
+                                                                          0000   Resource ID: 001A0003 
+                                                                          0000   size: 31, group: literal 
+                                                                          0000   type: compound_string, access: private, locked: false 
+      65726175715320 656B614D0B020001 3312D393538384F
+ 
+                                                                          0000   Resource ID: 001C0003 
+                                                                          0000   size: 31, group: literal 
+                                                                          0000   type: compound_string, access: private, locked: false 
+      65726175715320 656B614D0B020001 3312D393538384F
+ 
+                                                                          0000   Resource ID: 001F0003 
+                                                                          0000   size: 24, group: literal 
+                                                                          0000   type: compound_string, access: private, locked: false 
+                     706C654804020001 3312D393538384F
+ 
+                                                                          0000   Resource ID: 001E0003 
+                                                                          0000   size: 27, group: literal 
+                                                                          0000   type: compound_string, access: private, locked: false 
+              737369 6D73694407020001 3312D393538384F
+ 
+  363 (0)	
+ 
+     File (0)   ../dogs/dogs.uil
+     File (1)   ../dogs/Square.uil
+     File (2)   ../dogs/Dog.uil
+ 

@@ -1,0 +1,23 @@
+#ifndef XmClientLibs
+#define XmClientLibs $(XMLIB) $(XTOOLLIB) $(XLIB)
+#endif
+
+/* #include "../demos.cf" missing */
+
+      INCLUDES = -I.
+
+SRCS = colordemo.c bxutil-c.c 
+OBJS = colordemo.o bxutil-c.o 
+
+PROGRAMS = colordemo
+
+#ifndef NO_XP
+LOCAL_LIBRARIES = -lXm -lXt -lXp -lX11 -lXext
+#else
+LOCAL_LIBRARIES = -lXm -lXt -lX11 -lXext
+#endif
+
+NormalLibraryObjectRule()
+
+MComplexProgramTarget(colordemo,$(LOCAL_LIBRARIES),$(SYSLIBS))
+

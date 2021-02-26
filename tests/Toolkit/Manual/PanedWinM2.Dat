@@ -1,0 +1,10 @@
+#) Two test clients should appear, one on your default display and one on
+the second display you selected. Each client contains a paned window with
+two button children. If you do not see these clients, check the stdout
+window to see if your attempt to open the display failed. If it did fail,
+or you chose not to run this test, just continue.
+C)
+
+#) A Paned window with two children, an arrow button and a separator, appears. 
+#) Click on the arrow button. It will become insensitive. 
+E)

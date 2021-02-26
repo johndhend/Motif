@@ -1,0 +1,76 @@
+/* $XConsortium: SpinBoxPerf2.dat /main/4 1995/07/17 10:08:25 drk $ */
+/*
+ * @OPENGROUP_COPYRIGHT@
+ * COPYRIGHT NOTICE
+ * Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ * Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ * ALL RIGHTS RESERVED (MOTIF).  See the file named COPYRIGHT.MOTIF for
+ * the full copyright text.
+ * 
+ * This software is subject to an open license. It may only be
+ * used on, with or for operating systems which are themselves open
+ * source systems. You must contact The Open Group for a license
+ * allowing distribution and sublicensing of this software on, with,
+ * or for operating systems which are not Open Source programs.
+ * 
+ * See http://www.opengroup.org/openmotif/license for full
+ * details of the license agreement. Any use, reproduction, or
+ * distribution of the program constitutes recipient's acceptance of
+ * this agreement.
+ * 
+ * EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ * PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ * WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ * OR FITNESS FOR A PARTICULAR PURPOSE
+ * 
+ * EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ * NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ * INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ * ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ * EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGES.
+ * 
+ */
+/*
+ * HISTORY
+ */
+
+
+@) This test should be run automated since it requires the automation
+   performance monitor to measure the time lapsed for the given
+   actions listed on the following panels.
+
+@) A SpinBox will be displayed with a XmNUMERIC SpinBox child.
+   The following resource values have been set:
+
+#) XmNminimumValue = 1
+#) XmNmaximumValue = 2
+#) XmNincrementValue = 1
+
+#) Click on the increment arrow 500 times in order to spin through the
+   minimum to maximum values 250 times.
+
+C)
+
+@) The following SpinBox resource values have been updated as follows:
+
+#) XmNminimumValue = 1
+#) XmNmaximumValue = 500 
+#) XmNincrementValue = 1
+
+#) Click on the increment arrow 500 times in order to spin through all
+   the SpinBox values. 
+
+C)
+
+@) An output file, SpinBoxPerf2.prt, will be generated which lists the
+   times measured for the previous two testcases.
+   Check that there is not a significant difference between the time
+   lapsed for each of the two testcases. 
+
+C)
+E)

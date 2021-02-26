@@ -1,0 +1,94 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: Text2.dat /main/7 1995/07/13 19:27:52 drk $"
+*/
+#) This text widget has defined a number of different translations, which are
+listed below.  Try each translation and verify that the correct action is
+performed.  The fontList for this text widget is variable. If you 
+need to add more text to the example, do so.
+!) 
+   Ctrl<Key>g                 beep
+   Ctrl<Key>i                 insert string "newstring"
+   Ctrl<Key>right bracket     forward a paragraph
+   Ctrl<Key>left bracket      back a paragraph
+   Meta<Key>u                 scroll one line up
+   Meta<Key>d                 scroll down one line
+   Ctrl<Key>f                 next page
+   Ctrl<Key>b                 previous page
+   <Key>BackSpace             kill previous character
+   Ctrl<Key>s                 kill selection
+   Ctrl<Key>k                 kill next word
+   Meta<Key>k                 kill previous word
+   Ctrl<Key>u                 unkill
+   Ctrl<Key>r                 delete previous word
+   Meta<Key>r                 delete next word.
+   Ctrl<Key>c                 cut primary selection
+ 
+C)
+/* test case for PIR 3520 */
+/* This PIR was closed, test is no longer valid.
+ * #) Select any word in the text by double clicking MB1 on it.
+ * #) Press the Backspace key to kill the selection.
+ * #) Click MB1 somewhere else in the text.
+ * #) Press Ctrl<Key>u to unkill the selection and paste it at the
+ * insertion cursor position.
+ * #) Perform the same sequence of select word, kill and unkill using
+ * the kill-next-word ( Ctrl<Key>k ) action.
+ * #) Once again, perform the sequence using the kill-previous-word
+ * ( Meta<Key>k ) action.
+ * C)
+ */
+/* end of test case for PIR 3520 */
+
+/* test case for CR 8029 */
+#) Move the cursor to the beginning of the text. Type the following lines, 
+typing a space where the instructions indicate \"_\".
+!)
+       __A paragraph that starts<CR>
+       with whitespace<CR>
+        <CR>
+
+#) Move the cursor to the beginning of the text again. Type 
+Ctrl<Key>right bracket to move forward a paragraph. You should 
+be able to continue, no infinite loop should occur.
+
+C)
+
+E)

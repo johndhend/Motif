@@ -1,0 +1,246 @@
+! 
+! @OPENGROUP_COPYRIGHT@
+! COPYRIGHT NOTICE
+! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+! ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+! the full copyright text.
+! 
+! This software is subject to an open license. It may only be
+! used on, with or for operating systems which are themselves open
+! source systems. You must contact The Open Group for a license
+! allowing distribution and sublicensing of this software on, with,
+! or for operating systems which are not Open Source programs.
+! 
+! See http://www.opengroup.org/openmotif/license for full
+! details of the license agreement. Any use, reproduction, or
+! distribution of the program constitutes recipient's acceptance of
+! this agreement.
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+! OR FITNESS FOR A PARTICULAR PURPOSE
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+! POSSIBILITY OF SUCH DAMAGES.
+! 
+! 
+! HISTORY
+! 
+!   $XConsortium: multC.uil /main/4 1995/07/13 20:31:09 drk $
+!******************************************************************************
+
+module multC
+
+	version = 'v1.0'
+	names = case_sensitive
+
+procedure
+	callback1_1();
+	callback2_1();
+	callback2_2();
+	callback2_3();
+	callback3_1();
+	callback3_2();
+	callback4_1();
+	callback4_2();
+	callback5_1();
+	callback5_2();
+	callback5_3();
+	callback6_1();
+	callback6_2();
+	callback7_1();
+	callback8_1();
+	callback8_2();
+	callback8_3();
+	callback8_4();
+	callback8_5();
+	callback9_1();
+	callback9_2();
+	callback9_3();
+	callback9_4();
+	callback10_1();
+	callback10_2();
+	callback10_3();
+	callback11_1();
+	callback11_2();
+	callback12_1();
+	callback12_2();
+
+list
+	callbacks3 : procedures
+	{
+		callback3_1();
+		callback3_2();
+	};
+
+	callbacks4 : procedures
+	{
+		procedures callbacks3;
+		callback4_1();
+		callback4_2();
+	};
+
+	callbacks6 : callbacks
+	{
+		XmNactivateCallback	= procedure callback6_1();
+		XmNarmCallback		= procedure callback6_2();
+	};
+
+	callbacks7 : callbacks
+	{
+		callbacks callbacks6;
+		XmNdisarmCallback	= procedure callback7_1();
+	};
+
+	callbacks9 : callbacks
+	{
+		XmNactivateCallback	= procedure callback9_1();
+		XmNarmCallback		= procedure callback9_2();
+		XmNactivateCallback	= procedure callback9_3();
+		XmNdisarmCallback	= procedure callback9_4();
+	};
+
+	callbacks10 : callbacks
+	{
+		callbacks callbacks9;
+		XmNactivateCallback	= procedure callback10_1();
+		XmNdisarmCallback	= procedure callback10_2();
+		XmNdisarmCallback	= procedure callback10_3();
+	};
+
+object
+	widget1 : XmPushButton
+	{
+		callbacks
+		{
+			XmNactivateCallback = procedure callback1_1();
+		};
+	};
+
+	widget2 : XmPushButton
+	{
+		callbacks
+		{
+			XmNactivateCallback = procedures
+			{
+				callback2_1();
+				callback2_2();
+				callback2_3();
+			};
+		};
+	};
+
+	widget3 : XmPushButton
+	{
+		callbacks
+		{
+			XmNactivateCallback = procedures callbacks3;
+		};
+	};
+
+	widget4 : XmPushButton
+	{
+		callbacks
+		{
+			XmNactivateCallback = procedures callbacks4;
+		};
+	};
+
+/*
+ * Test for CR 4772
+ */
+	widget4a : XmPushButton
+	{
+		callbacks
+		{
+			XmNactivateCallback = procedures {
+				callback4_1();
+				procedures callbacks3;
+				callback4_2();
+			};
+		};
+	};
+/*
+ * End Text for CR 4772
+ */
+
+	widget5 : XmPushButton
+	{
+		callbacks
+		{
+			XmNactivateCallback	= procedure callback5_1();
+			XmNarmCallback		= procedure callback5_2();
+			XmNdisarmCallback	= procedure callback5_3();
+		};
+	};
+
+	widget6 : XmPushButton
+	{
+		callbacks callbacks6;
+	};
+
+	widget7 : XmPushButton
+	{
+		callbacks callbacks7;
+	};
+
+	widget8 : XmPushButton
+	{
+		callbacks
+		{
+			XmNactivateCallback	= procedure callback8_1();
+			XmNarmCallback		= procedure callback8_2();
+			XmNdisarmCallback	= procedure callback8_3();
+			XmNarmCallback		= procedure callback8_4();
+			XmNactivateCallback	= procedure callback8_5();
+		};
+	};
+
+	widget9 : XmPushButton
+	{
+		callbacks callbacks9;
+	};
+
+	widget10 : XmPushButton
+	{
+		callbacks callbacks10;
+	};
+
+	widget11 : XmPushButton
+	{
+		callbacks
+		{
+			XmNactivateCallback = procedures
+			{
+				callback11_1();
+				callback11_1();
+				callback11_2();
+			};
+		};
+	};
+
+	widget12 : XmPushButton
+	{
+		callbacks
+		{
+			XmNactivateCallback	= procedure callback12_1();
+			XmNarmCallback		= procedure callback12_2();
+			XmNdisarmCallback	= procedure callback12_1();
+		};
+	};
+
+end module;
+
+
+
+

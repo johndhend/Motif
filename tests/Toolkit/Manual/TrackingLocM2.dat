@@ -1,0 +1,69 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$TOG: TrackingLocM2.dat /main/6 1999/11/22 17:34:38 jff $"
+*/
+#) A client containing two Cascade Buttons in a MenuBar in a Bulletin
+   Board should appear. The Cascades will be labeled Menu1 and Menu2. 
+#) Move the pointer into the application and press KMenuBar. The focus should
+   move to Menu1's Cascade. Press the Down arrow. A Menu with three push buttons
+   should appear. Press KHelp. This should activate TrackingLocate() and the
+   cursor should
+   change to a \"Pirate\". Press MB1 on \"Push Button 3\". A Information Dialog
+   should be placed at (0,200) which will state what widget recieved input.
+   Press the Cancel button in the Information Dialog. The Dialog will 
+   disappear. 
+#) Click MB1 on Menu2 Cascade button. A Menu will be posted with three more
+   push buttons. Move through the Menu to \"Push Button 6\" and activate that
+   button. TrackingLocate() should agin be called. This time click MB1 on 
+   Menu1's Cascade button. 
+   Again an Information Dialog will appear with the name of the
+   Cascade button. Press cancel in the Information Dialog. It will disappear. 
+#) Try other combinations using TrackingLocate() via KHelp or \"Push Button 6\". 
+C)
+#) Move the pointer into the application and press KMenuBar. The focus should 
+   move to Menu1's Cascade. Press the Down arrow. A Menu with three push buttons
+   should appear. Press KHelp. This should activate TrackingLocate() and the
+   cursor should change to a \"Pirate\" the pointer should be confined to
+   the area of the Bulletin Board. Press MB1 on Menu2's Cascade button. 
+   An Information Dialog will appear with the name of the Cascade button. 
+   Press cancel in the Information Dialog. It will disappear. 
+#) Again try other combinations using TrackingLocate(). The cursor should always
+   be confined to the Bulletin Board. 
+E)

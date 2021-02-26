@@ -1,0 +1,18 @@
+#ifndef XmClientLibs
+#define XmClientLibs $(XMLIB) $(XTOOLLIB) $(XLIB)
+#endif
+
+      INCLUDES = -I.
+
+SRCS = outline.c 
+OBJS = outline.o 
+
+#ifndef NO_XP
+LOCAL_LIBRARIES = -lXm -lXt -lXp -lX11 -lXext
+#else
+LOCAL_LIBRARIES = -lXm -lXt -lX11 -lXext
+#endif
+
+ComplexProgramTarget(outline);
+
+

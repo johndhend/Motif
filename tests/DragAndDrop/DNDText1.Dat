@@ -1,0 +1,30 @@
+
+
+#) This is the DNDText1 test.
+
+#) This is just to test the DND support in the Text widget.
+
+#) Enter some text in the Text widget.
+
+#) Select some of the entered text.
+
+#) Position the pointer on the selected text and initiate drag by
+   pressing BTransfer (MB2 by default).
+
+#) With BTransfer pressed, drag the pointer over to some other part
+   of the Text widget and release BTransfer. The selected text should
+   get moved from its original position to the point where BTransfer
+   was released.
+
+#) Select some text again.
+
+#) Position the pointer on the selected text and initiate drag by
+   pressing BTransfer (MB2 by default).
+
+#) Now hold \<Ctrl\> key down and with BTransfer pressed, drag the
+   pointer to some other location in the Text widget and still
+   holding the \<Ctrl\> key, release BTransfer. This time, the
+   selected text should get copied into the new location, meaning
+   it should still be present at its original position also.
+
+E)

@@ -1,0 +1,11 @@
+
+	Please push the button labelled "Push Me" and check for errors
+	in the xterm window.  You should see the following messages
+	indicating that the test has passed:                             \
+		OK - focus is in button                                \
+		OK - focus should not be in button2
+C)
+	 Press Exit to end the test.  
+         Goodbye.
+E)
+

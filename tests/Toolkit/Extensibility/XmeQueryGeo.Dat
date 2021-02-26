@@ -1,0 +1,26 @@
+
+This test for XmeReplyToQueryGeometry is based on passing geometry requests
+to the ExmGrid demo widget which in turn calls the function.  Different
+geometry requests are sent to illicit all of the possible responses: 
+XtGeometryNo, XtGeometryYes, and XtGeometryAlmost.  Each test case will
+involve making an XtGeometryRequest and checking the result.  There is NO
+visual change to inspect for validating a test case.  Just make sure that
+no error messages occur.
+
+C)  This test case checks for XtGeometryNo.  The widget's intended size
+is identical to the actual size of the widget.
+
+#)	Make sure that no error messages are printed in the xterm window.
+
+C)  This test case checks for XtGeometryYes.
+
+#)	Make sure that no error messages are printed in the xterm window.
+
+C)  This test case checks for XtGeometryAlmost.
+
+#)	Make sure that no error messages are printed in the xterm window.
+
+C)
+	 Press Exit to end the test.  
+         Goodbye.
+E)

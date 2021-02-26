@@ -1,0 +1,73 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: IconGad2b.dat /main/1 1996/03/27 10:02:50 schuldy $"
+*/
+#)An Icon Gadget with a label of "IconLabel" and a pixmap should appear.
+#)Verify that the pixmap is displayed horizontally centered above the label
+with four pixels vertically separating the pixmap and the label.
+C)
+#)Click MB1 on the icon.
+#)Verify that a highlight appears that is two pixels in height about
+the icon and below the label and two pixels in width to the left and to the
+right of the pixmap and label.
+C)
+#)The Icon Gadget's alignment has been set to XmALIGNMENT_BEGINNING.
+Verify that the pixmap displays horizontally to the left side of the
+label and the highlight displays two pixels in height about the icon and
+below the label, and two pixels in width to the left and to the right of 
+the pixmap and label.
+C)
+#)The Icon Gadget's alignment has been set to XmALIGNMENT_END.
+Verify that the pixmap displays horizontally to the right side of the
+label and the highlight displays two pixels in height about the icon and
+below the label, and two pixels in width to the left and to the right of 
+the pixmap and label.
+C)
+#) The Icon Gadget's spacing has been set to 20.
+Verify that the pixmap displays 20 pixels above the label.
+C)
+#) The Icon Gadget's margin Height has been set to 10.
+Verify that the highlight border is 10 pixels high above the pixmap and
+10 pixels high below the label.
+C)
+#) The Icon Gadget's margin Width has been set to 0.
+Verify that no highlight is displayed to the left and the right of the
+rectangular area containing the pixmap and label.
+E)

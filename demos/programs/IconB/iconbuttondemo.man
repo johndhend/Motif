@@ -1,0 +1,10 @@
+.TH ICONBUTTONDEMO 1X "MOTIF" "\fBiconbuttondemo\fR 1" "Demonstration programs"
+.SH NAME
+iconbuttondemo \- iconbuttondemo demo
+.SH SYNOPSIS
+\fBiconbuttondemo\fR
+.SH DESCRIPTION
+Shows pane using pixmap buttons which when pressed show resource data,
+and a help pane explaining.
+.SH SEE ALSO
+columnMotif(1x)

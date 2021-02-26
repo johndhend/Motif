@@ -1,0 +1,181 @@
+.\" $XConsortium: panner.man /main/4 1995/07/17 10:48:10 drk $
+...\" @OPENGROUP_COPYRIGHT@
+...\" COPYRIGHT NOTICE
+...\" Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+...\" Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+...\" ALL RIGHTS RESERVED (MOTIF).  See the file named COPYRIGHT.MOTIF for
+...\" the full copyright text.
+...\" 
+...\" This software is subject to an open license. It may only be
+...\" used on, with or for operating systems which are themselves open
+...\" source systems. You must contact The Open Group for a license
+...\" allowing distribution and sublicensing of this software on, with,
+...\" or for operating systems which are not Open Source programs.
+...\" 
+...\" See http://www.opengroup.org/openmotif/license for full
+...\" details of the license agreement. Any use, reproduction, or
+...\" distribution of the program constitutes recipient's acceptance of
+...\" this agreement.
+...\" 
+...\" EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+...\" PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+...\" KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+...\" WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+...\" OR FITNESS FOR A PARTICULAR PURPOSE
+...\" 
+...\" EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+...\" NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+...\" INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+...\" DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+...\" AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+...\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+...\" ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+...\" EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+...\" POSSIBILITY OF SUCH DAMAGES.
+...\" 
+...\" 
+...\" HISTORY
+.TH panner 1X MOTIF "Demonstration programs"
+.SH NAME
+\fBpanner\fR\(emVirtual screen support demo
+.SH SYNOPSIS
+.sS
+\fBpanner\fR
+.sE
+.SH DESCRIPTION
+Panner demonstrates how an application can interface to Mwm's virtual
+screen support protocol.  The protocol allows other application to pan
+the desktop Mwm is running on.  With Panner, you can see a miniature
+version of your desktop and interactively pan the display.
+Panner also allows you to connect to other displays and pan (see) them as well.
+.\" Please use this feature with discretion; it can be most anoying to
+.\" others >:-).  Also note that Panner will only work with Mwm 2.0.
+.PP
+Panner starts up displaying notebook widget with one page.  Each page
+in the notebook represents a display screen.  As you add other
+displays to Panner, they appear as new pages in the notebook.  In the
+notebook page, you should see several colored rectangles. Each
+rectangle represents a window on the display.  The is also a dashed
+rectangle which represents the display screen.  You can grab hold of
+this rectangle using Button1 and interactively move it about the page
+causing the display to pan.  If you wish to quickly 'hop' to another
+location on the desktop, press Button1 on the destination and the
+screen will be centered around that point.
+.PP
+If your using Motif-2.5.2 (a non-virtual panner) added features are:
+Mwm can pan with keys without panner open, Atl-Arrow by default.
+Panner Button3 can drag individual windows,
+Panner Zoom (for kbd focus click on canvas),
+  Zoom see enormous space a new kind of workspaces,
+  Zoom in and out works no matter how you resize your window,
+  Zoom in greater than 1 to get very smooth panning,
+Panner coloring of rectangles,
+Panner has desktop edge scrolling which can be turned on or off.
+Panner edge scrolling has smooth versus speed options (trade-off).
+Panner allows opening a view of (remote) desktop (see code, panning is off).
+See mwmrc manpage for added Mwm settings for ~/.mwmrc and ~/.Xdefaults
+See NOTES.
+.SH COMMANDLIINE OPTIONS
+--screen-width=100,
+Aspect ratio of panner to desktop.
+(the size of icons that represet windows can be made larger or smaller)
+.TP
+--color-fail,
+Prevent color fallback behavior.
+.TP
+--x-only,
+Do not use UTM calling mwm for sending pan notify to Mwm.
+(now the only choice, always on)
+.TP
+--help,
+Show options briefly.
+.TP
+--version,
+Show version.
+.TP
+Also the standard Xt options (ie, -display, -geometry, ...)
+.SH MENU OPTIONS
+These options can be set by menu.
+.TP
+--zoom=.8,
+Zoom level
+.TP
+--edge-speed=48.0,
+If edge panning, how far to jump (pixels).
+.TP
+--pan-mult=2.0,
+How often to ignore new mouse position updates.  This gives a chance to
+start moving the mouse before Xme piles up a long trail of "mouse moved"
+messages has piled up (a sluggish start).
+.TP
+--edge-mult=1.0,
+Change how far panner pans per mouse travel when dragging (1-n).
+May need to set for x-only or just as preference.
+.TP
+--edge-slide=1.0,
+If edge panning on, the number of frames to animate
+(very situational if this is useful).
+It may not work for x-only.
+.TP
+--edge-freq=100.0,
+If edge panning, how often to query the pointer in miliseconds.
+.TP
+--edge-update=10.0,
+If edge panning, how often to update panner view (measured in pan counts).
+.TP
+--b3-upd-freq=10.0,
+If dragging window using button3, how often to update view (pan counts).
+.TP
+MWM options effect panning and panner.  see man mwm(1) for those settings.
+.SH NOTES
+If your using Motif-2.5.2
+
+A word of advice make sure to panner is in top mwmrc menu so if in a remote
+area and you close panner you can re-open it. Restart mwm should be in menu
+too.
+
+Panner always "pins" both panner and iconbox: this way you cannot
+move where you can't see panner, and if panner is iconized:
+the iconbox is still in view so can get panner back; if you try hard you could
+separate the iconbox from panner and get stuck (enforced lightly, not fully).
+
+If somehow panning is lost and or windows are lost no need to restart X:
+restart mwm, mwm upon managing mwm will place all windows in viewing area.
+
+A Non-Virtual panner just asks windows to move.
+
+Insure .mwmrc or .Xdefaults do not prevent off-screen placement
+(do not use "DontMoveOff" would prevent panner from being more useful).
+
+X's virtual screen support seems not effected and works as expected along
+with panning.
+
+Some windows may not move if posted in a way to deter window management,
+which is intentional.  There is an mwm option for the internal panner
+of whether to use only mwm window-move requets, only X requests, or either.
+
+Question:  I want the icon from remote to drag on this desktop?
+No not supported per say (X apps allocate resources on server, there
+is no server-server sharing of).  Just launch that app again from
+remote host using "app -display" on commandline and it's on your desktop!  Or
+more annoyingly, you can use Xnest to show a remote desktop in a window or
+have mwm connect to a new blank desktop on another server (annoying because
+you must switch between desktops which, using X11, isn't at all necessary).
+.SH OTHER
+.PP
+The Display item in the menu bar contains the following items:
+.PP
+\fBUpdate\fR            This will refresh the notebook page and
+.br
+                redraw each miniature window.
+.PP
+\fBNew Display\fR       This will prompt you for the name of a new
+.br
+                Display connection name.
+.PP
+---------
+.SH THANKS
+thanks to Andrew deBlois, original demo submitter, and others who added to it
+.PP
+.SH SEE ALSO
+mwmrc(5), mwm(1)

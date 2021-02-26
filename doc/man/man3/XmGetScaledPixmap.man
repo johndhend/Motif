@@ -1,0 +1,1 @@
+XmGetScaledPixmap.3

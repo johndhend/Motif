@@ -1,0 +1,290 @@
+# $XConsortium: Navigation4.scr /main/4 1995/07/17 20:44:47 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# HISTORY
+
+
+#Panel 1: No traversal to empty frames
+
+WindowMove InstructionBox 400 300
+WindowFocus Shell1
+CompareVisual btn1
+ClickKey KTab
+ClickKey KTab
+ClickKey KTab
+ClickKey KTab
+ClickKey KTab
+CompareVisual btn1
+Continue
+
+#Panel 2: TRAVERSE_DOWN
+
+LocatePointer misc2
+ClickMB Btn1
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc2
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc2
+
+LocatePointer toggle41
+ClickMB Btn1
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc4
+
+LocatePointer misc2
+ClickMB Btn1
+
+Continue
+
+#Panel 3: Check for programmatic DOWN
+
+LocatePointer bb
+CompareVisual rc2
+
+Continue
+
+#Panel 4: DOWN on parent of current
+
+
+LocatePointer Draw1
+ClickMB Btn1
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual Draw1
+
+LocatePointer btn33
+ClickMB Btn1
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc3
+
+LocatePointer toggle32
+ClickMB Btn1
+
+Continue
+
+#Panel 5: Check parent of last button
+
+LocatePointer bb
+CompareVisual rc3
+LocatePointer btn1
+ClickMB Btn1
+
+Continue
+
+#Panel 6: Check programmatic DOWN on btn3
+
+LocatePointer bb
+CompareVisual rc1
+
+Continue
+
+#Panel 7: HOME
+
+LocatePointer btn35
+ClickMB Btn1
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc3
+
+LocatePointer btn2
+ClickMB Btn1
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc1
+
+LocatePointer Draw1
+ClickMB Btn1
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual Frame5
+
+LocatePointer btn36
+ClickMB Btn1
+
+Continue
+
+#Panel 8: Check programmatic HOME
+
+LocatePointer bb
+CompareVisual rc3
+
+Continue
+
+#Panel 9: TRAVERSE_LEFT
+
+LocatePointer toggle22
+ClickMB Btn1
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc2
+
+LocatePointer btn35
+ClickMB Btn1
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc3
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc3
+
+Continue
+
+#Panel 10: NEXT
+
+LocatePointer misc1
+ClickMB Btn1
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc2
+
+LocatePointer btn34
+ClickMB Btn1
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc3
+
+Continue
+
+#Panel 11: NEXT_TAB_GROUP
+
+LocatePointer btn32
+ClickMB Btn1
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc3
+
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual Draw1
+
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+
+CompareVisual rc2
+
+Continue
+
+#Panel 12: PREV_TAB_GROUP
+
+LocatePointer Draw1
+ClickMB Btn1
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc4
+
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc3
+
+Continue
+
+#Panel 13: RIGHT
+
+LocatePointer btn31
+ClickMB Btn1
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc3
+
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc3
+
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc3
+
+LocatePointer btn42
+ClickMB Btn1
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc4
+
+Continue
+
+#Panel 15: UP
+
+LocatePointer toggle33
+ClickMB Btn1
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc3
+
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc3
+
+LocatePointer btn3
+ClickMB Btn1
+LocatePointer InstructionBox RHelpButton
+ClickMB Btn1
+LocatePointer bb
+CompareVisual rc1
+
+Continue
+
+Exit
+

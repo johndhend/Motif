@@ -1,0 +1,168 @@
+/* $XConsortium: DiaShellM1.dat /main/4 1995/07/17 10:15:30 drk $ */
+/*
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+ */
+/*
+ * HISTORY
+ */
+
+#) This is a test testing the various behaviors of DialogShells.
+
+#) There should be two TopLevel Shells, one with a bulletinboard containing a
+   bunch of pushbuttons inside, and the other with a bulletinboard containing
+   just one pushbutton "DefaultButton2".
+
+#) Move TopShell2 window to 500,500.
+
+#) There should be Primary modal dialog child of TopShell1 visible.
+
+#) Click MouseBtn1 on "DefaultButton2". The button should go in and out.
+   Otherwise, if you hear a beep, or no visible change occurs in the
+   button, CR4909 is still a problem.
+
+#) Click on "Cancel" of the dialog. The dialog should disappear and a new
+   Primary dialog child of TopShell1 should appear.
+
+#) Click MouseBtn1 on "DefaultButton2" again. Even if this failed with the
+   previous dialog up, it should succeed now, and the button should go in
+   and out. This is just to show that CR4909 is a problem only the first
+   time.
+
+#) Click on "Cancel" of the dialog. The dialog should disappear.
+
+C)
+
+#) Click MouseBtn1 on "Create Primary Modal from TopShell1". This should
+   post a PrimaryModal dialog child of TopShell1.
+
+#) With this modal up, try clicking on any other button inside TopShell1.
+   The input should not be accepted.
+
+#) Click MouseBtn1 on "DefaultButton2". The button should go in and out.
+
+#) Click MouseBtn1 on "Cancel" of the posted dialog. The dialog should
+   disappear.
+
+#) Click MouseBtn1 on "Create Modeless Dialog from TopShell1". This should
+   post a Modeless dialog child of TopShell1. 
+   
+#) Repeat steps 2 and 3. At this time, you should be able to input into
+   both TopShell1 and TopShell2.
+
+#) Click MouseBtn1 on "Cancel" of the posted dialog. The dialog should
+   disappear.
+
+C)
+
+
+#) Click MouseBtn1 on "Create Full App Modal from TopShell1". This should
+   post a FullAppModal dialog child of TopShell1.
+
+#) With this modal up, try clicking on any other button inside TopShell1.
+   The input should not be accepted.
+
+#) Click MouseBtn1 on "DefaultButton2". The input should not be accepted.
+
+#) Click MouseBtn1 on "Cancel" of the posted dialog. The dialog should
+   disappear.
+
+#) Click MouseBtn1 on "Create Full App Modal from TopShell2". This should
+   post a FullAppModal dialog child of TopShell2.
+
+#) Repeat steps 2 and 3. The result should be exactly the same.
+
+#) Click MouseBtn1 on "Cancel" of the posted dialog. The dialog should
+   disappear.
+
+C)
+
+
+#) Click MouseBtn1 on "Create System Modal from TopShell1". This should
+   post a System Modal dialog child of TopShell1.
+
+#) With this modal up, try clicking MouseBtn1 anywhere other than inside
+   the dialog. The input should not be accepted.
+
+#) Click MouseBtn1 on "Cancel" of the posted dialog. The dialog should
+   disappear.
+
+#) Click MouseBtn1 on "Create System Modal from TopShell2". This should
+   post a System Modal dialog child of TopShell2.
+
+#) With this modal up, try clicking MouseBtn1 anywhere other than inside
+   the dialog. The input should not be accepted.
+
+#) Click MouseBtn1 on "Cancel" of the posted dialog. The dialog should
+   disappear.
+
+C)
+
+
+#) Click MouseBtn1 on "Iconify TopShell2 by XIconifyWindow". TopShell2
+   window should be iconified.
+
+#) Click MouseBtn1 on "Popdown TopShell2 by XtPopdown". The TopShell2
+   icon should disappear.
+
+#) Click MouseBtn1 on "Popup TopShell2 by XtPopup". The TopShell2 window
+   should reappear in normal state.
+
+C)
+
+!) /* Begin test for CR 3622 */
+
+
+#) Click MouseBtn1 on "Unrealize TopShell2 by XtUnrealizeWidget". TopShell2
+   should become invisible.
+#) Click MouseBtn1 on ""Create Full App Modal from TopShell2". This should
+   post a FullAppModal dialog child of TopShell2.
+#) With this modal up, try clicking MouseBtn1 on TopShell1. 
+   The input should not be accepted.
+#) Click MouseBtn1 on "Cancel" of the posted dialog. The dialog should
+   disappear.
+#) Click MouseBtn1 on "Create Primary Modal from TopShell2". This should
+   post a PrimaryModal dialog child of TopShell2. 
+   With this modal up, try clicking MouseBtn1 on TopShell1. 
+   The input should not be accepted.
+   Click "Cancel" on the dialog to unpost it.
+#) Click MouseBtn1 on "Create System Modal from TopShell2". This should
+   post a SystemModal dialog child of TopShell2.
+   Click "Cancel" on the dialog to unpost it.
+#) If the actual behaviour diverges from the expected in any of these cases, 
+   CR 3622 hasn't been fixed.
+!) /* End test for CR 3622 */
+C)
+
+E)

@@ -1,0 +1,89 @@
+# $XConsortium: Conversion2.prt /main/3 1995/07/19 20:14:47 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) Continue
+     Resource Type                Result   
+    -----------------          -------------
+            XmRBoolean           Passed
+            XmRBoolean           Passed
+Warning: Cannot convert string "foo bar" to type Boolean
+            XmRBoolean           Passed
+               XmRBool           Passed
+               XmRBool           Passed
+Warning: Cannot convert string "foo bar" to type Bool
+               XmRBool           Passed
+             XmRCursor           Passed
+Warning: Cannot convert string "foo bar" to type Cursor
+             XmRCursor           Passed
+               XmRFile           Passed
+Warning: Cannot convert string "foo bar" to type File
+               XmRFile           Passed
+                XmRInt           Passed
+                XmRInt           Passed
+Warning: Cannot convert string "foo bar" to type Int
+                XmRInt           Passed
+              XmRShort           Passed
+              XmRShort           Passed
+Warning: Cannot convert string "foo bar" to type Short
+              XmRShort           Passed
+       XmRUnsignedChar           Passed
+Warning: Cannot convert string "foo bar" to type UnsignedChar
+       XmRUnsignedChar           Passed
+Warning: Color name "foo bar" is not defined
+              XmRPixel           Passed
+     XmRDeleteResponse           Passed
+     XmRDeleteResponse           Passed
+     XmRDeleteResponse           Passed
+Warning: Cannot convert string "foo bar" to type DeleteResponse
+     XmRDeleteResponse           Passed
+XmRKeyboardFocusPolicy           Passed
+XmRKeyboardFocusPolicy           Passed
+Warning: Cannot convert string "foo bar" to type KeyboardFocusPolicy
+XmRKeyboardFocusPolicy           Passed
+           XmRUnitType           Passed
+           XmRUnitType           Passed
+           XmRUnitType           Passed
+           XmRUnitType           Passed
+           XmRUnitType           Passed
+Warning: No type converter registered for 'String' to 'ShellUnitType' conversion.
+      XmRShellUnitType           Passed
+           XmRFontList           Passed
+Warning: Cannot convert string "foo bar" to type FontStruct
+           XmRFontList           Passed
+             XmRString           Passed
+TRACE:(2) Exit
+Exiting Test...Please Standby...

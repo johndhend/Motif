@@ -1,0 +1,37 @@
+
+
+	This test checks the XmeResolvePartOffsets function.  The
+ExmTabButton widget has been modified to use offsets.  For each test case
+the resource "OpenSide" has been modified.  The validation exists of
+instantiating the widget and checking the visual effect of the resource
+on the widget.
+
+#) The "OpenSide" resource effects the specified side of the button by
+omitting the shadow for that side.  The visual check to be performed is
+simply making sure that no shadow is present for the specified side.  
+(Note that by clicking on the button the shadow colors will alternate to
+make this check more obvious.)
+
+#) This first test validates the default value of the resource.  The
+default value is XmLEFT.  Check that the left side of the button has no
+shadow.
+
+#) Make sure that no error messages are printed in the xterm window.
+
+
+C)  This test validates the setting of the resource to the 
+value of XmTOP.  Check that the top side of the button has no
+shadow.
+
+#) Make sure that no error messages are printed in the xterm window.
+
+C)  This test validates the setting of the resource to the 
+value of XmRIGHT.  Check that the right side of the button has no
+shadow.
+
+#) Make sure that no error messages are printed in the xterm window.
+
+C)
+	 Press Exit to end the test.  
+         Goodbye.
+E)

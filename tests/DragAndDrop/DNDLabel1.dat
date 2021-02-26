@@ -1,0 +1,97 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: DNDLabel1.dat /main/6 1995/07/14 11:54:03 drk $"
+*/
+
+
+#) This is the DNDLabel1 test.
+
+#) To test this, you need to run another Motif client with an
+   editable Text(Field) widget in it.
+
+#) You should see a Label widget with two-line label.
+
+#) Position the pointer anywhere on the Label. Initiate drag by 
+   pressing BTransfer (MB2 by default).
+
+#) With BTransfer pressed, drag the pointer over to the Text
+   widget, and release BTransfer. The text \"Two-Line\" should
+   appear in the Text widget at the point where the button was
+   released and on the next line the text \"Label String\"
+   should appear.
+
+C)
+
+#) This panel tests that a dragged object can be moved and a drag
+   completed via the keyboard, when the drag is initiated using the default
+   BTransfer action (Pressing MB2).
+
+#) Position the pointer anywhere on the Label. Initiate drag by 
+   pressing BTransfer (MB2 by default).
+
+#) With BTransfer pressed, click on KUp. The drag icon should move
+   up. Repeat with KDown, KLeft and KRight. The drag icon should move
+   in the direction corresponding to the arrow key. Move the drag icon until
+   the hotspot is within the Text widget, and hit KReturn.
+   The text \"Two-Line\" should appear in the Text widget at the point 
+   where the cursor in the Text widget  was and on the next line the 
+   text \"Label String\" should appear.
+#) Position the pointer anywhere on the Label. Initiate drag by 
+   pressing BTransfer (MB2 by default).
+#) Drag the pointer over to the Text widget. Now, hit the osfActivate key.
+   The text \"Two-Line\" should appear in the Text widget at the point 
+   where the cursor was in the Text widget and on the next line the 
+   text \"Label String\" should appear.
+C)
+
+#) This panel tests that a drag action can be initiated via the keyboard.
+#) The translations for the Label have been overridden so that BTransfer is
+   now <Ctrl>d.
+#) Position the pointer anywhere on the Label, and click <Ctrl>d. A drag
+   action should be initiated. 
+#) Click on KUp. The drag icon should move up. Repeat with KDown, KLeft and 
+   KRight. The drag icon should move in the direction corresponding to the 
+   arrow key. Move the icon until the hotspot is within the Text widget, 
+   and hit KReturn. The text \"Two-Line\" should appear in the Text widget 
+   at the point where the pointer was , and on the next line the 
+   text \"Label String\" should appear.
+C)
+
+E)

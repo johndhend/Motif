@@ -1,0 +1,12 @@
+
+#) This is the I18N1 test running with the "-I I18N1b.Dat -u -b" option.
+#) This test is running with the LANG environment variable set to hebrew.
+C)
+
+#) The value from the first Text widget is converted to wide char and
+   displayed in the second Text widget.
+#) The strings should be identical.
+C)
+
+
+E)

@@ -1,0 +1,98 @@
+/*
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+ */
+/*
+ * HISTORY
+ */
+
+
+#) This is Container3 test run with the option "-I Container3c.Dat -u c",  
+   trying to test a customized translation table.
+C)
+
+#) The following is the set of translations defined in the resource file
+   Container.defaults.
+!)
+	~Shift ~Ctrl<Btn2Down> :        ContainerBeginSelect() 
+	~Shift ~Ctrl<Btn2Up>:           ContainerEndSelect() 
+	<Btn2Motion>:                   ContainerButtonMotion() 
+	Ctrl<Btn2Down>:                 ContainerBeginToggle() 
+	Ctrl<Btn2Up>:                   ContainerEndToggle() 
+	Shift<Btn2Down>:                ContainerBeginExtend() 
+	Shift<Btn2Up>:                  ContainerEndExtend() 
+	~Shift ~Ctrl<Btn1Down>:         ContainerStartTransfer(Copy) 
+	Shift Ctrl<Btn1Down>:           ContainerStartTransfer(Link) 
+	Shift<Btn1Down>:                ContainerStartTransfer(Move) 
+	<Btn1Up>:                       ContainerEndTransfer() 
+	~Shift ~Ctrl<Key>osfDelete:     ContainerPrimaryCopy() 
+	Shift Ctrl<Key>osfDelete:       ContainerPrimaryLink() 
+	Shift<Key>osfInsert:            ContainerPrimaryMove() 
+	<Key>osfSelect:                 ContainerCancel() 
+	Shift<Key>osfCancel:            ContainerExtend() 
+	<Key>osfCancel:                 ContainerSelect() 
+	Shift<Key>osfDown:              ContainerExtendCursor(Up)
+	Shift<Key>osfUp:                ContainerExtendCursor(Down) 
+	<Key>osfDown:                   ContainerMoveCursor(Up) 
+	<Key>osfUp:                     ContainerMoveCursor(Down)
+	Shift Ctrl<Key>osfEndLine:      ContainerExtendCursor(First)
+	Shift Ctrl<Key>osfBeginLine:    ContainerExtendCursor(Last)
+	Ctrl<Key>osfEndLine:            ContainerMoveCursor(First)
+	Ctrl<Key>osfBeginLine:          ContainerMoveCursor(Last)
+	<Key>d:	                        ContainerToggleMode()
+	Ctrl<Key>backslash:             ContainerSelectAll() 
+	Ctrl<Key>slash:                 ContainerDeselectAll() 
+	<Key>osfActivate:               ContainerActivate() 
+
+#) You should not see any message in the term window about "Actions
+   not found".
+#) You can exercize these actions, however the following actions
+   cannot have translations overidden due to the traversal mechanism,
+   and the default translation will be used:
+!)
+        ContainerExtendCursor(Up) 
+        ContainerExtendCursor(Down) 
+        ContainerExtendCursor(Left) 
+        ContainerExtendCursor(Right) 
+        ContainerMoveCursor(Up) 
+        ContainerMoveCursor(Down) 
+        ContainerMoveCursor(Left) 
+        ContainerMoveCursor(Right) 
+        ContainerExtendCursor(First) 
+        ContainerExtendCursor(Last) 
+        ContainerMoveCursor(First) 
+        ContainerMoveCursor(Last) 
+E)
+
+

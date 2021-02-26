@@ -1,0 +1,98 @@
+# $XConsortium: RIMainWin1.prt /main/3 1995/07/19 20:28:11 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) CompareVisual MainWindow 
+TRACE:(2) LocatePointer MenuBtn1  
+TRACE:(3) ClickKey KMenuBar
+TRACE:(4) PressMB Btn1 
+TRACE:(5) CompareVisual Pulldown1 
+TRACE:(6) LocatePointer MenuBtn2  
+TRACE:(7) LocatePointer MenuBtn3  
+TRACE:(8) LocatePointer MenuBtn1  
+TRACE:(9) LocatePointer OpenButton  
+TRACE:(10) ReleaseMB Btn1 
+TRACE:(11) LocatePointer MenuBtn3  
+TRACE:(12) ClickMB Btn1 
+TRACE:(13) CompareVisual Pulldown3 
+TRACE:(14) LocatePointer HelveticaButton  
+TRACE:(15) ClickMB Btn1 
+TRACE:(16) LocatePointer MenuBtn2  
+TRACE:(17) ClickMB Btn1 
+TRACE:(18) CompareVisual Pulldown2 
+TRACE:(19) ClickKey KRight
+TRACE:(20) CompareVisual Pulldown3 
+TRACE:(21) ClickKey KReturn
+TRACE:(22) Continue
+TRACE:(23) LocatePointer Command RSelectionText 
+TRACE:(24) InputString "Main Window\n"
+TRACE:(25) CompareVisual Command 
+TRACE:(26) LocatePointer Command RSelectionText 
+TRACE:(27) InputString "This is a test\n"
+TRACE:(28) WindowIconify Shell1
+TRACE:(29) WindowDeiconify Shell1
+TRACE:(30) Continue
+TRACE:(31) WindowRaise Shell1
+TRACE:(32) CompareVisual MainWindow RVertScrollBar
+TRACE:(33) CompareVisual MainWindow RHorizScrollBar
+TRACE:(34) Continue
+TRACE:(35) WindowRaise Shell1
+TRACE:(36) CompareVisual MainWindow 
+TRACE:(37) Continue
+TRACE:(38) WindowRaise Shell1
+TRACE:(39) LocatePointer MainWindow  
+TRACE:(40) CompareVisual MainWindow 
+TRACE:(41) Continue
+TRACE:(42) WindowRaise Shell1
+TRACE:(43) LocatePointer MainWindow  
+TRACE:(44) CompareVisual MainWindow 
+TRACE:(45) Continue
+TRACE:(46) CompareVisual MainWindow 
+TRACE:(47) Continue
+Warning: 
+    Name: MainWindow
+    Class: XmMainWindow
+    The Menu Bar cannot be changed to NULL.
+
+Warning: 
+    Name: MainWindow
+    Class: XmMainWindow
+    The Command Window cannot be changed to NULL.
+
+TRACE:(48) Continue
+TRACE:(49) CompareVisual Shell1 
+TRACE:(50) Exit
+Exiting Test...Please Standby...

@@ -1,0 +1,126 @@
+! 
+! @OPENGROUP_COPYRIGHT@
+! COPYRIGHT NOTICE
+! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+! ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+! the full copyright text.
+! 
+! This software is subject to an open license. It may only be
+! used on, with or for operating systems which are themselves open
+! source systems. You must contact The Open Group for a license
+! allowing distribution and sublicensing of this software on, with,
+! or for operating systems which are not Open Source programs.
+! 
+! See http://www.opengroup.org/openmotif/license for full
+! details of the license agreement. Any use, reproduction, or
+! distribution of the program constitutes recipient's acceptance of
+! this agreement.
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+! OR FITNESS FOR A PARTICULAR PURPOSE
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+! POSSIBILITY OF SUCH DAMAGES.
+! 
+! 
+! HISTORY
+! 
+!   $XConsortium: EnumVal1.uil /main/7 1995/07/13 20:26:53 drk $
+!******************************************************************************
+module Test
+        version = 'v1.0'
+        names = case_sensitive
+
+  include file "EnumVal1.msg";
+  
+  procedure
+          exit_test();
+	  Report_Callback(string);
+
+  value
+	  wheat			     : color('wheat');
+	  navy			     : color('navy');
+
+  object                                  ! The main window widget.
+          TopManager : XmBulletinBoard {
+  
+              arguments {
+                  XmNx = 0;
+                  XmNy = 0;
+                  XmNdialogTitle =
+			compound_string ("Enumerated Values Test No. 1");
+              };
+    	      controls {
+                  XmBulletinBoard    Bulletin_Board;
+  	      };
+  	  };
+
+  value
+        sky_blue: color ('SkyBlue');
+        black: color ('black');
+	align_value: XmALIGNMENT_END;
+
+  object
+        Bulletin_Board :  XmBulletinBoard {
+            arguments {
+		XmNborderWidth = 1;
+                XmNbackground =  sky_blue;
+                XmNmarginWidth =  20;
+                XmNmarginHeight =  20;
+                XmNdefaultPosition =  false;
+                XmNnoResize =  true;
+		XmNresizePolicy = XmRESIZE_GROW;
+		XmNshadowType = XmSHADOW_ETCHED_OUT;
+		XmNshadowThickness = 10;
+            };
+	    controls {
+		XmScrolledList	ScrolledList1;
+	    };
+        };
+
+	ScrolledList1 : XmScrolledList {
+	    arguments {
+		XmNwidth = 200;
+		XmNheight = 80;
+		XmNshadowThickness = 4;
+		XmNitems = string_table (
+			'Scrolled List entry 1',
+			'Scrolled List entry the second',
+			'Scrolled List entry which is third',
+			'Scrolled List entry in the fourth place',
+			'Scrolled List entry - fifth, actually',
+			'Scrolled List entry VI',
+			'Scrolled List entry 111 (binary)',
+			'Scrolled List entry same as largest Tudor',
+			'Scrolled List entry 3 squared',
+			'Scrolled List entry Dante\'s perfect number',
+			'Scrolled List entry onze',
+			'Scrolled List entry 12 (just the number, please)',
+			'Scrolled List entry 13',
+			'Scrolled List entry 14',
+			'Scrolled List entry 15',
+			'Scrolled List entry 16',
+			'Scrolled List entry 17',
+			'Scrolled List entry 18',
+			'Scrolled List entry 19');
+		XmNvisibleItemCount = 7;
+		XmNselectionPolicy = XmMULTIPLE_SELECT;
+		XmNlistSizePolicy = XmCONSTANT;
+		XmNscrollBarDisplayPolicy = XmAS_NEEDED;
+		XmNscrollBarPlacement = XmTOP_LEFT;
+	    };
+	};
+
+
+end module;

@@ -1,0 +1,25 @@
+! a setting that often gets lost
+*customization :        -color
+Mwm*panScrollX : 	25
+Mwm*panScrollY : 	25
+Mwm*usePan :		True
+Mwm*panUseX :		False  ! try True
+Mwm*panUseMwm :		False
+! not for panner , just stuff
+Mwm*rootButtonClick		: True
+Mwm*autoKeyFocus		: True
+Mwm*autoRaiseDelay		: 500
+Mwm*enforceKeyFocus		: True
+Mwm*enableWarp			: True
+Mwm*interactivePlacement	: False
+Mwm*useIconBox			: True
+Mwm*iconBoxGeometry		: 6x1 +0 -0
+Mwm*iconBoxSBDisplayPolicy	: horizontal
+! gives you 100 sec to undo mistaken Quit
+! Mwm*quitTimeout			: 100
+xclock*geometry			: 150x109+331-0
+xclock*background		: ghostwhite
+xclock*foreground		: CadetBlue
+xclock*hands			: SpringGreen3
+xclock*update			: 1
+

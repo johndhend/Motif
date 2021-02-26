@@ -1,0 +1,16 @@
+#ifndef XmClientLibs
+#define XmClientLibs $(XMLIB) $(XTOOLLIB) $(XLIB)
+#endif
+
+      INCLUDES = -I.
+
+SRCS = main.c creation.c callbacks.c bxutils.c 
+OBJS = main.o creation.o callbacks.o bxutils.o 
+
+#ifndef NO_XP
+LOCAL_LIBRARIES = -lXm -lXt -lXp -lX11 -lXext
+#else
+LOCAL_LIBRARIES = -lXm -lXt -lX11 -lXext
+#endif
+
+ComplexProgramTarget(tabstack)

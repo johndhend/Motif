@@ -1,0 +1,174 @@
+! @OPENGROUP_COPYRIGHT@
+! COPYRIGHT NOTICE
+! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+! ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+! the full copyright text.
+! 
+! This software is subject to an open license. It may only be
+! used on, with or for operating systems which are themselves open
+! source systems. You must contact The Open Group for a license
+! allowing distribution and sublicensing of this software on, with,
+! or for operating systems which are not Open Source programs.
+! 
+! See http://www.opengroup.org/openmotif/license for full
+! details of the license agreement. Any use, reproduction, or
+! distribution of the program constitutes recipient's acceptance of
+! this agreement.
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+! OR FITNESS FOR A PARTICULAR PURPOSE
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+! POSSIBILITY OF SUCH DAMAGES.
+! 
+! HISTORY
+! defaults file for MwmUI4.c
+
+!**************************************************************************!
+!Coloring Resources
+!**************************************************************************!
+
+! Windows, icons, menus
+
+Mwm*activeBackground : IndianRed
+Mwm*activeForeground : wheat
+Mwm*background :OldLace
+Mwm*foreground :IndianRed
+Mwm*menu*TestMenu*background : SteelBlue
+Mwm*menu*TestMenu*foreground : black
+
+
+! mattes
+
+! default values
+
+
+!Icon Images
+
+Mwm*iconImageBackground :oldlace
+Mwm*iconImageBottomShadowColor :LightPink
+Mwm*iconImageForeground :lavender
+Mwm*iconImageTopShadowColor :black
+
+
+!**************************************************************************!
+! Window Decorations
+!**************************************************************************!
+
+Mwm*clientDecorations : all
+Mwm*TestWindow1*clientFunctions : -maximize -move
+Mwm*transientDecorations : menu title resizeh
+Mwm*transientFunctions : -resize 
+
+
+
+!*************************************************************************!
+! Focus Policies
+!*************************************************************************!
+
+
+Mwm*keyboardFocusPolicy :explicit
+Mwm*deiconifyKeyFocus : True
+Mwm*focusAutoRaise : False
+
+
+!*************************************************************************!
+! Controlling Windows
+!*************************************************************************!
+
+! font
+
+Mwm*fontList : 8x13bold
+
+! Button Bindings
+
+Mwm*buttonBindings : MwmUI4ButtonBindings
+Mwm*keyBindings    : MwmUI4KeyBindings
+
+! Config file
+
+Mwm*configFile : MwmUI4.mwmrc
+
+! Window Menus
+
+Mwm*windowMenu : MwmUI4WindowMenu
+Mwm*wMenuButtonClick2 : False
+
+!**************************************************************************!
+!Controlling Window Size and Position
+!**************************************************************************!
+
+! Size Resources
+
+
+Mwm*resizeCursors : False
+Mwm*maximumMaximumSize : 500x500
+
+! Position Resources
+
+Mwm*clientAutoPlace : True
+Mwm*showFeedback : -move
+
+
+
+
+!**************************************************************************!
+!Configuring icons
+!**************************************************************************!
+
+Mwm*iconPlacement : top right
+Mwm*iconPlacementMargin :50
+Mwm*lowerOnIconify :True
+Mwm*iconDecoration : image label
+Mwm*iconImage : wingdogs
+
+
+!**************************************************************************!
+!Configuring the icon box
+!**************************************************************************!
+
+
+
+Mwm*useIconBox :False
+
+
+
+
+! End of mwm defaults file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

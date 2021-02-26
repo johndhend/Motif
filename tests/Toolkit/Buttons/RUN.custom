@@ -1,0 +1,56 @@
+# $XConsortium: RUN.custom /main/8 1996/08/15 14:02:53 jakku $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+# HISTORY
+# $Log$
+
+setenv AUTOVPATH /proj/motif/tests/visuals/Toolkit/Buttons
+
+# The following needed for Vista and Purify usage
+setenv TOP ../../..
+
+set Button1a = 'Button1 -I Button1a.Dat -S Button1a.Scr -V Button1a.vis -O Button1a.prt'
+set Button1b = 'Button1 -I Button1b.Dat -S Button1b.Scr -V Button1b.vis -O Button1b.prt'
+set ToggleBGad1 = 'ToggleBGad1 -xrm *label.labelPixmap:../bitmaps/gnu.bmp -xrm *label.labelInsensitivePixmap:../bitmaps/mtn.bmp'
+set ToggleBtn7a = 'ToggleBtn7 -I ToggleBtn7a.Dat -S ToggleBtn7a.Scr -V ToggleBtn7a.vis -O ToggleBtn7a.prt -xrm "*XmDisplay.enableToggleVisual: True"'
+set ToggleBtn7b = 'ToggleBtn7 -I ToggleBtn7b.Dat -S ToggleBtn7b.Scr -V ToggleBtn7b.vis -O ToggleBtn7b.prt -xrm "*XmDisplay.enableToggleVisual: False"'
+
+foreach test (ArrowBGad1 ArrowBGad2 ArrowBGad3 ArrowBGad4 \
+	      ArrowBtn1 ArrowBtn2 "$Button1a" "$Button1b" \
+              DrawnBtn2 \
+              PushBGad2 PushBGad3 PushBGad4 PushBtn1 PushBtn2 \
+	      "$ToggleBGad1" ToggleBGad2 ToggleBGad3 ToggleBGad4 ToggleBGad5 \
+	      ToggleBtn1 ToggleBtn2 ToggleBtn3 ToggleBtn4 ToggleBtn5 \
+	      ToggleBtn6 "$ToggleBtn7a" "$ToggleBtn7b")

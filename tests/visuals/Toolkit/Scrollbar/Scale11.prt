@@ -1,0 +1,160 @@
+# $XConsortium: Scale11.prt /main/3 1995/07/19 20:31:28 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) CompareVisual Scale1 
+TRACE:(2) LocatePointer ValSC RScrollBarSlider 
+TRACE:(3) DragSliderValue Right Max 
+TRACE:(4) LocatePointer SetValuePB  
+TRACE:(5) ClickMB Btn1 
+TRACE:(6) CompareVisual Scale1 
+TRACE:(7) Continue
+TRACE:(8) LocatePointer OptionM ROptionButton 
+TRACE:(9) PressMB Btn1 
+TRACE:(10) LocatePointer NearSliderPB  
+TRACE:(11) ReleaseMB Btn1 
+TRACE:(12) CompareVisual Scale1 
+TRACE:(13) LocatePointer ValSC RScrollBarSlider 
+TRACE:(14) DragSliderValue Left 50 
+TRACE:(15) LocatePointer SetValuePB  
+TRACE:(16) ClickMB Btn1 
+TRACE:(17) CompareVisual Scale1 
+TRACE:(18) Continue
+TRACE:(19) LocatePointer EditableTB  
+TRACE:(20) ClickMB Btn1 
+TRACE:(21) LocatePointer Scale1 RScrollBarDownOrRightSliderArea 
+TRACE:(22) ClickMB Btn1 
+TRACE:(23) CompareVisual Scale1 
+TRACE:(24) LocatePointer Scale1 RScrollBarUpOrLeftSliderArea 
+TRACE:(25) ClickMB Btn1 
+TRACE:(26) CompareVisual Scale1 
+TRACE:(27) LocatePointer Scale1 RScrollBarDownOrRightSliderArea 
+TRACE:(28) PressMB Btn1 
+TRACE:(29) Wait 5
+TRACE:(30) ReleaseMB Btn1 
+TRACE:(31) CompareVisual Scale1 
+TRACE:(32) LocatePointer Scale1 RScrollBarUpOrLeftSliderArea 
+TRACE:(33) PressMB Btn1 
+TRACE:(34) Wait 5
+TRACE:(35) ReleaseMB Btn1 
+TRACE:(36) CompareVisual Scale1 
+TRACE:(37) LocatePointer Scale1 RScrollBarDownOrRightSliderArea 
+TRACE:(38) ClickMB <Ctrl> Btn1 
+TRACE:(39) CompareVisual Scale1 
+TRACE:(40) LocatePointer Scale1 RScrollBarUpOrLeftSliderArea 
+TRACE:(41) ClickMB <Ctrl> Btn1 
+TRACE:(42) CompareVisual Scale1 
+TRACE:(43) LocatePointer Scale1 RScrollBarDownOrRightSliderArea 
+TRACE:(44) ClickMB Btn2 
+TRACE:(45) CompareVisual Scale1 
+TRACE:(46) LocatePointer Scale1 RScrollBarSlider 
+TRACE:(47) DragSliderValue Up Max Btn2
+TRACE:(48) CompareVisual Scale1 
+TRACE:(49) DragSliderValue Down Min Btn2
+TRACE:(50) CompareVisual Scale1 
+TRACE:(51) DragSliderValue Up 50 Btn2
+TRACE:(52) CompareVisual Scale1 
+TRACE:(53) Continue
+TRACE:(54) LocatePointer Scale1  
+TRACE:(55) ClickKey KUp
+TRACE:(56) ClickKey KUp
+TRACE:(57) CompareVisual Scale1 
+TRACE:(58) ClickKey KDown
+TRACE:(59) ClickKey KDown
+TRACE:(60) CompareVisual Scale1 
+TRACE:(61) ClickKey <Ctrl> KUp
+TRACE:(62) ClickKey <Ctrl> KUp
+TRACE:(63) CompareVisual Scale1 
+TRACE:(64) ClickKey <Ctrl> KDown
+TRACE:(65) ClickKey <Ctrl> KDown
+TRACE:(66) CompareVisual Scale1 
+TRACE:(67) ClickKey KPageUp
+TRACE:(68) ClickKey KPageUp
+TRACE:(69) CompareVisual Scale1 
+TRACE:(70) ClickKey KPageDown
+TRACE:(71) ClickKey KPageDown
+TRACE:(72) CompareVisual Scale1 
+TRACE:(73) ClickKey KBeginLine
+TRACE:(74) CompareVisual Scale1 
+TRACE:(75) ClickKey KEndLine
+TRACE:(76) CompareVisual Scale1 
+TRACE:(77) Continue
+TRACE:(78) LocatePointer RCScale0 RScrollBarSlider 
+TRACE:(79) DragSliderValue Right 20 
+TRACE:(80) LocatePointer RCScale3 RScrollBarSlider 
+TRACE:(81) DragSliderValue Right 20 
+TRACE:(82) LocatePointer SetTicsPB  
+TRACE:(83) ClickMB Btn1 
+TRACE:(84) CompareVisual Scale1 
+TRACE:(85) LocatePointer OptionM ROptionButton 
+TRACE:(86) PressMB Btn1 
+TRACE:(87) LocatePointer NearBorderPB  
+TRACE:(88) ReleaseMB Btn1 
+TRACE:(89) CompareVisual Scale1 
+TRACE:(90) LocatePointer RCScale1 RScrollBarSlider 
+TRACE:(91) DragSliderValue Right 1 
+TRACE:(92) LocatePointer RCScale4 RScrollBarSlider 
+TRACE:(93) DragSliderValue Right 10 
+TRACE:(94) LocatePointer SetTicsPB  
+TRACE:(95) ClickMB Btn1 
+TRACE:(96) CompareVisual Scale1 
+TRACE:(97) LocatePointer RCScale2 RScrollBarSlider 
+TRACE:(98) DragSliderValue Right 4 
+TRACE:(99) LocatePointer RCScale5 RScrollBarSlider 
+TRACE:(100) DragSliderValue Right 3 
+TRACE:(101) LocatePointer SetTicsPB  
+TRACE:(102) ClickMB Btn1 
+TRACE:(103) CompareVisual Scale1 
+TRACE:(104) LocatePointer ValSC RScrollBarSlider 
+TRACE:(105) DragSliderValue Left 80 
+TRACE:(106) LocatePointer SetValuePB  
+TRACE:(107) ClickMB Btn1 
+TRACE:(108) CompareVisual Scale1 
+TRACE:(109) Continue
+TRACE:(110) LocatePointer ResizeTB  
+TRACE:(111) ClickMB Btn1 
+TRACE:(112) LocatePointer RCScale0 RScrollBarSlider 
+TRACE:(113) DragSliderValue Right 50 
+TRACE:(114) LocatePointer RCScale1 RScrollBarSlider 
+TRACE:(115) DragSliderValue Right 4 
+TRACE:(116) LocatePointer RCScale2 RScrollBarSlider 
+TRACE:(117) DragSliderValue Right 9 
+TRACE:(118) LocatePointer SetTicsPB  
+TRACE:(119) ClickMB Btn1 
+TRACE:(120) CompareVisual Scale1 
+TRACE:(121) Continue
+TRACE:(122) Exit
+Exiting Test...Please Standby...

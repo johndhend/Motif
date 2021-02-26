@@ -1,0 +1,77 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: BBoard1.dat /main/5 1995/07/13 18:25:33 drk $"
+*/
+#) Click on both pushbuttons. 
+#) Iconify the client window. 
+#) Normalize the client window. 
+#) Resize the client window to paritally obscure pushbutton2. 
+#) Press Help key, and a message, \"A help callback was issued.\" will be printed. 
+#) Continue to have a scrollbar appear below pushbutton1, and
+   an arrow appear to the right of pushbutton1.
+C)
+#) Click on the arrow, arrow should appear to go in and out. 
+#) Move the scrollbar slider. 
+#) Click on scrollbar arrows. The scrollbar slider should move. 
+#) Continue to have a new arrow appear at the bottom of the client window.
+C)
+#) Click on the new arrow, the arrow should go in and out. 
+#) Continue to have the scrollbar slider change size
+   and have the height and position of the second arrow change.
+C)
+#) Click on the second arrow, arrow should appear to go in and out. 
+#) Move the scrollbar slider. 
+#) Click on pushbutton2, it should appear to go in and out. 
+#) Continue to have width and height of pushbutton2 change.
+C)
+#) The height and widget of pushbutton2 were changed.
+#) Click on pushbutton2, it should appear to go in and out. 
+C)
+#) All the widgets except the parent bulletin board were destroyed.
+#) Two bulletin boards have been created and maanged. They should appear
+   exactly the same. This test may fail if you did not invoke it from the
+RUN script.
+C)
+#) The bulletin boards were destroyed and two frames created in their place.
+#) The two frames should have exactly the same appearance.
+#) This test may fail if you did not invoke it from the RUN script.
+E)
+
+

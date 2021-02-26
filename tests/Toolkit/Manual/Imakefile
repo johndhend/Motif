@@ -1,0 +1,141 @@
+XCOMM 
+XCOMM @OPENGROUP_COPYRIGHT@
+XCOMM COPYRIGHT NOTICE
+XCOMM Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+XCOMM Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+XCOMM ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+XCOMM the full copyright text.
+XCOMM 
+XCOMM This software is subject to an open license. It may only be
+XCOMM used on, with or for operating systems which are themselves open
+XCOMM source systems. You must contact The Open Group for a license
+XCOMM allowing distribution and sublicensing of this software on, with,
+XCOMM or for operating systems which are not Open Source programs.
+XCOMM 
+XCOMM See http://www.opengroup.org/openmotif/license for full
+XCOMM details of the license agreement. Any use, reproduction, or
+XCOMM distribution of the program constitutes recipient's acceptance of
+XCOMM this agreement.
+XCOMM 
+XCOMM EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+XCOMM PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+XCOMM KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+XCOMM WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+XCOMM OR FITNESS FOR A PARTICULAR PURPOSE
+XCOMM 
+XCOMM EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+XCOMM NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+XCOMM INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+XCOMM DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+XCOMM AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+XCOMM LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+XCOMM ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+XCOMM EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+XCOMM POSSIBILITY OF SUCH DAMAGES.
+XCOMM 
+XCOMM 
+XCOMM HISTORY
+XCOMM 
+XCOMM   $XConsortium: Imakefile /main/9 1995/07/13 18:36:08 drk $
+INCLUDES 	= -I. -I$(MLIBSRC) -I../bitmaps -I../ -I$(TESTCOMSRC)
+DEFINES         = TestDefines
+DEPLIBS         = TestUilClientDepLibs
+LOCAL_LIBRARIES = TestUilClientLibs
+
+NormalLibraryObjectRule()
+
+MSimpleProgramTarget(BBoardM1)
+TestPPTarget(BBoardM1)
+MSimpleProgramTarget(ColorM1)
+TestPPTarget(ColorM1)
+MSimpleUidTarget(ColorM1)
+MSimpleProgramTarget(DrawnBtnM1)
+TestPPTarget(DrawnBtnM1)
+MSimpleProgramTarget(MenuM1)
+TestPPTarget(MenuM1)
+MSimpleProgramTarget(PanedWinM1)
+TestPPTarget(PanedWinM1)
+MSimpleProgramTarget(PanedWinM2)
+TestPPTarget(PanedWinM2)
+MSimpleProgramTarget(PushBGadM1)
+TestPPTarget(PushBGadM1)
+MSimpleProgramTarget(ResPartOffM1)
+TestPPTarget(ResPartOffM1)
+MSimpleProgramTarget(SharedTearM1)
+TestPPTarget(SharedTearM1a)
+TestPPTarget(SharedTearM1b)
+MSimpleProgramTarget(SimpleM1)
+TestPPTarget(SimpleM1)
+MSimpleProgramTarget(SimpleM2)
+TestPPTarget(SimpleM2)
+MSimpleProgramTarget(SimpleM3)
+TestPPTarget(SimpleM3)
+MSimpleProgramTarget(ToggleM1)
+TestPPTarget(ToggleM1)
+MSimpleProgramTarget(TrackingLocM1)
+TestPPTarget(TrackingLocM1)
+MSimpleProgramTarget(TrackingLocM2)
+TestPPTarget(TrackingLocM2)
+MSimpleProgramTarget(MessageBM1)
+TestPPTarget(MessageBM1)
+MSimpleProgramTarget(MessageDiaM1)
+TestPPTarget(MessageDiaM1)
+MSimpleProgramTarget(TearOffM1)
+TestPPTarget(TearOffM1)
+MSimpleProgramTarget(Text1M)
+TestPPTarget(Text1M)
+MSimpleProgramTarget(TextM2)
+TestPPTarget(TextM2)
+MSimpleProgramTarget(TextFieldM1)
+TestPPTarget(TextFieldM1)
+MSimpleProgramTarget(WMShellGeomM1)
+TestPPTarget(WMShellGeomM1)
+MSimpleProgramTarget(VenShellM1)
+TestPPTarget(VenShellM1)
+MSimpleProgramTarget(VenShellM2)
+MSimpleProgramTarget(VenShellM3)
+TestPPTarget(VenShellM3)
+MSimpleProgramTarget(TransFamilyM1)
+TestPPTarget(TransFamilyM1)
+MSimpleProgramTarget(DiaShellM1)
+TestPPTarget(DiaShellM1)
+MSimpleProgramTarget(DiaShellM2)
+TestPPTarget(DiaShellM2)
+MSimpleProgramTarget(ListM1)
+TestPPTarget(ListM1)
+MSimpleProgramTarget(TestCDEM1)
+TestPPTarget(TestCDEM1)
+
+
+
+SRCS=  \
+	BBoardM1.c \
+	ColorM1.c \
+	DrawnBtnM1.c \
+	MenuM1.c \
+        PanedWinM1.c \
+        PanedWinM2.c \
+        PushBGadM1.c \
+	ResPartOffM1.c \
+	SimpleM1.c \
+	SimpleM2.c \
+	SimpleM3.c \
+	ToggleM1.c \
+	TrackingLocM1.c \
+	TrackingLocM2.c \
+	MessageBM1.c \
+	Text1M.c \
+	TextM2.c \
+	TextFieldM1.c \
+	TearOffM1.c \
+	WMShellGeomM1.c \
+	VenShellM1.c \
+	VenShellM2.c \
+	VenShellM3.c \
+	TransFamilyM1.c \
+	DiaShellM1.c \
+	DiaShellM2.c \
+	ListM1.c \
+	TestCDEM1.c
+		  
+DependTarget () 

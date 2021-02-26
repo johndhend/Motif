@@ -1,0 +1,96 @@
+# $XConsortium: Form4.scr /main/4 1995/07/17 20:20:43 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+#) A client with a form should appear. The form should
+#)   contain one frame and should be 100x100 pixels.
+#) Resize the client window. The frame should remain around
+#)   the bounds of the window. 
+#) Iconify and Normalize the client window. The frame
+#)   should remain around the bounds of the window. 
+
+CompareVisual form
+WindowResize Shell1 SouthEast 200 150
+WindowIconify Shell1
+WindowDeiconify Shell1
+CompareVisual form
+Continue
+
+#) A client with one pushbutton contained in a form should appear.
+#)   The pushbutton should be \"Attached\" to the form on the top and on the
+#)   right. 
+#) Press MB1 on 'PushButton1'. The pushbutton should highlight. 
+
+LocatePointer PushButton1
+ClickMB Btn1
+CompareVisual PushButton1
+Continue
+
+#) The form should now contain a second pushbutton. The new
+#)   pushbutton should be \"Attached\" to the form on the left and on the
+#)   bottom. It should also be \"Attached\" to 'PushButton1' on the right. 
+#) Press MB1 on 'PushButton2'. The pushbutton should highlight. 
+
+CompareVisual form
+LocatePointer PushButton2
+ClickMB Btn1
+Continue
+
+#) The form should now contain a third pushbutton. The new
+#)   pushbutton should be \"Attached\" to the form on the left and on the
+#)   top. It should also be \"Attached\" to 'PushButton1' on the right, and
+#)   'PushButton2' on the bottom. 
+#) Press MB1 on 'PushButton3'. The pushbutton should highlight. 
+
+CompareVisual form
+LocatePointer PushButton3
+ClickMB Btn1
+Continue
+
+#) The form should now contain a fourth pushbutton. The new
+#)   pushbutton should be \"Attached\" to the form on the right and on the
+#)   bottom. It should also be \"Attached\" to 'PushButton1' on the top, and
+#)   'PushButton2' on the left. 
+#) Press MB1 on 'PushButton4'. The pushbutton should highlight. 
+
+CompareVisual form
+LocatePointer PushButton4
+ClickMB Btn1
+
+Exit

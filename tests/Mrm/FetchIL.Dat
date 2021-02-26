@@ -1,0 +1,28 @@
+
+#) This is the FetchIL test.
+C)
+
+#) There should now be two buttons in the second window.
+   The button faces should be the same color as the window.
+   Also, note that there should be four Mrm Toolkit Warning messages on 
+   stdout/stderr about MrmFAILUREs.
+
+C)
+
+#) The two buttons should now have labels which read
+	TEST   &   TEST
+	BTN1       BTN2           
+   The colors should be: background - yellow, foreground - red.
+C)
+
+#) The two buttons should now have labels which read
+	BTN1                   BTN2
+        TEST        and        TEST
+	The colors should be: background - red, foreground - yellow.
+C)
+
+#) A summary message should be printed onto stdout.
+E)
+
+
+

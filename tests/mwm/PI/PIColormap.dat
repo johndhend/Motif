@@ -1,0 +1,94 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: PIColormap.dat /main/5 1995/07/13 20:18:40 drk $"
+*/
+
+
+#) This is the PIColormap test.
+
+C)
+
+
+#) There should now be a pushbutton displayed in a window that says
+   \"TEST 1 BTN 1\". It should have red lettering on a yellow background.
+
+#) Move the pointer into the window, the colormap for the entire screen
+   should shift by 1 color value - everything should look way different.
+
+#) Click on the \"TEST 1 BTN 1\" pushbutton.  Don't be concerned if the
+   pushbutton label is all black in your particular color scheme.
+
+C)
+
+
+#) Now, there should be a second pushbutton displayed in the window that
+   says \"BTN 1 TEST 2\".  This pushbutton should have yellow lettering 
+   on a red background.
+
+#) Move the pointer into the window, the colormap for the screen should
+   shift by 2 color values and look different than either previous colormap.
+   Again, it should look very weird.
+
+#) Click on either pushbutton.
+
+C)
+
+
+#) There should still be both pushbuttons displayed in the window.
+
+#) Move the pointer into the window, the colormap should not change from
+   the original, standard colormap.
+
+#) Again, click on either pushbutton.
+
+C)
+
+!) /* begin test for CR 5183 */
+#) A control panel with 3 PushButtons should have appeared : Popup, Popdown
+   and Colormap. 
+#) Click MB1 on "Popup". An OverrideShell should appear.
+#) Click MB1 on "Popdown". The OverrideShell should disappear.
+#) Click MB1 on "Colormap".
+#) Click MB1 on "Popup". The OverrideShell should reappear.
+#) ClickMB1 on "Popdown". Only the OverrideShell should disappear. If
+   the main shell containing the control panel disappears as well, 
+   CR 5183 hasn't been fixed.
+!) /* end test for CR 5183 */
+E)

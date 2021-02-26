@@ -1,0 +1,235 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: Scrollbar4.dat /main/6 1995/07/13 19:14:57 drk $"
+*/
+
+#) A client window with a large horizontal scrollbar with two arrows
+   and a very thin slider will appear. 
+#) Click MB1 on each end of the scrollbar.  The value should change,
+   and should be displayed in the xterm window.  Clicking MB1 on the
+   left arrow will increase the value, and clicking MB1 on the right
+   arrow will decrease the value.  The maximum value will be 90 and
+   the minimum value will be 0. 
+C)
+
+#) The scrollbar will be much smaller, will now have a thicker slider, and
+   the processing direction will be reversed from the first scrollbar.
+   The initial value should be 20. 
+#) Press and hold down MB1 on the slider and drag the pointer to the
+   right and to the left.  Release MB1.  The current value should be
+   displayed in the xterm window.  The maximum value should be 90
+   and the minimum value should be 0. 
+C)
+
+#) The scrollbar orientation will change to vertical, with two
+   arrows and a very thin slider.  The initial value should be 80. 
+#) Click MB1 on each end of the scrollbar.  The value should change
+   and be displayed in the xterm window.  The maximum value will be
+   90 and the minimum value will be 0.  The bottom arrow increases
+   the value. 
+C)
+
+#) The following resources will be changed by the stated amounts:
+!)
+     a) Value will increase by 5.
+     b) Slider size will increase by 5.
+     c) Increment will increase by 2.
+     d) Page increment will increase by 5.
+@) These changes will be performed 10 times.  After each iteration,
+   the changes will be printed in the xterm window. 
+C)
+
+#) The scrollbar will grow vertically, the arrows will grow larger,
+   and the slider will grow. 
+#) An X Toolkit warning for setting the scrollbar value greater
+   than the maximum scrollbar value minus the scrollbar slider size
+   will be printed in the xterm window. 
+#) The initial values for the scrollbar will be printed in the
+   xterm window. 
+#) Press and hold down MB1 on the slider and drag the pointer up and
+   down.  No values will be printed to the xterm window. 
+#) Click MB1 on the top and bottom arrows of the scrollbar.  The
+   slider will move in the direction of the arrow clicked on.  No
+   values will be printed. 
+C)
+
+#) The scrollbar slider will be smaller. 
+#) An X Toolkit warning for setting the scrollbar value greater
+   than the maximum scrollbar value minus the scrollbar slider size
+   will be printed in the xterm window. 
+#) The initial values for the scrollbar will be printed in the xterm
+   window. 
+#) Press and hold down MB1 on the slider and drag the pointer up and
+   down.  No values will be printed to the xterm window. 
+#) Click MB1 on the top and bottom arrows of the scrollbar.  The
+   slider will move in the direction of the arrow clicked on.  No
+   values will be printed to the xterm window. 
+C)
+
+#) The scrollbar slider size will not change. 
+#) An X Toolkit warning for setting the scrollbar value greater
+   than the maximum scrollbar value minus the scrollbar slider size
+   will be printed in the xterm window. 
+#) The initial values for the scrollbar will be printed in the xterm
+   window. 
+#) Press and hold down MB1 on the slider and drag the pointer up and
+   down.  No values will be printed to the xterm window. 
+#) Click MB1 on the top and bottom arrows of the scrollbar.  The
+   slider will move in the direction of the arrow clicked on.  No
+   values will be printed to the xterm window. 
+C)
+
+#) The scrollbar slider will be at the top of the scrollbar. 
+#) The initial values for the scrollbar will be printed in the xterm
+   window. 
+#) Press and hold down MB1 on the slider and drag the pointer up and
+   down.  No values will be printed to the xterm window. 
+#) Click MB1 on the top and bottom arrows of the scrollbar.  The
+   slider will move in the direction of the arrow clicked on.  No
+   values will be printed to the xterm window. 
+C)
+
+#) The scrollbar slider will be smaller. 
+#) An X Toolkit warning for setting the scrollbar value less than
+   the minimum scrollbar value will be printed in the xterm window. 
+#) The initial values for the scrollbar will be printed in the xterm
+   window. 
+#) Press and hold down MB1 on the slider and drag the pointer up and
+   down.  No values will be printed to the xterm window. 
+#) Click MB1 on the top and bottom arrows of the scrollbar.  The
+   slider will move in the direction of the arrow clicked on.  No
+   values will be printed to the xterm window. 
+C)
+
+#) There will be no visible change in the scrollbar. 
+#) The initial values for the scrollbar will be printed in the xterm
+   window. 
+#) Press and hold down MB1 on the slider and drag the pointer up and
+   down.  No values will be printed to the xterm window. 
+#) Click MB1 on the top and bottom arrows of the scrollbar.  The
+   slider will move in the direction of the arrow clicked on.  No
+   values will be printed to the xterm window. 
+C)
+
+#) There will be no visible change in the scrollbar. 
+#) The initial values for the scrollbar will be printed in the xterm
+   window. 
+#) Press and hold down MB1 on the slider and drag the pointer up and
+   down.  No values will be printed to the xterm window. 
+#) Click MB1 on the top and bottom arrows of the scrollbar.  The
+   slider will move in the direction of the arrow clicked on.  No
+   values will be printed to the xterm window. 
+C)
+
+#) The scrollbar slider will be at the bottom of the scrollbar. 
+#) An X Toolkit warning for setting the scrollbar value greater
+   than the maximum scrollbar value minus the scrollbar slider size
+   will be printed in the xterm window. 
+#) The initial values for the scrollbar will be printed in the xterm
+   window. 
+#) Press and hold down MB1 on the slider and drag the pointer up and
+   down.  No values will be printed to the xterm window. 
+#) Click MB1 on the top and bottom arrows of the scrollbar.  The
+   slider will move in the direction of the arrow clicked on.  No
+   values will be printed to the xterm window. 
+C)
+
+#) The scrollbar slider will be larger. 
+#) An X Toolkit warning for setting the scrollbar value greater
+   than the maximum scrollbar value minus the scrollbar slider size
+   will be printed in the xterm window. 
+#) The initial values for the scrollbar will be printed in the xterm
+   window. 
+#) Press and hold down MB1 on the slider and drag the pointer up and
+   down.  No values will be printed to the xterm window. 
+#) Click MB1 on the top and bottom arrows of the scrollbar.  The
+   slider will move in the direction of the arrow clicked on.  No
+   values will be printed to the xterm window. 
+C)
+
+#) There will be no visible change in the scrollbar. 
+#) The initial values for the scrollbar will be printed in the xterm
+   window. 
+#) Press and hold down MB1 on the slider and drag the pointer up and
+   down.  No values will be printed to the xterm window. 
+#) Click MB1 on the top and bottom arrows of the scrollbar.  The
+   slider will move in the direction of the arrow clicked on.  No
+   values will be printed to the xterm window. 
+C)
+
+#) The scrollbar slider will be larger. 
+#) An X Toolkit warning for setting the scrollbar value greater
+   than the maximum scrollbar value minus the scrollbar slider size
+   will be printed in the xterm window. 
+#) The initial values for the scrollbar will be printed in the xterm
+   window. 
+#) Press and hold down MB1 on the slider and drag the pointer up and
+   down.  No values will be printed to the xterm window. 
+#) Click MB1 on the top and bottom arrows of the scrollbar.  The
+   slider will move in the direction of the arrow clicked on.  No
+   values will be printed to the xterm window. 
+C)
+
+#) The scrollbar slider will be at the top of the scrollbar. 
+#) An X Toolkit warning for setting the scrollbar value less than
+   the minimum scrollbar value will be printed in the xterm window. 
+#) The initial values for the scrollbar will be printed in the xterm
+   window. 
+#) Press and hold down MB1 on the slider and drag the pointer up and
+   down.  No values will be printed to the xterm window. 
+#) Click MB1 on the top and bottom arrows of the scrollbar.  The
+   slider will move in the direction of the arrow clicked on.  No
+   values will be printed to the xterm window. 
+C)
+
+#) The scrollbar slider will be larger. 
+#) An X Toolkit warning for setting the scrollbar value less than
+   the minimum scrollbar value will be printed in the xterm window. 
+#) The initial values for the scrollbar will be printed in the xterm
+   window. 
+#) Press and hold down MB1 on the slider and drag the pointer up and
+   down.  When you release MB1, the current scrollbar value will be
+   printed to the xterm window. 
+#) Click MB1 on the top and bottom arrows of the scrollbar.  The
+   slider will move in the direction of the arrow clicked on.  The
+   current scrollbar value will be printed to the xterm window. 
+C)
+
+E)

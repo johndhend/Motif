@@ -1,0 +1,8 @@
+.TH OUTLINE 1X "MOTIF" "\fBoutline\fR 1X" "Demonstration programs"
+.SH NAME
+outline \- outline demo
+.SH SYNOPSIS
+\fBoutline\fR  [Xt opts, ie \fB-display\fR, \fB-geom\fR]
+.SH DESCRIPTION
+Shows heirarchial data, can expand and collapse, using Motif.
+.LP

@@ -1,0 +1,43 @@
+
+
+#) This test routine tests the Uil translation table data structure by
+   comparing a uil translation table to an equivalently defined Intrinsics
+   translation table.
+
+#) For each of the following screens the tester will apply the
+   same keystrokes (or mouse events) to test both applications.
+
+#) Two top-level shells, named \"Xt Version\" and \"Uil Version\",
+   have appeared on the screen (one on top of the other).
+
+C)
+
+#) For each shell (\"Xt Version\" and \"Uil Version\"), click on the text 
+   field and type the string \"How now brown cow\".  
+
+#) Then click on the Change My Label button for each application.  
+   The text in the text field should be copied into the pushbutton label.  
+
+C)
+
+#) Click on the text field of the \"Uil Version\" and type
+   \"Pickled Peppers\".  Then type \"C-a\" (cntrl a).  The text
+   in the text field should be copied into the pushbutton label.
+   If not, CR 3281 has not been fixed.
+
+C)
+
+#) Click on the text field for each application and type the string \"C-b\" 
+   (cntrl b).  The insertion point should move to the beginning of the text.
+
+#) Type \"C-e\".  The insertion point should move to the end of the text.
+C)
+
+#) Move the mouse pointer to the area between the two pushbuttons.  Type
+   \"C-q\".  The application window should disappear and dump the text
+   to the terminal window.
+C)
+
+#) If the two applications exhibited the same behavior, then the translation
+   tables must be matched.
+E)

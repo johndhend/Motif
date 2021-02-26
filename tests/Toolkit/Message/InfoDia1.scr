@@ -1,0 +1,168 @@
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+/*
+static char rcsid[] = "$XConsortium: InfoDia1.scr /main/6 1995/07/13 18:58:27 drk $"
+*/
+# A client with an information dialog should appear. The
+# dialog will have three buttons labeled 'Minimize',
+# 'W=500', and 'H=300'. The 'W=500' button should have highlight. 
+
+CompareVisual mbox
+
+# Move the pointer into the dialog, you should get a focusCallback
+# message in the term window.
+
+LocatePointer mbox
+
+# Move outside the window again and now move back into the dialog very
+# quickly. You should NOT get multiple focusCallbacks, you should only
+# get one.
+
+LocatePointerXYAbs 200 200
+LocatePointer mbox
+LocatePointerXYAbs 200 200
+LocatePointer mbox
+
+# Try the previous two steps, except run mwm in explicit mode. When you
+# initially move into the dialog you should NOT get a focusCallback
+# (the window should not have window manager focus).
+
+# Click MB1 on the 'H=300' button. The dialog should grow
+# to a height of 300 pixels. 
+
+LocatePointer mbox RHelpButton
+ClickMB Btn1
+CompareVisual mbox
+
+# Click MB1 on the 'W=500' button. The dialog should grow
+# to a width of 500 pixels. 
+
+LocatePointer mbox RCancelButton
+ClickMB Btn1
+
+WindowRaise Shell1
+CompareVisual mbox
+
+# Click MB1 on the 'Minimize' button. Buttons should minimize
+# and dialog should shrink to minimal dimensions. 
+
+LocatePointer mbox ROkButton
+ClickMB Btn1
+CompareVisual mbox
+
+# C)
+
+Continue
+
+# Click MB1 on the 'H=300' button. The dialog should grow
+# to a height of 300 pixels. 
+
+LocatePointer mbox RHelpButton
+ClickMB Btn1
+CompareVisual mbox
+
+# Click MB1 on the 'W=500' button. The dialog should grow
+# to a width of 500 pixels. 
+
+LocatePointer mbox RCancelButton
+ClickMB Btn1
+WindowRaise Shell1
+CompareVisual mbox
+
+# Click on the To Default button.
+
+LocatePointer mbox ROkButton
+ClickMB Btn1
+CompareVisual mbox
+
+# C)
+
+Continue
+
+# A dialog has been created with mappedWhenManaged: False, and managed. This
+# dialog should not actually be visible.
+
+# Its geometry is 300x300 pixels, location x=0, y=50.
+
+# should produce warning (we want this to happen).
+
+LocatePointer mbox
+
+# C)
+
+Continue
+
+# The dialog shell should be mapped.
+# Its geometry is 300x300 pixels, location x=200, y=200.
+
+LocatePointer mbox
+CompareVisual mbox
+
+# C)
+
+Continue
+
+# The geometry was changed to 300 by 400 pixels at x=0, y=200.
+
+LocatePointer mbox
+CompareVisual mbox
+
+# C)
+
+Continue
+
+# Another unmapped message dialog was created.
+
+# should produce warning (we want this to happen).
+
+LocatePointer mbox
+
+# C)
+
+Continue
+
+# An unmapped message box was created.
+
+# should produce warning (we want this to happen).
+
+LocatePointer mbox
+
+# E)
+
+Exit

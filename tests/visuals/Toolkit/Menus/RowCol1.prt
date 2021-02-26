@@ -1,0 +1,112 @@
+# $XConsortium: RowCol1.prt /main/3 1995/07/19 20:23:27 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) CompareVisual RowColumn1 
+TRACE:(2) LocatePointer button1  
+TRACE:(3) ClickMB Btn1 
+TRACE:(4) CompareVisual RowColumn1 
+TRACE:(5) LocatePointer button2  
+TRACE:(6) ClickMB Btn1 
+TRACE:(7) CompareVisual RowColumn1 
+TRACE:(8) Continue
+TRACE:(9) CompareVisual RowColumn1 
+TRACE:(10) Continue
+TRACE:(11) CompareVisual RowColumn1 
+TRACE:(12) Continue
+TRACE:(13) CompareVisual RowColumn1 
+TRACE:(14) Continue
+TRACE:(15) CompareVisual RowColumn1 
+TRACE:(16) Continue
+TRACE:(17) CompareVisual RowColumn1 
+TRACE:(18) Continue
+TRACE:(19) CompareVisual RowColumn1 
+TRACE:(20) LocatePointer ArrowButton1  
+TRACE:(21) PressMB Btn1 
+TRACE:(22) CompareVisual ArrowButton1 
+TRACE:(23) ReleaseMB Btn1 
+TRACE:(24) LocatePointer Label1  
+TRACE:(25) PressMB Btn1 
+TRACE:(26) CompareVisual Label1 
+TRACE:(27) ReleaseMB Btn1 
+TRACE:(28) LocatePointer ToggleButton1  
+TRACE:(29) ClickMB Btn1 
+TRACE:(30) CompareVisual ToggleButton1 
+TRACE:(31) LocatePointer PushButton1  
+TRACE:(32) PressMB Btn1 
+TRACE:(33) CompareVisual PushButton1 
+TRACE:(34) ReleaseMB Btn1 
+TRACE:(35) Continue
+TRACE:(36) CompareVisual RowColumn1 
+TRACE:(37) LocatePointer ArrowButton1  
+TRACE:(38) PressMB Btn1 
+TRACE:(39) CompareVisual ArrowButton1 
+TRACE:(40) ReleaseMB Btn1 
+Activation Callback was received.
+TRACE:(41) LocatePointer PushButton1  
+TRACE:(42) PressMB Btn1 
+TRACE:(43) CompareVisual PushButton1 
+TRACE:(44) ReleaseMB Btn1 
+Activation Callback was received.
+TRACE:(45) LocatePointer ToggleButton1  
+TRACE:(46) PressMB Btn1 
+TRACE:(47) CompareVisual ToggleButton1 
+TRACE:(48) ReleaseMB Btn1 
+Value Changed Callback was received.
+ State check: button is OFF
+
+TRACE:(49) Continue
+TRACE:(50) WindowRaise Shell1
+TRACE:(51) CompareVisual RowColumn1 
+TRACE:(52) WindowResize Shell1 SouthEast 240 180
+TRACE:(53) WindowRaise Shell1
+TRACE:(54) CompareVisual RowColumn1 
+TRACE:(55) Continue
+TRACE:(56) WindowRaise Shell1
+TRACE:(57) CompareVisual RowColumn1 
+TRACE:(58) Continue
+TRACE:(59) WindowResize Shell1 SouthEast 200 200
+TRACE:(60) WindowRaise Shell1
+TRACE:(61) CompareVisual RowColumn1 
+TRACE:(62) WindowResize Shell1 SouthEast 100 100
+TRACE:(63) WindowRaise Shell1
+TRACE:(64) CompareVisual RowColumn1 
+TRACE:(65) WindowResize Shell1 SouthEast 300 300
+TRACE:(66) WindowRaise Shell1
+TRACE:(67) CompareVisual RowColumn1 
+TRACE:(68) Continue
+TRACE:(69) Exit
+Exiting Test...Please Standby...

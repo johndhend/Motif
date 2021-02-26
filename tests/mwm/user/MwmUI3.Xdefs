@@ -1,0 +1,193 @@
+! @OPENGROUP_COPYRIGHT@
+! COPYRIGHT NOTICE
+! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+! ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+! the full copyright text.
+! 
+! This software is subject to an open license. It may only be
+! used on, with or for operating systems which are themselves open
+! source systems. You must contact The Open Group for a license
+! allowing distribution and sublicensing of this software on, with,
+! or for operating systems which are not Open Source programs.
+! 
+! See http://www.opengroup.org/openmotif/license for full
+! details of the license agreement. Any use, reproduction, or
+! distribution of the program constitutes recipient's acceptance of
+! this agreement.
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+! OR FITNESS FOR A PARTICULAR PURPOSE
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+! POSSIBILITY OF SUCH DAMAGES.
+! 
+! HISTORY
+! 
+
+!**************************************************************************!
+!Coloring Resources
+!**************************************************************************!
+
+! Windows, icons, menus
+
+Mwm*activeBackground : IndianRed
+Mwm*activeForeground : wheat
+Mwm*background :OldLace
+Mwm*foreground :IndianRed
+
+
+! mattes
+
+Mwm*TestWindow1*matteWidth : 10
+Mwm*matteBackground : dark sea green
+Mwm*matteBottomShadowColor : red
+Mwm*matteTopShadowColor : blue
+Mwm*matteForeground :black
+Mwm*matteTopShadowPixmap : slant_right
+Mwm*matteBottomShadowPixmap: slant_left
+
+
+!Icon Images
+
+Mwm*iconImageBackground :oldlace
+Mwm*iconImageBottomShadowColor :LightPink
+Mwm*iconImageForeground :lavender
+Mwm*iconImageTopShadowColor :black
+Mwm*iconPixmap :../bitmaps/mtn.xbm
+
+
+!**************************************************************************!
+! Window Decorations
+!**************************************************************************!
+
+Mwm*transientDecorations : all
+Mwm*transientFunctions : all
+
+
+
+!*************************************************************************!
+! Focus Policies
+!*************************************************************************!
+
+
+Mwm*autoKeyFocus : False
+Mwm*deiconifyKeyFocus : False
+Mwm*keyboardFocusPolicy :explicit
+Mwm*startupKeyFocus : False
+Mwm*TestWindow3*focusAutoRaise : False
+Mwm*TestWindow4*focusAutoRaise : True
+
+!*************************************************************************!
+! Controlling Windows
+!*************************************************************************!
+
+! bindings
+
+Mwm*buttonBindings : MwmUI3ButtonBindings
+Mwm*keyBindings :    MwmUI3KeyBindings
+
+
+! font
+
+Mwm*fontList : courb24
+
+
+
+!Window Menus
+
+Mwm*wMenuButtonClick1 : False
+Mwm*wMenuButtonClick2 : False
+
+
+!Config file
+
+Mwm*configFile : MwmUI3.mwmrc
+
+
+!**************************************************************************!
+!Controlling Window Size and Position
+!**************************************************************************!
+
+! Size Resources
+
+
+Mwm*limitResize : False
+Mwm*resizeBorderWidth :10
+Mwm*resizeCursors : True
+
+
+! Position Resources
+
+Mwm*clientAutoPlace : False
+Mwm*interactivePlacement : False
+Mwm*showFeedback : all
+
+! Other
+
+Mwm*enableWarp : True
+
+
+!**************************************************************************!
+!Configuring icons
+!**************************************************************************!
+
+Mwm*iconAutoPlace : True
+Mwm*iconPlacement : top right
+Mwm*iconClick : False
+Mwm*iconDecoration :activelabel label image
+Mwm*iconPlacementMargin : 50
+Mwm*lowerOnIconify :True
+
+
+
+!**************************************************************************!
+!Configuring the icon box
+!**************************************************************************!
+
+
+
+Mwm*useIconBox : True
+Mwm*iconBoxTitle : MyIcons
+Mwm*iconBoxGeometry : 4x1
+Mwm*iconBoxSBDisplayPolicy :vertical
+
+
+
+! End of mwm defaults file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

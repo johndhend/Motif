@@ -1,0 +1,149 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*   $XConsortium: Pixmap.h /main/4 1995/07/13 20:34:17 drk $ */
+
+#include <stdio.h>
+
+#include <Mrm/MrmAppl.h>
+
+/*
+ * Name of uid file
+ */
+
+String		filename_vec[] =
+{
+    "dataS.uid"
+};
+
+MrmCount	filename_num =
+(sizeof(filename_vec) / sizeof(filename_vec[0]));
+
+/*
+ * Convenience routine
+ */
+
+void		error_proc();
+
+/*
+ * Local declarations
+ */
+
+MrmHierarchy	s_MrmHierarchy;
+MrmType		*class;
+MrmCode		*type;
+
+Widget		toplevel;
+
+Display		*dsp;
+Colormap	cmap;
+Screen		*screen;
+Drawable	draw;
+int		depth;
+
+XColor		rgb_db_def,
+		colorcell_def;
+
+Pixel		white,
+		black;
+
+Pixmap		UIL_pixmap,
+		X_pixmap;
+
+XImage		*UIL_image,
+		*X_image;
+
+int		bitmap_width = 25,
+		bitmap_height = 27;
+
+static char	bits1[] =
+{
+    0xff, 0xff, 0xff, 0x01, 0xfe, 0xff, 0xff, 0x01, 0x01, 0x00, 0x80, 0x01,
+    0x02, 0x00, 0x80, 0x01, 0xf1, 0xff, 0x9f, 0x01, 0xf2, 0xc3, 0x9f, 0x01,
+    0xf1, 0xbb, 0x9f, 0x01, 0xf2, 0xc3, 0x9f, 0x01, 0xf1, 0xbb, 0x9f, 0x01,
+    0xf2, 0xc3, 0x9f, 0x01, 0xf1, 0xff, 0x9f, 0x01, 0xf2, 0x83, 0x9f, 0x01,
+    0xf1, 0xef, 0x9f, 0x01, 0xf2, 0xef, 0x9f, 0x01, 0xf1, 0xef, 0x9f, 0x01,
+    0xf2, 0xef, 0x9f, 0x01, 0xf1, 0xff, 0x9f, 0x01, 0xf2, 0xb3, 0x9f, 0x01,
+    0xf1, 0xb3, 0x9f, 0x01, 0xf2, 0xab, 0x9f, 0x01, 0xf1, 0x9b, 0x9f, 0x01,
+    0xf2, 0x9b, 0x9f, 0x01, 0xf1, 0xff, 0x9f, 0x01, 0x02, 0x00, 0x80, 0x01,
+    0x01, 0x00, 0x80, 0x01, 0xaa, 0xaa, 0xaa, 0x01, 0x55, 0x55, 0x55, 0x01,
+};
+
+static char bits2[] =
+{
+    0xff, 0xff, 0xff, 0xff, 0x5d, 0x18, 0x04, 0xff, 0x6b, 0x77, 0xdf, 0xff,
+    0x77, 0x78, 0xdf, 0xff, 0x6b, 0x77, 0xdf, 0xff, 0x5d, 0x18, 0xdc, 0xff,
+    0xff, 0xff, 0xff, 0xff, 0x4f, 0xc6, 0xf0, 0xff, 0xaf, 0xba, 0xee, 0xff,
+    0xef, 0x82, 0xf0, 0xff, 0xef, 0xba, 0xfe, 0xff, 0xef, 0xba, 0xfe, 0xff,
+    0xff, 0xff, 0xff, 0xff, 0x41, 0xd0, 0x07, 0xff, 0xfd, 0xdd, 0xf7, 0xff,
+    0xf1, 0xdd, 0xc7, 0xff, 0xfd, 0xdd, 0xf7, 0xff, 0x7d, 0x10, 0x04, 0xff,
+    0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
+    0x41, 0x10, 0x04, 0xff, 0x77, 0xdf, 0xdf, 0xff, 0x77, 0x1c, 0xdc, 0xff,
+    0x77, 0xff, 0xdd, 0xff, 0x77, 0x10, 0xdc, 0xff, 0xff, 0xff, 0xff, 0xff,
+};
+
+String		bitmaps[2] =
+{
+    bits1,
+    bits2,
+};
+
+String		icon_names[4] =
+{
+    "icon1",
+    "icon2",
+};
+
+String		format[3] =
+{
+    "XYBitmap",
+    "XYPixmap",
+    "ZPixmap",
+};
+
+String		byte_order[2] =
+{
+    "LSBFirst",
+    "MSBFirst",
+};
+
+String		which[2] =
+{
+    "ICON",
+    "XBITMAPFILE",
+};

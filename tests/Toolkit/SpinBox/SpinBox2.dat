@@ -1,0 +1,166 @@
+/* $XConsortium: SpinBox2.dat /main/4 1995/07/17 10:22:30 drk $ */
+/*
+ *  (c) Copyright 1989, 1990, 1991, 1992, 1993 OPEN SOFTWARE FOUNDATION, INC. 
+ *  ALL RIGHTS RESERVED 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+ */
+/*
+ * HISTORY
+ */
+
+#) This test verifies the default translations for SpinBox.
+#) A SpinBox with a numeric TextField child should appear on your screen.
+   The valid values for the TextField child are 1, 4, 7, 10.
+   The current value displayed should be 7.
+#) Press MB1 on the right-pointing arrow. The SpinBox should be visually
+   armed ( the right-pointing arrow appears depressed ).
+#) Release MB1. The value in the NUMERIC child should be incremented from
+   7 to 10. Verify that the following messages are displayed to the terminal:
+@)     XmNmodifyVerifyCallback invoked, reason = XmCR_SPIN_NEXT
+@)     XmNvalueChangedCallback invoked, reason = XmCR_SPIN_NEXT
+@)     XmNvalueChangedCallback invoked, reason = XmCR_OK
+
+#) Press MB1 on the left-pointing arrow. The SpinBox should be visually
+   armed ( the left-pointing arrow appears depressed ).
+#) Release MB1. The value in the NUMERIC child should be decremented from
+   10 to 7. Verify that the following messages are displayed to the terminal:
+@)     XmNmodifyVerifyCallback invoked, reason = XmCR_SPIN_PRIOR
+@)     XmNvalueChangedCallback invoked, reason = XmCR_SPIN_PRIOR
+@)     XmNvalueChangedCallback invoked, reason = XmCR_OK
+
+C)
+
+#) Click osfBeginData. The value in the NUMERIC child should change to 
+   the first value, 1. Verify the following messages are displayed:
+@)     XmNmodifyVerifyCallback invoked, reason = XmCR_SPIN_FIRST
+@)     XmNvalueChangedCallback invoked, reason = XmCR_SPIN_FIRST
+@)     XmNvalueChangedCallback invoked, reason = XmCR_OK
+   
+#) Click osfEndData. The value in the NUMERIC child should change to 
+   the last value, 10. Verify the following messages are displayed:
+@)     XmNmodifyVerifyCallback invoked, reason = XmCR_SPIN_LAST
+@)     XmNvalueChangedCallback invoked, reason = XmCR_SPIN_LAST
+@)     XmNvalueChangedCallback invoked, reason = XmCR_OK
+
+C)
+
+@) An XmNmodifyVerifyCallback has been added to test whether the SpinBox
+   has attempted to increment/decrement passed the maximum/minimum value.
+#) Click MB1 on the right-pointing arrow button to increment value
+   passed the maximum. The doit field of the XmSpinBoxCallbackStruct 
+   will be set to False and the value of the text field will not be changed. 
+   Verify that the following messages are displayed:
+@)     XmNmodifyVerifyCallback invoked, reason = XmCR_SPIN_NEXT
+@)     crossed_boundary = True
+@)     XmNvalueChangedCallback invoked, reason = XmCR_OK
+
+#) Click MB1 on the right-pointing arrow button again.  This time the
+   doit field of the XmSpinBoxCallbackStruct will be set to True and 
+   the SpinBox will display the minimum value of 1. 
+   Verify that the following messages are displayed:
+@)     XmNmodifyVerifyCallback invoked, reason = XmCR_SPIN_NEXT
+@)     crossed_boundary = True
+@)     XmNvalueChangedCallback invoked, reason = XmCR_SPIN_NEXT
+@)     XmNvalueChangedCallback invoked, reason = XmCR_OK
+   
+#) Click MB1 on the left-pointing arrow button to decrement the value passed
+   the minimum.  The doit field will be set to False and the value will
+   not be changed.
+   Verify that the following messages are displayed:
+@)     XmNmodifyVerifyCallback invoked, reason = XmCR_SPIN_PRIOR
+@)     crossed_boundary = True
+@)     XmNvalueChangedCallback invoked, reason = XmCR_OK
+
+#) Click MB1 on the left-pointing arrow button again.  This time the
+   doit field will be set to True and the SpinBox will display the
+   maximum value of 10.
+   Verify that the following messages are displayed:
+@)     XmNmodifyVerifyCallback invoked, reason = XmCR_SPIN_PRIOR
+@)     crossed_boundary = True
+@)     XmNvalueChangedCallback invoked, reason = XmCR_SPIN_PRIOR
+@)     XmNvalueChangedCallback invoked, reason = XmCR_OK
+
+C)
+
+@) An XmNmodifyVerifyCallback has been added which will assign a value to
+   the position field of the XmSpinBoxCallbackStruct.
+#) Click MB1 on the right-pointing arrow button to increase the value
+   passed the maximum.  The doit field will be set to True and position
+   field will be set to the position before the maximum. 
+   Verify that the value displayed is 7 and that the following messages
+   are displayed to the terminal.
+@)     XmNmodifyVerifyCallback invoked, reason = XmCR_SPIN_NEXT
+@)     XmNvalueChangedCallback invoked, reason = XmCR_SPIN_NEXT
+@)     XmNvalueChangedCallback invoked, reason = XmCR_OK
+
+#) Click MB1 on the left-pointing arrow button to decrease the value
+   passed the minimum.  The doit field will be set to True and position
+   field will be set to the maximum position. 
+   Verify that the value displayed is 10 and that the following messages
+   are displayed to the terminal.
+@)     XmNmodifyVerifyCallback invoked, reason = XmCR_SPIN_PRIOR
+@)     XmNvalueChangedCallback invoked, reason = XmCR_SPIN_PRIOR
+@)     XmNvalueChangedCallback invoked, reason = XmCR_OK
+
+C)
+
+#) Click KLeft. The value in the NUMERIC child should go to 7.
+   Verify the following messages are displayed:
+@)     XmNmodifyVerifyCallback invoked, reason = XmCR_SPIN_PRIOR
+@)     XmNvalueChangedCallback invoked, reason = XmCR_SPIN_PRIOR
+@)     XmNvalueChangedCallback invoked, reason = XmCR_OK
+
+#) Click KUp. The value in the NUMERIC child should go to 4.
+   Verify the following messages are displayed:
+@)     XmNmodifyVerifyCallback invoked, reason = XmCR_SPIN_PRIOR
+@)     XmNvalueChangedCallback invoked, reason = XmCR_SPIN_PRIOR
+@)     XmNvalueChangedCallback invoked, reason = XmCR_OK
+
+#) Click KRight. The value in the NUMERIC child should go to 7.
+   Verify the following messages are displayed:
+@)     XmNmodifyVerifyCallback invoked, reason = XmCR_SPIN_NEXT
+@)     XmNvalueChangedCallback invoked, reason = XmCR_SPIN_NEXT
+@)     XmNvalueChangedCallback invoked, reason = XmCR_OK
+
+#) Click KDown. The value in the NUMERIC child should go to 10.
+   Verify the following messages are displayed:
+@)     XmNmodifyVerifyCallback invoked, reason = XmCR_SPIN_NEXT
+@)     XmNvalueChangedCallback invoked, reason = XmCR_SPIN_NEXT
+@)     XmNvalueChangedCallback invoked, reason = XmCR_OK
+
+C)
+E)
+
+

@@ -1,0 +1,151 @@
+# $XConsortium: ArrowBtn1.scr /main/6 1995/07/17 20:06:02 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+# The button contains an arrow pointing up.   
+#  Move the pointer into the arrow button's window and use   
+#  mouse button 1 to click on the arrow button. It should appear   
+#  to be pressed in, then popped out.  
+#  Use the MINIMIZE button on the window frame to iconify the window.   
+#  Then normalize the window.  
+
+LocatePointer ArrowButton1
+PressMB Btn1
+CompareVisual ArrowButton1
+ReleaseMB Btn1 
+CompareVisual ArrowButton1
+WindowIconify Shell1
+WindowDeiconify Shell1
+Continue
+
+# Arrow is now pointing down. Pull one of the resize handles on  
+#  the bottom of the window way down. The arrow should grow. Resize  
+#  the window to the left. The arrow should grow again.  
+#  Resize the right edge of the window toward the left and the arrow  
+#  should grow smaller. Move the window using the mouse.  
+
+WindowMove Shell1 40 40
+CompareVisual ArrowButton1
+WindowResize Shell1 South 400
+CompareVisual ArrowButton1
+WindowResize Shell1 West 430
+CompareVisual ArrowButton1
+WindowResize Shell1 East 350
+CompareVisual ArrowButton1
+WindowMove Shell1 200 200
+CompareVisual ArrowButton1
+Continue
+
+# Arrow is now pointing left. Size the window as small as possible,  
+#  then resize back to 300 by 300.  
+
+CompareVisual ArrowButton1
+WindowResize Shell1 SouthEast 10 10
+CompareVisual ArrowButton1
+WindowResize Shell1 SouthEast 300 300
+CompareVisual ArrowButton1
+Continue
+
+# Arrow is now pointing right. Resize the window as small as possible  
+#  horizontally.  
+#  Then resize the window to 200 by 200.  
+
+CompareVisual ArrowButton1
+WindowResize Shell1 East 1
+CompareVisual ArrowButton1
+WindowResize Shell1 SouthEast 200 200
+Continue
+
+# Arrow is now pointing up.  
+
+CompareVisual ArrowButton1
+Continue
+
+# An error message appears in the xterm window.  
+
+Continue
+
+# Arrow is now pointing down.  
+
+CompareVisual ArrowButton1
+Continue
+
+# An error message appears in the xterm window.  
+
+Continue
+
+# Click on the arrow button.  
+#  ACTIVATED should appear in the xterm window.  
+
+LocatePointer ArrowButton1
+ClickMB Btn1
+Continue
+
+# Click mouse button one down on arrow button and hold.  
+#  ARMED should appear in xterm window.  
+#  Then release mouse button one.  
+#  ACTIVATED should appear in the xterm window.  
+
+LocatePointer ArrowButton1
+PressMB Btn1
+ReleaseMB Btn1
+Continue
+
+# Press mouse button one down on the arrow button and hold.  
+#  ARMED should appear in the xterm window.  
+#  Release mouse button one.  
+#  ACTIVATED and DISARMED should appear in xterm window.  
+#  Press mouse button one down on the arrow button and hold.  
+#  ARMED should appear in the xterm window.  
+#  Move sprite out of window and release mouse button 1.  
+#  DISARMED should appear in xterm window.  
+
+LocatePointer ArrowButton1
+PressMB Btn1
+ReleaseMB Btn1
+LocatePointer ArrowButton1
+PressMB Btn1
+LocatePointer Shell1 Off
+ReleaseMB Btn1
+Continue
+
+# Press Exit to end the test.  
+#  Goodbye.
+
+Exit

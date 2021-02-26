@@ -1,0 +1,8 @@
+
+#)  This test creates and destroys an XmText and a Scrolled XmText widget 
+prior to realizing them. The test window should display an empty
+Bulletin Board widget.  The test should not core dump as a result
+of destroying either widget.
+
+C)
+E)

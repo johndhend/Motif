@@ -1,0 +1,57 @@
+/* $XConsortium: GC1.dat /main/4 1995/07/17 10:19:07 drk $ */
+/*
+ * @OPENGROUP_COPYRIGHT@
+ * COPYRIGHT NOTICE
+ * Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ * Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ * ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ * the full copyright text.
+ * 
+ * This software is subject to an open license. It may only be
+ * used on, with or for operating systems which are themselves open
+ * source systems. You must contact The Open Group for a license
+ * allowing distribution and sublicensing of this software on, with,
+ * or for operating systems which are not Open Source programs.
+ * 
+ * See http://www.opengroup.org/openmotif/license for full
+ * details of the license agreement. Any use, reproduction, or
+ * distribution of the program constitutes recipient's acceptance of
+ * this agreement.
+ * 
+ * EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ * PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ * WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ * OR FITNESS FOR A PARTICULAR PURPOSE
+ * 
+ * EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ * NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ * INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ * ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ * EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGES.
+*/
+/* 
+ * HISTORY
+*/
+
+!) /* begin test for CR 2761. */
+#) A client containing 3 PushButtons in a Form should have appeared on your
+   screen. The PushButtons should be labeled "Draw Rectangle", 
+   "Erase Rectangle", and "Change Highlight".
+#) Click on "Draw Rectangle". A rectangle will be drawn on the left side of
+   the Form. The lines should be about 5 pixels thick.
+#) Click on "Erase Rectangle". The rectangle will disappear.
+#) Click on "Change Highlight". Note the highlight thickness of this
+   PushButton.
+#) Click on "Draw Rectangle" again. A rectangle should be drawn again. The
+   highlight thickness should continue to be about 5 pixels. If instead, it
+   is equal to the highlight thickness of the "Change Highlight" PushButton,
+   CR 2761 hasn't been fixed.
+!) /* end test for CR 2761. */
+E)   
+
+

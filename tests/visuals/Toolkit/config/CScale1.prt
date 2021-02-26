@@ -1,0 +1,78 @@
+# $XConsortium: CScale1.prt /main/3 1995/07/19 20:42:14 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) LocatePointer Scale1 RScrollBarSlider 
+TRACE:(2) DragSliderValue Up Max 
+TRACE:(3) CompareVisual Scale1 
+TRACE:(4) DragSliderValue Down Min 
+TRACE:(5) CompareVisual Scale1 
+TRACE:(6) DragSliderValue Up 40 
+TRACE:(7) CompareVisual Scale1 
+TRACE:(8) Continue
+TRACE:(9) WindowResize Shell1 SouthEast 250 500
+TRACE:(10) CompareVisual Shell1 
+TRACE:(11) LocatePointer Scale1 RScrollBarSlider 
+TRACE:(12) DragSliderValue Up Max 
+TRACE:(13) CompareVisual Scale1 
+TRACE:(14) DragSliderValue Down Min 
+TRACE:(15) CompareVisual Scale1 
+TRACE:(16) DragSliderValue Up 40 
+TRACE:(17) CompareVisual Scale1 
+TRACE:(18) WindowResize Shell1 SouthEast 150 300
+TRACE:(19) CompareVisual Shell1 
+TRACE:(20) WindowIconify Shell1
+TRACE:(21) WindowDeiconify Shell1
+TRACE:(22) CompareVisual Shell1 
+TRACE:(23) WindowResize Shell1 SouthEast 0 0
+TRACE:(24) CompareVisual Shell1 
+TRACE:(25) WindowResize Shell1 SouthEast 150 300
+TRACE:(26) CompareVisual Shell1 
+TRACE:(27) Continue
+TRACE:(28) LocatePointer Scale1 RScrollBarSlider 
+TRACE:(29) DragSliderValue Left Min 
+TRACE:(30) DragSliderValue Right 1 
+TRACE:(31) CompareVisual Scale1 
+TRACE:(32) DragSliderValue Right 3 
+TRACE:(33) DragSliderValue Right 5 
+TRACE:(34) DragSliderValue Right 7 
+TRACE:(35) CompareVisual Scale1 
+TRACE:(36) DragSliderValue Right 20 
+TRACE:(37) DragSliderValue Right 30 
+TRACE:(38) DragSliderValue Right 40 
+TRACE:(39) CompareVisual Scale1 
+TRACE:(40) Exit
+Exiting Test...Please Standby...

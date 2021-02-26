@@ -1,0 +1,119 @@
+# $XConsortium: PanedWin11.scr /main/4 1995/07/17 20:32:41 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# HISTORY
+#) A client with a Paned Window with three pushbuttons will appear.
+
+CompareVisual PW
+Continue
+
+#) The first button will be unmapped.  It should have disappeared
+#  but it's pane should still be visible and manipulable.
+
+CompareVisual PW
+Continue
+
+#) The first button will be remapped and the second button unmapped.
+
+CompareVisual PW
+Continue
+
+#) The second button will be remapped and the third button unmapped.
+
+CompareVisual PW
+Continue
+
+#) The third button will be remapped and the first button unmanaged.
+#  The pane for the first button will also disappear, leaving two panes
+#  in the paned window.
+
+CompareVisual PW
+Continue
+
+
+#) The first button will be remanaged and the second button unmanaged.
+#  The pane for the first button will reappear, and the second will
+#  disappear, again leaving two panes.
+
+CompareVisual PW
+Continue
+
+#  The second button will be remanaged and the third button unmanaged.
+#  The pane for the second button will reappear, and the third will
+#  disappear, again leaving two panes.
+
+CompareVisual PW
+Continue
+
+#) The third button will be remanaged.
+#  The pane for the third button will reappear, restoring the paned
+#  window to its original three panes.
+
+CompareVisual PW
+Continue
+
+#) The paned window will be destroyed and recreated before the next
+#  series of tests which will involve creating a paned window with
+#  three buttons three times destroying a different button each time.
+
+CompareVisual PW
+Continue
+
+#  The first button will be destroyed.  Its pane will disappear leaving
+#  two panes in the paned window.
+
+CompareVisual PW
+Continue
+
+#) The paned window will be destroyed and recreated with three buttons.
+
+CompareVisual PW
+Continue
+
+#) The second button will be destroyed.  Its pane will disappear leaving
+#  two panes in the paned window.
+
+CompareVisual PW
+Continue
+
+#) The paned window will be destroyed and recreated with three buttons.
+
+CompareVisual PW
+Exit
+
+
+
+
+

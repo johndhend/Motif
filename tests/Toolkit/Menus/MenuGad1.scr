@@ -1,0 +1,219 @@
+# $XConsortium: MenuGad1.scr /main/4 1995/07/17 20:26:45 drk $
+#
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+#
+
+
+# A client window will appear with a menu bar containing three
+#  cascade button gadgets, labeled "Menu1", "Menu2" and "Menu3".
+#  Each of these gadgets will have one character in its label
+#  underlined.
+
+CompareVisual Shell1
+
+# Move the pointer into the client window.
+
+WindowFocus Shell1
+
+# Press and hold MAlt, then press the '1' key.  The
+#  pulldown menu "Menu1" will appear.  The button gadget
+#  "pushbutton1" will appear raised.
+
+ClickKey <Alt> K1
+CompareVisual PullDown1
+
+# Use the KDown and KUp to move between the three
+#  button gadgets in "Menu1".
+
+ClickKey KDown
+ClickKey KDown
+ClickKey KUp
+ClickKey KUp
+
+CompareVisual PullDown1
+
+# Press the 't' key.  The pulldown menu will disappear.
+
+ClickKey Kt
+
+# Click MB1 on "Menu1".  The same pulldown menu will appear,
+#  but there will be a filled square to the left of "toggle1".
+
+LocatePointer Menu1
+ClickMB Btn1
+
+CompareVisual PullDown1
+
+# Press the 't' key.  The pulldown menu will disappear.
+
+ClickKey Kt
+
+Continue
+
+# Move the pointer into the client window.
+
+WindowFocus Shell1
+
+# Press and hold MAlt, then press the '1' key.  "Menu1
+# will appear with NO filled box to the left of "toggle1".
+
+ClickKey <Alt> K1
+CompareVisual Menu1
+
+# Press the 'c' key.  "Menu1A" will appear.
+
+ClickKey Kc
+
+CompareVisual PullDown1A
+
+# Press the return key.  The pulldown menus will disappear.
+
+ClickKey KReturn
+
+# Press and hold KAlt, then press the '1' key.  "Menu1
+# will appear.
+
+WindowFocus Shell1
+ClickKey <Alt> K1
+
+# Press the 'c' key.  "Menu1A" will appear.
+
+ClickKey Kc
+
+CompareVisual PullDown1A
+
+# Press the 'a' key.  The pulldown menus will disappear.
+
+ClickKey Ka
+
+Continue
+
+# Move the pointer into the client window.
+
+WindowFocus Shell1
+
+# Click MB1 on "Menu1".  The pulldown menu "Menu1" will appear
+
+LocatePointer Menu1
+ClickMB Btn1
+
+# Use the KRight and KLeft to move between the menus
+#  "Menu1", "Menu2" and "Menu3".
+
+ClickKey KRight
+ClickKey KRight
+ClickKey KLeft
+ClickKey KLeft
+
+# Click MB1 on "Menu2".  The pulldown menu "Menu2" will appear.
+
+LocatePointer Menu2
+ClickMB Btn1
+
+# Press the 'c' key.  The pulldown menu "Menu2A" will appear.
+
+ClickKey Kc
+
+CompareVisual PullDown2A
+
+# Press the 'b' key.  Both pulldown menus will disappear.
+
+ClickKey Kb
+
+CompareVisual MenuBar1
+
+Continue
+
+# Move the pointer into the client window.
+
+WindowFocus Shell1
+
+# Press and hold MAlt, then press the '2' key.  The menu
+#  "Menu2" will appear.
+
+ClickKey <Alt> K2
+
+CompareVisual PullDown2
+
+# Press KRight three times.  The menus "Menu3",
+#  "Menu3A" and "Menu3AA" will appear.
+
+ClickKey KRight
+ClickKey KRight
+ClickKey KRight
+
+CompareVisual PullDown3AA
+
+# Press KLeft.  The menu "Menu3AA" will disappear.
+
+ClickKey KLeft
+
+# Press KDown twice.  The button gadget "cascade3C
+#  will appear raised.
+
+ClickKey KDown
+ClickKey KDown
+
+CompareVisual cascade3C
+
+# Press KRight.  The menu "Menu3CA" will appear.
+
+ClickKey KRight
+
+CompareVisual cascade3CA
+
+# Press the return key.  The menu "Menu3CAA" will appear.
+
+ClickKey KReturn
+
+CompareVisual PullDown3CAA
+
+# Press KCancel.  The menu "Menu3CAA" will disappear.
+
+ClickKey KCancel
+
+# Press KCancel three more times.  All of the menus will
+#  disappear.
+
+ClickKey KCancel
+ClickKey KCancel
+ClickKey KCancel
+
+CompareVisual MenuBar1
+
+Exit

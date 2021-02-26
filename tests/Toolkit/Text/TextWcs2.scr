@@ -1,0 +1,92 @@
+# $XConsortium: TextWcs2.scr /main/5 1995/07/17 20:43:27 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+#  @) A single line text widget with the string 'Sample Text' will appear in
+#     the test window. The text is red on a white background. 
+#  #) Move the pointer into the text widget and press ANY key. No matter
+#     what key was pressed, an 'A' will appear. 
+LocatePointer Text1 RTextChar 5
+ClickKey Kr
+CompareVisual Text1
+
+#  #) Press another key. This time a 'B' will appear in the text widget. 
+ClickKey Kp
+CompareVisual Text1
+
+#  #) Repeat this cycle and you will print out the entire alphabet. 
+InputString "this text will never appear"
+CompareVisual Text1
+
+#  C)
+Continue
+
+#  #) Move the pointer into the text widget and press ANY key. No matter
+#     what key was pressed, an 'A' followed by a very long series of
+#     digits will appear.
+LocatePointer Text1 RTextChar 5
+ClickKey Kp
+CompareVisual Text1
+
+#  #) Press another key. This time a 'B' followed by a very long series
+#     of digits will appear in the text widget.
+ClickKey Kr
+CompareVisual Text1
+
+#  #) Repeat this cycle ten times and it will print out more letters
+#  of the alphabet each
+#  followed by a long digit series.
+#  (This may be slow to watch - after typing the keys, use osfEndData
+#  to jump to the end of the text and check that it has updated correctly.)
+InputString "no show"
+ClickKey KDown
+ClickKey KDown
+ClickKey KDown
+ClickKey KDown
+ClickKey KDown
+ClickKey KDown
+ClickKey KDown
+ClickKey KDown
+ClickKey KDown
+CompareVisual Text1
+ClickKey KEndData
+CompareVisual Text1
+
+#  E)
+Exit

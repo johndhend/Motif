@@ -1,0 +1,54 @@
+
+
+#) This is the PIProto test.
+
+C)
+
+
+#) There should be two pushbutton windows displayed.  The first should
+   have a yellow background and red letters that say \"TEST 1 BTN 1\".
+   The second should have a red background with yellow letters that say
+   \"BTN 1 TEST 2\".
+
+#) Pick the f.kill option (\"Close\") off the menu in the border of the 
+   first window. The window should not actually close, but instead a 
+   message should appear on the standard output saying 
+   "Close window message sent."
+
+C)
+
+
+#) The first window should remained unchanged. The second window with
+   the yellow on red background should unmap and remap. Also, you
+   should see a message on the term window saying 
+   "Motif Message message sent."
+
+#) The second window with the yellow on red background should now have
+   a new item on it's window menu. The new item should be labelled 
+   \"Send_Message\".
+
+#) Pick \"Send_Message\" from the menu of second window, you should
+   see two messages appear on the standard output. The first should
+   say "Motif Message callback hit.". The second message should say
+   "Motif Message message sent."
+
+C)
+
+
+
+
+#) The first window should remained unchanged. The second window should
+   now have a second and a third new item on its window menu. The second
+   item should be labelled \"Send_Message2\". The third item should be
+   labelled \"Send_Message3\" but it should be grayed out and inaccessible.
+
+#) If, by error, the third new item is not grayed-out, select it and see 
+   two messages appear on the standard output.
+
+#) Also, select the second new item \"Send_Message2\" again, and see
+   two more messages appear on the standard output.
+
+C)
+
+
+E)

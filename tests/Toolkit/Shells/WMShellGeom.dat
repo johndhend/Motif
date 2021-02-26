@@ -1,0 +1,106 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: WMShellGeom.dat /main/5 1995/07/13 19:21:29 drk $"
+*/
+
+#) This is a test testing the setting and inheriting of all the
+   geometry related WMShell resources.
+
+#) There should be a control panel shown with all the resources available
+   to be set by the user. 
+
+C)
+
+#) There should be a new option menu in the control panel with the label
+   "Apply Changes To". Also, the option menu should have "ApplicationShell",
+   as the selected item,  with "TopShell", and "DialogShell" items being 
+   insensitive.
+
+#) Also, a new window with title "ApplicationShell", containing a pushbutton
+   should appear on the screen.
+
+#) To change the WMShell resources for the ApplicationShell, modify the
+   various scale values, and then click on "ApplicationShell" item of the
+   option menu. The ApplicationShell window should unmap and remap. 
+   Depending on the resources you have changed, you should be able to check
+   their new values by performing various window manager operations on
+   the ApplicationShell window. (for example, with no iconBox, if you have 
+   set new values for iconX and/or iconY, you should be able to check it 
+   by iconifying the window, and noting the position of the icon on the 
+   screen.)
+
+C)
+
+#) There should now be a new window with title "TopLevelShell", containing 
+   a pushbutton.Also, the item "TopLevelShell" in the option menu should 
+   be sensitive now.
+
+#) To change the WMShell resources for the TopLevelShell, modify the
+   various scale values, and then click on "TopLevelShell" item of the
+   option menu. The TopLevelShell window should unmap and remap. 
+   Depending on the resources you have changed, you should be able to check
+   their new values by performing various window manager operations on
+   the TopLevelShell window. (for example, with no iconBox, if you have 
+   set new values for iconX and/or iconY, you should be able to check it 
+   by iconifying the window, and noting the position of the icon on the 
+   screen.)
+
+#) To apply the changes to both the shells, select "All Shells" from the
+   option menu.
+
+C)
+
+#) There should now be a modeless dialog box displayed. Also, the item
+   "DialogShell" in the option menu should be sensitive now.
+
+#) To change the WMShell resources for the DialogShell, modify the
+   various scale values, and then click on "DialogShell" item of the
+   option menu. The DialogShell window should unmap and remap. 
+   Depending on the resources you have changed, you should be able to check
+   their new values by performing various window manager operations on
+   the DialogShell window. 
+
+#) To apply the changes to all the three shells, select "All Shells" from 
+   the option menu.
+
+C)
+
+
+E)

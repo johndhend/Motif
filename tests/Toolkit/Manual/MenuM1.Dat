@@ -1,0 +1,14 @@
+
+#) A client window will appear with a menubar widget and a row
+   column widget containing six pushbuttons. 
+#) Give focus to the client window. 
+#) Click and hold down MB1 on "pdbtn2" in the menubar.  A pulldown
+   widget with six option buttons will appear.  Slide the pointer
+   down to any of these options and release MB1. 
+#) Again, click and hold down MB1 on "pdbtn2".  Note that the
+   cursor has changed to a pixmap corresponding to the option button
+   you selected.  A filled box will appear next to the option button
+   you selected. 
+#) Repeat the above to view all of the different cursor pixmaps. 
+C)
+E)

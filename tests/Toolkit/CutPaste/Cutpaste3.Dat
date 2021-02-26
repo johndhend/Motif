@@ -1,0 +1,26 @@
+
+#) A client window will appear with a shell containing three
+   pushbuttons, labeled \"Copy From Text1\", \"Copy From Text2
+   and \"Paste Contents\", and three text widgets.  The first
+   text widget will contain the string \"Test Text1\", and the
+   second will contain the string \"Test Text2\". 
+#) Select all of the text in the first text widget by placing the
+   cursor to the left of the text, pressing MB1 and dragging the
+   cursor through all of the text. 
+#) Select the \"Copy From Text1\" pushbutton with MB1.  The third
+   text widget will contain the string \"Copied to Clipboard\". 
+#) Select the \"Paste Contents\" pushbutton with MB1.  The third
+   text widget will contain the string \"Test Text1\". 
+C)
+
+#) Select all of the text in the second text widget. 
+#) Select the \"Copy From Text2\" pushbutton with MB1.  The third
+   text widget will contain the string \"Copied to Clipboard\". 
+#) Select the \"Paste Contents\" pushbutton with MB1.  The third
+   text widget will contain the string \"Test Text2\". 
+#) Select the word \"Text1\" in the first text widget. 
+#) Select the \"Copy From Text1\" pushbutton with MB1.  The third
+   text widget will contain the string \"Copied to Clipboard\". 
+#) Select the \"Paste Contents\" pushbutton with MB1.  The third
+   text widget will contain the string \"Text1\". 
+E)

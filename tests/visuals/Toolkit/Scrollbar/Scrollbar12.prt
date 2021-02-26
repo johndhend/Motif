@@ -1,0 +1,131 @@
+# $XConsortium: Scrollbar12.prt /main/3 1995/07/19 20:32:28 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) LocatePointer Scrollbar1 RSlider 
+TRACE:(2) DragXYRelative 542 100 50 
+TRACE:(3) CompareVisual Scrollbar1 
+TRACE:(4) LocatePointer Scrollbar1 RSlider 
+TRACE:(5) DragXYRelative 542 -100 -50 
+TRACE:(6) CompareVisual Scrollbar1 
+TRACE:(7) Continue
+TRACE:(8) LocatePointer Scrollbar1 RSlider 
+TRACE:(9) DragXYRelative 542 20 100 
+TRACE:(10) CompareVisual Scrollbar1 
+TRACE:(11) LocatePointer Scrollbar1 RSlider 
+TRACE:(12) DragXYRelative 542 -20 -50 
+TRACE:(13) CompareVisual Scrollbar1 
+TRACE:(14) LocatePointer Scrollbar1 RSlider 
+TRACE:(15) DragXYRelative 542 30 50 
+TRACE:(16) CompareVisual Scrollbar1 
+TRACE:(17) LocatePointer Scrollbar1 RSlider 
+TRACE:(18) DragXYRelative 542 -30 50 
+TRACE:(19) CompareVisual Scrollbar1 
+TRACE:(20) Continue
+TRACE:(21) LocatePointer Scrollbar1 RSlider 
+TRACE:(22) DragXYRelative 542 50 100 
+TRACE:(23) CompareVisual Scrollbar1 
+TRACE:(24) LocatePointer Scrollbar1 RSlider 
+TRACE:(25) DragXYRelative 542 85 50 
+TRACE:(26) CompareVisual Scrollbar1 
+TRACE:(27) LocatePointer Scrollbar1 RSlider 
+TRACE:(28) DragXYRelative 542 -50 -100 
+TRACE:(29) CompareVisual Scrollbar1 
+TRACE:(30) LocatePointer Scrollbar1 RSlider 
+TRACE:(31) DragXYRelative 542 -85 -50 
+TRACE:(32) CompareVisual Scrollbar1 
+TRACE:(33) Continue
+TRACE:(34) LocatePointer Scrollbar1 RSlider 
+TRACE:(35) DragXYRelative 542 75 100 
+TRACE:(36) CompareVisual Scrollbar1 
+TRACE:(37) LocatePointer Scrollbar1 RSlider 
+TRACE:(38) DragXYRelative 542 135 50 
+TRACE:(39) CompareVisual Scrollbar1 
+TRACE:(40) LocatePointer Scrollbar1 RSlider 
+TRACE:(41) DragXYRelative 542 -75 -100 
+TRACE:(42) CompareVisual Scrollbar1 
+TRACE:(43) LocatePointer Scrollbar1 RSlider 
+TRACE:(44) DragXYRelative 542 -135 -50 
+TRACE:(45) CompareVisual Scrollbar1 
+TRACE:(46) Continue
+TRACE:(47) LocatePointer Scrollbar1 RSlider 
+TRACE:(48) DragXYRelative 542 50 100 
+TRACE:(49) CompareVisual Scrollbar1 
+TRACE:(50) LocatePointer Scrollbar1 RSlider 
+TRACE:(51) DragXYRelative 542 -50 -100 
+TRACE:(52) CompareVisual Scrollbar1 
+TRACE:(53) Continue
+TRACE:(54) LocatePointer Scrollbar1 RSlider 
+TRACE:(55) DragXYRelative 542 100 -20 
+TRACE:(56) CompareVisual Scrollbar1 
+TRACE:(57) LocatePointer Scrollbar1 RSlider 
+TRACE:(58) DragXYRelative 542 -50 20 
+TRACE:(59) CompareVisual Scrollbar1 
+TRACE:(60) LocatePointer Scrollbar1 RSlider 
+TRACE:(61) DragXYRelative 542 50 -50 
+TRACE:(62) CompareVisual Scrollbar1 
+TRACE:(63) LocatePointer Scrollbar1 RSlider 
+TRACE:(64) DragXYRelative 542 -50 50 
+TRACE:(65) CompareVisual Scrollbar1 
+TRACE:(66) Continue
+TRACE:(67) LocatePointer Scrollbar1 RSlider 
+TRACE:(68) DragXYRelative 542 -50 -50 
+TRACE:(69) CompareVisual Scrollbar1 
+TRACE:(70) LocatePointer Scrollbar1 RSlider 
+TRACE:(71) DragXYRelative 542 50 50 
+TRACE:(72) CompareVisual Scrollbar1 
+TRACE:(73) LocatePointer Scrollbar1 RSlider 
+TRACE:(74) DragXYRelative 542 -25 -85 
+TRACE:(75) CompareVisual Scrollbar1 
+TRACE:(76) LocatePointer Scrollbar1 RSlider 
+TRACE:(77) DragXYRelative 542 25 85 
+TRACE:(78) CompareVisual Scrollbar1 
+TRACE:(79) Continue
+TRACE:(80) LocatePointer Scrollbar1 RSlider 
+TRACE:(81) DragXYRelative 542 -100 -75 
+TRACE:(82) CompareVisual Scrollbar1 
+TRACE:(83) LocatePointer Scrollbar1 RSlider 
+TRACE:(84) DragXYRelative 542 100 75 
+TRACE:(85) CompareVisual Scrollbar1 
+TRACE:(86) LocatePointer Scrollbar1 RSlider 
+TRACE:(87) DragXYRelative 542 -100 -130 
+TRACE:(88) CompareVisual Scrollbar1 
+TRACE:(89) LocatePointer Scrollbar1 RSlider 
+TRACE:(90) DragXYRelative 542 100 130 
+TRACE:(91) CompareVisual Scrollbar1 
+TRACE:(92) Continue
+TRACE:(93) Exit
+Exiting Test...Please Standby...

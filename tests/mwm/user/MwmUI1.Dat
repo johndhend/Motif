@@ -1,0 +1,45 @@
+#) This is the MwmUI1 test.
+
+C)
+
+#) You should see the string "THIS IS JUST A TEST STRING" in 9x15bold
+   font.
+
+C)
+
+#) You should see the string "THIS IS JUST A TEST STRING" in 12x24
+   font.
+
+#) Move the MwmUI1 window to -200, 200.
+
+C)
+
+#) If the MwmUI1 window has disappeared from the display, either the
+   enhancement to keep the window always visible on the screen has not
+   been incorporated, or the added enhancement is buggy (PIR2939).
+
+#) If the window is visible, you should see the same string
+   "THIS IS JUST A TEST STRING" in 6x12 font.
+
+C)
+
+#) Irrespective of whether the window was visible with the previous
+   instruction panel, you should now see the same string 
+   "THIS IS JUST A TEST STRING" in courb24 (courier-bold-24) font.
+
+C)
+
+#) Resize the window to 500x500.
+
+#) Move the window over so as to cover the iconBox.
+
+#) Iconify the window.
+
+#) Deiconify the window.
+
+#) The window should get focus. If the window does not get focus until
+   you move out and back into the window, PIR4141 has not been fixed.
+
+C)
+
+E)

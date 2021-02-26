@@ -1,0 +1,1 @@
+XmStringWidth.3

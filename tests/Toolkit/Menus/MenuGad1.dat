@@ -1,0 +1,125 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: MenuGad1.dat /main/5 1995/07/13 18:48:32 drk $"
+*/
+
+
+#) A client window will appear with a menu bar containing three
+   cascade button gadgets, labeled \"Menu1\", \"Menu2\" and \"Menu3\".
+   Each of these gadgets will have one character in its label
+   underlined.
+
+#) Move the pointer into the client window.
+
+#) Press and hold MAlt, then press the '1' key.  The
+   pulldown menu \"Menu1\" will appear.  The button gadget
+   \"pushbutton1\" will appear raised.
+
+#) Use the KDown and KUp to move between the three
+   button gadgets in \"Menu1\".
+
+#) Press the 't' key.  The pulldown menu will disappear.
+
+#) Click MB1 on \"Menu1\".  The same pulldown menu will appear,
+   but there will be a filled square to the left of \"toggle1\".
+
+#) Press the 't' key.  The pulldown menu will disappear.
+
+C)
+
+
+#) Move the pointer into the client window.
+
+#) Press and hold MAlt, then press the '1' key.  \"Menu1
+   will appear with NO filled box to the left of \"toggle1\".
+
+#) Press the 'c' key.  \"Menu1A\" will appear.
+
+#) Press the return key.  The pulldown menus will disappear.
+
+#) Press and hold KAlt, then press the '1' key.  \"Menu1
+   will appear.
+
+#) Press the 'c' key.  \"Menu1A\" will appear.
+
+#) Press the 'a' key.  The pulldown menus will disappear.
+
+C)
+
+
+#) Move the pointer into the client window.
+
+#) Click MB1 on \"Menu1\".  The pulldown menu \"Menu1\" will appear
+
+#) Use the KRight and KLeft to move between the menus
+   \"Menu1\", \"Menu2\" and \"Menu3\".
+
+#) Click MB1 on \"Menu2\".  The pulldown menu \"Menu2\" will appear.
+
+#) Press the 'c' key.  The pulldown menu \"Menu2A\" will appear.
+
+#) Press the 'b' key.  Both pulldown menus will disappear.
+
+C)
+
+
+#) Move the pointer into the client window.
+
+#) Press and hold MAlt, then press the '2' key.  The menu
+   \"Menu2\" will appear.
+
+#) Press KRight three times.  The menus \"Menu3\",
+   \"Menu3A\" and \"Menu3AA\" will appear.
+
+#) Press KLeft.  The menu \"Menu3AA\" will disappear.
+
+#) Press KDown twice.  The button gadget \"cascade3C
+   will appear raised.
+
+#) Press KRight.  The menu \"Menu3CA\" will appear.
+
+#) Press the return key.  The menu \"Menu3CAA\" will appear.
+
+#) Press KCancel.  The menu \"Menu3CAA\" will disappear.
+
+#) Press KCancel three more times.  All of the menus will
+   disappear.
+
+E)

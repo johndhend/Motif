@@ -1,0 +1,20 @@
+#ifndef XmClientLibs
+#define XmClientLibs $(XMLIB) $(XTOOLLIB) $(XLIB)
+#endif
+
+/* #include "../demos.cf" missing */
+
+      INCLUDES = -I. EPakIncludes
+
+SRCS = dropdown.c
+OBJS = dropdown.o
+LOCAL_LIBRARIES = EPakClientLibs
+
+
+NormalLibraryObjectRule()
+
+MSimpleProgramTarget(dropdown)
+
+InstallProgram(dropdown,$(BINDIR))
+
+DependTarget()

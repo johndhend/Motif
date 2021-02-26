@@ -1,0 +1,249 @@
+# $XConsortium: Notebook5.scr /main/4 1995/07/17 20:32:10 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF).  See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# This test enables you to test the basic geometry behavior of Notebook.
+# There will be a Notebook widget on your screen, and a control panel
+# which lets you change various geometry settings. There will also
+# be a scrolled list which contains a list of widgets in the test -
+# this  is to let you set the resources on the widget of choice.
+
+
+WindowMove ScrollList1 800 600
+
+
+
+CompareVisual Notebook
+Continue
+
+#  Set the 'Set Width' scale to 400.
+#  Set the 'Set Height' scale to 400.
+#  Click on the 'Parent' item in the List. 
+#  The width and height of the parent Frame should both be set to 400.
+
+
+WindowRaise GeoShell1 
+LocatePointer GeoScale0 RScaleSlider
+DragSliderValue Right 400
+LocatePointer GeoScale1 RScaleSlider
+DragSliderValue Right 400
+LocatePointer ScrollList1 RListItem 1
+ClickMB Btn1
+
+WindowRaise Notebook
+CompareVisual Notebook
+Continue
+
+#) Set the 'Set Width' scale to 500.
+#) Set the 'Set Height' scale to 500.
+#) Click on the 'Notebook' item in the List. 
+#) The width and height of the Notebook should both be set to 500.
+
+
+WindowRaise GeoShell1 
+LocatePointer GeoScale0 RScaleSlider
+DragSliderValue Right 500
+LocatePointer GeoScale1 RScaleSlider
+DragSliderValue Right 500
+LocatePointer ScrollList1 RListItem 2
+ClickMB Btn1
+
+WindowRaise Notebook
+CompareVisual Notebook
+Continue
+
+#) Set the 'Set Width' scale to 600.
+#) Set the 'Set Height' scale to 600.
+#) Click on the 'Frame1' item in the List. 
+#) The Notebook should resize itself larger to accomodate the new width and
+#) height of the Frame1 page.
+
+WindowRaise GeoShell1 
+LocatePointer GeoScale0 RScaleSlider
+DragSliderValue Right 600
+LocatePointer GeoScale1 RScaleSlider
+DragSliderValue Right 600
+LocatePointer ScrollList1 RListItem 3
+ClickMB Btn1
+
+WindowRaise Notebook
+CompareVisual Notebook
+
+Continue
+
+
+#) Set the 'Set Width' scale to 500.
+#) Set the 'Set Height' scale to 500.
+#) Click on the 'Parent' item in the List. 
+#) The width and height of the parent Frame should both be set to 500.
+
+WindowRaise GeoShell1 
+LocatePointer GeoScale0 RScaleSlider
+DragSliderValue Left 500
+LocatePointer GeoScale1 RScaleSlider
+DragSliderValue Left 500 
+LocatePointer ScrollList1 RListItem 1
+
+WindowRaise Notebook
+CompareVisual Notebook
+ClickMB Btn1
+Continue
+
+#) Set the 'Set Width' scale to 400.
+#) Set the 'Set Height' scale to 400.
+#) Click on the 'Notebook' item in the List. 
+#) The width and height of the Notebook should both be set to 400.
+
+WindowRaise GeoShell1 
+LocatePointer GeoScale0 RScaleSlider
+DragSliderValue Left 400
+LocatePointer GeoScale1 RScaleSlider
+DragSliderValue Left 400
+LocatePointer ScrollList1 RListItem 2
+
+WindowRaise Notebook
+CompareVisual Notebook
+ClickMB Btn1
+Continue
+
+#) Set the 'Set Width' scale to 300.
+#) Set the 'Set Height' scale to 300.
+#) Click on the 'Frame1' item in the List. 
+#) The Notebook should resize itself smaller to accomodate the new width and
+#) height of the Frame1 page.
+
+WindowRaise GeoShell1 
+LocatePointer GeoScale0 RScaleSlider
+DragSliderValue Left 300
+LocatePointer GeoScale1 RScaleSlider
+DragSliderValue Left 300
+LocatePointer ScrollList1 RListItem 3
+
+WindowRaise Notebook
+CompareVisual Notebook
+ClickMB Btn1
+Continue
+
+#  Set the 'Set y' scale to about 600.
+#  Click on the 'BBKid1' item in the ScrolledList. This will set the resource
+#  on one of the children of page 5, which is a BulletinBoard.
+#  The Notebook should increase in width to accomodate this change in y 
+#  position.
+#  Set the 'Set y' scale to about 400.
+#  Again, click on the  'BBKid1' item in the ScrolledList. 
+#  The Notebook should decrese in height. There should be no problem redrawing
+#  the back pages.
+
+
+
+
+WindowRaise GeoShell1 
+LocatePointer GeoScale3 RScaleSlider
+DragSliderValue Right 600
+LocatePointer ScrollList1 RListItem 8
+ClickMB Btn1
+
+WindowRaise Notebook
+CompareVisual Notebook
+
+WindowRaise GeoShell1 
+LocatePointer GeoScale3 RScaleSlider
+DragSliderValue Left 300
+LocatePointer ScrollList1 RListItem 8
+ClickMB Btn1
+
+WindowRaise Notebook
+CompareVisual Notebook
+Continue
+
+
+
+#) Type 'resizable' into the 'Resource Name' TextField. Hit Return.
+#) Type 'False' into the 'Resource Value' TextField. Hit Return.
+#) Click on the 'Frame1' item in the ScrolledList. This will set the resizable
+#) resource for Page1 to False.
+#) Set the 'Set Width' scale to 500.
+#) Set the 'Set Height' scale to 500.
+#) Click on the 'Frame1' item in the List. 
+#) There should be no change in the width and height of the Notebook
+
+
+WindowRaise GeoShell1 
+
+
+LocatePointer ResourceText
+ClickMB Btn1
+InputString "resizable"
+ClickKey KEnter
+
+
+
+LocatePointer ValueText
+ClickMB Btn1
+InputString "False"
+ClickKey KEnter
+
+
+
+LocatePointer GeoScale0 RScaleSlider
+DragSliderValue Right 500
+LocatePointer GeoScale1 RScaleSlider
+DragSliderValue Right 500
+LocatePointer ScrollList1 RListItem 3
+ClickMB Btn1
+
+
+WindowRaise Notebook
+CompareVisual Notebook
+
+Continue
+
+
+Exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+

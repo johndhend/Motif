@@ -1,0 +1,1 @@
+XmTextGetSelectionPosition.3

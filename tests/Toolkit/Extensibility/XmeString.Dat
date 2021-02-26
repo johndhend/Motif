@@ -1,0 +1,38 @@
+
+	This test confirms several aspects of XmStrings as they are used 
+	in the Extensibility functions.
+#)
+	The first case checks that a localized string is created and 
+	displayed.  The string displayed on the window should read
+	"Test String".  Make sure that no error messages are printed in 
+	the xterm window.
+C)
+	This test confirms the proper displaying of a reverse direction
+	string.  The word "Reverse" is used and thus should appear as
+	"esreveR".
+C)
+	This test validates the encoding value of the current locale.
+	Make sure that no error messages are printed in the xterm window.
+C)
+	This test checks the XmeGetNextCharacter function.  This 
+	function is used while parsing a string. This instance
+	works on the string "Shoot Out, okay" the function uses a key
+	character (in this case the letter 'o') and returns the 
+	following character.  So the string displayed should read
+	"Shot Out, kay".
+C)
+	This test validates the operation of the XmeGetDirection function
+	used during parsing a string.  The test will check the value of
+	the retuned XmString component, which should be a directional
+	XmString component.
+
+#)	Because a direction change has no text the widget should display
+	any characters. 
+
+#)	Make sure that no error messages are printed in the xterm window.
+
+C)
+	 Press Exit to end the test.  
+         Goodbye.
+E)
+

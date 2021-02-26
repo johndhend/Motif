@@ -1,0 +1,1 @@
+XmFontListRemoveEntry.3

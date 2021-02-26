@@ -1,0 +1,184 @@
+# $XConsortium: PanedWin7.prt /main/3 1995/07/19 20:26:17 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+76X31
+TRACE:(1) CompareVisual PW 
+TRACE:(2) Continue
+106X31
+TRACE:(3) CompareVisual PW 
+TRACE:(4) Continue
+76X106
+TRACE:(5) CompareVisual PW 
+TRACE:(6) Continue
+106X106
+TRACE:(7) CompareVisual PW 
+TRACE:(8) Continue
+76X31
+TRACE:(9) CompareVisual PW 
+TRACE:(10) Continue
+106X31
+TRACE:(11) CompareVisual PW 
+TRACE:(12) Continue
+76X106
+TRACE:(13) CompareVisual PW 
+TRACE:(14) Continue
+106X106
+TRACE:(15) CompareVisual PW 
+TRACE:(16) Continue
+76X31
+TRACE:(17) CompareVisual PW 
+TRACE:(18) Continue
+106X31
+TRACE:(19) CompareVisual PW 
+TRACE:(20) Continue
+76X106
+TRACE:(21) CompareVisual PW 
+TRACE:(22) Continue
+106X106
+TRACE:(23) CompareVisual PW 
+TRACE:(24) Continue
+76X31
+TRACE:(25) CompareVisual PW 
+TRACE:(26) Continue
+106X31
+TRACE:(27) CompareVisual PW 
+TRACE:(28) Continue
+76X106
+TRACE:(29) CompareVisual PW 
+TRACE:(30) Continue
+106X106
+TRACE:(31) CompareVisual PW 
+TRACE:(32) Continue
+76X64
+TRACE:(33) CompareVisual PW 
+TRACE:(34) Continue
+106X64
+TRACE:(35) CompareVisual PW 
+TRACE:(36) Continue
+76X214
+TRACE:(37) CompareVisual PW 
+TRACE:(38) Continue
+106X214
+TRACE:(39) CompareVisual PW 
+TRACE:(40) Continue
+76X64
+TRACE:(41) CompareVisual PW 
+TRACE:(42) Continue
+106X64
+TRACE:(43) CompareVisual PW 
+TRACE:(44) Continue
+76X214
+TRACE:(45) CompareVisual PW 
+TRACE:(46) Continue
+106X214
+TRACE:(47) CompareVisual PW 
+TRACE:(48) Continue
+76X64
+TRACE:(49) CompareVisual PW 
+TRACE:(50) Continue
+106X64
+TRACE:(51) CompareVisual PW 
+TRACE:(52) Continue
+76X214
+TRACE:(53) CompareVisual PW 
+TRACE:(54) Continue
+106X214
+TRACE:(55) CompareVisual PW 
+TRACE:(56) Continue
+76X64
+TRACE:(57) CompareVisual PW 
+TRACE:(58) Continue
+106X64
+TRACE:(59) CompareVisual PW 
+TRACE:(60) Continue
+76X214
+TRACE:(61) CompareVisual PW 
+TRACE:(62) Continue
+106X214
+TRACE:(63) CompareVisual PW 
+TRACE:(64) Continue
+76X97
+TRACE:(65) CompareVisual PW 
+TRACE:(66) Continue
+106X97
+TRACE:(67) CompareVisual PW 
+TRACE:(68) Continue
+76X322
+TRACE:(69) CompareVisual PW 
+TRACE:(70) Continue
+106X322
+TRACE:(71) CompareVisual PW 
+TRACE:(72) Continue
+76X97
+TRACE:(73) CompareVisual PW 
+TRACE:(74) Continue
+106X97
+TRACE:(75) CompareVisual PW 
+TRACE:(76) Continue
+76X322
+TRACE:(77) CompareVisual PW 
+TRACE:(78) Continue
+106X322
+TRACE:(79) CompareVisual PW 
+TRACE:(80) Continue
+76X97
+TRACE:(81) CompareVisual PW 
+TRACE:(82) Continue
+106X97
+TRACE:(83) CompareVisual PW 
+TRACE:(84) Continue
+76X322
+TRACE:(85) CompareVisual PW 
+TRACE:(86) Continue
+106X322
+TRACE:(87) CompareVisual PW 
+TRACE:(88) Continue
+76X97
+TRACE:(89) CompareVisual PW 
+TRACE:(90) Continue
+106X97
+TRACE:(91) CompareVisual PW 
+TRACE:(92) Continue
+76X322
+TRACE:(93) CompareVisual PW 
+TRACE:(94) Continue
+106X322
+TRACE:(95) CompareVisual PW 
+TRACE:(96) Continue
+TRACE:(97) CompareVisual Shell1 
+TRACE:(98) Exit
+Exiting Test...Please Standby...

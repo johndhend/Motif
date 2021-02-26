@@ -1,0 +1,12 @@
+XCOMM $XFree86: xc/doc/man/Imakefile,v 1.10 2006/01/09 14:56:17 dawes Exp $
+
+#define IHaveSubdirs
+#define PassCDebugFlags
+
+SUBDIRS = man1  man3 man4 man5
+
+all::
+
+depend::
+
+MakeSubdirs($(SUBDIRS))

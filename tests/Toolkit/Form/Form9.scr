@@ -1,0 +1,93 @@
+# $XConsortium: Form9.scr /main/4 1995/07/17 20:20:54 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+# A client with a form should appear. The form should be about
+# 200x200 pixels and have a scrollbar along the right edge
+# extending halfway down the form.  It should also have a
+# scrollbar along the bottom edge extending to the x location
+# of the vertical scrollbar. 
+# Resize the client window several times.  You should see the
+# vertical scrollbar remain on the right edge of the form and
+# maintain its original height.  The horizontal scrollbar should
+# remain on the bottom edge of the form, but grow horizontally
+# so that its right edge always extends to the x location of the
+# vertical scrollbar. 
+# Press the osfHelp key.
+# Iconify and Normalize the client.  The scrollbars should reappear
+# when the client is normalized. 
+
+
+
+CompareVisual form
+WindowResize Shell1 SouthEast 400 300
+CompareVisual form
+WindowResize Shell1 South 400
+CompareVisual form
+WindowResize Shell1 East 400
+CompareVisual form
+WindowFocus form
+ClickKey KHelp
+WindowIconify Shell1
+WindowDeiconify Shell1
+CompareVisual form
+Continue
+
+
+# A client with a form should appear. The form should
+# contain a scrollbar. 
+# Resize the client window. You should see the scrollbar
+# grow to the size of the window minus some horizontal and
+# vertical spacing.
+# Iconify and Normalize the client window. You should see
+# the scollbar. 
+
+
+CompareVisual form
+WindowResize Shell1 SouthEast 400 300
+CompareVisual form
+WindowResize Shell1 South 400
+CompareVisual form
+WindowResize Shell1 East 400
+CompareVisual form
+WindowIconify Shell1
+WindowDeiconify Shell1
+CompareVisual form
+
+Exit

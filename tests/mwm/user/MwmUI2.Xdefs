@@ -1,0 +1,167 @@
+! @OPENGROUP_COPYRIGHT@
+! COPYRIGHT NOTICE
+! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+! ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+! the full copyright text.
+! 
+! This software is subject to an open license. It may only be
+! used on, with or for operating systems which are themselves open
+! source systems. You must contact The Open Group for a license
+! allowing distribution and sublicensing of this software on, with,
+! or for operating systems which are not Open Source programs.
+! 
+! See http://www.opengroup.org/openmotif/license for full
+! details of the license agreement. Any use, reproduction, or
+! distribution of the program constitutes recipient's acceptance of
+! this agreement.
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+! OR FITNESS FOR A PARTICULAR PURPOSE
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+! POSSIBILITY OF SUCH DAMAGES.
+! 
+! HISTORY
+
+!defaults file for MwmUI2.c
+
+!*************************************!
+!Coloring Resources
+!*************************************!
+
+! Windows, icons, menus
+
+Mwm*activeBackground : black
+Mwm*activeForeground : white
+Mwm*activeBottomShadowColor : yellow
+Mwm*activeTopShadowColor : purple
+Mwm*activeBackgroundPixmap : slant_right
+
+
+Mwm*background : white
+Mwm*foreground : black
+Mwm*bottomShadowColor : orange
+Mwm*topShadowColor : aquamarine
+Mwm*backgroundPixmap : vertical
+
+Mwm*cleanText : False
+
+
+!*************************************!
+! Window Decorations
+!*************************************!
+
+Mwm*clientDecoration : all
+Mwm*clientFunctions : all
+
+
+!*************************************!
+! Focus Policies
+!*************************************!
+
+
+Mwm*autoKeyFocus : True
+Mwm*colormapFocusPolicy : explicit
+Mwm*deiconifyKeyFocus : True
+Mwm*enforceKeyFocus : True
+Mwm*focusAutoRaise :True
+Mwm*keyboardFocusPolicy : explicit
+Mwm*passButtons :True
+
+
+
+!*************************************!
+! Controlling Windows
+!*************************************!
+
+! bindings
+
+Mwm*buttonBindings : MwmUI2ButtonBindings
+Mwm*keyBindings : MwmUI2KeyBindings
+
+
+! font
+
+Mwm*fontList : 6 x 12
+
+
+
+!Window Menus
+
+Mwm*wMenuButtonClick  :True
+Mwm*wMenuButtonClick2 :True
+
+!Configuration file
+
+Mwm*configFile : MwmUI2.mwmrc
+
+
+!*************************************!
+!Controlling Window Size and Position
+!*************************************!
+
+! Size Resources
+
+
+Mwm*frameBorderWidth :20
+Mwm*limitResize : True
+Mwm*TestWindow1.maximumClientSize : 300x300
+Mwm*maximumMaximumSize : 1000x1000
+
+
+
+! Position Resources
+
+Mwm*clientAutoPlace : False
+Mwm*interactivePlacement : True
+Mwm*moveThreshold : 100
+Mwm*showFeedback : all
+
+
+!*************************************!
+!Configuring icons
+!*************************************!
+
+
+Mwm*iconAutoPlace : True
+Mwm*iconPlacement : bottom right
+Mwm*iconDecoration :activelabel label image
+Mwm*iconClick : True
+Mwm*useClientIcon : True
+Mwm*TestWindow2*iconImage : ../../Toolkit/bitmaps/smiley.bmp
+Mwm*TestWindow2*iconImageForeground : black
+Mwm*TestWindow2*iconImageBackground : white
+Mwm*TestWindow2*iconImageTopShadowColor : blue
+Mwm*TestWindow2*iconImageBottomShadowColor : red
+Mwm*TestWindow2*iconImageTopShadowPixmap : slant_left
+Mwm*TestWindow2*iconImageBottomShadowPixmap : slant_right
+
+
+
+!*************************************!
+!Configuring the icon box
+!*************************************!
+
+Mwm*useIconBox :False
+
+
+! End of mwm defaults file
+
+
+
+
+
+
+
+

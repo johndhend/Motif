@@ -1,0 +1,112 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$TOG: PIHints.dat /main/7 1997/04/17 12:41:15 dbl $"
+*/
+
+
+#) This is the PIHints test.
+
+#) The window has been mapped and remapped
+C)
+
+
+#) There should now be a pushbutton displayed in a window that shows
+   a yellow background and red letters that say \"TEST 1 BTN 1\".
+
+#) The minimum size of the window should be 200x200 and the maximun 
+   size, 380x380. Try resizing the window to confirm this.
+
+C)
+
+#) There should also be a new icon displayed near the rest of the icons
+   with a special pixmap that says \"PI HINTS\".  The name of the icon 
+   and its associated window is \"Hints Window\".
+
+#) Deiconify the icon, the body of the window should be solid white.
+
+C)
+
+
+#) The pushbutton window should now have a minimum aspect ratio of 2:1
+   and a maximum aspect ratio of 4:1. Verify this by resizing the window
+   to various sizes.
+
+#) The HINTS WINDOW icon should have moved to the upper left corner of the 
+   screen(if no iconBox present), - position 20x20 (or as close as the 
+   grid allows), and the "PI HINTS" pixmap replaced by a solid black background.
+
+C)
+
+#) PIHints window now should have size 100x100 and should have moved to
+   the location 10,100.
+
+#) You should see a new window of size 100x100 at 200,10. This is
+   Transient window for PIHints window. This window has title as
+   'Black Window'. The window should have a black background.
+
+#) Iconify PIHints window. The new window should disappear from the
+   display.
+
+#) Deiconify PIHints window. The new window should come back up.
+
+C)
+
+#) Now the new window has been made a Transient window for test_top
+   window.
+
+#) Iconify test_top window. The new window should diappear.
+
+#) Deiconify test_top window. The new window should come back up.
+
+C)
+
+#) You should see a new window of size 100x100 at 200,200. This is
+   Transient window for the "Black Window". This window should have
+   title "White Window". The window should have a white background.
+
+#) Iconify test_top window. Both the "Black Window" and the
+   "White Window" should disappear.
+
+#) Deiconify test_top window. Both the "Black Window" and the
+   "White Window" should come back up.
+
+C)
+
+E)

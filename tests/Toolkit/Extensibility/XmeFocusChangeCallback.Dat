@@ -1,0 +1,31 @@
+
+	This test checks the focus callback management routines for
+	a widget.  A callback can be added and removed from the
+	list of focus change callback procedures.
+
+#) 	To begin press "Validate" and make sure that no messages 
+	appear in the xterm window.
+
+C)
+	The next test begins by adding a new focus change callback
+	for the button's shell widget.  The callback message "New Focus
+	Change Callback has been called" is printed in the xterm
+	window everytime the focus enters or leaves the shell.  NOTE:
+	the message should be printed twice as this test case starts.
+
+#)	Move the mouse over the button itself and press the first
+	mouse button.  The callback message should print.  Press the
+	mouse button once again and make sure the message does not 
+	print.
+C)
+	The next test removes the change focus callback so that
+	no message is printed when this occurs.
+
+#)	Move the mouse to the title bar of the button.  Press the
+	first mouse button and make sure that NO callback message
+	is printed.  Repeat this test by pressing the button itself.
+C)
+	 Press Exit to end the test.  
+         Goodbye.
+E)
+

@@ -1,0 +1,11 @@
+#) Give the test window the focus. A red border appears around the
+   top text widget.
+   The insertion cursor appears but does not blink.
+#) Hold down the Shift key, and press the down arrow three times. 
+This creates a
+primary selection.
+#) Press the up-arrow key twice, without the Shift key depressed.
+The insertion cursor moves
+back to the second line and no text is selected. You should not see more than
+1 insertion cursor.
+E)

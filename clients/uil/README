@@ -1,0 +1,9 @@
+
+the uil-callable/ directory is Over-Written by Makefile build
+
+there are two libuil.a , one has a callable interface the other
+is static.  the symbols are not completely the same they are
+not interchangeable
+
+Uil(1) has a manpage
+

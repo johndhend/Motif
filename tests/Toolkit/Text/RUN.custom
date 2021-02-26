@@ -1,0 +1,65 @@
+# $XConsortium: RUN.custom /main/8 1996/08/15 14:05:23 jakku $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+# HISTORY
+
+setenv AUTOVPATH /proj/motif/tests/visuals/Toolkit/Text
+setenv XFILESEARCHPATH ./Text.defaults
+
+# The following needed for Vista and Purify usage
+setenv TOP ../../..
+
+set ScrollText1a = 'ScrollText1 -S ScrollText1a.Scr -I ScrollText1a.Dat -O ScrollText1a.prt -V ScrollText1a.vis -xrm "*ScrollText1*Text1.layoutDirection: RIGHT_TO_LEFT" -xrm "*ScrollText1*Text2.layoutDirection: RIGHT_TO_LEFT"'
+set ScrollText3a = 'ScrollText3 -S ScrollText3a.Scr -I ScrollText3a.Dat -O ScrollText3a.prt -V ScrollText3a.vis -xrm *XmScrollBar*initialDelay:250 -xrm *XmScrollBar*repeatDelay:50'
+set ScrollText3b = 'ScrollText3 -S ScrollText3b.Scr -I ScrollText3b.Dat -O ScrollText3b.prt -V ScrollText3b.vis'
+set ScrollText3c = 'ScrollText3 -S ScrollText3c.Scr -I ScrollText3c.Dat -O ScrollText3c.prt -V ScrollText3c.vis'
+set ScrollText3d = 'ScrollText3 -S ScrollText3d.Scr -I ScrollText3d.Dat -O ScrollText3d.prt -V ScrollText3d.vis'
+set ScrollText3e = 'ScrollText3 -S ScrollText3e.Scr -I ScrollText3e.Dat -O ScrollText3e.prt -V ScrollText3e.vis'
+set ScrollText3f = 'ScrollText3 -S ScrollText3f.Scr -I ScrollText3f.Dat -O ScrollText3f.prt -V ScrollText3f.vis'
+set ScrollText3g = 'ScrollText3 -S ScrollText3g.Scr -I ScrollText3g.Dat -O ScrollText3g.prt -V ScrollText3g.vis'
+set ScrollText3h = 'ScrollText3 -S ScrollText3h.Scr -I ScrollText3h.Dat -O ScrollText3h.prt -V ScrollText3h.vis'
+set TextFWcs1 = 'TextFWcs1 -xrm *XmTextField*fontList:-*-helvetica-bold-r-normal*120*:'
+set TextFWcs2 = 'TextFWcs2 -xrm *XmTextField*fontList:-*-helvetica-bold-r-normal*120*:'
+
+foreach test ( ScrollText1 "$ScrollText1a" ScrollText2 \
+	       "$ScrollText3a" "$ScrollText3b" "$ScrollText3c" \
+	       "$ScrollText3d" "$ScrollText3e" "$ScrollText3f" \
+	       "$ScrollText3g" "$ScrollText3h" ScrollText4 \
+               Text1 Text2 Text3 Text4 Text5 Text6 \
+               Text7 Text8 Text9 Text10 Text11 Text12 \
+               TextField1 TextField2 TextField3 \
+	       TextField4 TextField5 TextWcs1 TextWcs2 \
+	       "$TextFWcs1" "$TextFWcs2" )
+

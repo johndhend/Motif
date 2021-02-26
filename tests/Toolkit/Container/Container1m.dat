@@ -1,0 +1,102 @@
+/* $XConsortium: Container1m.dat /main/4 1995/07/17 10:11:14 drk $ */
+/*
+ * @OPENGROUP_COPYRIGHT@
+ * COPYRIGHT NOTICE
+ * Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ * Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ * ALL RIGHTS RESERVED (MOTIF).  See the file named COPYRIGHT.MOTIF for
+ * the full copyright text.
+ * 
+ * This software is subject to an open license. It may only be
+ * used on, with or for operating systems which are themselves open
+ * source systems. You must contact The Open Group for a license
+ * allowing distribution and sublicensing of this software on, with,
+ * or for operating systems which are not Open Source programs.
+ * 
+ * See http://www.opengroup.org/openmotif/license for full
+ * details of the license agreement. Any use, reproduction, or
+ * distribution of the program constitutes recipient's acceptance of
+ * this agreement.
+ * 
+ * EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ * PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ * WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ * OR FITNESS FOR A PARTICULAR PURPOSE
+ * 
+ * EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ * NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ * INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ * ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ * EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGES.
+ * 
+ */
+/*
+ * HISTORY
+ */
+
+#) This is the Container1 Test run with option "-I Container1m.Dat -u m".
+C)
+
+#) The container widget should be displayed in its ANY_ICON view,
+   with an OUTLINE layoutStyle.
+#) Four IconGadgets should be visible in a single column.
+   "IconGad1", "IconGad2" and "IconGad4" should be displayed with a small 
+   icon view, with the pixmap part displaying a "S" within
+   a black box, and the label part displaying the strings "IconGad1",
+   "IconGad2", "IconGad3" and "IconGad4" next to the pixmap. 
+   The label "IconGad2" should be truncated.
+#) "IconGad3" should be displayed in its large icon view, with the pixmap 
+   part displaying a "L" within a black box, and the label part 
+   displaying the string "IconGad3" below the pixmap.
+   There should also be visible to the left of IconGad3, a
+   pixmap displaying letter "C" with background white and foreground
+   black. This indicates that the item "IconGad3" has child items that
+   are not displayed; in other words, this item is in the collapsedState.
+C)
+
+#) The selectionTechnique has been specified to be MARQUEE.
+#) Press BSelect in the background on Container on the left of "IconGad1"
+#) With BSelect pressed, drag the pointer over to the right and bottom
+   of"IconGad3".
+#) You may not notice it immediately, but as soon as you start dragging, 
+   you should notice a marque rectangle. As the pointer moves over an
+   item, and that item gets completely enclosed in the marquee rectangle,
+   it becomes selected.
+#) When item "IconGad3" is also selected, release BSelect.
+#) The marquee rectangle should disapper.
+#) The items selected should include "IconGad2" and "IconGad3".
+#) You should also see the following message on the term window:
+!)
+      Reason for SelectionCallback: CR_EXTENDED_SELECT
+      Number of items selected: 2
+      Names of items selected: IconGad2 IconGad3 
+
+#) Click BSelect in the background of the Container outside of all the
+   items. All the selected items should get deselected. You should also
+   see the following message in the term window:
+!)
+      Reason for SelectionCallback: CR_EXTENDED_SELECT
+      Number of items selected: 0
+      Names of items selected: 
+C)
+
+#) Press BSelect on "IconGad1"
+#) With BSelect pressed, drag the pointer over to the right a little.
+#) As soon as you start dragging, you should notice a marque rectangle,
+   starting where you pressed the mouse.
+#) Release BSelect.
+#) The marquee rectangle should disapper. Nothing should be selected.
+C)
+
+#) Expand the children of "IconGad3" by clicking on the Outline button.
+#) Press BSelect in the background of the Container and start dragging.
+#) You should see a marquee rectangle. If not CR 8368 has not been fixed.
+#) Release BSelect.
+C)
+
+E)

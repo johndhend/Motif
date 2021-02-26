@@ -1,0 +1,1 @@
+XmTextFieldClearSelection.3

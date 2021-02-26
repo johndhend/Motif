@@ -1,0 +1,139 @@
+# $XConsortium: TextField3.scr /main/5 1995/07/17 20:42:57 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+#  @) A Text Field widget with the string 'Sample Text' will appear in
+#     the test window. The text is red on a white background. 
+#  #) Move the pointer into the Text Field and press the return key.
+#     It should have no effect. 
+LocatePointer Text1 RTextChar Max
+ClickMB Btn1
+ClickKey KReturn
+CompareVisual Text1
+
+#  C)
+Continue
+
+#  #) Move the pointer into the Text Field and press ANY key. No matter
+#     what key was pressed, a 'A' will appear. 
+LocatePointer Text1 RTextChar Max
+ClickMB Btn1
+ClickKey Kf
+
+#  #) Press another key. This time a 'B' will appear in the text widget. 
+ClickKey Ky
+CompareVisual Text1
+
+#  #) Repeat this cycle and you will print out the entire alphabet. 
+InputString "this string has how many"
+CompareVisual Text1
+
+#  C)
+Continue
+
+#  #) Move the pointer into the Text Field, and again press Return.
+#     The text will change to the name of your server vendor. 
+LocatePointer Text1
+ClickMB Btn1
+ClickKey KReturn
+CompareVisual Text1
+
+#  C)
+Continue
+
+#  /* test case for PIR 2492, 4077 */
+#  #) Type some text into the text field.  Press return.  The text 
+#     will be replaced with a long string that overflows the display.
+LocatePointer Text1 RTextChar Max
+ClickMB Btn1
+InputString "new text"
+ClickKey KReturn
+
+#  #) Confirm that the destination and insertion cursors are at
+#     the beginning of the text
+#     and that the text is on-screen.
+CompareVisual Text1
+
+#  #) Press return again. The text will be replaced with a short string.
+#     Confirm that the location and insertion cursors are at the beginning
+#     of the text
+#     and that the text is on-screen.
+ClickKey KReturn
+CompareVisual Text1
+
+#  /* end of test case for PIR 2492, 4077 */
+
+Continue
+
+# /*  Begin test case for CR 4803 */
+# #) The maximum length for the text has been set to 40 characters and
+# the XmNaudibleWarning resource for the Shell has been set to XmBELL.
+# Set the insertion cursor at the end of the sentence and try entering
+# new text. Verify that no new text is entered and that the terminal beeps
+# when attempting to enter the new text.
+LocatePointer Text1 RTextChar Max
+ClickMB Btn1
+InputString "new text"
+CompareVisual Text1
+
+Continue
+
+# #) The maximum length for the text is still set at 40 characters, however,
+# the XmNaudibleWarning resource has been changed to XmNONE. Set the insertion
+# cursor at the end of the sentence and try to enter new text again.
+# Verify that no new text is entered and that the terminal does not beep.
+# /* End test for CR 4803 */
+LocatePointer Text1 RTextChar Max
+ClickMB Btn1
+InputString "new text"
+CompareVisual Text1
+
+Continue
+
+# #) The sentence \"The cursor should be here.  If not, an error occurred.\"
+# should be displayed in the widget.  The insertion position has been set to
+# position immediately after the first sentence.
+# 
+# #) Verify that the insertion cursor is located after
+# \"The cursor should be here.\".
+# /* end test for CR 5258 */
+CompareVisual Text1
+
+Continue
+

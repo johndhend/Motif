@@ -1,0 +1,152 @@
+!
+! @OPENGROUP_COPYRIGHT@
+! COPYRIGHT NOTICE
+! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+! ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+! the full copyright text.
+! 
+! This software is subject to an open license. It may only be
+! used on, with or for operating systems which are themselves open
+! source systems. You must contact The Open Group for a license
+! allowing distribution and sublicensing of this software on, with,
+! or for operating systems which are not Open Source programs.
+! 
+! See http://www.opengroup.org/openmotif/license for full
+! details of the license agreement. Any use, reproduction, or
+! distribution of the program constitutes recipient's acceptance of
+! this agreement.
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+! OR FITNESS FOR A PARTICULAR PURPOSE
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+! POSSIBILITY OF SUCH DAMAGES.
+!
+!
+! HISTORY
+!
+!   $XConsortium: SharedTearM1.db /main/5 1995/07/13 18:38:05 drk $
+
+*tearOffModel: XmTEAR_OFF_ENABLED
+
+*mb_cb1.labelString: Colors
+*mb_cb1.mnemonic: C
+*mb_cb2.labelString: Patterns
+*mb_cb2.mnemonic: P
+*mb_cb3.labelString: Extra Colors
+*mb_cb3.mnemonic: x
+
+*pd1_lbl.labelString: Color Choices
+*pd1_pb1.labelString: Red
+*pd1_pb1.mnemonic: R
+*pd1_pb1.accelerator: Ctrl<Key>R
+*pd1_pb1.acceleratorText: Ctrl-R
+*pd1_pb2.labelString: Green
+*pd1_pb2.mnemonic: G
+*pd1_pb2.accelerator: Ctrl<Key>G
+*pd1_pb2.acceleratorText: Ctrl-G
+*pd1_tb1.labelString: Blue
+*pd1_tb1.mnemonic: l
+*pd1_tb1.accelerator: Ctrl<Key>l
+*pd1_tb1.acceleratorText: Ctrl-l
+*pd1_tb2.labelString: Yellow
+*pd1_tb2.mnemonic: Y
+*pd1_tb2.accelerator: Ctrl<Key>Y
+*pd1_tb2.acceleratorText: Ctrl-Y
+*pd1_cb1.labelString: More Colors
+*pd1_cb1.mnemonic: M
+*pd1_cb2.labelString: Still More Colors
+*pd1_cb2.mnemonic: S
+
+# N/A
+*pd1_cb1.accelerator: Ctrl<Key>M
+*pd1_cb1.acceleratorText: Ctrl-M
+*pd1_cb2.accelerator: Ctrl<Key>S
+*pd1_cb2.acceleratorText: Ctrl-S
+
+*pd2_pb1.labelString: Black
+*pd2_pb1.mnemonic: a
+*pd2_pb1.accelerator: Ctrl<Key>a
+*pd2_pb1.acceleratorText: Ctrl-a
+*pd2_pb2.labelString: White
+*pd2_pb2.mnemonic: t
+*pd2_pb2.accelerator: Ctrl<Key>t
+*pd2_pb2.acceleratorText: Ctrl-t
+
+*pd3_tb1.labelString: Magenta
+*pd3_tb1.mnemonic: n
+*pd3_tb1.accelerator: Ctrl<Key>n
+*pd3_tb1.acceleratorText: Ctrl-n
+*pd3_tb2.labelString: Grey
+*pd3_tb2.mnemonic: e
+*pd3_tb2.accelerator: Ctrl<Key>e
+*pd3_tb2.acceleratorText: Ctrl-e
+
+*pd4_pb1.labelString: Orange
+*pd4_pb1.mnemonic: O
+*pd4_pb1.accelerator: Ctrl<Key>O
+*pd4_pb1.acceleratorText: Ctrl-O
+*pd4_pb2.labelString: Brown
+*pd4_pb2.mnemonic: w
+*pd4_pb2.accelerator: Ctrl<Key>w
+*pd4_pb2.acceleratorText: Ctrl-w
+
+*pd5_tb1.labelString: Sky Blue
+*pd5_tb1.mnemonic: k
+*pd5_tb1.accelerator: Ctrl<Key>K
+*pd5_tb1.acceleratorText: Ctrl-K
+*pd5_tb2.labelString: Forrest Green
+*pd5_tb2.mnemonic: F
+*pd5_tb2.accelerator: Ctrl<Key>F
+*pd5_tb2.acceleratorText: Ctrl-F
+
+*pop_lbl.labelString: And More Colors
+*pop_pb1.labelString: Pink
+*pop_pb1.mnemonic: P
+*pop_pb1.accelerator: Ctrl<Key>P
+*pop_pb1.acceleratorText: Ctrl-P
+*pop_pb2.labelString: Baby Blue
+*pop_pb2.mnemonic: B
+*pop_pb2.accelerator: Ctrl<Key>B
+*pop_pb2.acceleratorText: Ctrl-B
+*pop_cb1.labelString: To More Colors
+*pop_cb1.mnemonic: M
+*pop_cb2.labelString: To Still More Colors
+*pop_cb2.mnemonic: S
+
+*wa_om.labelString: Color Options
+*wa_om.mnemonic: O
+
+*action_reset.labelString: RESET
+*action_test_acc.labelString: Test Acc
+*action_test_opaque.labelString: Test Opq
+
+*wa_pb1.labelString: Change Red Sensitivity
+*wa_pb2.labelString: Change Green Sensitivity
+*wa_pb3.labelString: Change Blue Sensitivity
+*wa_pb4.labelString: Change Yellow Sensitivity
+*wa_pb5.labelString: Change More Colors Sensitivity
+*wa_pb6.labelString: Change Still More Colors Sensitivity
+*wa_pb7.labelString: Change Black Sensitivity
+*wa_pb8.labelString: Change White Sensitivity
+*wa_pb9.labelString: Change Magenta Sensitivity
+*wa_pb10.labelString: Change Grey Sensitivity
+*wa_pb11.labelString: Change Orange Sensitivity
+*wa_pb12.labelString: Change Brown Sensitivity
+*wa_pb13.labelString: Change Pink Sensitivity
+*wa_pb14.labelString: Change Baby Blue Sensitivity
+*wa_pb15.labelString: Change To More Colors Sensitivity
+*wa_pb16.labelString: Change To Still More Colors Sensitivity
+*wa_pb17.labelString: Change Sky Blue Sensitivity
+*wa_pb18.labelString: Change Forrest Green Sensitivity

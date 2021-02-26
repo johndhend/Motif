@@ -1,0 +1,43 @@
+
+#) A client with a Toggle Button and a Pixmap should appear. 
+#) Click MB1 in the client window an the indicator should change. Also,
+   the pixmap will invert (black and white). 
+C)
+
+#) The foreground and background colors of the pixmap should reverse again
+   and the button is now insensitive. 
+#) Click on the toggle button and the indicator should not change. 
+C)
+
+#) A toggle button will appear with top and bottom shadow colors set to black.
+   Verify that the button's indicator gets filled when toggling.  This test
+   must  be performed on a color display.
+C)
+#) Two radio boxes will appear.  One should have colors of black and orange
+   and the other magenta and blue.  The diamond indicators should be their
+   appropriate colors.  For example, the black and orange radio box should 
+   NOT have magenta colored indicators.
+
+C)
+
+#) The window will now contain a RadioBox widget with two ToggleButton
+   children.
+   Several messages should appear in the term window, indicating what
+   the menuHistory of the RadioBox is.  None should be 0. 
+C)
+
+#) Click on ToggleButton2 so that the highlight is drawn around it.
+#) Now, move the window containing the ToggleButtons around the screen. 
+#) Stop moving the window. Note the appearance of the highlight as it is 
+   redrawn! The highlight should not be drawn twice.
+C)
+
+
+#) The ToggleButtons have been destroyed, and a ToggleButtonGadget has been 
+   created.
+#) Click on ToggleButtonGadget1 so that the highlight is drawn around it.
+#) Now, move the window containing the ToggleButtonGadget around the screen. 
+#) Stop moving the window. Note the appearance of the highlight as it is 
+   redrawn! The highlight should not be drawn twice.
+E)
+

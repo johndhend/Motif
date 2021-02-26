@@ -1,0 +1,53 @@
+
+#) This is the DNDScroll test, to test auto scrolling functionality.
+   This test entails dragging and dropping between 2 clients.
+#) A ScrolledWindow with 15 PushButton children be present on your screen. 
+#) To run this test, you will need to run another DND client simultaenously.
+#) Run DNDDrop2 with the command line option "-l". 
+#) A client with 6 PushButtons arranged in 2 rows and a Text widget
+   will appear on your screen.
+C)
+   
+#) Locate the pointer over any of the PushButtons in the DNDDrop2 client. 
+   Press Btransfer (MB2 by default) to initiate a drag. Drag over to any 
+   point to the right of the clipWindow in DNDScroll.  The horizontal
+   ScrollBar should start to scroll automatically.
+   
+#) Release BTransfer. The drag icon should snap back to the point from
+   from which the drag was initiated.
+   
+C)
+
+#) Locate the pointer over any of the PushButtons in the DNDDrop2 client. 
+   Press Btransfer (MB2 by default) to initiate a drag. Drag over to any 
+   point below the clipWindow in DNDScroll.  The vertical ScrollBar
+   should start to scroll automatically.
+   
+#) Release BTransfer. The drag icon should snap back to the point from
+   from which the drag was initiated.
+
+C)
+
+#) The autoDragModel resource has been set to AUTO_DRAG_DISABLED for
+   the ScrolledWindow.
+#) Locate the pointer over any of the PushButtons in the DNDDrop2 client. 
+   Press Btransfer (MB2 by default) to initiate a drag. Drag over to any 
+   point to the right of the clipWindow in DNDScroll.  No automatic
+   scrolling should take place.
+   
+#) Locate the pointer over any of the PushButtons in the DNDDrop2 client. 
+   Press Btransfer (MB2 by default) to initiate a drag. Drag over to any 
+   point below the clipWindow in DNDScroll.  No automatic scrolling
+   should take place.
+
+#) Release BTransfer. The drag icon should snap back to the point from
+   from which the drag was initiated.
+C)
+   
+E)
+
+
+
+
+
+

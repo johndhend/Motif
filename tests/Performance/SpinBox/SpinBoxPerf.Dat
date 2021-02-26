@@ -1,0 +1,19 @@
+
+@)  This test needs to be run automated since it requires use of the
+    automation performance monitor.
+
+@)  With the SpinBox resources, XmNinitialDelay and XmNrepeatDelay,
+    set to their default values, measurements are taken for the
+    following actions:
+
+#)  The time lapsed to increment the SpinBox from its minimum
+    to its maximum value.
+
+#)  The time lapsed to decrement the SpinBox from its maximum
+    to its minimum value.
+
+@)  An output file, SpinBoxPerf.prt, is generated which lists the
+    measurements taken. 
+
+C)
+E)

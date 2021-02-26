@@ -1,0 +1,20 @@
+
+@) A client window with a DrawnButton should appear.
+   The Button will contain a "DONT PANIC" Pixmap, but with the thick
+   shadows within the window
+   the client window should not be large enough to completely display the
+   pixmap; the window 
+   will instead display the shadow very close up so that it appears
+   as two shaded triangles abutting one another.
+#) Confirm that the shadows and a part of the "DONT PANIC" pixmap
+   (letters NT and parts of NIC letters) are displayed.
+
+C)
+
+#) Resize the window larger in several increments. Confirm that as it
+grows the shadow thickness remains a constant size. As the window grows
+larger, the pixmap with a superimposed label should appear. Continue
+until the label is fully visible.
+
+
+E)

@@ -1,0 +1,72 @@
+# $XConsortium: Navigation7.prt /main/3 1995/07/19 20:39:15 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) LocatePointer bb  
+TRACE:(2) ClickKey KTab
+TRACE:(3) CompareVisual btn1 
+TRACE:(4) ClickKey KTab
+TRACE:(5) CompareVisual btn31 
+TRACE:(6) ClickKey KTab
+TRACE:(7) CompareVisual misc1 
+TRACE:(8) ClickKey KTab
+TRACE:(9) CompareVisual btn1 
+TRACE:(10) ClickKey KDown
+TRACE:(11) ClickKey KDown
+TRACE:(12) ClickKey KRight
+TRACE:(13) CompareVisual toggle1 
+TRACE:(14) ClickKey KTab
+TRACE:(15) CompareVisual btn31 
+TRACE:(16) ClickKey KLeft
+TRACE:(17) ClickKey KUp
+TRACE:(18) ClickKey KUp
+TRACE:(19) ClickKey KRight
+TRACE:(20) CompareVisual toggle32 
+TRACE:(21) Continue
+TRACE:(22) LocatePointer bb  
+TRACE:(23) ClickKey KTab
+TRACE:(24) ClickKey KTab
+TRACE:(25) ClickKey KTab
+TRACE:(26) ClickKey KTab
+TRACE:(27) ClickKey KTab
+TRACE:(28) ClickKey KTab
+TRACE:(29) ClickKey KTab
+TRACE:(30) WindowRaise bb
+TRACE:(31) LocatePointer bb  
+TRACE:(32) CompareVisual misc1 
+TRACE:(33) Continue
+TRACE:(34) Exit
+Exiting Test...Please Standby...

@@ -1,0 +1,68 @@
+! $XConsortium: CDE /main/4 1995/07/17 10:28:16 drk $
+! @OPENGROUP_COPYRIGHT@
+! COPYRIGHT NOTICE
+! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+! ALL RIGHTS RESERVED (MOTIF).  See the file named COPYRIGHT.MOTIF for
+! the full copyright text.
+! 
+! This software is subject to an open license. It may only be
+! used on, with or for operating systems which are themselves open
+! source systems. You must contact The Open Group for a license
+! allowing distribution and sublicensing of this software on, with,
+! or for operating systems which are not Open Source programs.
+! 
+! See http://www.opengroup.org/openmotif/license for full
+! details of the license agreement. Any use, reproduction, or
+! distribution of the program constitutes recipient's acceptance of
+! this agreement.
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+! OR FITNESS FOR A PARTICULAR PURPOSE
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+! POSSIBILITY OF SUCH DAMAGES.
+! 
+! 
+! HISTORY
+! 
+! Bindings for CDE 1.0, generic keyboard
+! 
+! This file does not correspond to any specific server, so it cannot
+! be accessed via xmbind.aliases.  If you wish to use these bindings,
+! copy them into ~/.motifbind or use xmbind to load this file directly.
+
+osfActivate	   : <Key>KP_Enter, <Key>Execute
+osfAddMode	   : Shift<Key>F8
+osfBackSpace	   : <Key>BackSpace
+osfBeginLine	   : <Key>Home, <Key>Begin
+osfCancel	   : <Key>Escape, <Key>Cancel, Ctrl<Key>s
+osfClear	   : <Key>Clear
+osfCopy		   : Ctrl<Key>c, Ctrl<Key>Insert
+osfCut		   : Ctrl<Key>x, Shift<Key>Delete
+osfDelete	   : <Key>Delete
+osfDown		   : <Key>Down
+osfEndLine	   : <Key>End
+osfHelp		   : <Key>F1, <Key>Help
+osfInsert	   : <Key>Insert
+osfLeft		   : <Key>Left
+osfMenu		   : Shift<Key>F10, <Key>Menu
+osfMenuBar	   : <Key>F10, Shift<Key>Menu
+osfPageDown	   : <Key>Next
+osfPageUp	   : <Key>Prior
+osfPaste	   : Ctrl<Key>v, Shift<Key>Insert
+osfRight	   : <Key>Right
+osfSelect	   : <Key>Select
+osfSwitchDirection : Alt<Key>Return, Alt<Key>KP_Enter
+osfUndo		   : <Key>Undo
+osfUp		   : <Key>Up

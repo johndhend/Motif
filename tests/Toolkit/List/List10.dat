@@ -1,0 +1,82 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: List10.dat /main/6 1995/07/13 18:14:59 drk $"
+*/
+#) Move the pointer into the Text field widget labeled \"Add String to Selected
+   List:\" and click MB1.
+#) Type the string NewWidget and hit return. NewWidget should be added 
+   to the list's selected items list.
+#) Click MB1 on \"Get SelectedItems\". \"The Selected Items:\" list should
+   contain 1 item \"Get SelectedItems\".
+#) Move the pointer into the Text field widget labeled \"Add String to Items
+   List:\" and click MB1.
+#) Type the string NewWidget and hit return. NewWidget should be added to the
+   \"Action List\" selected.
+C)
+#) Move the pointer into the Text field widget labeled \"Add String to Selected
+   List:\" and click MB1.
+#) Type the string NewerWidget and hit return. NewerWidget should be added 
+   to the list's selected items list.
+#) Click MB1 on \"Call XmListUpdateSelectedList\".
+#) Click MB1 on \"Get SelectedItems\". \"The Selected Items:\" list should
+   contain 1 item (NewWidget).
+#) Move the pointer into the Text field widget labeled \"Add String to Items
+   List:\" and click MB1.
+#) Type the string NewWidget and hit return. NewerWidget should be added to the
+   \"Action List\" unselected.
+C)
+#) Click MB1 on the ToggleButton labeled \"Dont Add Item Unselected\". It 
+   should toggle to \"Add Item Unselected\".
+#) Move the pointer into the Text field widget labeled \"Add String to Selected
+   List:\" and click MB1.
+#) Type the string OldWidget and hit return. OldWidget should be added
+   to the list's selected items list.
+#) Click MB1 on \"Get SelectedItems\". \"The Selected Items:\" list should
+   contain two items (NewWidget and OldWidget).
+#) Move the pointer into the Text field widget labeled \"Add String to Items
+   List:\" and click MB1.
+#) Type the string OldWidget and hit return. OldWidget should be added to the
+   \"Action List\" unselected.
+#) Click MB1 on \"Call XmListUpdateSelectedList\".
+#) Click MB1 on \"Get SelectedItems\". \"The Selected Items:\" list should
+   contain 1 item (NewWidget).
+E)
+#) This is a Motif 1.2 test only.
+E)

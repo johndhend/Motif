@@ -1,0 +1,190 @@
+# $XConsortium: Conversion1.prt /main/3 1995/07/19 20:14:40 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) Continue
+                                                   Expected   Actual
+     Resource Type                 String             Value    Value Result
+-------------------------     --------------------  --------   ----- ------
+        XmRArrowDirection                 arrow_up        0        0 Passed
+        XmRArrowDirection               arrow_down        1        1 Passed
+        XmRArrowDirection               arrow_left        2        2 Passed
+        XmRArrowDirection              arrow_right        3        3 Passed
+Warning: Cannot convert string "foo bar" to type ArrowDirection
+        XmRArrowDirection                  foo bar       NULL   NULL Passed
+               XmRPacking                pack_none        3        3 Passed
+               XmRPacking               pack_tight        1        1 Passed
+               XmRPacking              pack_column        2        2 Passed
+Warning: Cannot convert string "foo bar" to type Packing
+               XmRPacking                  foo bar       NULL   NULL Passed
+           XmROrientation                 vertical        1        1 Passed
+           XmROrientation               horizontal        2        2 Passed
+Warning: Cannot convert string "foo bar" to type Orientation
+           XmROrientation                  foo bar       NULL   NULL Passed
+             XmRAlignment         alignment_center        1        1 Passed
+             XmRAlignment      alignment_beginning        0        0 Passed
+             XmRAlignment            alignment_end        2        2 Passed
+Warning: Cannot convert string "foo bar" to type Alignment
+             XmRAlignment                  foo bar       NULL   NULL Passed
+            XmRAttachment              attach_none        0        0 Passed
+            XmRAttachment              attach_form        1        1 Passed
+            XmRAttachment     attach_opposite_form        2        2 Passed
+            XmRAttachment            attach_widget        3        3 Passed
+            XmRAttachment   attach_opposite_widget        4        4 Passed
+            XmRAttachment          attach_position        5        5 Passed
+            XmRAttachment              attach_self        6        6 Passed
+Warning: Cannot convert string "foo bar" to type Attachment
+            XmRAttachment                  foo bar       NULL   NULL Passed
+             XmRLabelType                   string        2        2 Passed
+             XmRLabelType                   pixmap        1        1 Passed
+Warning: Cannot convert string "foo bar" to type LabelType
+             XmRLabelType                  foo bar       NULL   NULL Passed
+         XmRIndicatorType                n_of_many        1        1 Passed
+         XmRIndicatorType              one_of_many        2        2 Passed
+Warning: Cannot convert string "foo bar" to type IndicatorType
+         XmRIndicatorType                  foo bar       NULL   NULL Passed
+              XmREditMode          multi_line_edit        0        0 Passed
+              XmREditMode         single_line_edit        1        1 Passed
+Warning: Cannot convert string "foo bar" to type EditMode
+              XmREditMode                  foo bar       NULL   NULL Passed
+       XmRScrollingPolicy                automatic        0        0 Passed
+       XmRScrollingPolicy      application_defined        1        1 Passed
+Warning: Cannot convert string "foo bar" to type ScrollingPolicy
+       XmRScrollingPolicy                  foo bar       NULL   NULL Passed
+          XmRVisualPolicy                 variable        0        0 Passed
+          XmRVisualPolicy                 constant        1        1 Passed
+Warning: Cannot convert string "foo bar" to type VisualPolicy
+          XmRVisualPolicy                  foo bar       NULL   NULL Passed
+XmRScrollBarDisplayPolicy                as_needed        1        1 Passed
+XmRScrollBarDisplayPolicy                   static        0        0 Passed
+Warning: Cannot convert string "foo bar" to type ScrollBarDisplayPolicy
+XmRScrollBarDisplayPolicy                  foo bar       NULL   NULL Passed
+    XmRScrollBarPlacement                 top_left        3        3 Passed
+    XmRScrollBarPlacement                top_right        1        1 Passed
+    XmRScrollBarPlacement              bottom_left        2        2 Passed
+    XmRScrollBarPlacement             bottom_right        0        0 Passed
+Warning: Cannot convert string "foo bar" to type ScrollBarPlacement
+    XmRScrollBarPlacement                  foo bar       NULL   NULL Passed
+       XmRSelectionPolicy            single_select        0        0 Passed
+       XmRSelectionPolicy          multiple_select        1        1 Passed
+       XmRSelectionPolicy          extended_select        2        2 Passed
+       XmRSelectionPolicy            browse_select        3        3 Passed
+Warning: Cannot convert string "foo bar" to type SelectionPolicy
+       XmRSelectionPolicy                  foo bar       NULL   NULL Passed
+        XmRListSizePolicy                 variable        0        0 Passed
+        XmRListSizePolicy                 constant        1        1 Passed
+Warning: Cannot convert string "foo bar" to type ListSizePolicy
+        XmRListSizePolicy                  foo bar       NULL   NULL Passed
+              XmRUnitType                   pixels        0        0 Passed
+              XmRUnitType        100th_millimeters        1        1 Passed
+              XmRUnitType            1000th_inches        2        2 Passed
+              XmRUnitType             100th_points        3        3 Passed
+              XmRUnitType         100th_font_units        4        4 Passed
+Warning: Cannot convert string "foo bar" to type UnitType
+              XmRUnitType                  foo bar       NULL   NULL Passed
+   XmRProcessingDirection               max_on_top        0        0 Passed
+   XmRProcessingDirection            max_on_bottom        1        1 Passed
+   XmRProcessingDirection              max_on_left        2        2 Passed
+   XmRProcessingDirection             max_on_right        3        3 Passed
+Warning: Cannot convert string "foo bar" to type ProcessingDirection
+   XmRProcessingDirection                  foo bar       NULL   NULL Passed
+       XmRStringDirection  string_direction_l_to_r        0        0 Passed
+       XmRStringDirection  string_direction_r_to_l        1        1 Passed
+Warning: Cannot convert string "foo bar" to type StringDirection
+       XmRStringDirection                  foo bar       NULL   NULL Passed
+         XmRSeparatorType                  no_line        0        0 Passed
+         XmRSeparatorType              single_line        1        1 Passed
+         XmRSeparatorType              double_line        2        2 Passed
+         XmRSeparatorType       single_dashed_line        3        3 Passed
+         XmRSeparatorType       double_dashed_line        4        4 Passed
+         XmRSeparatorType        shadow_etched_out        6        6 Passed
+         XmRSeparatorType         shadow_etched_in        5        5 Passed
+Warning: Cannot convert string "foo bar" to type SeparatorType
+         XmRSeparatorType                  foo bar       NULL   NULL Passed
+            XmRShadowType         shadow_etched_in        5        5 Passed
+            XmRShadowType        shadow_etched_out        6        6 Passed
+            XmRShadowType                shadow_in        7        7 Passed
+            XmRShadowType               shadow_out        8        8 Passed
+Warning: Cannot convert string "foo bar" to type ShadowType
+            XmRShadowType                  foo bar       NULL   NULL Passed
+           XmRWhichButton                  button1        1        1 Passed
+           XmRWhichButton                  button2        2        2 Passed
+           XmRWhichButton                  button3        3        3 Passed
+           XmRWhichButton                  button4        4        4 Passed
+           XmRWhichButton                  button5        5        5 Passed
+Warning: Cannot convert string "foo bar" to type WhichButton
+           XmRWhichButton                  foo bar       NULL   NULL Passed
+          XmRResizePolicy              resize_none        0        0 Passed
+          XmRResizePolicy              resize_grow        1        1 Passed
+          XmRResizePolicy               resize_any        2        2 Passed
+Warning: Cannot convert string "foo bar" to type ResizePolicy
+          XmRResizePolicy                  foo bar       NULL   NULL Passed
+           XmRDialogStyle         dialog_work_area        0        0 Passed
+           XmRDialogStyle          dialog_modeless        0        0 Passed
+           XmRDialogStyle dialog_application_modal        1        1 Passed
+           XmRDialogStyle      dialog_system_modal        3        3 Passed
+Warning: Cannot convert string "foo bar" to type DialogStyle
+           XmRDialogStyle                  foo bar       NULL   NULL Passed
+            XmRDialogType             dialog_error        1        1 Passed
+            XmRDialogType       dialog_information        2        2 Passed
+            XmRDialogType           dialog_message        3        3 Passed
+            XmRDialogType          dialog_question        4        4 Passed
+            XmRDialogType           dialog_warning        5        5 Passed
+            XmRDialogType           dialog_working        6        6 Passed
+Warning: Cannot convert string "foo bar" to type DialogType
+            XmRDialogType                  foo bar       NULL   NULL Passed
+            XmRDialogType          dialog_template        0        0 Passed
+         XmRSelectionType            dialog_prompt        1        1 Passed
+         XmRSelectionType         dialog_selection        2        2 Passed
+         XmRSelectionType           dialog_command        3        3 Passed
+         XmRSelectionType    dialog_file_selection        4        4 Passed
+         XmRSelectionType         dialog_work_area        0        0 Passed
+Warning: Cannot convert string "foo bar" to type SelectionType
+         XmRSelectionType                  foo bar       NULL   NULL Passed
+     XmRDefaultButtonType         dialog_ok_button        4        4 Passed
+     XmRDefaultButtonType     dialog_cancel_button        2        2 Passed
+     XmRDefaultButtonType       dialog_help_button        7        7 Passed
+Warning: Cannot convert string "foo bar" to type DefaultButtonType
+     XmRDefaultButtonType                  foo bar       NULL   NULL Passed
+         XmRRowColumnType                work_area        0        0 Passed
+         XmRRowColumnType                 menu_bar        1        1 Passed
+         XmRRowColumnType               menu_popup        3        3 Passed
+         XmRRowColumnType            menu_pulldown        2        2 Passed
+         XmRRowColumnType              menu_option        4        4 Passed
+Warning: Cannot convert string "foo bar" to type RowColumnType
+         XmRRowColumnType                  foo bar       NULL   NULL Passed
+TRACE:(2) Exit
+Exiting Test...Please Standby...

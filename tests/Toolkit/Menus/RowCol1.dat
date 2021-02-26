@@ -1,0 +1,98 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: RowCol1.dat /main/7 1995/07/13 18:54:22 drk $"
+*/
+#) A row column with two push buttons should appear.  The labels, 'button1'
+and 'button2' should appear centered in the buttons.  
+#) Press button1.  The label should change to 'a' and still be centered in the
+   button.
+
+#) Press button2.  The label should change to 'a' and still be centered in the
+   button.
+C)
+
+#) A RowColumn widget should be displayed, with an arrowbutton and 
+   'Label1' directly below it.
+C)
+#) 'Label1' will now be to the right of the arrowbutton and 'PushButton1' 
+    will appear below the arrowbutton.
+C)
+#) 'ToggleButton1' will appear below 'Label1'.
+C)
+#) The background will have changed to a yellow and black pixmap.
+C)
+#) The margin width and height will have changed to 20 pixels.
+C)
+#) The spacing will have changed to 20 pixels.
+#) Click on the arrowbutton - it should appear depressed. 
+#) Click on 'Label1' - nothing should happen. 
+#) Click on 'ToggleButton1' - the indicator should appear filled in. 
+#) Press and hold MB1 on 'PushButton1' - the background color
+   of the pushbutton should change. 
+C)
+
+#)The black entry border will appear around each child of the rowcolumn.
+#) Click in the border of the arrow button. The button should appear
+   pressed in and out, and an \"Activation Callback\"
+   message should appear in the standard out window. 
+#) Repeat for the push button. 
+#) Repeat for the Toggle button, pressing both in the border
+   and over the toggle button itself. Instead of
+   \"Activation callback\", the message should say a \"Value changed\"
+   callback was received.  Also verify that the state printed in the message
+   matches the visible state of the toggle button. (A filled-in indicator is
+   ON, a raised indicator is OFF.) 
+C)
+
+#) The number of rows will have changed to four.
+#) Move the client window so that it partially obscures
+   the lower left corner of the term window. 
+#) Raise the term window. 
+#) Raise the client window. 
+#) Resize the lower right corner of the client window to
+   240 x 180. Only the arrowbutton and 'Label1' should be visible. 
+C)
+
+#) The number of rows has changed to one.
+C)
+#) Resize the window several times. The buttons should grow or shrink
+   to fit the window. 
+C)
+E)

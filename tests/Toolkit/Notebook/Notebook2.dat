@@ -1,0 +1,86 @@
+/* $XConsortium: Notebook2.dat /main/4 1995/07/17 10:17:56 drk $ */
+/*
+ * @OPENGROUP_COPYRIGHT@
+ * COPYRIGHT NOTICE
+ * Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ * Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ * ALL RIGHTS RESERVED (MOTIF).  See the file named COPYRIGHT.MOTIF for
+ * the full copyright text.
+ * 
+ * This software is subject to an open license. It may only be
+ * used on, with or for operating systems which are themselves open
+ * source systems. You must contact The Open Group for a license
+ * allowing distribution and sublicensing of this software on, with,
+ * or for operating systems which are not Open Source programs.
+ * 
+ * See http://www.opengroup.org/openmotif/license for full
+ * details of the license agreement. Any use, reproduction, or
+ * distribution of the program constitutes recipient's acceptance of
+ * this agreement.
+ * 
+ * EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ * PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ * WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ * OR FITNESS FOR A PARTICULAR PURPOSE
+ * 
+ * EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ * NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ * INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ * ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ * EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGES.
+ * 
+ */
+/*
+ * HISTORY
+ */
+#) This test tests default translations for Notebook.
+#) A Notebook will appear on your screen. 
+C)
+
+
+!) /* TraverseTab action */
+#) Set the focus on the MajorTab3
+#) Click on osfBeginLine. MajorTab1 should now have the focus.
+#) Click on osfEndLine. MajorTab3 should now have the focus.
+#) Click on osfLeft. MajorTab2 should have focus.
+#) Click on osfRight. MajorTab3 should have focus.
+#) Click on osfUp. MajorTab2 should have focus.
+#) Click on osfDown. MajorTab3 should have focus.
+C) 
+
+
+!) /* TraverseTab action */
+#) Click on MajorTab1. MinorTab1, MinorTab2, MinorTab3 should become visible.
+#) Set the focus on the MinorTab3.
+#) Click on osfBeginLine. MinorTab1 should now have the focus.
+#) Click on osfEndLine. MinorTab3 should now have the focus.
+#) Click on osfLeft. MinorTab2 should have focus.
+#) Click on osfRight. MinorTab3 should have focus.
+#) Click on osfUp. MinorTab2 should have focus.
+#) Click on osfDown. MinorTab3 should have focus.
+
+C) 
+
+
+!) /* Traversal order */
+#) Set the focus on Page1.
+#) Use the arrow keys to traverse between the different children of the Form.
+#) Click Tab. The focus should move to the TextField status area.
+#) Click Tab. The focus should move to the SpinBox page scroller.
+#) Click Tab. The focus should move to MajorTab1.
+#  Click Tab. The focus should move to MinorTab1.
+C)
+
+
+
+!) /* Test for destroying the Notebook */
+#) The Notebook should have been destroyed.
+C)
+
+
+E)

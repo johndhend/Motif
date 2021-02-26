@@ -1,0 +1,140 @@
+! @OPENGROUP_COPYRIGHT@
+! COPYRIGHT NOTICE
+! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+! ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+! the full copyright text.
+! 
+! This software is subject to an open license. It may only be
+! used on, with or for operating systems which are themselves open
+! source systems. You must contact The Open Group for a license
+! allowing distribution and sublicensing of this software on, with,
+! or for operating systems which are not Open Source programs.
+! 
+! See http://www.opengroup.org/openmotif/license for full
+! details of the license agreement. Any use, reproduction, or
+! distribution of the program constitutes recipient's acceptance of
+! this agreement.
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+! OR FITNESS FOR A PARTICULAR PURPOSE
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+! POSSIBILITY OF SUCH DAMAGES.
+! 
+! HISTORY
+Fileview*fontList :  *-helvetica-bold-r-normal--24-*-iso8859-1:
+*main.menubar*fontList :  *-helvetica-bold-r-normal--24-*-iso8859-1:
+*primary*Foreground : Black
+*main*Background : Grey88
+*main*work*panes*paneSW*pane*Background : OldLace
+!*primary.Geometry: 400x400
+!*fsb*Background : RosyBrown1
+*main*panes*XmText*resizeWidth: True
+*main.work.resizePolicy: RESIZE_GROW
+*main.work.panes*allowResize: True
+*main.work.panes.refigureMode: True
+*main.work.panes*sash*background: Turquoise
+*main*XmText*fontList: *-lucida-medium-r-normal-sans-20-*-iso8859-1:
+*main.work.panes*sashHeight: 10
+*main.work.panes*sashIndent: -32
+*main.work.panes*sashWidth: 40
+*main.work.panes.spacing: 20
+*main.work.panes*XmSeparatorGadget*Margin: 10
+*main*menubar*background: PaleGreen
+*main*menubar*TearOffControl.shadowThickness : 4
+*main*menubar*TearOffControl.separatorType : XmSHADOW_ETCHED_IN_DASH
+*primary.main.menubar*fileMenu.exit.labelString: Quit
+*primary.main.menubar*fileMenu.close.labelString: Close
+*main*menubar.file.labelString: File
+*main.menubar.view.labelString: View
+*main.menubar.help.labelString: Help
+*main.menubar*fileMenu.opennew.labelString: Open New Shell
+*main.menubar*fileMenu.open.labelString: Open New File
+*main.menubar*viewMenu.search.labelString: Search
+*main.menubar*viewMenu.new_pane.labelString: New Pane
+*main.menubar*viewMenu.kill_pane.labelString: Close Pane
+*main.menubar*helpMenu.help_view.labelString: Tutorial
+*search_box*fontList:  *-helvetica-bold-r-normal--24-*-iso8859-1:
+*search_box*dialogTitle: Search Dialog
+*search_box.form.dir_frame*title.labelString : Direction
+*search_box.form.dir_frame*forward.labelString: Forward
+*search_box.form.dir_frame*backward.labelString: Backward
+
+! Optionally place this file in your system's app-defaults directory, 
+! often found in /usr/lib/X11/app-defaults
+
+! Size of the text display area
+*fsb_popup*text.rows: 24
+*fsb_popup*text.columns: 80
+
+! Color resources
+
+! On HP and CDE systems,  the following line will turn off the color
+! object
+! *useColorObj:		false
+
+*fsb_popup*fontList:			-adobe-*-medium-r-*-*-10-*-*-*-*-*-*-*
+*fsb_popup.background:			SteelBlue
+*fsb_popup.foreground:			wheat
+
+*fsb_popup*Text.fontList:		-adobe-*-bold-r-*-*-10-*-*-*-*-*-*-*
+*fsb_popup*Text.background:		black
+*fsb_popup*Text.foreground:		wheat
+
+*fsb_popup*fsb*selectColor:		lightblue
+
+*fsb_popup*fsb.width:			400
+*fsb_popup*fsb.height:			200
+*fsb_popup*fsb.autoUnmanage:		True
+*fsb_popup*fsb.pathMode:		XmPATH_MODE_RELATIVE
+
+*fsb_popup*fsb.fontList:		-adobe-*-medium-r-*-*-10-*-*-*-*-*-*-*
+*fsb_popup*fsb.background:		SteelBlue
+*fsb_popup*fsb.foreground:		wheat
+
+!/* text of file selected box */
+*fsb_popup*fsb*Text.fontList:		-adobe-*-bold-r-*-*-10-*-*-*-*-*-*-*
+*fsb_popup*fsb*Text.background:		lavenderblush
+*fsb_popup*fsb*Text.foreground:		black
+
+*fsb_popup*fsb*FilterText.fontList:	-adobe-*-bold-r-*-*-10-*-*-*-*-*-*-*
+*fsb_popup*fsb*FilterText.background:	azure
+*fsb_popup*fsb*FilterText.foreground:	black
+
+*fsb_popup*fsb*DirText.fontList:	-adobe-*-medium-r-*-*-10-*-*-*-*-*-*-*
+*fsb_popup*fsb*DirText.background:	ivory
+*fsb_popup*fsb*DirText.foreground:	black
+
+!/* directory list */
+*fsb_popup*fsb*DirList.fontList:	-adobe-*-medium-r-*-*-10-*-*-*-*-*-*-*
+*fsb_popup*fsb*DirList.background:	ivory
+*fsb_popup*fsb*DirList.foreground:	black
+
+!/* file list */
+*fsb_popup*fsb*ItemsList.fontList:		-adobe-*-medium-r-*-*-10-*-*-*-*-*-*-*
+*fsb_popup*fsb*ItemsList.background:	grey95
+*fsb_popup*fsb*ItemsList.foreground:	black
+
+! Here are some suggested schemes for coloring
+
+! Gray color scheme
+! *background:		gray50
+! *foreground:		white
+! *text*foreground:	black
+! *text*background:	gray95
+! *notebook*foreground:	black
+! *notebook*background:	gray85
+! *notebook*frameBackground:	gray80
+! *atab.highlightColor:	white
+

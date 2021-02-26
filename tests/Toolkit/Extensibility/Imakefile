@@ -1,0 +1,137 @@
+XCOMM $XConsortium: Imakefile /main/4 1995/07/14 17:36:10 drk $
+XCOMM 
+XCOMM @OPENGROUP_COPYRIGHT@
+XCOMM COPYRIGHT NOTICE
+XCOMM Copyright (c) 1993 Open Software Foundation, Inc.
+XCOMM Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+XCOMM ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+XCOMM the full copyright text.
+XCOMM 
+XCOMM This software is subject to an open license. It may only be
+XCOMM used on, with or for operating systems which are themselves open
+XCOMM source systems. You must contact The Open Group for a license
+XCOMM allowing distribution and sublicensing of this software on, with,
+XCOMM or for operating systems which are not Open Source programs.
+XCOMM 
+XCOMM See http://www.opengroup.org/openmotif/license for full
+XCOMM details of the license agreement. Any use, reproduction, or
+XCOMM distribution of the program constitutes recipient's acceptance of
+XCOMM this agreement.
+XCOMM 
+XCOMM EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+XCOMM PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+XCOMM KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+XCOMM WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+XCOMM OR FITNESS FOR A PARTICULAR PURPOSE
+XCOMM 
+XCOMM EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+XCOMM NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+XCOMM INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+XCOMM DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+XCOMM AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+XCOMM LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+XCOMM ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+XCOMM EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+XCOMM POSSIBILITY OF SUCH DAMAGES.
+XCOMM 
+
+XCOMM 
+XCOMM HISTORY
+XCOMM 
+
+
+XCOMM	The following lines specify the location of the Exm library and
+XCOMM	includes.  If Exm library and includes aren't installed in the
+XCOMM	Motif tree you need to update these lines.
+EXMINCLUDESRC   = $(MTOP)/X11
+EXMLIB          = $(MTOP)/demos/lib/Exm/libExm.a
+
+INCLUDES 	= -I. -I$(TESTCOMSRC) -I$(EXMINCLUDESRC)
+DEFINES         = TestDefines
+DEPLIBS         = $(EXMLIB) TestClientDepLibs
+LOCAL_LIBRARIES = $(EXMLIB) TestClientLibs 
+
+NormalLibraryObjectRule()
+
+DEPS	= Targets.o
+
+MSimpleProgramTarget(XmeConfigureObject)
+TestPPTarget(XmeConfigureObject)
+MSimpleProgramTarget(XmeCursor)
+TestPPTarget(XmeCursor)
+MSimpleProgramTarget(XmeDrawing1)
+TestPPTarget(XmeDrawing1)
+MSimpleProgramTarget(XmeFocusChangeCallback)
+TestPPTarget(XmeFocusChangeCallback)
+MSimpleProgramTarget(XmeGetPixmapData)
+TestPPTarget(XmeGetPixmapData)
+MSimpleProgramTarget(XmeGetTextualDragIcon)
+TestPPTarget(XmeGetTextualDragIcon)
+MSimpleProgramTarget(XmeFocusIsInShell)
+TestPPTarget(XmeFocusIsInShell)
+MSimpleProgramTarget(XmeCreateClassDialog)
+TestPPTarget(XmeCreateClassDialog)
+MSimpleProgramTarget(XmeGetDefaultPixel)
+TestPPTarget(XmeGetDefaultPixel)
+MSimpleProgramTarget(XmeNavigate)
+TestPPTarget(XmeNavigate)
+MSimpleProgramTarget(XmeQueryGeo)
+TestPPTarget(XmeQueryGeo)
+MSimpleProgramTarget(XmeRedisplayGadgets)
+TestPPTarget(XmeRedisplayGadgets)
+MSimpleProgramTarget(XmeReplyToQueryGeometry)
+TestPPTarget(XmeReplyToQueryGeometry)
+MSimpleProgramTarget(XmeResolvePO)
+TestPPTarget(XmeResolvePO)
+MSimpleProgramTarget(XmeString)
+TestPPTarget(XmeString)
+MSimpleProgramTarget(XmeTargets)
+TestPPTarget(XmeTargets)
+MSimpleProgramTarget(XmeTransfer)
+TestPPTarget(XmeTransfer)
+MSimpleProgramTarget(XmeUserMessages)
+TestPPTarget(XmeUserMessages)
+
+
+SRCS=  \
+	XmeConfigureObject.c \
+	XmeCreateClassDialog.c \
+	XmeCursor.c \
+	XmeDrawing1.c \
+	XmeFocusChangeCallback.c \
+	XmeFocusIsInShell.c \
+	XmeGetDefaultPixel.c \
+	XmeGetPixmapData.c \
+	XmeGetTextualDragIcon.c \
+	XmeNavigate.c \
+	XmeQueryGeo.c \
+	XmeRedisplayGadgets.c \
+	XmeReplyToQueryGeometry.c \
+	XmeResolvePO.c \
+	XmeString.c \
+	XmeTransfer.c \
+	XmeTargets.c \
+	XmeUserMessages.c
+
+OBJS=  \
+	XmeConfigureObject.o \
+	XmeCreateClassDialog.o \
+	XmeCursor.o \
+	XmeDrawing1.o \
+	XmeFocusChangeCallback.o \
+	XmeFocusIsInShell.o \
+	XmeGetDefaultPixel.o \
+	XmeGetPixmapData.o \
+	XmeGetTextualDragIcon.o \
+	XmeNavigate.o \
+	XmeQueryGeo.o \
+	XmeRedisplayGadgets.o \
+	XmeReplyToQueryGeometry.o \
+	XmeResolvePO.o \
+	XmeString.o \
+	XmeTargets.o \
+	XmeTransfer.o \
+	XmeUserMessages.o
+
+DependTarget () 
+

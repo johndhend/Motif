@@ -1,0 +1,67 @@
+# $XConsortium: PanedWin4.prt /main/3 1995/07/19 20:26:00 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) CompareVisual PanedWindow1 
+TRACE:(2) LocatePointer PanedWindow1 RSash 0
+TRACE:(3) LocatePointer PanedWindow1 RSash 0
+TRACE:(4) DragXYRelative Down 50 
+TRACE:(5) CompareVisual PanedWindow1 
+TRACE:(6) LocatePointer PanedWindow1 RSash 1
+TRACE:(7) DragXYRelative Up 50 
+TRACE:(8) CompareVisual PanedWindow1 
+TRACE:(9) Continue
+TRACE:(10) LocatePointer PanedWindow1 RSash 1
+TRACE:(11) DragXYRelative Down 50 
+TRACE:(12) CompareVisual PanedWindow1 
+TRACE:(13) LocatePointer PanedWindow1 RSash 0
+TRACE:(14) DragXYRelative Up 35 
+TRACE:(15) CompareVisual PanedWindow1 
+TRACE:(16) Continue
+TRACE:(17) CompareVisual PanedWindow1 
+TRACE:(18) LocatePointer PanedWindow1 RSash 1
+TRACE:(19) DragXYRelative Down 52 
+TRACE:(20) CompareVisual PanedWindow1 
+TRACE:(21) LocatePointer PanedWindow1 RSash 0
+TRACE:(22) DragXYRelative Up 55 
+TRACE:(23) CompareVisual PanedWindow1 
+TRACE:(24) LocatePointer PanedWindow1 RSash 0
+TRACE:(25) DragXYRelative Down 55 
+TRACE:(26) CompareVisual PanedWindow1 
+TRACE:(27) WindowResize Shell1 South 25
+TRACE:(28) CompareVisual PanedWindow1 
+TRACE:(29) Exit
+Exiting Test...Please Standby...

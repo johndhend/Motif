@@ -1,0 +1,168 @@
+/* $TOG: TransFamilyM1.dat /main/5 1997/05/23 10:13:17 dbl $ */
+/*
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+ */
+/*
+ * HISTORY
+ */
+
+#) This is a test testing the various behaviors of a family of transient 
+   windows with their parent windows and otherwise.
+
+#) There should be two TopLevel Shells with a bulletinboard containing a
+   bunch of pushbuttons inside.
+
+C)
+
+
+#) Click MouseBtn1 on "Create Primary Modal from TopShell1". This should
+   post a PrimaryModal dialog child of TopShell1.
+
+#) Post the windowMenu of the newly posted dialog. There should be an 
+   item "Beep" appended to the windowMenu.
+
+#) Select the item "Beep" from the posted windowMenu. If bell is not
+   turned off on your system, you should hear a beep.
+
+#) Click MouseBtn1 on "Cancel" of the posted dialog.
+
+#) Click MouseBtn1 on "Create Modeless Dialog from TopShell1". This should
+   post a Modeless dialog child of TopShell1.  Repeat steps 2 thru 4.
+
+#) Click MouseBtn1 on "Create Full App Modal from TopShell1". This should
+   post a FullAppModal dialog child of TopShell1.  Click MouseBtn1 on 
+   "Cancel" of the posted dialog.
+
+#) Click MouseBtn1 on "Create System Modal from TopShell1". This should
+   post a System Modal dialog child of TopShell1.  Click MouseBtn1 on 
+   "Cancel" of the posted dialog.
+
+#) Repeat steps 1 thru 7 replacing TopShell1 with TopShell2.
+
+
+C)
+
+
+#) Click MouseBtn1 on "Create Primary Modal from TopShell1". This should
+   post a PrimaryModal dialog child of TopShell1.
+
+#) Click MouseBtn1 on "Spawn Dialog Child". This should post a PrimaryModal
+   dialog child of the first PrimaryModal dialog. When this second child
+   is up, you should not be able to input into either the first dialog, or
+   TopShell1.
+
+#) Click MouseBtn1 on "Create Modeless Dialog from TopShell1". This should
+   post a PrimaryModal dialog child of TopShell1.
+
+#) Click MouseBtn1 on "Spawn Dialog Child". This should post a Modeless
+   dialog child of the first Modeless dialog. Even when this second child
+   is up, you should be able to input in all the other windows.
+
+#) Click MouseBtn1 on "Create FullApp Modal from TopShell1". This should
+   post a FullApp Modal dialog child of TopShell1.
+
+#) Click MouseBtn1 on "Spawn Dialog Child". This should post a FullApp Modal
+   dialog child of the first FullApp Modal dialog. When this second child
+   is up, you should not be able to input into any other window in the
+   application including the first FullApp modal.
+
+#) Click MouseBtn1 on "Create System Modal from TopShell1". This should
+   post a System Modal dialog child of TopShell1.
+
+#) Click MouseBtn1 on "Spawn Dialog Child". This should post a System Modal
+   dialog child of the first System Modal dialog. When this second child
+   is up, you should not be able to input anywhere else on the screen, 
+   including the first System modal.
+
+#) Repeat steps 1 thru 8 replacing TopShell1 with TopShell2.
+
+C)
+
+
+
+#) If you are NOT running 1.2 (or greater) mwm, please exit the test now.
+
+C) 
+
+#) Continue to test some new features of 1.2 (or greater) mwm.
+
+C) 
+
+
+#) Now post different dialog children from both TopShell1 and TopShell2,
+   by clicking on the appropriate buttons.
+
+#) All the children should have four new items, "LowerWithin", "LowerFree",
+   "RaiseWithin", and "RaiseFree", appended to the WindowMenu.
+
+#) Get rid of all the children by selecting "Cancel" in each.
+
+
+C)
+
+#) Click on "Create Modeless Dialog from TopShell1" in TopShell1. Spawn
+   a bunch of modeless dialogs by selecting "Spawn Dialog Child" in the
+   newly created modeless dialogs.
+
+#) The modeless dialogs are no longer created as children of the spawning
+   dialog but of TopShell1 or TopShell2. 
+
+#) Select "LowerWithin" from the WindowMenu of any of the modeless dialogs.
+   This should lower that dialog window within the family, (and staying
+   above the parent), without lowering the family in the global window
+   stack.
+
+#) Select "RaiseWithin" from the WindowMenu of any of the modeless dialogs.
+   This should raise that dialog window within the family, (and staying
+   above the parent), without raising the family in the global window
+   stack.
+
+#) Select "LowerFree" from the WindowMenu of any of the modeless dialogs.
+   This should lower that dialog window to the bottom of the 
+   window stack without affecting its position within the global window stack.
+
+#) Select "RaiseFree" from the WindowMenu of any of the modeless dialogs.
+   This should raise that dialog window to the top of the 
+   window stack without affecting its position within the global window stack.
+
+#) Get rid of all the children by selecting "Cancel" in each.
+
+#) Try different combinations of the above tests, creating children from 
+   both TopShell1 and TopShell2 at the same time.
+
+C)
+
+
+E)

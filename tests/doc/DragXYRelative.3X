@@ -1,0 +1,93 @@
+...\" @OPENGROUP_COPYRIGHT@
+...\" COPYRIGHT NOTICE
+...\" Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+...\" Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+...\" ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+...\" the full copyright text.
+...\" 
+...\" This software is subject to an open license. It may only be
+...\" used on, with or for operating systems which are themselves open
+...\" source systems. You must contact The Open Group for a license
+...\" allowing distribution and sublicensing of this software on, with,
+...\" or for operating systems which are not Open Source programs.
+...\" 
+...\" See http://www.opengroup.org/openmotif/license for full
+...\" details of the license agreement. Any use, reproduction, or
+...\" distribution of the program constitutes recipient's acceptance of
+...\" this agreement.
+...\" 
+...\" EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+...\" PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+...\" KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+...\" WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+...\" OR FITNESS FOR A PARTICULAR PURPOSE
+...\" 
+...\" EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+...\" NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+...\" INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+...\" DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+...\" AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+...\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+...\" ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+...\" EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+...\" POSSIBILITY OF SUCH DAMAGES.
+...\" 
+...\" 
+...\" HISTORY
+# $XConsortium: DragXYRelative.3X /main/4 1995/07/13 19:59:37 drk $
+...\" **
+...\" **  (c) Copyright 1991, 1992 by Open Software Foundation, Inc.
+...\" **      All Rights Reserved.
+...\" **
+...\" **
+.TH DragXYRelative 3X
+.SH NAME
+\*LDragXYRelative \*O\(em Command to drag in Delta X, Delta Y direction
+.SH SYNOPSIS
+\*LDragXYRelative\*O
+\*VDirection Delta1 [Delta2]\*O
+.br
+\*V[ModifierList]* [Button]\*O
+.SH DESCRIPTION
+The
+\*LDragXYRelative\*O
+command will drag to a coordinate location in a widget hierarchy. 
+The Drag will begin at the cursor's current location (see \*LLocatePointer\*O)
+The destination coordinate will be determined by the parameters to this
+function. Delta1 and Delta2 are changes in the X or Y direction
+(depending on the value of Direction). The \*LDragXYRelative\*O command
+is composed of a call to \*LPressMB\*O, a call to \*LLocatePointer\*O
+to move to the second coordinate, and a call to \*LReleaseMB\*O.  
+.IP "\*VDirection\*O" 14n
+Direction in which to Drag. Valid values are \*LUp\*O, \*LDown\*O, \*LRight\*O,
+\*LLeft\*O, and
+\*LAny\*O. \*LAny\*O indicates a change in both the X and Y direction.
+.IP "\*VDelta1\*O"
+Change in either the X or Y direction. If \*VDirection\*O is either \*LUp\*O or
+\*LDown\*O then \*VDelta1\*O is used as the change in the Y direction. 
+If \*VDirection\*O
+is \*LRight\*O, \*LLeft\*O, or \*LAny\*O, then \*VDelta1\*O 
+is the change in the X direction.
+.IP "\*V[Delta2]\*O"
+Change in the Y direction (only used if \*VDirection\*O is \*LAny\*O).
+.IP "\*V[ModifierList]*\*O" 
+List of Modifiers to modify the mouse button press. For a full list of
+available modifiers see \*LModifierList(3X)\*O. The default is no modifiers.
+.IP "\*V[Button]\*O"
+Button to be pressed. For a full list of available
+buttons see \*LButtonList(3X)\*O. The default is Button1.
+.PP 
+For more information about \*LDragXYRelative\*O, see
+the \*EOSF/Motif Quality Assurance Test Suite User's Guide\*O.
+.SH EXAMPLE
+\*LDragXYRelative Any 100 -10 <Alt> Btn3\*O
+.PP
+This result of this command is to Drag from the current location to
+(CurrentX + 100, CurrentY - 10), using Button3 modified by the \*LAlt\*O key.
+.PP
+.SH "RELATED INFORMATION"
+.na
+\*LLocatePointer(3X)\*O, \*LPressMB(3X)\*O, \*LReleaseMB(3X)\*O, 
+\*LDragComponent(3X)\*O, \*LDragSliderValue(3X)\*O, \*LModifierList(3X)\*O,
+\*LComponentList(3X)\*O
+.ad

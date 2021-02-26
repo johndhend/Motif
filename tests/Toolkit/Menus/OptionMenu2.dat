@@ -1,0 +1,78 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: OptionMenu2.dat /main/5 1995/07/13 18:49:31 drk $"
+*/
+
+#) A client window will appear with an Option Menu.  The Option Menu
+   will have a label named Option with the 'o' in Option underlined,
+   and a CascadeButton labeled Experience Hackerungnen.  The Shell
+   will be located 50 pixels from the top left corner of the display. 
+#) Press and hold MB3 on the Selection Area (Experience Hackerungnen).
+   A Pulldown Menu labeled Menu1 will appear. Release MB3. 
+C)
+
+#) Press and hold MB3 on the Selection Area (Experience Hackerungnen).
+   The label for ShortBtn1 (the topmost button in Menu1) will be the
+   circles pixmap.  The label for MediumBtn2 (the second button in Menu1)
+   will be the gnu pixmap. 
+#) Drag the pointer up to the top selection and release MB3.  Menu1 will
+   disappear and the circles pixmap will appear in the Selection Area. 
+#) Again, press and hold MB3 on the Selection Area (circles pixmap).
+   Verify that each entry in Menu1, when selected, becomes the entry which
+   appears in the Selection Area.  
+#) Select the gnu pixmap so that it is displayed in the Selection Area.
+   In the next panel, XmNsensitive for the Option Menu will be set to False.
+C)
+
+!) /* begin test for CR 5475. */
+#) XmNsensitive has been set to False for the Option Menu. The gnu pixmap
+   should still be displayed in the Selection Area. If the Selection Area
+   is blank, CR 5475 hasn't been fixed.
+!) /* End test for CR 5475 */
+C) 
+
+#) The shadow thickness of the Selection Area will now be set to 4. 
+C)
+
+
+#) The OptionMenu will now contain many many entries.   
+#) Select pushbutton15.  Then select pushbutton16.  The menu should not move
+   position. 
+E)

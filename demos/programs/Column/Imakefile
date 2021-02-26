@@ -1,0 +1,27 @@
+#ifndef XmClientLibs
+#define XmClientLibs $(XMLIB) $(XTOOLLIB) $(XLIB)
+#endif
+
+/* pan250: missing ? */
+/* #include "../demos.cf" */
+
+      INCLUDES = -I.
+
+SRCS = columnMotif.c
+OBJS = columnMotif.o
+
+#ifndef NO_XP
+LOCAL_LIBRARIES = -lXm -lXt -lXp -lX11 -lXext
+#else
+LOCAL_LIBRARIES = -lXm -lXt -lX11 -lXext
+#endif
+
+NormalLibraryObjectRule()
+
+MSimpleProgramTarget(columnMotif)
+
+InstallProgram(columnMotif,$(BINDIR))
+
+InstallAppDefaults(Column)
+
+DependTarget()

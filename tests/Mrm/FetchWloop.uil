@@ -1,0 +1,196 @@
+! 
+! @OPENGROUP_COPYRIGHT@
+! COPYRIGHT NOTICE
+! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+! ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+! the full copyright text.
+! 
+! This software is subject to an open license. It may only be
+! used on, with or for operating systems which are themselves open
+! source systems. You must contact The Open Group for a license
+! allowing distribution and sublicensing of this software on, with,
+! or for operating systems which are not Open Source programs.
+! 
+! See http://www.opengroup.org/openmotif/license for full
+! details of the license agreement. Any use, reproduction, or
+! distribution of the program constitutes recipient's acceptance of
+! this agreement.
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+! OR FITNESS FOR A PARTICULAR PURPOSE
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+! POSSIBILITY OF SUCH DAMAGES.
+! 
+! 
+! HISTORY
+! 
+!   $XConsortium: FetchWloop.uil /main/8 1995/07/14 10:49:26 drk $
+!******************************************************************************
+module FetchWcycle
+
+	version = 'v1.0'
+	names = case_sensitive
+
+!
+! This version will produce a compiler error; it detects the cycle in
+! the loop_widget test
+!
+
+!
+! Contains declarations for main MessageBox widget
+!
+
+include file 'main.uil';
+  
+!
+! Contains color table and icons
+!
+
+include file 'pixmaps.uil';  
+
+!
+! Form widget to hold test widgets
+!
+
+object
+	test_box : XmForm
+	{
+		controls
+		{
+			XmPushButton		button1;
+			XmPushButton		button2;
+		};
+	};
+
+object
+	button1 : XmPushButton
+	{
+		arguments
+		{
+			XmNlabelType		= XmPIXMAP;
+			XmNlabelPixmap		= test1_btn1_icon;
+			XmNleftAttachment	= XmATTACH_FORM; 
+			XmNtopAttachment	= XmATTACH_FORM; 
+		};
+	};
+
+object
+	button2 : XmPushButton
+	{
+		arguments
+		{
+			XmNlabelType		= XmPIXMAP;
+			XmNlabelPixmap		= test1_btn2_icon;
+			XmNleftAttachment	= XmATTACH_FORM;
+			XmNtopAttachment	= XmATTACH_FORM; 
+			XmNleftOffset		= 130;
+		};
+	};
+
+object
+	button3 : XmPushButton
+	{
+		arguments
+		{
+			XmNlabelType		= XmPIXMAP;
+			XmNlabelPixmap		= test2_btn1_icon;
+			XmNleftAttachment	= XmATTACH_FORM; 
+			XmNtopAttachment	= XmATTACH_FORM; 
+			XmNtopOffset		= 60;
+		};
+	};
+
+object
+	button4 : XmPushButton
+	{
+		arguments
+		{
+			XmNlabelType		= XmPIXMAP;
+			XmNlabelPixmap		= test2_btn2_icon;
+			XmNleftAttachment	= XmATTACH_FORM;
+			XmNtopAttachment	= XmATTACH_FORM; 
+			XmNleftOffset		= 130;
+			XmNtopOffset		= 60;
+		};
+	};
+
+/*
+ * button5 and button6 are extras
+ */
+
+object
+	button5 : XmPushButton
+	{
+		arguments
+		{
+			XmNlabelType		= XmPIXMAP;
+			XmNlabelPixmap		= test2_btn2_icon;
+			XmNleftAttachment	= XmATTACH_FORM;
+			XmNtopAttachment	= XmATTACH_FORM; 
+			XmNleftOffset		= 130;
+			XmNtopOffset		= 60;
+		};
+	};
+
+object
+	button6 : XmPushButton
+	{
+		arguments
+		{
+			XmNlabelType		= XmPIXMAP;
+			XmNlabelPixmap		= test2_btn2_icon;
+			XmNleftAttachment	= XmATTACH_FORM;
+			XmNtopAttachment	= XmATTACH_FORM; 
+			XmNleftOffset		= 130;
+			XmNtopOffset		= 60;
+		};
+	};
+
+!
+! Test cycle detection in a widget hierarchy. loop_widget is a Form
+! containing a form which contains a cycle. loop_widget is not itself
+! a child of anybody, so that Uil's output algorithm (start at widgets
+! which have no parent) will be satisfied.
+!
+
+object
+	loop_widget : XmForm
+	{
+		controls
+		{
+			XmForm			child1;
+		};
+	};
+
+object
+	child1 : XmForm
+	{
+		controls
+		{
+			XmForm			child2;
+		};
+	};
+object
+	child2 : XmForm
+	{
+		controls
+		{
+			XmForm			child1;
+		};
+	};
+
+end module;
+
+

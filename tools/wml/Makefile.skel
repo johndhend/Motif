@@ -1,0 +1,126 @@
+# -----------------------------------------------------
+#
+# This Makefile works well with small projects where a full IDE isn't needed
+# or wanted.  It is about as automatic as can be for a lightweight project.
+#
+# USAGE: just place in directory with .c files and do "make".
+# 	make
+
+# NOTE If you add or removed .h or .c files from the project then do make 
+# clean again.  In some odd cases use make clean after you've make changes 
+# that effect dependancy as "cc -MD" may not _allways_ notice the relation.
+# 	make clean
+
+# Why use make?
+#
+# You can build a small project with just "cc *.c".  The
+# benefit of using make is to provide automatic dependacy builds: which means
+# only files that need to be compiled are compiled.  You don't want to do 
+# "cc -MD" dependancies by hand - its really meant to work with make.
+
+# Create file MPROJ with one line "PROJECT = outputname" to make the
+# output executable some name other than "a.out".
+
+# -----------------------------------------------------
+
+# this makefile expects sh to interpret commands
+SHELL = /bin/sh
+
+-include MPROJ
+
+# incase MPROJ is removed ?
+ifndef PROJECT
+PROJECT = a.out
+endif
+
+# -----------------------------------------------------
+# define variables - wrap them with ${} when using them
+
+# blank ones are not used - just place holders
+INCLUDES=
+LIBS=
+CFLAGS=
+LDFLAGS=
+COMPILE = cc ${INCLUDES} ${LIBS} ${CFLAGS} ${LDFLAGS}
+DEPENDENCIES=
+
+# (below)	$@ means the target name of the rule where found (PROJECT)
+LINK    = cc -o $@
+
+# This defines OBJECTS.  "make clean" creates file MOBJS.
+-include MOBJS
+
+# -----------------------------------------------------
+# The first explicit rule (name:) is the default rule used with "make".
+# 	a.out: makefile specifies how to make it
+
+# ${PROJECT}: $(OBJECTS) $(DEPENDENCIES)
+${PROJECT}: check_objs $(OBJECTS) $(DEPENDENCIES)
+	@rm -f ${PROJECT}
+	$(LINK) $(LDFLAGS) $(OBJECTS) $(LIBS)
+
+# NEW: automatically run clean first time to make various dep. files
+# Mon Jun 13 13:05:23 EDT 2005
+check_objs:
+	if [ ! -f "MPROJ" ] ; then make clean ; fi
+	if [ ! -f "MOBJS" ] ; then make clean ; fi
+	if [ ! -f "MDEPS" ] ; then make clean ; fi
+
+# -----------------------------------------------------
+# this says clean isn't a real program target, which means clean does not have
+# to meat dependancies of the first rule of the file.
+# 	oddly, we specified clean as a dep of PROJECT so that user
+.PHONY: clean
+# Clean rule is used with "make clean" (the default rule is skipped).
+clean:
+	rm -f *.o
+	rm -r .deps
+	mkdir .deps
+	# name all .c as a.out compiler dependancies
+	# 	not as fast as per-need; but simple
+	echo "DEP_FILES = `echo *.c | sed -e 's/\.c/\.P/g; s/^/.deps\//; s/[.]P /.P .deps\//g'`" > MDEPS
+	echo "OBJECTS = `echo *.c | sed -e 's/\.c/.o/g'`" > MOBJS
+	if [ ! -f "MPROJ" ] ; then echo "PROJECT = a.out" > MPROJ ; fi
+
+# -----------------------------------------------------
+# DEP_FILES and %.o rules together do typical dependancy checking.
+# "make clean" creates file MDEPS
+# 	another way is to list ea. filename and it's deps. in the Makefile
+# 	instead of using symbols that list all .o and .c
+
+-include MDEPS
+-include ${DEP_FILES}
+
+# % An implicit rule means a rules made by filename extensions (ie, *.o)
+# 	$< is replaced with the prerequisite: "the .c needed to make the .o"
+# 	$(*F) is one of many make built-in macros (this one is for filenames)
+
+%.o: %.c
+	@echo '$(COMPILE) -c $<'; \
+	$(COMPILE) -Wp,-MD,.deps/$(*F).pp -c $<
+	@-cp .deps/$(*F).pp .deps/$(*F).P; \
+	tr ' ' '\012' < .deps/$(*F).pp \
+	| sed -e 's/^\\$$//' -e '/^$$/ d' -e '/:$$/ d' -e 's/$$/ :/' \
+	>> .deps/$(*F).P; \
+	rm .deps/$(*F).pp
+
+# -----------------------------------------------------
+# How does it work?
+#
+# target [target] ... : [source source ...]
+# 	command
+# 	command
+#
+# The target is assume to be created by commands and commands depend upon
+# the listed sources.
+#
+# Make looks for the first "rule:" and takes the list after it as things that
+# rule: depends upon.  If any other rule matches these names (ie, %.o) that
+# rule is done before the instructions under "rule:" are done.  When all 
+# dependancies of rule: are met make goes back to "rule:" and does what it 
+# says (ie, finally link the program).
+#
+# Its obvious that for instruction (but not dependancies) you may use
+# any shell commandline.
+#
+

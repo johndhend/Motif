@@ -1,0 +1,29 @@
+
+
+#) This is the CloseH test.
+C)
+
+#) There should now be one label widget.
+   It should say:
+	OpenH_vh is completed.
+	Also, note that there should be four Mrm Toolkit Warning messages on 
+        stdout/stderr about MrmFAILUREs.
+   WARNING: The next phase of this test may perform a VERY LARGE 
+   number of disk file operations.
+   DO NOT CONTINUE if this will disrupt other people's work!
+C)  
+
+
+#) There should now be three new label widgets.
+   They should say:
+       OpenH_mf1 is completed.
+       OpenH_mf2 is completed.
+       OpenH_mf3 is completed.
+C)
+
+
+#) A summary message should be printed on stdout.
+E)
+
+
+

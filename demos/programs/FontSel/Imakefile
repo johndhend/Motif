@@ -1,0 +1,20 @@
+#ifndef XmClientLibs
+#define XmClientLibs $(XMLIB) $(XTOOLLIB) $(XLIB)
+#endif
+
+      INCLUDES = -I.
+
+SRCS = callbacks-c.c  creation-c.c   fontsel.c
+OBJS = callbacks-c.o  creation-c.o   fontsel.o
+
+#ifndef NO_XP
+LOCAL_LIBRARIES = -lXm -lXt -lXp -lX11 -lXext
+#else
+LOCAL_LIBRARIES = -lXm -lXt -lX11 -lXext
+#endif
+
+NormalLibraryObjectRule()
+
+MComplexProgramTarget(fontsel,$(LOCAL_LIBRARIES),NullParameter)
+
+DependTarget()

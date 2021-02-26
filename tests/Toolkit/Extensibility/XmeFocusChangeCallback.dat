@@ -1,0 +1,70 @@
+/* $XConsortium: XmeFocusChangeCallback.dat /main/4 1995/07/17 10:13:44 drk $ */
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+ */ 
+/*
+ * HISTORY
+ */
+
+	This test checks the focus callback management routines for
+	a widget.  A callback can be added and removed from the
+	list of focus change callback procedures.
+
+#) 	To begin press "Validate" and make sure that no messages 
+	appear in the xterm window.
+
+C)
+	The next test begins by adding a new focus change callback
+	for the button's shell widget.  The callback message "New Focus
+	Change Callback has been called" is printed in the xterm
+	window everytime the focus enters or leaves the shell.  NOTE:
+	the message should be printed twice as this test case starts.
+
+#)	Move the mouse over the button itself and press the first
+	mouse button.  The callback message should print.  Press the
+	mouse button once again and make sure the message does not 
+	print.
+C)
+	The next test removes the change focus callback so that
+	no message is printed when this occurs.
+
+#)	Move the mouse to the title bar of the button.  Press the
+	first mouse button and make sure that NO callback message
+	is printed.  Repeat this test by pressing the button itself.
+C)
+	 Press Exit to end the test.  
+         Goodbye.
+E)
+

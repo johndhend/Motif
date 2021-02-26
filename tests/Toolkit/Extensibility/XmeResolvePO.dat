@@ -1,0 +1,76 @@
+/* $XConsortium: XmeResolvePO.dat /main/4 1995/07/17 10:14:37 drk $ */
+/*
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+ */
+/*
+ * HISTORY
+ */
+
+
+	This test checks the XmeResolvePartOffsets function.  The
+ExmTabButton widget has been modified to use offsets.  For each test case
+the resource "OpenSide" has been modified.  The validation exists of
+instantiating the widget and checking the visual effect of the resource
+on the widget.
+
+#) The "OpenSide" resource effects the specified side of the button by
+omitting the shadow for that side.  The visual check to be performed is
+simply making sure that no shadow is present for the specified side.  
+(Note that by clicking on the button the shadow colors will alternate to
+make this check more obvious.)
+
+#) This first test validates the default value of the resource.  The
+default value is XmLEFT.  Check that the left side of the button has no
+shadow.
+
+#) Make sure that no error messages are printed in the xterm window.
+
+
+C)  This test validates the setting of the resource to the 
+value of XmTOP.  Check that the top side of the button has no
+shadow.
+
+#) Make sure that no error messages are printed in the xterm window.
+
+C)  This test validates the setting of the resource to the 
+value of XmRIGHT.  Check that the right side of the button has no
+shadow.
+
+#) Make sure that no error messages are printed in the xterm window.
+
+C)
+	 Press Exit to end the test.  
+         Goodbye.
+E)

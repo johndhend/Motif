@@ -1,0 +1,234 @@
+# $XConsortium: ScrollList3.scr /main/5 1995/07/17 20:22:45 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+# OSF/Motif: @(#)ScrollList3.scr	1.2  91/10/31
+
+# A client with a Scrolled List contained in a Form should appear.
+# The List should contain a vertical scrollbar with 5
+# visible items (One - Five). The List should be attached to the Form
+# on the right and left, and have an Offset of 50 on the right and left.
+# The font will be courier if your system supports it, if not the
+# test suite default font.
+
+LocatePointer List1 RListItem 0
+CompareVisual List1
+
+# Click MB1 in the scrollbar below the slider. Item <Five> should
+# now the be first item in the List, and Items Five - Nine should
+# be visible. 
+
+LocatePointer List1 RVertScrollBarDownSliderArea
+ClickMB Btn1
+
+CompareVisual List1
+
+# C)
+
+Continue
+
+# Select the first visible Item (Five). The last Item (Ten) should be
+# deleted from the List. There should be no visible change to the List,
+# but the scrollbar should fill downwards. 
+
+LocatePointer List1 RListItem 0
+ClickMB Btn1
+
+# Select the first Item from the List again (Item5). The last item
+# should be deleted from the List and the List should scroll up one item. 
+
+LocatePointer List1 RListItem 0
+ClickMB Btn1
+
+# Continue this process until no items are left in the List. 
+
+# When item <Six> is deleted, the vertical scrollbar will disappear. 
+
+# When the last item is deleted from the list a message will be
+# printed in the term window. 
+
+LocatePointer List1 RListItem 0
+ClickMB Btn1
+
+LocatePointer List1 RListItem 0
+ClickMB Btn1
+
+LocatePointer List1 RListItem 0
+ClickMB Btn1
+
+LocatePointer List1 RListItem 0
+ClickMB Btn1
+
+LocatePointer List1 RListItem 0
+ClickMB Btn1
+
+LocatePointer List1 RListItem 0
+ClickMB Btn1
+
+LocatePointer List1 RListItem 0
+ClickMB Btn1
+
+LocatePointer List1 RListItem 0
+ClickMB Btn1
+
+# C)
+
+Continue
+
+# All ten items will be replaced, and items Six through Ten should be visible. 
+
+LocatePointer List1 RListItem 0
+CompareVisual List1
+
+# C)
+
+Continue
+
+# The List should shrink to a height of 0. No items should be visible. 
+
+# C)
+
+Continue
+
+# The List should grow to a height of 500. All items should be visible. 
+
+LocatePointer List1 RListItem 0
+CompareVisual List1
+
+# C)
+
+Continue
+
+# The List should now be empty, there also should be two PushButtons
+# below the List.
+
+CompareVisual List1
+
+# Press \"Push To Add one Item\" 5 times until the vertical scrollbar
+# grows.
+
+LocatePointer Push2
+ClickMB Btn1
+ClickMB Btn1
+ClickMB Btn1
+ClickMB Btn1
+ClickMB Btn1
+
+CompareVisual List1
+
+# Now move the vertical scrollbar all the way down.
+
+LocatePointer List1 RVertScrollBarSlider
+DragSliderValue Down Max
+
+# Now press \"Push to Delete and Add\". The List should contain 1 item
+# \"Yet Another\". 
+
+LocatePointer Push1
+ClickMB Btn1
+
+CompareVisual List1
+
+# C)
+
+Continue
+
+# The List should now be empty, there also should be two PushButtons
+# below the List.
+
+CompareVisual List1
+
+# Press \"Push To Add one Item\" 5 times until the vertical scrollbar
+# grows.
+
+LocatePointer Push2
+ClickMB Btn1
+ClickMB Btn1
+ClickMB Btn1
+ClickMB Btn1
+ClickMB Btn1
+
+# Now move the vertical scrollbar all the way down.
+
+LocatePointer List1 RVertScrollBarSlider
+DragSliderValue Down Max
+
+# Now press \"Push to Delete and Add\". The List should contain 1 item
+# \"Yet Another\". 
+
+LocatePointer Push1
+ClickMB Btn1
+
+CompareVisual List1
+
+# C)
+
+Continue
+
+# The List should now be empty, there also should be two PushButtons
+# below the List.
+
+CompareVisual List1
+
+# Press \"Push To Add one Item\" 5 times until the vertical scrollbar
+# grows.
+
+LocatePointer Push2
+ClickMB Btn1
+ClickMB Btn1
+ClickMB Btn1
+ClickMB Btn1
+ClickMB Btn1
+
+# Now move the vertical scrollbar all the way down.
+
+LocatePointer List1 RVertScrollBarSlider
+DragSliderValue Down Max
+
+# Now press \"Push to Delete and Add\". The List should contain 1 item
+# \"Yet Another\". 
+
+LocatePointer Push1
+ClickMB Btn1
+
+CompareVisual List1
+
+# E)
+
+Exit

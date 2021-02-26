@@ -1,0 +1,246 @@
+! @OPENGROUP_COPYRIGHT@
+! COPYRIGHT NOTICE
+! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+! ALL RIGHTS RESERVED (MOTIF).  See the file named COPYRIGHT.MOTIF for
+! the full copyright text.
+! 
+! This software is subject to an open license. It may only be
+! used on, with or for operating systems which are themselves open
+! source systems. You must contact The Open Group for a license
+! allowing distribution and sublicensing of this software on, with,
+! or for operating systems which are not Open Source programs.
+! 
+! See http://www.opengroup.org/openmotif/license for full
+! details of the license agreement. Any use, reproduction, or
+! distribution of the program constitutes recipient's acceptance of
+! this agreement.
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+! OR FITNESS FOR A PARTICULAR PURPOSE
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+! POSSIBILITY OF SUCH DAMAGES.
+! 
+! 
+! HISTORY
+
+procedure
+    NewCB();
+    OpenCB();
+    SaveCB();
+    SaveAsCB();
+    CopyToCB();
+    MoveToCB();
+    RemoveCB();
+    PrintCB();
+    PrintSetupCB();
+    CloseCB();
+    ExitCB();
+    UndoCB();
+    RepeatRedoCB();
+    DragMoveCB();
+    CutCB();
+    CopyCB();
+    PasteCB();
+    ClearCB();
+    DeleteCB();
+    SelectAllCB();
+    DeselectAllCB();
+    ChangeViewCB();
+    NewWindowCB();
+    OverviewCB();
+    TocCB();
+    TasksCB();
+    ReferenceCB();
+    OnItemCB();
+    UsingHelpCB();
+    AboutCB();
+
+list
+	new_cbs : callbacks {
+  	      XmNactivateCallback = procedure NewCB();
+  	};
+
+	open_cbs : callbacks {
+  	      XmNactivateCallback = procedure OpenCB();
+  	};
+
+	save_cbs : callbacks {
+  	      XmNactivateCallback = procedure SaveCB();
+  	};
+
+	saveAs_cbs : callbacks {
+  	      XmNactivateCallback = procedure SaveAsCB();
+  	};
+
+	revert_cbs : callbacks {
+  	};
+
+	copyTo_cbs : callbacks {
+  	      XmNactivateCallback = procedure CopyToCB();
+  	};
+
+	moveTo_cbs : callbacks {
+	        XmNactivateCallback = procedure MoveToCB();
+  	};
+
+	linkTo_cbs : callbacks {
+  	};
+
+	drag_cbs : callbacks {
+  	};
+
+	print_cbs : callbacks {
+  	      XmNactivateCallback = procedure PrintCB();
+  	};
+
+	printSetup_cbs : callbacks {
+  	      XmNactivateCallback = procedure PrintSetupCB();
+  	};
+
+	close_cbs : callbacks {
+  	      XmNactivateCallback = procedure CloseCB();
+  	};
+
+	exit_cbs : callbacks {
+  	      XmNactivateCallback = procedure ExitCB();
+  	};
+
+	undo_cbs : callbacks {
+  	      XmNactivateCallback = procedure UndoCB();
+  	};
+
+	repeatRedo_cbs : callbacks {
+  	      XmNactivateCallback = procedure RepeatRedoCB();
+  	};
+
+	dragMove_cbs : callbacks {
+  	      XmNactivateCallback = procedure DragMoveCB();
+  	};
+
+	size_cbs : callbacks {
+  	};
+
+	duplicate_cbs : callbacks {
+  	};
+
+	cut_cbs : callbacks {
+  	      XmNactivateCallback = procedure CutCB();
+  	};
+
+	copy_cbs : callbacks {
+  	      XmNactivateCallback = procedure CopyCB();
+  	};
+
+	copyLink_cbs : callbacks {
+	};
+
+	copySpecial_cbs : callbacks {
+	};
+
+	paste_cbs : callbacks {
+  	      XmNactivateCallback = procedure PasteCB();
+  	};
+
+	pasteLink_cbs : callbacks {
+	};
+
+	pasteSpecial_cbs : callbacks {
+	};
+
+	insert_cbs : callbacks {
+	};
+
+	primaryCopy_cbs : callbacks {
+	};
+
+	primaryMove_cbs : callbacks {
+	};
+
+	primaryLink_cbs : callbacks {
+	};
+
+	clear_cbs : callbacks {
+  	      XmNactivateCallback = procedure ClearCB();
+  	};
+
+	delete_cbs : callbacks {
+  	      XmNactivateCallback = procedure DeleteCB();
+  	};
+
+	selectAll_cbs : callbacks {
+  	      XmNactivateCallback = procedure SelectAllCB();
+  	};
+
+	deselectAll_cbs : callbacks {
+  	      XmNactivateCallback = procedure DeselectAllCB();
+  	};
+
+	selectPasted_cbs : callbacks {
+	};
+
+	reselect_cbs : callbacks {
+	};
+
+	changeView_cbs : callbacks {
+  	      XmNactivateCallback = procedure ChangeViewCB();
+  	};
+	newWindow_cbs : callbacks {
+  	      XmNactivateCallback = procedure NewWindowCB();
+  	};
+
+	include_cbs : callbacks {
+	};
+
+	sort_cbs : callbacks {
+	};
+
+	find_cbs : callbacks {
+	};
+
+	overview_cbs : callbacks {
+  	      XmNactivateCallback = procedure OverviewCB();
+  	};
+
+	index_cbs : callbacks {
+	};
+
+	toc_cbs : callbacks {
+  	      XmNactivateCallback = procedure TocCB();
+  	};
+	tasks_cbs : callbacks {
+  	      XmNactivateCallback = procedure TasksCB();
+  	};
+	reference_cbs : callbacks {
+  	      XmNactivateCallback = procedure ReferenceCB();
+  	};
+
+	tutorial_cbs : callbacks {
+	};
+
+	keyboard_cbs : callbacks {
+	};
+
+	mouse_cbs : callbacks {
+	};
+
+	onItem_cbs : callbacks {
+  	      XmNactivateCallback = procedure OnItemCB();
+  	};
+	usingHelp_cbs : callbacks {
+  	      XmNactivateCallback = procedure UsingHelpCB();
+  	};
+	about_cbs : callbacks {
+  	      XmNactivateCallback = procedure AboutCB();
+  	};

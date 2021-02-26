@@ -1,0 +1,20 @@
+
+
+
+
+#) This is the fetchCL test.
+C)
+
+
+#) There should now be two buttons in the second window.
+   The buttons should have labels which read Button1 Button2.
+   The colors should be: background - red, foreground - yellow.
+   Also, note that there should be four Mrm Toolkit Warning messages 
+   on stdout/stderr about MrmFAILUREs.
+C)
+
+#) The two buttons should still have the same labels, but the colors 
+   should be background - blue, foreground - white.
+C)
+
+E)

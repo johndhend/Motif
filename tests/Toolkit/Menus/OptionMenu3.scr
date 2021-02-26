@@ -1,0 +1,195 @@
+# $XConsortium: OptionMenu3.scr /main/7 1995/07/17 20:27:02 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+# OSF/MOTIF @(#)OptionMenu3.scr	1.3 92/02/07
+
+# A client window containing a RowColumn widget with nine OptionMenu
+#  children will appear.  The window will be located 300 pixels down
+#  from the top left corner of the display.  Click on the buttons
+#  labelled 'Himalayan', 'Siamese', and 'Exotic Shorthair' and
+#  you'll see the same (shared) menu pane.
+#     Note: there should be no warning messages in the xterm window. 
+
+WindowRaise Shell1
+CompareVisual RC
+
+# When you select one of the choices in any shared menu, the shadow
+#  of its corresponding CascadeButton will increase.  Also, the font
+#  of the label will change to '8x13bold', a larger, bold font. 
+
+LocatePointer OptionMenu0 ROptionButton
+PressMB Btn1
+LocatePointer PushBtn3
+ReleaseMB Btn1
+
+LocatePointer OptionMenu1 ROptionButton
+PressMB Btn1
+LocatePointer PushBtn3
+ReleaseMB Btn1
+
+LocatePointer OptionMenu2 ROptionButton
+PressMB Btn1
+LocatePointer child2
+ReleaseMB Btn1
+
+LocatePointer OptionMenu5 ROptionButton
+PressMB Btn1
+LocatePointer PushBtn3
+ReleaseMB Btn1
+
+
+# Verify the graphic to the right of the text is the same in each
+#  Option Button. It should be a small, shadowed square
+#  (example: the button next to \"Domestic Shorthair\". 
+
+WindowRaise Shell1
+CompareVisual RC
+
+# Use the up and down arrow keys to traverse between the OptionMenus. You 
+#  should go up and down within the columns.
+
+# Get Focus to First OptionMenu
+
+LocatePointer OptionMenu0 ROptionButton
+PressMB Btn1
+ReleaseMB Btn1
+
+ClickKey KDown
+ClickKey KDown
+ClickKey KDown
+ClickKey KUp
+ClickKey KUp
+ClickKey KUp
+ClickKey KRight
+ClickKey KDown
+ClickKey KDown
+ClickKey KDown
+ClickKey KUp
+ClickKey KUp
+ClickKey KUp
+
+CompareVisual RC
+
+# Use the left and right arrow keys to traverse across the rows.
+
+ClickKey KRight
+ClickKey KLeft
+ClickKey KRight
+ClickKey KLeft
+ClickKey KLeft
+ClickKey KLeft
+ClickKey KRight
+
+CompareVisual RC
+
+Continue
+
+# An option menu in a row column should appear with three push buttons.
+# Press MB1 on the option menu selection area.  Move the pointer to item1
+#  and release.
+
+WindowRaise Shell1
+LocatePointer option ROptionButton
+PressMB Btn1 
+LocatePointer item1
+ReleaseMB Btn1
+CompareVisual rc
+
+# Click MB1 on LARGER. This will make the size of the push button bigger, 
+#  as well as its parent, the rowcolumn.
+
+LocatePointer LARGER
+ClickMB Btn1
+CompareVisual rc
+
+# Select item1 from the option menu again.  The rowcolumn should not change
+#  size.
+
+LocatePointer option ROptionButton
+PressMB Btn1 
+LocatePointer item1
+ReleaseMB Btn1
+CompareVisual rc
+
+Continue
+
+# Two option menus should appear.  Verify that both option menus
+#  can be selected.   Each has 3 entries.
+
+WindowRaise Shell1
+LocatePointer option_menu1 ROptionButton
+PressMB Btn1
+LocatePointer option1b
+ReleaseMB Btn1
+
+LocatePointer option_menu2 ROptionButton 
+PressMB Btn1
+LocatePointer option2c
+ReleaseMB Btn1
+CompareVisual rc
+Continue
+
+# Be sure that clicking MB1 in the selection area of the option menu
+#   posts the menu.
+
+LocatePointer option_menu1 ROptionButton
+ClickMB Btn1
+CompareVisual option1b
+LocatePointer option_menu1 Off
+ClickMB Btn1
+
+# The height of the button gadget in the first option menu has been changed 
+#  to 80.  Verify that the height appears correct and that each option menu
+#  can be selected and displays their three entries correctly.
+
+CompareVisual rc
+LocatePointer option_menu1 ROptionButton
+PressMB Btn1
+CompareVisual pulldown1
+ReleaseMB Btn1
+LocatePointer option_menu2 ROptionButton
+PressMB Btn1
+CompareVisual pulldown2
+ReleaseMB Btn1
+
+CompareVisual rc
+
+Exit
+

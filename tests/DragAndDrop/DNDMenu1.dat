@@ -1,0 +1,89 @@
+/* $XConsortium: DNDMenu1.dat /main/4 1995/07/17 10:05:28 drk $ */
+/*
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/
+/*
+ * HISTORY
+*/
+
+
+#) This is a basic test for dragging from menus.
+#) A client will appear containing a tear-off Pulldown menu with a MenuBar
+   labeled "MenuBar", an Option menu with "OptionItem1" displayed in the 
+   selection area , and a label "PopupMenu" for which an event handler has
+   been set, which posts a tear-off Popup menu on pressing MB3.
+#) There will also be a Popup shell. containing a Text widget.
+C)
+
+#) Initiate Drag by pressing BTransfer (MB2 by default) with the 
+   pointer positioned on the MenuBar. 
+#) With BTransfer pressed, drag the pointer over the Text widget. 
+#) Release BTransfer. The dragIcon should melt into the background, indicating
+   a successful drop. The line "MenuBar" should appear in the Text widget.
+C)
+
+
+#) Post the Pulldown menu, by pressing MB1 on the MenuBar,
+   and tear it off by releasing MB1 on the tear-off
+   control.  The menu should have one item "PulldownMenu".
+#) Initiate Drag by pressing BTransfer (MB2 by default) with the 
+   pointer positioned on the menu item. 
+#) With BTransfer pressed, drag the pointer over the Text widget. 
+#) Release BTransfer. The dragIcon should melt into the background, indicating
+   a successful drop. The line "PulldownMenu" should appear in the Text widget.
+#) Dismiss the tear-off by choosing "Close" from the window menu.
+C)
+
+
+#) Initiate Drag by pressing BTransfer (MB2 by default) with the 
+   pointer positioned on the selection area, of the Option menu.
+#) With BTransfer pressed, drag the pointer over the Text widget. 
+#) Release BTransfer. The dragIcon should melt into the background, indicating
+   a successful drop. The line "OptionItem1" should appear in the Text widget.
+C)
+
+#) Post the Popup menu by pressing MB3 on the label, and tear it off by 
+   releasing MB3 on the tear-off control. The menu should have a single item,
+   "PopupMenu".
+#) Initiate Drag by pressing BTransfer (MB2 by default) with the 
+   pointer positioned on the menu item of the Popup.
+#) With BTransfer pressed, drag the pointer over the Text widget. 
+#) Release BTransfer. The dragIcon should melt into the background, indicating
+   a successful drop. The line "PopupMenu" should appear in the Text widget.
+C)
+
+E)   
+
+

@@ -1,0 +1,28 @@
+
+#) This is the FetchSV test
+C)
+
+
+
+
+#) There should now be two buttons in the second window.
+   The buttons' labels should read\ TEST BTN1 &  TEST BTN2.
+   The colors should be: background - yellow, foreground - red.
+   The righthand button should have a wider shadow (6 pixels) around it.
+   Also, note that there should be two Mrm Toolkit Warning messages on 
+   stdout/stderr about an MrmBAD_HIERARCHY andMrm_NOT_FOUND.
+C)
+
+#) There should now be two additional buttons in the window.
+   The new buttons' labels should read    BTN1 TEST  & BTN2    TEST        
+   and The colors for the left button shadow should be:topshadow - blue,  
+   bottomshadow - black.The colors for the right button shadow should be:
+   topshadow - white,  bottomshadow - default, same as the button above it.
+   Note that there should be another Mrm Toolkit Warningmessage on 
+   stdout/stderr about an MrmNOT_FOUND.
+
+C)
+
+
+#) There should be a summary message on stdout.
+E)

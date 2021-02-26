@@ -1,0 +1,143 @@
+# $XConsortium: Container1h.scr /main/4 1995/07/17 20:14:27 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF).  See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+
+# #) This is the Container1 Test run with option "-I Container1h.Dat -u h".
+# C)
+# 
+# #) The container widget should be displayed in its ANY_ICON view.
+# #) Four IconGadgets should be visible.
+#    "IconGad1", "IconGad2" and "IconGad3" should be displayed in their small
+#    icon view, with the pixmap part displaying a "S" within
+#    a black box, and the label part displaying the strings "IconGad1",
+#    "IconGad2", and "IconGad4" respectively.
+#    "IconGad3" should be displayed in its large icon view.
+# #) The layoutType is XmSPATIAL, the spatialStyle is XmCELLS, 
+#    the spatialSnapModel is XmCenter, smallCellHeight is 80, 
+#    smallCellWidth is 100, largeCellHeight is 80, largeCellWidth is 100,
+#    marginHeight is 20, and marginWidth is 20.
+# #)  Resize the window until the width is 250. 
+# C)
+
+Continue
+CompareVisual Container1h
+WindowResize Shell1 East 250
+CompareVisual Container1h
+Continue
+
+# #) The selectionPolicy is the default EXTENDED_SELECT and the
+#    selectionTechnique is the default TOUCH_OVER.
+# #) Click BSelect in the background of Container where there is no item.
+#    All selected items should get deselected. You should also see the
+#    following message in the term window:
+# !)
+#       Reason for SelectionCallback: CR_EXTENDED_SELECT
+#       Number of items selected: 0
+#       Names of items selected:
+# 
+# #) Press BSelect on "IconGad1"
+# #) "IconGad1" gets selected.
+# #) With BSelect pressed, drag the pointer over item "IconGad4", touching
+#    "IconGad3" on the way, without touching "IconGad2".
+# #) Release BSelect. Only "IconGad1", "IconGad3", and "IconGad4"
+#    should get selected.
+# #) You should also see the following message on the term window:
+# !)
+#       Reason for SelectionCallback: CR_EXTENDED_SELECT
+#       Number of items selected: 3
+#       Names of items selected: IconGad1 IconGad3 IconGad4
+# 
+# #) Click BSelect in the background of Container where there is no item.
+#    All selected items should get deselected.
+# C)
+
+LocatePointerXYRel Container1h 10 10 
+ClickMB Btn1
+CompareVisual Container1h
+LocatePointer IconGad1
+PressMB Btn1
+CompareVisual Container1h
+LocatePointer IconGad3
+LocatePointer IconGad4
+ReleaseMB Btn1
+CompareVisual Container1h
+LocatePointerXYRel Container1h 10 10 
+ClickMB Btn1
+CompareVisual Container1h
+Continue
+ 
+# #) Press Bselect in the background of the Container at some point to the
+#    top and left of the item "IconGad1" and drag a little. You will notice
+#    a marquee rectangle following the pointer.
+# #) With BSelect pressed, drag the pointer to the right and down till
+#    the rectangle completely encompasses both "IconGad2" and "IconGad3".
+# #) While dragging, you should notice that as an item gets completely
+#    covered by the marquee rectangle (both the label part and the pixmap
+#    part), that item gets selected.
+# #) Release BSelect.
+# #) The marquee rectangle should disappear.
+# #) The items selected should include "IconGad1", "IconGad2" and "IconGad3"
+# #) You should also see the following message on the term window:
+# !)
+#       Reason for SelectionCallback: CR_EXTENDED_SELECT
+#       Number of items selected: 3
+#       Names of items selected: IconGad1 IconGad2 IconGad3
+# 
+# #) Click BSelect in the background of the Container outside of all the
+#    items. All the selected items should get deselected. You should also
+#    see the following message in the term window:
+# !)
+#       Reason for SelectionCallback: CR_EXTENDED_SELECT
+#       Number of items selected: 0
+#       Names of items selected:
+# C)
+
+LocatePointerXYRel Container1h 10 10 
+PressMB Btn1
+CompareVisual Container1h
+LocatePointerXYRel Container1h 50 50 
+CompareVisual Container1h
+LocatePointerXYRel Container1h 200 190
+CompareVisual Container1h
+ReleaseMB Btn1
+CompareVisual Container1h
+LocatePointerXYRel Container1h 10 10 
+ClickMB Btn1
+Continue 
+
+# E)
+Exit

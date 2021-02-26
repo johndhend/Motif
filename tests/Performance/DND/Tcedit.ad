@@ -1,0 +1,189 @@
+! $XConsortium: Tcedit.ad /main/4 1995/07/17 18:53:51 drk $
+!
+! @OPENGROUP_COPYRIGHT@
+! COPYRIGHT NOTICE
+! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+! ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+! the full copyright text.
+! 
+! This software is subject to an open license. It may only be
+! used on, with or for operating systems which are themselves open
+! source systems. You must contact The Open Group for a license
+! allowing distribution and sublicensing of this software on, with,
+! or for operating systems which are not Open Source programs.
+! 
+! See http://www.opengroup.org/openmotif/license for full
+! details of the license agreement. Any use, reproduction, or
+! distribution of the program constitutes recipient's acceptance of
+! this agreement.
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+! OR FITNESS FOR A PARTICULAR PURPOSE
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+! POSSIBILITY OF SUCH DAMAGES.
+!
+!
+! HISTORY
+!
+
+
+Tcedit.geometry: =400x400
+Tcedit*menuFile.labelString:	File
+Tcedit*menuQuit.labelString:	Quit
+
+Tcedit*decalForeground:		sgiDarkGray
+Tcedit*showDecal:		TRUE
+
+
+!
+! SGI Look Resources
+!
+
+! Fonts
+
+! all labels should be bold
+*XmLabel*fontList:   		-*-helvetica-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+*XmLabelGadget*fontList:	-*-helvetica-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+*XmScale*fontList:   		-*-helvetica-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+*XmBulletinBoard*labelFontList:	-*-helvetica-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+*optionMenu.XmLabelGadget*fontList:	-*-helvetica-bold-r-normal-*-14-*-*-*-*-*-iso8859-1
+
+! all buttons, toggles, and radio buttons should be plain
+*XmPushButton*fontList:		-*-helvetica-medium-r-normal-*-14*iso8859-1
+*XmPushButtonGadget*fontList:	-*-helvetica-medium-r-normal-*-14*iso8859-1
+*XmToggleButton*fontList:	-*-helvetica-medium-r-normal-*-14*iso8859-1
+*XmToggleButtonGadget*fontList:	-*-helvetica-medium-r-normal-*-14*iso8859-1
+*optionMenu*fontList:		-*-helvetica-medium-r-normal-*-14*iso8859-1
+*XmIconGadget*fontList:		-*-helvetica-medium-r-normal-*-14*iso8859-1
+*XmBulletinBoard*buttonFontList: -*-helvetica-medium-r-normal-*-14*iso8859-1
+
+! menuBar entries, panes, popups, and option menus should be oblique
+*menuBar*fontList:   		-*-helvetica-bold-o-normal-*-14*iso8859-1
+! for entries in popup menus
+*XmMenuShell*XmPushButton*fontList:  -*-helvetica-bold-o-normal-*-14*iso8859-1
+*XmMenuShell*XmLabelGadget*fontList: -*-helvetica-bold-o-normal-*-14*iso8859-1
+*XmMenuShell*XmLabel*fontList: -*-helvetica-bold-o-normal-*-14*iso8859-1
+*XmMenuShell*XmPushButtonGadget*fontList: -*-helvetica-bold-o-normal-*-14*iso8859-1
+*XmMenuShell*XmCascadeButton*fontList: -*-helvetica-bold-o-normal-*-14*iso8859-1
+*XmMenuShell*XmCascadeButtonGadget*fontList: -*-helvetica-bold-o-normal-*-14*iso8859-1
+*XmMenuShell*XmToggleButton*fontList: -*-helvetica-bold-o-normal-*-14*iso8859-1
+*XmMenuShell*XmToggleButtonGadget*fontList: -*-helvetica-bold-o-normal-*-14*iso8859-1
+*optionPane*fontList:	-*-helvetica-bold-o-normal-*-14*iso8859-1
+
+! Lists
+*XmList*fontList:	-*-helvetica-medium-r-normal-*-14*iso8859-1
+
+! Text fonts
+*XmText.fontList:      -*-lucidatypewriter-medium-r-normal-*-14*iso8859-1
+*XmTextField.fontList: -*-lucidatypewriter-medium-r-normal-*-14*iso8859-1
+
+
+!
+! Spacing stuff, probably belongs in master scheme file
+!
+
+! buttons shouldn't look "cramped"
+! (24 pixels across face from top to bottom and 8 in margin on face)
+*XmPushButton*marginHeight: 	4
+*XmPushButton*marginWidth: 	7
+
+! option menu buttons shouldn't look "cramped" either 
+! but need to be a bit smaller than regular buttons and the
+! same as the menu bar
+*optionMenu*marginHeight: 	0
+*optionMenu*marginTop: 		5
+*optionMenu*marginBottom: 	5
+*optionMenu*marginWidth: 	0
+
+! option menu panes are more like pulldown menus than buttons
+*optionPane*XmPushButton*marginHeight:	1
+*optionPane*XmPushButton*marginWidth:	1
+*optionPane*XmPushButton*marginLeft:	3
+*optionPane*XmPushButton*marginRight:	3
+
+! move the text in lists slightly right to improve legibility
+*XmList*listMarginWidth:        3
+
+! height of menuBar should be 22 pixels 
+*menuBar*marginHeight: 		1
+*menuBar.marginHeight: 		0
+*menuBar*marginLeft:  		1
+*menuBar.spacing:  		7
+*XmMenuShell*marginLeft:  	3
+*XmMenuShell*marginRight:  	4
+
+! spacing between indicator and label should be only 6 in menus
+*XmMenuShell*XmToggleButtonGadget*spacing: 	 2
+*XmMenuShell*XmToggleButtonGadget*marginHeight:  0
+*XmMenuShell*XmToggleButtonGadget*indicatorSize: 10
+
+*XmMenuShell*XmLabelGadget*marginHeight: 4
+
+! spacing between indicator and label should be 8 outside of menus
+*XmToggleButtonGadget*spacing: 	4
+*XmToggleButton*spacing: 	4
+
+! spacing between scrollbars and clients should be 2 pixels
+*XmScrolledWindow*spacing: 	0
+
+! Scrollbars
+*XmScrollBar*width: 		18
+*XmScrollBar*height: 		18
+
+! sliders should be slightly narrower than scrollbars ->
+! 12 pixels across the trough as opposed to 14
+! *XmScale*scaleHeight: 		20
+
+! in a perfect world, text fields would be the same size as buttons
+! (28 pixels including shadow) but since lucidatypwriter14 is really
+! only 13 pixels, our text fields will be 27 pixels high
+*XmText*marginHeight:		4
+
+
+!
+! Color Mappings
+!
+
+*foreground:			 	Black
+*background:			 	gray
+!*XmList*background:     		gray50
+*XmPushButton*background:	 	gray68
+*XmToggleButton*background:	 	gray68
+*XmText.background:		 	gray72
+!*XmTextField.background:	 	rosy brown
+*troughColor: 			 	gray52
+
+! color all dialogs, warnings, and errors the same
+!*XmSelectionBox*background:	 	gray84
+*XmSelectionBox*XmText*background: 	rosy brown
+*XmMessageBox*background:	 	gray84
+
+! color all radio and toggle buttons when they are selected
+*fillOnSelect:			True
+*visibleWhenOff:		True
+*selectColor:			yellow
+
+! for keyboard traversal
+*highlightColor:		 	Black
+*XmText*highlightThickness:		1
+*XmTextField*highlightThickness:	1
+*XmPushButton*highlightThickness:	1
+
+!! no need for anything else to highlight itself
+*highlightThickness:	0
+
+
+
+

@@ -1,0 +1,1 @@
+XmDestroyPixmap.3

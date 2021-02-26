@@ -1,0 +1,8 @@
+#) This is the Performance Container Test 3.
+#) The number of object created is the number you gave on the command line.
+   1000 by default (or max).
+#) The container widget should be displayed in its LargeIcon view, with an 
+   SPATIAL layout type, in mode GRID. 
+
+
+E)

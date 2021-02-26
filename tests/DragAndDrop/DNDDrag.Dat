@@ -1,0 +1,11 @@
+#) This is the DNDDrag test. It tests the XmNdragStartCallback XmDisplay
+   resource, which can be used to disable dragging.
+#) A Label should have appeared on your screen with the labelString
+   "Non-draggable label".
+C)
+
+#) Move the pointer over the label, and try to initiate a drag by
+   pressing BTransfer (MB2 by default). No drag action should be initiated,
+   and a message should be printed on to stdout saying "Sorry, can't drag!"
+E)
+

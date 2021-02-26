@@ -1,0 +1,35 @@
+#) Two client windows will appear.  Each window will contain a
+   shell with a text widget, two pushbutton widgets and a toggle
+   button widget.
+   The pushbuttons will be labeled "CUT" and "PASTE",  and the
+   toggle button will be labeled "LOCK".
+#) Move the pointer into the text widget of the top client window.
+#) Type the phrase "First cut/paste test" into the text widget.
+#) Select "cut/paste" by placing the cursor to the left of the
+   word, pressing MB1 and dragging the cursor through the word.
+#) Select the top client's "CUT" pushbutton with MB1.
+#) Select the bottom client's "PASTE" pushbutton with MB1.  The
+   word "cut/paste" will appear on the first line of the bottom
+   client's text widget.
+C)
+#) Select the top client's "LOCK" toggle button with MB1.  The
+   box to the left of the label will now be filled.
+#) Select "First" from the top client's text widget with MB1.
+#) Select the top client's "CUT" pushbutton with MB1.
+#) Select the bottom client's "PASTE" pushbutton with MB1.  The
+   message "paste inquire length failed" will be printed in the
+   xterm window.
+C)
+#) Select the bottom client's "LOCK" toggle button with MB1.  The
+   message "lock failed" will be printed to the xterm window.
+#) Select the top client's "LOCK" toggle button with MB1.  The
+   box to the left of the label will now be empty.
+#) Move the pointer into the text widget of the bottom client.
+#) Move the text input cursor to the next blank line.
+#) Select the bottom client's "PASTE" pushbutton with MB1.  The
+   word "First" will appear on the second line of the bottom
+   client's text widget.
+#) The test is finished. Before exiting this test, pull down
+   CLOSE from the window menu
+   for both clients.
+E)

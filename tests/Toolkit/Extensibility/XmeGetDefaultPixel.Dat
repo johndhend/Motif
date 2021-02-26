@@ -1,0 +1,17 @@
+
+	This test checks the pixel values for each of the colors in
+	the button widget returned by the XmeGetDefaultPixel call.
+
+#)
+ 	To begin press "Validate" and make sure that no ERROR messages 
+	appear in the xterm window.
+
+C)
+	The next test begins by creating a new button widget with 
+	different colors.  Press "Validate" and make sure that no ERROR
+	messages appear in the xterm window.
+
+C)
+	 Press Exit to end the test.  
+         Goodbye.
+E)

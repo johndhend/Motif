@@ -1,0 +1,91 @@
+# $XConsortium: PanedWin12.scr /main/4 1995/07/17 20:32:47 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# HISTORY
+
+
+#   A client with a Paned Window with ten pushbuttons will appear.
+#   Each pane should be the same size.  Each button will have a label
+#   consisting of PB plus two numbers separated by a colon.  The first
+#   number indicates the order in which the buttons were created.  The
+#   second number represents the value used to sort the buttons.  The buttons
+#   should be sorted from top to bottom in descending order.
+
+CompareVisual PW
+Continue
+
+#) A panedwindow with 4 push buttons should appear, PB1, PB2, PB3 and PB4.
+
+CompareVisual PW
+Continue
+
+#) PB4 should have moved to before PB1.
+#) The Xterm window should show that XtGetValues of PB4 returns a value of 0.
+
+CompareVisual PW
+Continue
+
+#) PB3 should have moved to after PB4 and before PB2.
+#) The Xterm window should show that XtGetValues of PB3 returns a value of 1.
+
+CompareVisual PW
+Continue
+
+#) A new push button, PB5, should have been added to the end.
+#) The Xterm window should show that XtGetValues of PB5 returns a value of 4.
+
+CompareVisual PW
+Continue
+
+#) The fifth button has had its position set to 7, an invalid value.
+# No core dumps or change should have occurred.
+#) The Xterm window should show that XtGetValues of PB5 returns a value of 4.
+
+CompareVisual PW
+Continue
+
+#) PB4 has had its index set to -2. No change should occur.
+#) XtGetValues of PB4 should return a value of 0.
+
+CompareVisual PW
+Exit
+
+
+
+
+
+
+
+

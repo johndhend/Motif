@@ -1,0 +1,13 @@
+
+
+#) This test demonstrates performance problems encountered with Notebook.
+#) A Notebook widget will appear on your screen. It will have 500 page
+   children of the type specified on the command line.
+
+#) Resize the window containing the Notebook.
+#) Click once on the downward-pointing major tab scroller.
+#) Scroll forwards through all the pages of the Notebook using the page 
+   scroller.
+#) Scroll backwards through all the pages of the Notebook using the page 
+   scroller.
+#) Click on MajorTab10 to go to page 100.

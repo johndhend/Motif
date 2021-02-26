@@ -1,0 +1,89 @@
+/* $XConsortium: Container1j.dat /main/4 1995/07/17 10:10:59 drk $ */
+/*
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+ */
+/*
+ * HISTORY
+ */
+#) This is the Container1 Test run with option "-I Container1j.Dat -u j".
+C)
+
+#) The container widget should be displayed in its SMALL_ICON view,
+   with a DETAIL layoutType.
+#) There should be 3 columns and there should be 4 rows of 
+   IconGadgets.
+#) Each row should display pixmap-label combination of an IconGadget
+   in the first column, with the pixmap displaying the letter "S" on
+   a black background and the label text should display "IconGad1",
+   "IconGad2", "IconGad3" and "IconGad4" respectively.
+#) The remaining two columns in each row should display plain text.
+#) The first row is selected with an aquamarine color.
+#) Move the pointer into the "Container1" window. The first row should have
+   the focus, highlighted with a red border around it.
+C)
+
+#) The selectionPolicy is BROWSE_SELECT.
+#) Press BSelect on row 1 and drag to row 3.
+#) As you drag the pointer over each item, you should see a message
+   of the following type in the term window:
+!)
+      Reason for SelectionCallback: CR_BROWSE_SELECT
+      Number of items selected: 1
+      Names of items selected: <name>
+
+	  where <name> corresponds to "IconGad1", "IconGad2", etc.
+
+#) Release BSelect on row 3.
+#) Only row 3 should get selected, and should have now the location cursor.
+#) Also, you should see the following message on the term window:
+!)
+      Reason for SelectionCallback: CR_BROWSE_SELECT
+      Number of items selected: 1
+      Names of items selected: IconGad3
+C)
+
+#) Double click BSelect on any of the rows.
+#) A new row should appear appended to row 4. This row should display
+   a pixmap-label combination of an IconGadget in the first column,
+   with the pixmap displaying the letter "S" on a black background 
+   and the label text should display "IconGad5". Rest of the columns
+   should display plain text.
+#) Using the Up and Down arrow keys traverse through all the rows
+   more than once. When you reach the last or first row, you should
+   cycle back to the first or last row depending on the direction
+   of the key pressed.
+C)
+
+E)

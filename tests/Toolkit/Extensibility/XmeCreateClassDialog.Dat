@@ -1,0 +1,21 @@
+
+#)	Check that the push button dialog "button_popup" has been created:
+
+#)	Inspect the dialog/popup window decorations.  No minimize or 
+	maximize buttons should be present.
+
+#)	Press the button and the popup should go away.
+
+C)
+	Check that the list dialog "list_popup" has been created:
+
+#)	Inspect the dialog/popup window decorations.  No minimize or 
+	maximize buttons should be present.
+
+#)	To close this popup choose any of the list entries with mouse
+	and press return (or double click on an item).
+C)
+	 Press Exit to end the test.  
+         Goodbye.
+E)
+

@@ -1,0 +1,108 @@
+# $XConsortium: Command2.scr /main/6 1995/07/17 20:37:23 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+# OSF/Motif: @(#)Command2.scr	1.2  92/01/28
+# A client window will appear containing a command widget. 
+
+CompareVisual command
+
+# Move the pointer into the client window. 
+
+LocatePointer command 
+
+# Press the return key.  Three X Toolkit warnings will be
+# printed into the xterm window.  These warnings refer to
+# command widget resources which were set incorrectly. 
+
+ClickKey KReturn
+CompareVisual command
+
+# Type a command into the command area and press the return
+# key.  An X Toolkit warning will be printed into the xterm
+# window.  This warning is caused by an attempt to fetch a
+# nonexistent child of the command widget. 
+
+LocatePointer command RSelectionText
+ClickMB Btn1
+InputString "Hello"
+ClickKey KReturn
+CompareVisual command
+
+# C)
+
+Continue
+
+# Move the pointer into the client window. 
+# Type a command into the command area and press the return key.
+# Two X Toolkit warnings will be printed into the xterm window.
+# These warnings are caused by attempts to replace the command
+# string with bad strings. 
+
+LocatePointer command
+ClickKey KTab
+ClickKey KReturn
+CompareVisual command
+
+# Type a command into the command area and press the return key.
+# The history list will move up two lines, but no error message
+# will be displayed below the history list.  This behavior is
+# caused by attempts to display bad error strings.
+# During one of the last two actions, scroll bars
+# will have appeared around the list. 
+
+LocatePointer command RSelectionText
+ClickMB Btn1
+InputString "Goodbye"
+ClickKey KReturn
+CompareVisual command
+
+
+# Type a character into the command area.  An X Toolkit warning
+# will be printed into the xterm window.  This warning is caused
+# by an attempt to append a bad string to the command string. 
+
+LocatePointer command RSelectionText
+ClickMB Btn1
+ClickKey Ka
+CompareVisual command
+
+# E)
+
+Exit

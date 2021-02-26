@@ -1,0 +1,33 @@
+#) A client window will appear with 6 pushButtons and
+   two toggleButtons. The Program will display the warning:
+	\"Warning: Attempt to remove nonexistent passive grab\"
+   in the term window. 
+#) Set focus into the client window, and then move the
+   focus onto Button6. 
+#) Press 'a'. The message \"Widget Grab1 received
+   a key event\" will be displayed in the term window. 
+C)
+#) Set focus into the client window, and then move the
+   focus onto Button6. 
+#) Press 'a'. No messages will be displayed in the term window. 
+#) Press <Shift> 'a'. No messages will be displayed in the term window.
+C)
+#) Set focus into the client window, and then move the
+   focus onto Button6. 
+#) Press 'a'. No messages will be displayed in the term window. 
+#) Press <Shift> 'a'. The message \"Widget Grab1 received
+   a key event\" will be displayed in the term window. 
+C)
+#) Move the focus onto Button6. 
+#) Press 'b'. The message \"Widget Grab1 received
+   a key event\" will be displayed in the term window. 
+#) Press <Shift> 'b'. The message \"Widget Grab1 received
+   a key event\" is displayed in the term window. 
+#) Press <Ctrl> 'b'. Nothing will be displayed in the term window. 
+C)
+#) Move the focus onto toggle1. 
+#) Press 'd'. The message \"Widget Grab1 received
+   a key event\" will be displayed in the term window. 
+#) Press <Ctrl> 'd'. No messages will be displayed in the term window. 
+#) Press 'q'.  The test will finish 
+E)

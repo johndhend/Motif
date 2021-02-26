@@ -1,0 +1,11 @@
+# these are use only for imake / cf build not 2.5.0 Makefile build
+# .  mergelib.cpp IS A CF SCRIPT not for compiling
+#    it is used by Imake.rules
+# .  makestrs is used by Librarty.tmpl (-DUseInstalled means
+#    not overriden by platform script)
+#    it is not installed, it is used by pathing here
+#    it should be compiled during "make Everything"
+# .  checktree appears used by nobody, it is maybe used in building xc/
+# .  lndir appears used by nobody, it is used in building xc/
+# .  chownxterm is not for motif but for xc/programs/xterm
+# .  xmkmf is not for motif but for xc/programs/xterm

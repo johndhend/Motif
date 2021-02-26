@@ -1,0 +1,51 @@
+#) Two client windows will appear.  The left client will contain a
+   paned window widget containing two bulletin board widgets.  The
+   top bulletin board will contain six label widgets, five text
+   widgets and eight pushbutton widgets.  The right client will
+   contain a paned window widget containing a pushbutton widget,
+   a label widget and a text widget. 
+#) Select "Begin Copy" in the left client with MB1. 
+#) Select "Get Values" in the right client with MB1.  The text
+   widget below the label "String" will contain the string
+   "initial text". 
+C)
+#) Select "Start Copy" in the left client with MB1. 
+#) Select "Inquire Status" in the left client with MB1.  The
+   following information will be displayed in the text widgets
+   in the left client:
+!)
+          Label        Text
+          -----        ----
+          format name: STRING
+          length:      15
+          count:       1
+          max length:  6
+          pending:     xxx  0
+@) where xxx is some (not necessarily 3 digit) number. 
+C)
+
+#) Select "Retrieve" in the left client with MB1. 
+#) Select "Get Values" in the right client with MB1.  The text
+   widget below the label "String" will contain the string
+   "recopy". 
+#) Select "Copy By Name" in the left client with MB1. 
+#) Select "Get Values" in the right client with MB1.  The text
+   widget below the label "String" will contain the string
+   "recopyrecopy". 
+#) Select "Multiple Retrieve" in the left client with MB1. 
+#) Select "Get Values" in the right client with MB1.  The text
+   widget below the label "String" will contain the string
+   "recopy". 
+C)
+#) Select "Undo Copy" in the left client with MB1. 
+#) Select "Get Values" in the right client with MB1.  The text
+   widget below the label "String" will contain the string
+   "recopyrecopy". 
+#) Move the pointer into the text widget next to the label
+   "to/from text" in the left client. 
+#) Type the phrase "What's up doc?" into the text widget. 
+#) Select "Cancel Copy" in the left client with MB1. 
+#) Select "Get Values" in the right client with MB1.  The text
+   widget below the label "String" will still contain the
+   string "recopyrecopy". 
+E)

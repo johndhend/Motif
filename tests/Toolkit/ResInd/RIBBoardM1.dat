@@ -1,0 +1,100 @@
+/* $XConsortium: RIBBoardM1.dat /main/4 1995/07/17 10:19:59 drk $ */
+/*
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+ */
+/*
+ * HISTORY
+ */
+/* 
+ * Original History:
+ *
+ * Revision 1.1.4.2  1993/02/17  18:23:02  yak
+ * 	Fixed comment leader
+ * 	[1993/02/17  18:22:29  yak]
+ *
+ * Revision 1.1.2.2  1992/05/05  20:38:26  msr
+ * 	Created from BBoardM4.dat
+ * 	[1992/05/05  20:28:59  msr]
+ * 
+ */
+
+#) A client with an arrow button pointing upwards will appear. 1) A message should appear in the term window saying that the unitType
+   of the arrow button is XmPIXELS. 
+#) The height, width, borderWidth, x and y values for the Bulletin Board and
+   the arrow button will be printed out at each step.
+   The starting values for the PARENT bulletin board are:
+!)
+     Width & height, 224
+     x & y, 0
+     borderWidth, 0
+   The starting values for the CHILD Bulletin Board are:
+     x & y, 100
+     borderWidth, 10
+     height & width, 93 (calculated).
+   The starting values for Arrow Button are:
+     x & y, 50
+     borderWidth, 5
+     height & width, 23 (calculated) 
+#) Continue to change the unitType of the Bulletin Board and to destroy
+   and re-create the arrow button. 
+C)
+
+#) A client with a larger arrow button will appear. 
+#) A message will appear in the term window saying that the unitType of
+   the arrow button is Xm1000TH_INCHES. 
+#) The printed resource values have been adjusted for the new unit Type. This will
+   happen on all successive panels. 
+#) Continue to change the unitType of the Bulletin Board and to destroy
+   and re-create the arrow button. 
+C)
+
+#) A client with a smaller arrow button will appear. 
+#) A message will appear in the term window saying that the unitType of
+   the arrow button is Xm100TH_MILLIMETERS. 
+#) Continue to change the unitType of the Bulletin Board and to destroy
+   and re-create the arrow button. 
+C)
+
+#) A client with a smaller arrow button will appear. 
+#) A message will appear in the term window saying that the unitType of
+   the arrow button is Xm100TH_POINTS. 
+#) Continue to change the unitType of the Bulletin Board and to destroy
+   and re-create the arrow button. 
+C)
+
+#) A client with a larger arrow button will appear. 
+#) A message will appear in the term window saying that the unitType of
+   the arrow button is Xm100TH_FONT_UNITS. 
+E)

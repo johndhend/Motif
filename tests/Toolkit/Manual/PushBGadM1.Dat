@@ -1,0 +1,27 @@
+
+#) A PushButtonGadget will have appeared on the screen. 
+#) Press MB1 in the PushButtonGadget; it will appear pressed in. 
+#) Slowly move the pointer to one pixel outside the highlight. 
+   The PushButtonGadget will disarm visually (i.e, it will appear pushed out).
+#) Release MB1. There should be no Activate Callback message in the term 
+   window; if there is, CR 4891 hasn't been fixed.
+C)
+
+
+#) Move the pointer into the window containing the PushButtonGadget 
+   so that it gets the focus.
+#) Now, move the window around the screen. 
+#) Stop moving the window. Note the appearance of the highlight as it is 
+   redrawn! The highlight should not be drawn twice.
+C)
+
+
+#) The PushButtonGadget has been destroyed, and replaced by a PushButton.
+#) Move the pointer into the window containing the PushButton
+   so that it gets the focus.
+#) Now, move the window around the screen. 
+#) Stop moving the window. Note the appearance of the highlight as it is 
+   redrawn! The highlight should not be drawn twice.
+E)
+
+

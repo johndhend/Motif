@@ -1,0 +1,175 @@
+# $XConsortium: Container2a.scr /main/4 1995/07/17 20:15:14 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF).  See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+
+# #) This is Container2 testing SINGLE_SELECT selectionPolicy in OUTLINE 
+#    layoutType.
+# #) Select "SingleSelect" from the "Selection Policy" option menu.
+# #) Iconify the Control Panel.
+# #) Expand IconGad3 by clicking on the "C" Outline Button.
+# C)
+
+LocatePointer SelectionPolicy_Option ROptionButton
+PressMB Btn1
+LocatePointer SingleSelect
+ReleaseMB Btn1
+WindowIconify FormDialog
+LocatePointer IconGad3 ROutlineBtn
+ClickMB Btn1
+CompareVisual Container2
+Continue
+ 
+# #) This panel is testing the Point Click, Toggle Mode technique.
+# #) Click Btn1 on "IconGad1". It should become selected.
+# #) You should see the following in your term window:
+# !)
+#           Reason for SelectionCallback: CR_SINGLE_SELECT
+#           Number of items selected: 1
+#           Names of items selected: IconGad1
+# 
+# #) Notice that the location cursor is a dashed rectangle.
+# #) Click again on "IconGad1". It should get deselected.
+# #) You should see the following in your term window:
+# !)
+#           Reason for SelectionCallback: CR_SINGLE_SELECT
+#           Number of items selected: 0
+#           Names of items selected: 
+# 
+# C)
+
+LocatePointer IconGad1
+ClickMB Btn1
+CompareVisual Container2
+LocatePointer IconGad1
+ClickMB Btn1
+CompareVisual Container2
+Continue
+ 
+# #) Press Btn1 on "IconGad2", move the pointer over "IconGad3" and
+#    release Btn1.
+# #) As soon as you press Btn1 on "IconGad2", it gets selected, and the 
+#    following appears in your term window:
+# !)
+#           Reason for SelectionCallback: CR_SINGLE_SELECT
+#           Number of items selected: 1
+#           Names of items selected: IconGad2
+# 
+# #) Only "IconGad2" should get selected.
+# #) Do again the same action.
+# #) This time, "IconGad2" should get deselected, and you should see in your
+#    term window:
+# !)
+#           Reason for SelectionCallback: CR_SINGLE_SELECT
+#           Number of items selected: 0
+#           Names of items selected: 
+# 
+# C)
+
+LocatePointer IconGad2
+PressMB Btn1
+CompareVisual Container2
+LocatePointer IconGad3
+ReleaseMB Btn1
+CompareVisual Container2
+LocatePointer IconGad2
+PressMB Btn1
+CompareVisual Container2
+LocatePointer IconGad3
+ReleaseMB Btn1
+CompareVisual Container2
+Continue
+ 
+# #) Click BToggle on "IconGad3". Nothing should occur.
+# #) Press BToggle on "IconGad3", move over "IconGad31" and release.
+#    Nothing should occur.
+# C)
+
+LocatePointer IconGad3
+ClickMB <Ctrl> Btn1
+CompareVisual Container2
+LocatePointer IconGad3
+PressMB <Ctrl> Btn1
+LocatePointer IconGad31
+ReleaseMB <Ctrl> Btn1
+CompareVisual Container2
+Continue
+ 
+# #) Select "IconGad2".
+# #) Using osfDown key, move the location cursor on "IconGad4". Only the 
+#    location cursor should move. The selection should stay on "IconGad2".
+# #) Click on the osfSelect key.
+# #) "IconGad4" gets selected and "IconGad2" deselected.
+# #) You should also see in your term window:
+# !)
+#           Reason for SelectionCallback: CR_SINGLE_SELECT
+#           Number of items selected: 1
+#           Names of items selected: IconGad4
+# 
+# #) Using osfUp key, move the location cursor on "IconGad3". Only the 
+#    location cursor should move. The selection should stay on "IconGad4".
+# #) Click on the osfSelect key.
+# #) "IconGad3" gets selected and "IconGad4" deselected.
+# #) You should also see in your term window:
+# !)
+#           Reason for SelectionCallback: CR_SINGLE_SELECT
+#           Number of items selected: 1
+#           Names of items selected: IconGad3
+# 
+# C)
+
+LocatePointer IconGad2
+ClickMB Btn1
+CompareVisual Container2
+ClickKey KDown
+ClickKey KDown
+ClickKey KDown
+ClickKey KDown
+ClickKey KDown
+CompareVisual Container2
+ClickKey KSelect
+CompareVisual Container2
+ClickKey KUp
+ClickKey KUp
+ClickKey KUp
+ClickKey KUp
+CompareVisual Container2
+ClickKey KSelect
+CompareVisual Container2
+Continue
+
+# E)
+Exit

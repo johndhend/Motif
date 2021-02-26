@@ -1,0 +1,29 @@
+
+
+#) This is the PISizeHints test.
+
+C)
+
+
+#) There should now be a pushbutton displayed in a window that shows
+   a yellow background and red letters that say \"TEST 1 BTN 1\".
+
+#) There should also be a control panel with seven scales to specify
+   different min, max, base sizes and resize increment for the
+   pushbutton window. You can apply different values by clicking on
+   the \"Apply\" button. The pushbutton window should be unmapped
+   and remapped with new values everytime.
+
+C)
+
+
+#) The pushbutton window will be in the same state it was at the end
+   of the previous screen.
+
+#) The control panel now should contain four scales to specify 
+   different minimum and maximum aspect ratio values. Again, you can
+   apply different set of values by clicking on the "\Apply\" button.
+
+C)
+
+E)

@@ -1,0 +1,150 @@
+! @OPENGROUP_COPYRIGHT@
+! COPYRIGHT NOTICE
+! Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+! Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+! ALL RIGHTS RESERVED (MOTIF).  See the file named COPYRIGHT.MOTIF for
+! the full copyright text.
+! 
+! This software is subject to an open license. It may only be
+! used on, with or for operating systems which are themselves open
+! source systems. You must contact The Open Group for a license
+! allowing distribution and sublicensing of this software on, with,
+! or for operating systems which are not Open Source programs.
+! 
+! See http://www.opengroup.org/openmotif/license for full
+! details of the license agreement. Any use, reproduction, or
+! distribution of the program constitutes recipient's acceptance of
+! this agreement.
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+! PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+! KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+! WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+! OR FITNESS FOR A PARTICULAR PURPOSE
+! 
+! EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+! NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+! INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+! DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+! AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+! LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+! ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+! EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+! POSSIBILITY OF SUCH DAMAGES.
+! 
+! 
+! HISTORY
+
+
+!************************************************************
+!     menu_strings.uil -- description of interface
+!
+!  Strings used in interface -- change when locale changes
+!    e.g. New --> Nuevo, Open -> Abrir, etc.
+!
+!************************************************************
+
+value
+    ! Menu Bar menus
+    fileString: "File";
+    fileMnemonic: keysym('F');
+    editString: "Edit";
+    editMnemonic: keysym('E');
+    viewString: "View";
+    viewMnemonic: keysym('V');
+    helpString: "Help";
+    helpMnemonic: keysym('H');
+
+    ! File menu
+    newString: "New";
+    newMnemonic: keysym('N');
+    openString: "Open...";
+    openMnemonic: keysym('O');
+    saveString: "Save";
+    saveMnemonic: keysym('S');
+    saveAsString: "Save As...";
+    saveAsMnemonic: keysym('A');
+    revertString: "Revert";
+    copyToString: "Copy To...";
+    moveToString: "Move To...";
+    linkToString: "Link To...";
+    dragString: "Drag";
+    printString: "Print...";
+    printMnemonic: keysym('P');
+    printSetupString: "Print Setup";
+    printSetupMnemonic: keysym('r');
+    closeString: "Close";
+    closeMnemonic: keysym('C');
+    exitString: "Exit";
+    exitMnemonic: keysym('x');
+
+    ! Edit menu
+    undoString: "Undo";
+    undoMnemonic: keysym('U');
+    repeatRedoString: "Repeat";
+    repeatRedoMnemonic: keysym('R');
+    dragMoveString: "Drag";
+    sizeString: "Size";
+    duplicateString: "Duplicate";
+    cutString: "Cut";
+    cutMnemonic: keysym('t');
+    copyString: "Copy";
+    copyMnemonic: keysym('C');
+    copyLinkString: "Copy Link";
+    copyLinkMnemonic: keysym('k');
+    copySpecialString: "Copy Special";
+    pasteString: "Paste";
+    pasteMnemonic: keysym('P');
+    pasteLinkString: "Paste Link";
+    pasteLinkMnemonic: keysym('l');
+    pasteSpecialString: "Paste Special";
+    insertString: "Insert...";
+    insertMnemonic: keysym('I');
+    primaryCopyString: "Primary Copy";
+    primaryMoveString: "Primary Move";
+    primaryLinkString: "Primary Link";
+    clearString: "Clear";
+    clearMnemonic: keysym('e');
+    deleteString: "Delete";
+    deleteMnemonic: keysym('D');    
+    selectAllString: "Select All";
+    selectAllMnemonic: keysym('S');
+    deselectAllString: "Deselect All";
+    selectPastedString: "Select Pasted";
+    reselectString: "Reselect";
+
+    ! View menu
+    changeViewString: "Change View";
+    changeViewMnemonic: keysym('C');
+    newWindowString: "New Window";
+    newWindowMnemonic: keysym('N');
+    includeString: "Include...";
+    includeMnemonic: keysym('I');
+    sortString: "Sort...";
+    sortMnemonic: keysym('S');
+    findString: "Find...";
+    findMnemonic: keysym('F');
+
+    ! Help Menu
+    overviewString: "Overview";
+    overviewMnemonic: keysym('O');
+    indexString: "Index";
+    indexMnemonic: keysym('I');
+    tocString: "Table of Contents";
+    tocMnemonic: keysym('C');
+    tasksString: "Tasks";
+    tasksMnemonic: keysym('T');
+    referenceString: "Reference";
+    referenceMnemonic: keysym('R');
+    tutorialString: "Tutorial";
+    tutorialMnemonic: keysym('T');
+    keyboardString: "Keyboard";
+    keyboardMnemonic: keysym('K');
+    mouseString: "Mouse";
+    mouseMnemonic: keysym('M');
+    onItemString: "On Item";
+    onItemMnemonic: keysym('n');
+    usingHelpString: "Using Help";
+    usingHelpMnemonic: keysym('U');
+    aboutString: "About ";
+    aboutMnemonic: keysym('A');

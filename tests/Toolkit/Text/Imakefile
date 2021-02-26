@@ -1,0 +1,156 @@
+XCOMM 
+XCOMM @OPENGROUP_COPYRIGHT@
+XCOMM COPYRIGHT NOTICE
+XCOMM Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+XCOMM Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+XCOMM ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+XCOMM the full copyright text.
+XCOMM 
+XCOMM This software is subject to an open license. It may only be
+XCOMM used on, with or for operating systems which are themselves open
+XCOMM source systems. You must contact The Open Group for a license
+XCOMM allowing distribution and sublicensing of this software on, with,
+XCOMM or for operating systems which are not Open Source programs.
+XCOMM 
+XCOMM See http://www.opengroup.org/openmotif/license for full
+XCOMM details of the license agreement. Any use, reproduction, or
+XCOMM distribution of the program constitutes recipient's acceptance of
+XCOMM this agreement.
+XCOMM 
+XCOMM EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+XCOMM PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+XCOMM KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+XCOMM WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+XCOMM OR FITNESS FOR A PARTICULAR PURPOSE
+XCOMM 
+XCOMM EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+XCOMM NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+XCOMM INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+XCOMM DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+XCOMM AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+XCOMM LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+XCOMM ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+XCOMM EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+XCOMM POSSIBILITY OF SUCH DAMAGES.
+XCOMM 
+XCOMM 
+XCOMM HISTORY
+XCOMM
+XCOMM   $TOG: Imakefile /main/12 1997/09/18 10:59:30 csn $
+
+#define IHaveSubdirs
+#define PassCDebugFlags
+
+   SUBDIRS  = lib
+
+INCLUDES 	= -I. -I./lib -I../bitmaps -I.. -I$(TESTCOMSRC)
+DEFINES         = TestDefines
+#ifdef Automation
+LOCAL_LIBRARIES = lib/libTextA.a TestClientLibs
+DEPLIBS         = TestClientDepLibs lib/libTextA.a
+#else
+LOCAL_LIBRARIES = lib/libTextM.a TestClientLibs
+DEPLIBS         = TestClientDepLibs lib/libTextM.a
+#endif
+
+all:: lib
+
+lib/libTextA.a lib/libTextM.a:	lib
+
+ForceSubdirs(lib)
+
+NormalLibraryObjectRule()
+
+RunTarget()
+MSimpleProgramTarget(ScrollText1)
+TestPPTarget(ScrollText1)
+TestPPTarget(ScrollText1a)
+MSimpleProgramTarget(ScrollText2)
+TestPPTarget(ScrollText2)
+MSimpleProgramTarget(ScrollText3)
+TestPPTarget(ScrollText3a)
+TestPPTarget(ScrollText3b)
+TestPPTarget(ScrollText3c)
+TestPPTarget(ScrollText3d)
+TestPPTarget(ScrollText3e)
+TestPPTarget(ScrollText3f)
+TestPPTarget(ScrollText3g)
+TestPPTarget(ScrollText3h)
+MSimpleProgramTarget(ScrollText4)
+TestPPTarget(ScrollText4)
+MSimpleProgramTarget(Text1)
+TestPPTarget(Text1)
+MSimpleProgramTarget(Text2)
+TestPPTarget(Text2)
+MSimpleProgramTarget(Text3)
+TestPPTarget(Text3)
+MSimpleProgramTarget(Text4)
+TestPPTarget(Text4)
+MSimpleProgramTarget(Text5)
+TestPPTarget(Text5)
+MSimpleProgramTarget(Text6)
+TestPPTarget(Text6)
+MSimpleProgramTarget(Text7)
+TestPPTarget(Text7)
+MSimpleProgramTarget(Text8)
+TestPPTarget(Text8)
+MSimpleProgramTarget(Text9)
+TestPPTarget(Text9)
+MSimpleProgramTarget(Text10)
+TestPPTarget(Text10)
+MSimpleProgramTarget(Text11)
+TestPPTarget(Text11)
+MSimpleProgramTarget(Text12)
+TestPPTarget(Text12)
+MSimpleProgramTarget(Text13)
+TestPPTarget(Text13)
+MSimpleProgramTarget(TextField1)
+TestPPTarget(TextField1)
+MSimpleProgramTarget(TextField2)
+TestPPTarget(TextField2)
+MSimpleProgramTarget(TextField3)
+TestPPTarget(TextField3)
+MSimpleProgramTarget(TextField4)
+TestPPTarget(TextField4)
+MSimpleProgramTarget(TextField5)
+TestPPTarget(TextField5)
+MSimpleProgramTarget(TextWcs1)
+TestPPTarget(TextWcs1)
+MSimpleProgramTarget(TextWcs2)
+TestPPTarget(TextWcs2)
+MSimpleProgramTarget(TextFWcs1)
+TestPPTarget(TextFWcs1)
+MSimpleProgramTarget(TextFWcs2)
+TestPPTarget(TextFWcs2)
+MSimpleProgramTarget(TextPerf)
+TestPPTarget(TextPerf)
+
+SRCS=  \
+	ScrollText1.c \
+	ScrollText2.c \
+	ScrollText3.c \
+	Text1.c \
+	Text2.c \
+	Text3.c \
+	Text4.c \
+	Text5.c \
+	Text6.c \
+	Text7.c \
+	Text8.c \
+	Text9.c \
+	Text10.c \
+	Text11.c \
+	Text12.c \
+	TextField1.c \
+	TextField2.c \
+	TextField3.c \
+	TextField4.c \
+	TextField5.c \
+	TextWcs1.c \
+	TextWcs2.c \
+	TextFWcs1.c \
+	TextFWcs2.c \
+        TextPerf.c
+		  
+DependTarget () 
+DependSubdirs($(SUBDIRS))

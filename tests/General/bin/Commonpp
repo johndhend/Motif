@@ -1,0 +1,122 @@
+#!/bin/csh
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# HISTORY
+#
+
+if ($#argv < 1) then  
+Help:
+	echo "usage: "$0" -DMOTIF1_1 ... -DMotif1_n <TestName>.dat ||"
+	echo "usage: "$0" -DMOTIF1_1 ... -DMotif1_n <TestName>.scr"
+	exit 1
+endif
+
+if ("$argv[1]" == "-help") then
+	goto Help
+endif
+
+set extension = $argv[$#argv]:e
+
+if ("$extension" == "dat") then
+	set output_extension = ".Dat"
+else
+	if ("$extension" == "scr") then
+		set output_extension = ".Scr"
+	else
+		echo "usage: "$0" -DMOTIF1_1 ... -DMotif1_n <TestName>.dat ||"
+		echo "usage: "$0" -DMOTIF1_1 ... -DMotif1_n <TestName>.scr"
+		exit 1
+	endif
+endif
+
+set tmp_script = /tmp/$$.sed
+set tmp_file = /tmp/$$.pp1
+set tmp_file2 = /tmp/$$.pp2
+set root = $argv[$#argv]:r
+
+touch $tmp_script
+chmod 777 $tmp_script
+
+if (-e $root$output_extension) then
+	rm $root$output_extension
+endif
+
+# create sed file to delete ifdef's and endif's corresponding to 
+# the defines passed in from DEFINES.
+
+foreach define ($argv[*])
+	if ("$define" == "-DMOTIF1_1") then
+		echo "/^#ifdef[	 ]*MOTIF1_1/d" >> $tmp_script
+		echo "/^#endif[	 ]*MOTIF1_1/d" >> $tmp_script
+	endif
+	if ("$define" == "-DMOTIF1_2") then
+		echo "/^#ifdef[	 ]*MOTIF1_2/d" >> $tmp_script
+		echo "/^#endif[	 ]*MOTIF1_2/d" >> $tmp_script
+	endif
+	if ("$define" == "-DMOTIF1_3") then
+		echo "/^#ifdef[	 ]*MOTIF1_3/d" >> $tmp_script
+		echo "/^#endif[	 ]*MOTIF1_3/d" >> $tmp_script
+		echo "/^#ifdef[	 ]*MOTIF1_2/d" >> $tmp_script
+		echo "/^#endif[	 ]*MOTIF1_2/d" >> $tmp_script
+	endif
+	if ("$define" == "-DMOTIF1_4") then
+		echo "/^#ifdef[	 ]*MOTIF1_4/d" >> $tmp_script
+		echo "/^#endif[	 ]*MOTIF1_4/d" >> $tmp_script
+		echo "/^#ifdef[	 ]*MOTIF1_3/d" >> $tmp_script
+		echo "/^#endif[	 ]*MOTIF1_3/d" >> $tmp_script
+		echo "/^#ifdef[	 ]*MOTIF1_2/d" >> $tmp_script
+		echo "/^#endif[	 ]*MOTIF1_2/d" >> $tmp_script
+	endif
+end
+
+
+if (-z $tmp_script) then
+        cat $argv[$#argv] > $tmp_file
+else
+        sed -f $tmp_script $argv[$#argv] > $tmp_file
+endif
+
+# remove remaining #ifdef and #endif lines.
+
+sed "/^#ifdef[	 ]*.*/,/^#endif[	 ]*.*/d" $tmp_file > $tmp_file2
+
+# remove C Style comment lines from pp file.
+
+sed -e "/\/\*.*\*\//d" \
+    -e "/\/\*/,/\*\//d" $tmp_file2 > $root$output_extension
+
+# clean up all temporary files.
+
+rm -f $tmp_script $tmp_file $tmp_file2

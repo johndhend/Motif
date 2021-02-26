@@ -1,0 +1,95 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: PanedWin10.dat /main/4 1995/07/13 19:05:57 drk $"
+*/
+
+
+#) A client with a Paned Window with three pushbuttons will appear.
+   Each pane should be the same size. 
+C)
+
+#) By default all buttons have XmNallowResize set to False.
+
+#) An attempt was made to increase the size of each button, but no
+   visible change should have occurred.
+C)
+
+#) The first button had XmNallowResize set True.  An attempt was made to
+   increase the size of each button.  Each button should be wider, but
+   only the first button will be higher.
+C)
+
+#) The second button had XmNallowResize set True.  An attempt was made to
+   increase the size of each button.  Each button should be wider, but
+   only the first and second buttons will be higher.
+C)
+
+#) The third button had XmNallowResize set True.  An attempt was made to
+   increase the size of each button.  Each button should be both wider
+   and higher.
+C)
+
+#) The first button had XmNallowResize set False.  An attempt was made to
+   reduce the size of each button.  Only the second and third buttons
+   should be shorter.
+C)
+
+#) The second button had XmNallowResize set False.  An attempt was made
+   to reduce the size of each button.  Only the third button
+   should be shorter.
+C)
+
+#) The third button had XmNallowResize set False.  An attempt was made to
+   reduce the size of each button, but no visible change should have
+   occurred.
+C)
+
+#) An attempt was made to move the first button.  No visible
+   change should have occurred.
+C)
+
+#) An attempt was made to move the second button.  No visible
+   change should have occurred.
+C)
+
+#) An attempt was made to move the third button.  No visible
+   change should have occurred.
+
+E)

@@ -1,0 +1,196 @@
+/* $XConsortium: Notebook3b.dat /main/4 1995/07/17 10:18:12 drk $ */
+/*
+ * @OPENGROUP_COPYRIGHT@
+ * COPYRIGHT NOTICE
+ * Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ * Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ * ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ * the full copyright text.
+ * 
+ * This software is subject to an open license. It may only be
+ * used on, with or for operating systems which are themselves open
+ * source systems. You must contact The Open Group for a license
+ * allowing distribution and sublicensing of this software on, with,
+ * or for operating systems which are not Open Source programs.
+ * 
+ * See http://www.opengroup.org/openmotif/license for full
+ * details of the license agreement. Any use, reproduction, or
+ * distribution of the program constitutes recipient's acceptance of
+ * this agreement.
+ * 
+ * EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ * PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ * WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ * OR FITNESS FOR A PARTICULAR PURPOSE
+ * 
+ * EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ * NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ * INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ * ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ * EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGES.
+*/
+/* 
+ * HISTORY
+*/
+
+#) A NoteBook Widget will appear on your screen. It will have all
+   the default settings.
+#) There will be an empty ScrolledList in the upper left of your screen. This
+   will be dynamically updated with the names of any widgets you create during
+   the test.
+#) This test tests the 8 different visual configurations of the
+   NoteBook, which depend on the values XmNorientation and 
+   XmNbackPagePlacement.
+C)
+
+
+#) There will be a SpinBox on the bottom right side of
+   the NoteBook. This is the Page Scroller child of the Notebook
+   that should be observed when checking visual configurations.
+#) Set "Child Type" to PAGE.
+   Set the "Set Page Number" scale to 1.
+   Select "Set childType" from the "Set Child Values" menu.
+   Select "Set pageNumber" from the "Set Child Values" menu.
+   Post the menu "Child", and select "Create Child".
+   A SelectionDialog will appear on your screen. Choose "XmMessageBox".
+   from the list of choices. Click on the "OK" button of the 
+   SelectionDialog.
+#) A MessageBox page will appear on the screen.
+#) Set "Child Type" to MAJOR_TAB.
+   Set the "Set Page Number" scale to 1.
+   Select "Set childType" from the "Set Child Values" menu.
+   Select "Set pageNumber" from the "Set Child Values" menu.
+   Post the menu "Child", and select "Create Child".
+   A SelectionDialog will appear on your screen. Choose "XmPushButton"
+   from the list of choices. Click on the "OK" button of the 
+   SelectionDialog.
+#) A PushButton will appear on the right side of the Notebook. It
+   will have the name "MajorTab1". This is the Major Tab child which
+   should be observed when checking visual configurations.
+#) Set "Child Type" to MINOR_TAB.
+   Repeat steps 2-5.
+   Choose "XmPushButton" from the list of choices in the SelectionDialog
+   and click on the "OK" button of the SelectionDialog.
+#) A PushButton will appear at the bottom of the Notebook. It
+   will have the name "MinorTab1". This is the Minor Tab child which
+   should be observed when checking visual configurations.
+#) Set "Child Type" to STATUS_AREA.
+   Repeat steps 2-5. 
+   Choose "XmLabel" from the list of choices in the SelectionDialog
+   and click on the "OK" button of the SelectionDialog.
+#) A Label will appear at the bottom left side of the Notebook. It
+   will have the name "StatusArea1". This is the Status Area child which
+   should be observed when checking visual configurations.
+C)
+
+#) Set "Back Page Placement" to BOTTOM_RIGHT.
+#) Select "Set backPagePlacement" from the "Set Notebook Values" menu.
+#) Set "Orientation" to HORIZONTAL.
+#) Select "Set orientation" from the "Set Notebook Values" menu.
+#) No visual change should take place, since these are the default values
+   for the 2 resources.
+C)
+
+#) Set "Back Page Placement" to BOTTOM_RIGHT.
+#) Select "Set backPagePlacement" from the "Set Notebook Values" menu.
+#) Set "Orientation" to VERTICAL.
+#) Select "Set orientation" from the "Set Notebook Values" menu.
+#) The visual configuration of the NoteBook should be as follows:
+	
+@)	- Binding : Top
+@)	- Major Tab : Bottom
+@)	- Minor Tab : Right
+@)	- Status Area : Bottom Left
+@)	- Page Scroller : Bottom Right
+C)
+
+
+#) Set "Back Page Placement" to BOTTOM_LEFT.
+#) Select "Set backPagePlacement" from the "Set Notebook Values" menu.
+#) Set "Orientation" to HORIZONTAL
+#) Select "Set orientation" from the "Set Notebook Values" menu.
+#) The visual configuration of the NoteBook should be as follows:
+	
+@)	- Binding : Right
+@)	- Major Tab : Left
+@)	- Minor Tab : Bottom
+@)	- Status Area : Bottom Right
+@)	- Page Scroller : Bottom Left
+C)
+
+
+#) Set "Back Page Placement" to BOTTOM_LEFT.
+#) Select "Set backPagePlacement" from the "Set Notebook Values" menu.
+#) Set "Orientation" to VERTICAL.
+#) Select "Set orientation" from the "Set Notebook Values" menu.
+#) The visual configuration of the NoteBook should be as follows:
+	
+@)	- Binding : Top
+@)	- Major Tab : Bottom
+@)	- Minor Tab : Left
+@)	- Status Area : Bottom Right
+@)	- Page Scroller : Bottom Left
+C)
+
+
+#) Set "Back Page Placement" to TOP_RIGHT.
+#) Select "Set backPagePlacement" from the "Set Notebook Values" menu.
+#) Set "Orientation" to HORIZONTAL.
+#) Select "Set orientation" from the "Set Notebook Values" menu.
+#) The visual configuration of the NoteBook should be as follows:
+	
+@)	- Binding : Left
+@)	- Major Tab : Right
+@)	- Minor Tab : Top
+@)	- Status Area : Bottom Left
+@)	- Page Scroller : Bottom Right
+C)
+
+
+#) Set "Back Page Placement" to TOP_RIGHT.
+#) Select "Set backPagePlacement" from the "Set Notebook Values" menu.
+#) Set "Orientation" to VERTICAL.
+#) Select "Set orientation" from the "Set Notebook Values" menu.
+#) The visual configuration of the NoteBook should be as follows:
+	
+@)	- Binding : Bottom
+@)	- Major Tab : Top
+@)	- Minor Tab : Right
+@)	- Status Area : Bottom Left
+@)	- Page Scroller : Bottom Right
+C)
+
+
+#) Set "Back Page Placement" to TOP_LEFT.
+#) Select "Set backPagePlacement" from the "Set Notebook Values" menu.
+#) Set "Orientation" to HORIZONTAL.
+#) Select "Set orientation" from the "Set Notebook Values" menu.
+#) The visual configuration of the NoteBook should be as follows:
+	
+@)	- Binding : Right
+@)	- Major Tab : Left.
+@)	- Minor Tab : Top
+@)	- Status Area : Bottom Right
+@)	- Page Scroller : Bottom Left
+C)
+
+
+#) Set "Back Page Placement" to TOP_LEFT.
+#) Select "Set backPagePlacement" from the "Set Notebook Values" menu.
+#) Set "Orientation" to VERTICAL.
+#) Select "Set orientation" from the "Set Notebook Values" menu.
+#) The visual configuration of the NoteBook should be as follows:
+	
+@)	- Binding : Bottom
+@)	- Major Tab : Top
+@)	- Minor Tab : Left
+@)	- Status Area : Bottom Right
+@)	- Page Scroller : Bottom Left
+
+
+E)

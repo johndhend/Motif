@@ -1,0 +1,13 @@
+
+
+
+#) Two windows will appear on your screen : "win_fix_pos" and "win_toggle".
+#) Maximize the win_toggle window.
+C)
+#) A message will appear on the term window saying "Move after Maximize was 
+   executed". The upper left corner of both windows should be at the same 
+   position. If they aren't, CR 5217 hasn't been fixed.
+E)
+
+
+

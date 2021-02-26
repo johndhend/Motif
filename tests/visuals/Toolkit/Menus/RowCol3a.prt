@@ -1,0 +1,66 @@
+# $XConsortium: RowCol3a.prt /main/3 1995/07/19 20:23:37 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) WindowFocus mainParent
+TRACE:(2) LocatePointer textf1  
+TRACE:(3) ClickKey Kn
+TRACE:(4) ClickKey Ke
+TRACE:(5) ClickKey Kw
+TRACE:(6) ClickKey KSpace
+TRACE:(7) ClickKey Kv
+TRACE:(8) ClickKey Ka
+TRACE:(9) ClickKey Kl
+TRACE:(10) ClickKey Ku
+TRACE:(11) ClickKey Ke
+TRACE:(12) ClickKey KReturn
+TRACE:(13) CompareVisual parent 
+TRACE:(14) LocatePointer scale1  
+TRACE:(15) ClickKey KRight
+TRACE:(16) ClickKey KRight
+TRACE:(17) ClickKey KRight
+TRACE:(18) ClickKey KRight
+TRACE:(19) CompareVisual parent 
+TRACE:(20) Continue
+TRACE:(21) Continue
+TRACE:(22) Continue
+TRACE:(23) Continue
+TRACE:(24) Continue
+TRACE:(25) Continue
+TRACE:(26) Continue
+TRACE:(27) Continue
+TRACE:(28) Exit
+Exiting Test...Please Standby...

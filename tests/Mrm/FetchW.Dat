@@ -1,0 +1,17 @@
+
+#) This is the FetchW test.
+C)
+
+#) There should now be two buttons in the second window.
+   The buttons' labels should read TEST BTN1 &  TEST BTN2.                   
+   The colors should be : background - yellow, foreground - red.
+C)
+
+#) There should now be two additional buttons in the window.
+   The new buttons' labels should read  BTN1 TEST & BTN2 TEST.        
+   The colors should be: background - red, foreground - yellow.
+C)
+
+#) A summary message shouldbe printed on stdout.
+E)
+

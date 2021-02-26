@@ -1,0 +1,99 @@
+# $XConsortium: PanedWin14.prt /main/3 1995/07/19 20:25:55 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) CompareVisual XmVPanedWindow1 
+TRACE:(2) LocatePointer XmVPanedWindow1 RSash 0
+TRACE:(3) DragXYRelative Up 52 Btn1
+TRACE:(4) CompareVisual XmVPanedWindow1 
+TRACE:(5) LocatePointer XmVPanedWindow1 RSash 0
+TRACE:(6) DragXYRelative Down 104 Btn1
+TRACE:(7) CompareVisual XmVPanedWindow1 
+TRACE:(8) LocatePointer XmVPanedWindow1 RSash 1
+TRACE:(9) DragXYRelative Down 54 Btn1
+TRACE:(10) CompareVisual XmVPanedWindow1 
+TRACE:(11) Continue
+Current height of child is 146
+Using the setValues method...
+Have set paneMinimum to 146 and paneMaximum to 146
+
+Current height of child is 154
+Using the setValues method...
+Have set paneMinimum to 154 and paneMaximum to 154
+
+Current height of child is 100
+Using the setValues method...
+Have set paneMinimum to 100 and paneMaximum to 100
+
+TRACE:(12) LocatePointer XmVPanedWindow1 RSash 0
+     SCRWARNING** : Can't move over object! Will ignore xisMovePointerTo()
+TRACE:(13) DragXYRelative Up 10 Btn1
+TRACE:(14) LocatePointer XmVPanedWindow1 RSash 0
+     SCRWARNING** : Can't move over object! Will ignore xisMovePointerTo()
+TRACE:(15) DragXYRelative Down 10 Btn1
+TRACE:(16) LocatePointer XmVPanedWindow1 RSash 1
+     SCRWARNING** : Can't move over object! Will ignore xisMovePointerTo()
+TRACE:(17) DragXYRelative Down 10 Btn1
+TRACE:(18) Continue
+TRACE:(19) CompareVisual Shell1 
+TRACE:(20) Continue
+Current height of PushButton1 is 146
+   Setting paneMimimum to 146
+Current height of PushButton2 is 154
+   Setting paneMimimum to 154
+Current height of PushButton3 is 100
+   Setting paneMimimum to 100
+TRACE:(21) CompareVisual XmVPanedWindow1 
+TRACE:(22) Continue
+Current height of child is 37
+Using the queryGeometry method...
+Have set paneMinimum to 37 and paneMaximum to 37
+
+TRACE:(23) CompareVisual XmVPanedWindow1 
+TRACE:(24) Continue
+Current height of child is 31
+Using the queryGeometry method...
+Have set paneMinimum to 31 and paneMaximum to 31
+
+TRACE:(25) CompareVisual XmVPanedWindow1 
+TRACE:(26) Continue
+Current height of child is 31
+Using the queryGeometry method...
+Have set paneMinimum to 31 and paneMaximum to 31
+
+TRACE:(27) CompareVisual XmVPanedWindow1 
+TRACE:(28) Exit
+Exiting Test...Please Standby...

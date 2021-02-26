@@ -1,0 +1,135 @@
+XCOMM 
+XCOMM @OPENGROUP_COPYRIGHT@
+XCOMM COPYRIGHT NOTICE
+XCOMM Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+XCOMM Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+XCOMM ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+XCOMM the full copyright text.
+XCOMM 
+XCOMM This software is subject to an open license. It may only be
+XCOMM used on, with or for operating systems which are themselves open
+XCOMM source systems. You must contact The Open Group for a license
+XCOMM allowing distribution and sublicensing of this software on, with,
+XCOMM or for operating systems which are not Open Source programs.
+XCOMM 
+XCOMM See http://www.opengroup.org/openmotif/license for full
+XCOMM details of the license agreement. Any use, reproduction, or
+XCOMM distribution of the program constitutes recipient's acceptance of
+XCOMM this agreement.
+XCOMM 
+XCOMM EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+XCOMM PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+XCOMM KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+XCOMM WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+XCOMM OR FITNESS FOR A PARTICULAR PURPOSE
+XCOMM 
+XCOMM EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+XCOMM NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+XCOMM INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+XCOMM DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+XCOMM AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+XCOMM LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+XCOMM ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+XCOMM EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+XCOMM POSSIBILITY OF SUCH DAMAGES.
+XCOMM 
+XCOMM 
+XCOMM HISTORY
+XCOMM 
+XCOMM   $XConsortium: Imakefile /main/10 1995/07/13 18:43:08 drk $
+INCLUDES 	= -I. -I$(MLIBSRC) -I../bitmaps -I../ -I$(TESTCOMSRC)
+DEFINES         = TestDefines
+DEPLIBS         = TestClientDepLibs
+LOCAL_LIBRARIES = TestClientLibs
+
+NormalLibraryObjectRule()
+
+RunTarget()
+MSimpleProgramTarget(Menu1)
+TestPPTarget(Menu1)
+TestPPTarget(Menu1a)
+MSimpleProgramTarget(Menu2)
+TestPPTarget(Menu2)
+MSimpleProgramTarget(Menu3)
+TestPPTarget(Menu3)
+MSimpleProgramTarget(Menu4)
+TestPPTarget(Menu4)
+MSimpleProgramTarget(Menu5)
+TestPPTarget(Menu5)
+MSimpleProgramTarget(Menu6)
+TestPPTarget(Menu6)
+MSimpleProgramTarget(Menu7)
+TestPPTarget(Menu7)
+MSimpleProgramTarget(MenuBar1)
+TestPPTarget(MenuBar1)
+MSimpleProgramTarget(MenuBar2)
+TestPPTarget(MenuBar2)
+MSimpleProgramTarget(MenuBar3)
+TestPPTarget(MenuBar3)
+MSimpleProgramTarget(MenuGad1)
+TestPPTarget(MenuGad1)
+MSimpleProgramTarget(OptionMenu1)
+TestPPTarget(OptionMenu1)
+MSimpleProgramTarget(OptionMenu2)
+TestPPTarget(OptionMenu2)
+MSimpleProgramTarget(OptionMenu3)
+TestPPTarget(OptionMenu3)
+MSimpleProgramTarget(OptionMenu4)
+TestPPTarget(OptionMenu4)
+TestPPTarget(OptionMenu4a)
+MSimpleProgramTarget(OptionMenu5)
+TestPPTarget(OptionMenu5)
+MSimpleProgramTarget(PopupMenu1)
+TestPPTarget(PopupMenu1)
+MSimpleProgramTarget(PopupMenu2)
+TestPPTarget(PopupMenu2)
+TestPPTarget(PopupMenu2a)
+MSimpleProgramTarget(PopupMenu3)
+TestPPTarget(PopupMenu3)
+MSimpleProgramTarget(PopupMenu4)
+TestPPTarget(PopupMenu4)
+MSimpleProgramTarget(PopupMenu5)
+TestPPTarget(PopupMenu5)
+MSimpleProgramTarget(PopupMenu6)
+TestPPTarget(PopupMenu6)
+MSimpleProgramTarget(PopupMenu7)
+TestPPTarget(PopupMenu7)
+MSimpleProgramTarget(RowCol1)
+TestPPTarget(RowCol1)
+MSimpleProgramTarget(RowCol2)
+TestPPTarget(RowCol2)
+MSimpleProgramTarget(RowCol3)
+TestPPTarget(RowCol3a)
+TestPPTarget(RowCol3b)
+TestPPTarget(RowCol3c)
+TestPPTarget(RowCol3d)
+TestPPTarget(RowCol3e)
+
+SRCS=  \
+	Menu1.c \
+	Menu2.c \
+	Menu3.c \
+	Menu4.c \
+	Menu5.c \
+	Menu6.c \
+	Menu7.c \
+	MenuBar1.c \
+	MenuBar2.c \
+	MenuBar3.c \
+	MenuGad1.c \
+	OptionMenu1.c \
+	OptionMenu2.c \
+	OptionMenu3.c \
+	OptionMenu4.c \
+	OptionMenu5.c \
+	PopupMenu1.c \
+	PopupMenu2.c \
+	PopupMenu3.c \
+	PopupMenu4.c \
+	PopupMenu5.c \
+	PopupMenu6.c \
+	PopupMenu7.c \
+	RowCol1.c \
+	RowCol2.c \
+        RowCol3.c		  
+DependTarget () 

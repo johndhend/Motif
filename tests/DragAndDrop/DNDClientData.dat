@@ -1,0 +1,86 @@
+/* $XConsortium: DNDClientData.dat /main/4 1995/07/17 10:05:19 drk $ */
+/*
+ * @OPENGROUP_COPYRIGHT@
+ * COPYRIGHT NOTICE
+ * Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ * Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ * ALL RIGHTS RESERVED (MOTIF).  See the file named COPYRIGHT.MOTIF for
+ * the full copyright text.
+ * 
+ * This software is subject to an open license. It may only be
+ * used on, with or for operating systems which are themselves open
+ * source systems. You must contact The Open Group for a license
+ * allowing distribution and sublicensing of this software on, with,
+ * or for operating systems which are not Open Source programs.
+ * 
+ * See http://www.opengroup.org/openmotif/license for full
+ * details of the license agreement. Any use, reproduction, or
+ * distribution of the program constitutes recipient's acceptance of
+ * this agreement.
+ * 
+ * EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ * PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ * WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ * OR FITNESS FOR A PARTICULAR PURPOSE
+ * 
+ * EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ * NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ * INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ * ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ * EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGES.
+ * 
+ */
+/*
+ * HISTORY
+ */
+
+#) This is the DNDClientData test. It tests the XmNclientData resource.
+C)
+
+#) A RowColumn should have appeared on your screen. It should have the 
+   following children : A ToggleButton, a Label, an empty List, a Scale,
+   and a PushButton.
+#) Each of these widgets has been registered as a drop site.
+#) There should also be a PushButton within a FormDialog on your screen
+   labelled "Drag Source"
+C)
+
+#) Move the pointer to the "Drag Source" PushButton. Initiate a drag
+   by pressing BTransfer (MB2 by default). Drag over to the ToggleButton,
+   and release MB2. The drag icon should melt into the background, indicating
+   a successful drop, and the background color of the ToggleButton should
+   change to be red.
+C)
+
+#) Move the pointer to the "Drag Source" PushButton. Initiate a drag
+   by pressing BTransfer (MB2 by default). Drag over to the Label.
+   and release MB2. The drag icon should melt into the background, indicating
+   a successful drop, and the label should change to be the GNU pixmap.
+C)
+
+#) Move the pointer to the "Drag Source" PushButton. Initiate a drag
+   by pressing BTransfer (MB2 by default). Drag over to the List,
+   and release MB2. The drag icon should melt into the background, indicating
+   a successful drop, and the List should now have one item, "ListItem".
+C)
+
+#) Move the pointer to the "Drag Source" PushButton. Initiate a drag
+   by pressing BTransfer (MB2 by default). Drag over to the Scale,
+   and release MB2. The drag icon should melt into the background, indicating
+   a successful drop, and the slider of the Scale should move to 2.
+C)
+
+#) Move the pointer to the "Drag Source" PushButton. Initiate a drag
+   by pressing BTransfer (MB2 by default). Drag over to the PushButton,
+   and release MB2. The drag icon should melt into the background, indicating
+   a successful drop, and the label of the PushButton should change to "Another
+   Label".
+C)
+
+E)
+

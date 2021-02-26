@@ -1,0 +1,110 @@
+# $XConsortium: Menu7.scr /main/5 1995/07/17 20:26:22 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+# A main window will appear with two pulldown menus in the menu bar, Menu1
+#   and Menu2.
+# Menu1 has three entries, PushButton1, PushButton2, and PushButton3.
+# Menu2 has four entries, OtherButton1, OtherButton2, OtherButton3, and
+#  OtherButton4.
+
+WindowRaise Shell1
+LocatePointer Menu1
+ClickMB Btn1
+CompareVisual pulldown1
+ClickKey KCancel
+
+LocatePointer Menu2
+ClickMB Btn1
+CompareVisual pulldown2
+ClickKey KCancel
+
+Continue
+
+# Menu1's entries have been rearranged so that PushButton1 comes last.
+# Menu2's entries have been reordered so that they are reversed now:
+#  OtherButton4 comes first, followed by OtherButton3, OtherButton2, and
+#  OtherButton1.
+
+WindowRaise Shell1
+LocatePointer Menu1
+ClickMB Btn1
+CompareVisual pulldown1
+ClickKey KCancel
+
+LocatePointer Menu2
+ClickMB Btn1
+CompareVisual pulldown2
+ClickKey KCancel
+
+Continue
+
+# Some illegal values are being set for XmNpositionIndex for some
+# of the buttons.  No change should have been made to Menu1 or Menu2.
+
+WindowRaise Shell1
+LocatePointer Menu1
+ClickMB Btn1
+CompareVisual pulldown1
+ClickKey KCancel
+
+LocatePointer Menu2
+ClickMB Btn1
+CompareVisual pulldown2
+ClickKey KCancel
+
+Continue
+
+# A new child was added to the 2nd index position of Menu1 and two new
+# children have been added to the 0th and last position of Menu2.
+
+WindowRaise Shell1
+LocatePointer Menu1
+ClickMB Btn1
+CompareVisual pulldown1
+ClickKey KCancel
+
+LocatePointer Menu2
+ClickMB Btn1
+CompareVisual pulldown2
+ClickKey KCancel
+
+Continue
+
+Exit

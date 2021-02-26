@@ -1,0 +1,122 @@
+/* $XConsortium: ToggleBtn3.dat /main/4 1995/07/17 10:09:02 drk $ */
+/*
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+ */
+/*
+ * HISTORY
+ */
+
+#) This is a simple test of toggle button behaviors. To toggle a 
+   toggle button, click anywhere on the label or on the indicator.  
+
+#) Click on ToggleButton1. The indicator should fill to show it is on.
+   Toggle Button 1 uses a large font and its indicator is sized 
+   proportionally. 
+
+#) Press MB1 down on ToggleButton1, then move outside the window and release
+   the button.  The toggle indicator will change when you press the button
+   and should revert when you move outside the window. 
+
+#) Move the pointer back over ToggleButton1, and use the space bar to
+   toggle the indicator. 
+
+
+C)
+
+#) Move the pointer over ToggleButton2. Toggle the toggle button using either 
+   the mouse or the keyboard, as you did with ToggleButton1. The indicator 
+   should not fill with a new color, but the top and bottom shadows should
+   change.
+
+#) Leave this button ON before you continue. It should remain ON for the
+   remainder of the test. 
+
+
+C)
+
+#) ToggleButton3 should show no indicator. Toggle it, and the indicator will
+   appear. 
+
+
+C)
+
+#) ToggleButton4 should already appear ON. You can manipulate it normally. 
+
+#) ToggleButton5 contains a pixmap instead of a label. When you toggle the
+   toggle button, the pixmap will change. 
+
+
+C)
+
+#) ToggleButton6 has no indicator. When you toggle it, the shadows should
+   change so that it appears depressed. Press again and it will revert. 
+
+
+C)
+
+#) ToggleButton5 should now be toggled to the ON position (smiley face). 
+
+
+C)
+
+#) ToggleButton5 should now be toggled to the OFF position (circles). 
+
+
+C)
+
+
+#) The background of ToggleButton5 should have changed to smily face pixmap.
+
+
+C)
+
+
+#) The background of ToggleButton5 should have changed back to the default
+   background color. 
+
+#) PLEASE READ THIS BEFORE CONTINUING. In the next panel, the background
+   of Manager is being specified as None. This may result in a X Protocol
+   error.
+
+
+C)
+
+#) The background of Manager has been specified as None. This should not
+   result in protocol error.
+
+
+C)
+
+E)

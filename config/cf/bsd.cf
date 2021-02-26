@@ -1,0 +1,34 @@
+XCOMM platform:  $XConsortium: bsd.cf /main/24 1996/09/28 16:09:13 rws $
+
+#ifndef OSName
+#define OSName            freeBSD
+#endif
+XCOMM operating system:  OSName
+#ifndef OSMajorVersion
+#define OSMajorVersion    12
+#endif
+#ifndef OSMinorVersion
+#define OSMinorVersion    2
+#endif
+
+#if 0
+#define BootstrapCFlags -DNOSTDHDRS
+#define StandardDefines -DNOSTDHDRS -DCSRG_BASED
+#define HasVoidSignalReturn NO
+#define HasBsearch NO
+#define DirFailPrefix -
+#define AvoidNullMakeCommand	YES
+#endif
+
+#define BuildServer NO
+
+#if 0
+#ifdef VaxArchitecture
+#define UnalignedReferencesAllowed YES	       /* if arbitrary deref is okay */
+#endif
+#endif
+
+#if OSMajorVersion >= 4 && OSMinorVersion >= 3
+#define SetTtyGroup YES
+#endif
+

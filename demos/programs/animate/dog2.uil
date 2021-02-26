@@ -1,0 +1,5 @@
+module dog
+value
+anim_width: exported 700 ;
+end module ;
+

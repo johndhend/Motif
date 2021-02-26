@@ -1,0 +1,12 @@
+Panner*NumberDialog_popup.width :	170
+Panner*NumberDialog_popup.height :	130
+Panner*NumberDialog.width :		170
+Panner*NumberDialog.height :		130
+Panner*AddDisplayDialog_popup.width :	170
+Panner*AddDisplayDialog_popup.height :	130
+Panner*AddDisplayDialog.width :		170
+Panner*AddDisplayDialog.height :	130
+Panner*HelpDialog_popup.width :		325
+Panner*HelpDialog_popup.height :	155
+Panner*HelpDialog.width :		325
+Panner*HelpDialog.height :		155

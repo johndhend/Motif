@@ -1,0 +1,11 @@
+
+
+#) A PushButton will appear on your screen with the label "Pop 'em up".
+#) Push the button. This will pop up additional shells containing the
+   following PushButtons : "Button1", "Button2", "Button3".
+#) Push on the buttons one at a time. All 3 should be activated. If Button1
+   and Button3 can be activated, but Button2 can not, CR 5989 hasn't been
+   fixed.
+E)
+
+

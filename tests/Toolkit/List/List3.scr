@@ -1,0 +1,72 @@
+# $XConsortium: List3.scr /main/5 1995/07/17 20:21:44 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+# OSF/Motif: @(#)List3.scr	1.1  91/10/11
+# Screen 1
+# A client containing a List should appear. The List should have the
+# following resources set:
+#    1) Should have 6 items (Item1 - Item6).
+#    2) Should have 3 Selected Items (Item1, Item3, and Item6). 
+#    3) Background should be wheat and foreground navy.
+#    4) The font should be variable.
+#    5) ListMarginWidth and listMarginHeight should be 20.
+#    6) ShadowThickness and listSpacing should be 10.
+#    7) SelectionPolicy should be MULTIPLE_SELECT.
+# All these resources are defined in the resource file List3DB and should
+# have been merged into the system resource database via xrdb.
+
+LocatePointer List1
+CompareVisual List1
+
+# C)
+
+Continue
+
+# Screen 2
+# The same List will appear but the names of the Items will change. Also,
+# all items except the last item will be selected. These resources have
+# been set in the application and not from List3DB.
+
+LocatePointer List1
+CompareVisual List1
+
+# E)
+
+Exit

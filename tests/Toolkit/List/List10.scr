@@ -1,0 +1,187 @@
+# $XConsortium: List10.scr /main/5 1995/07/17 20:21:14 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+# Move the pointer into the Text field widget labeled \"Add String to Selected
+# List:\" and click MB1.
+
+WindowRaise Shell1
+
+LocatePointer TextF_AddSL 
+ClickMB Btn1
+
+# Type the string NewWidget and hit return. NewWidget should be added 
+# to the list's selected items list.
+
+InputString "NewWidget"
+ClickKey KReturn
+
+# Click MB1 on \"Get SelectedItems\". \"The Selected Items:\" list should
+# contain 1 item \"Get SelectedItems\".
+
+LocatePointer PushB_GetSelected
+ClickMB Btn1
+
+CompareVisual Selected_ListSV
+
+# Move the pointer into the Text field widget labeled \"Add String to Items
+# List:\" and click MB1.
+
+LocatePointer TextF_AddIL
+ClickMB Btn1
+
+# Type the string NewWidget and hit return. NewWidget should be added to the
+# \"Action List\" selected.
+
+InputString "NewWidget"
+ClickKey KReturn
+
+CompareVisual List1
+
+# C)
+
+Continue
+
+WindowRaise Shell1
+
+# Move the pointer into the Text field widget labeled \"Add String to Selected
+# List:\" and click MB1.
+
+LocatePointer TextF_AddSL
+ClickMB Btn1
+
+# Type the string NewerWidget and hit return. NewerWidget should be added 
+# to the list's selected items list.
+
+InputString "NewerWidget"
+ClickKey KReturn
+
+# Click MB1 on \"Call XmListUpdateSelectedList\".
+
+LocatePointer PushB_Update
+ClickMB Btn1
+
+# Click MB1 on \"Get SelectedItems\". \"The Selected Items:\" list should
+# contain 1 item (NewWidget).
+
+LocatePointer PushB_GetSelected
+ClickMB Btn1
+
+CompareVisual Selected_ListSV
+
+# Move the pointer into the Text field widget labeled \"Add String to Items
+# List:\" and click MB1.
+
+LocatePointer TextF_AddIL
+ClickMB Btn1
+
+# Type the string NewWidget and hit return. NewerWidget should be added to the
+# \"Action List\" unselected.
+
+InputString "NewerWidget"
+ClickKey KReturn
+
+CompareVisual List1
+
+# C)
+
+Continue
+
+WindowRaise Shell1
+
+# Click MB1 on the ToggleButton labeled \"Dont Add Item Unselected\". It 
+# should toggle to \"Add Item Unselected\".
+
+LocatePointer Toggle_Selected
+ClickMB Btn1
+
+# Move the pointer into the Text field widget labeled \"Add String to Selected
+# List:\" and click MB1.
+
+LocatePointer TextF_AddSL
+ClickMB Btn1
+
+# Type the string OldWidget and hit return. OldWidget should be added
+# to the list's selected items list.
+
+InputString "OldWidget"
+ClickKey KReturn
+
+# Click MB1 on \"Get SelectedItems\". \"The Selected Items:\" list should
+# contain two items (NewWidget and OldWidget).
+
+LocatePointer PushB_GetSelected
+ClickMB Btn1
+
+CompareVisual Selected_ListSV
+
+# Move the pointer into the Text field widget labeled \"Add String to Items
+# List:\" and click MB1.
+
+LocatePointer TextF_AddIL
+ClickMB Btn1
+
+# Type the string OldWidget and hit return. OldWidget should be added to the
+# \"Action List\" unselected.
+
+InputString "OldWidget"
+ClickKey KReturn
+
+CompareVisual List1
+
+# Click MB1 on \"Call XmListUpdateSelectedList\".
+
+LocatePointer PushB_Update
+ClickMB Btn1
+
+# Click MB1 on \"Get SelectedItems\". \"The Selected Items:\" list should
+# contain 1 item (NewWidget).
+
+LocatePointer PushB_GetSelected
+ClickMB Btn1
+
+CompareVisual Selected_ListSV
+
+# E)
+
+Exit
+
+# This is a Motif 1.2 test only
+
+Exit

@@ -1,0 +1,8 @@
+#!/bin/sh
+for x in * ; do
+cat << EOF | ed
+r $x
+%s/X11/X11/g
+wq $x
+EOF
+done

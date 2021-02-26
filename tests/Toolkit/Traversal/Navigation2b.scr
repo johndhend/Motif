@@ -1,0 +1,95 @@
+# $XConsortium: Navigation2b.scr /main/4 1995/07/17 20:44:27 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+
+/**** NOTE:
+ ***  This script supports two tests, Navigation2 and Navigation10.
+ ***  If you change it, you may need to rerecord both.
+ ***/
+
+#) This is a test of traversal behaviours.  
+#Nine Forms should appear within a Form. 
+#Each child Form should contain a 3x3 matrix of PushButtons. 
+#) Pressing the TAB or Shift-TAB will result on the focus moving 
+#from one form to another. 
+#) Pressing the up/down left/right arrow keys will result in traversal 
+#within the current form. 
+#) Clicking MB1 on the PushButtons should make them disappear. Click MB1 
+#on the PushButtons of any of the Forms until they all go away. 
+#) Try TABbing between the remaining Forms.
+
+WindowFocus Shell1
+LocatePointer Green1
+ClickMB Btn1
+CompareVisual Form2
+ClickKey KSpace
+ClickKey KSpace
+ClickKey KSpace
+CompareVisual Form2
+ClickKey KTab
+ClickKey KDown
+ClickKey KSpace
+CompareVisual Form1
+LocatePointer Magenta6
+ClickMB Btn1
+ClickKey KSpace
+ClickKey KSpace
+ClickKey KSpace
+ClickKey KSpace
+ClickKey KSpace
+ClickKey KSpace
+ClickKey KSpace
+ClickKey KSpace
+ClickKey KSpace
+CompareVisual Form1
+ClickKey KTab
+ClickKey KTab
+ClickKey KTab
+ClickKey KTab
+ClickKey KTab
+ClickKey KTab
+ClickKey KTab
+ClickKey KTab
+ClickKey <Shift> KTab
+CompareVisual Form
+
+Exit
+
+

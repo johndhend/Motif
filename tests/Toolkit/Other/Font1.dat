@@ -1,0 +1,78 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: Font1.dat /main/5 1995/07/13 19:05:05 drk $"
+*/
+#) A window should appear with several labels.  These labels were created
+   with the font that they name.  For example, label 6x10 was created
+   with the 6x10 font.  This window should be used for comparisons during
+   this test.
+C)
+
+#) A bulletin board should appear with several children.  The labels of the
+children indicate which font they should appear with.
+#) Verify that the fonts are correct.
+C)
+
+#) A bulletin board should appear with several children.  The labels of the
+children indicate which font they should appear with.
+#) Verify that the fonts are correct.
+C)
+
+#) A new child has been added to the bulletin board.  The label of the push
+  button should indicate that it's font is 8x13bold.
+#) You may need to resize the bulletin board to see the new child.
+C)
+
+#) A Dialog Shell will appear with a label indicating there is a popupMenu
+   associated with it. 
+#) Press MB3.  A PopupMenu should appear.  The Button children should be
+   in font 10x20.  The label child should be in font 8x13bold.
+
+C)
+
+#) A menu should appear in the top left corner of the screen.  The menu items
+should reflect the font which is described in their labels.
+C)
+
+#) A Dialog Shell will appear with children whose labels indicate the font
+   they should be displayed in.
+#) Verify the fonts are correct.
+C)
+E)

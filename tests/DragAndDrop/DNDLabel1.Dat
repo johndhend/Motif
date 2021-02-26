@@ -1,0 +1,56 @@
+
+
+#) This is the DNDLabel1 test.
+
+#) To test this, you need to run another Motif client with an
+   editable Text(Field) widget in it.
+
+#) You should see a Label widget with two-line label.
+
+#) Position the pointer anywhere on the Label. Initiate drag by 
+   pressing BTransfer (MB2 by default).
+
+#) With BTransfer pressed, drag the pointer over to the Text
+   widget, and release BTransfer. The text \"Two-Line\" should
+   appear in the Text widget at the point where the button was
+   released and on the next line the text \"Label String\"
+   should appear.
+
+C)
+
+#) This panel tests that a dragged object can be moved and a drag
+   completed via the keyboard, when the drag is initiated using the default
+   BTransfer action (Pressing MB2).
+
+#) Position the pointer anywhere on the Label. Initiate drag by 
+   pressing BTransfer (MB2 by default).
+
+#) With BTransfer pressed, click on KUp. The drag icon should move
+   up. Repeat with KDown, KLeft and KRight. The drag icon should move
+   in the direction corresponding to the arrow key. Move the drag icon until
+   the hotspot is within the Text widget, and hit KReturn.
+   The text \"Two-Line\" should appear in the Text widget at the point 
+   where the cursor in the Text widget  was and on the next line the 
+   text \"Label String\" should appear.
+#) Position the pointer anywhere on the Label. Initiate drag by 
+   pressing BTransfer (MB2 by default).
+#) Drag the pointer over to the Text widget. Now, hit the osfActivate key.
+   The text \"Two-Line\" should appear in the Text widget at the point 
+   where the cursor was in the Text widget and on the next line the 
+   text \"Label String\" should appear.
+C)
+
+#) This panel tests that a drag action can be initiated via the keyboard.
+#) The translations for the Label have been overridden so that BTransfer is
+   now <Ctrl>d.
+#) Position the pointer anywhere on the Label, and click <Ctrl>d. A drag
+   action should be initiated. 
+#) Click on KUp. The drag icon should move up. Repeat with KDown, KLeft and 
+   KRight. The drag icon should move in the direction corresponding to the 
+   arrow key. Move the icon until the hotspot is within the Text widget, 
+   and hit KReturn. The text \"Two-Line\" should appear in the Text widget 
+   at the point where the pointer was , and on the next line the 
+   text \"Label String\" should appear.
+C)
+
+E)

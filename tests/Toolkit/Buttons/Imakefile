@@ -1,0 +1,133 @@
+XCOMM 
+XCOMM @OPENGROUP_COPYRIGHT@
+XCOMM COPYRIGHT NOTICE
+XCOMM Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+XCOMM Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+XCOMM ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+XCOMM the full copyright text.
+XCOMM 
+XCOMM This software is subject to an open license. It may only be
+XCOMM used on, with or for operating systems which are themselves open
+XCOMM source systems. You must contact The Open Group for a license
+XCOMM allowing distribution and sublicensing of this software on, with,
+XCOMM or for operating systems which are not Open Source programs.
+XCOMM 
+XCOMM See http://www.opengroup.org/openmotif/license for full
+XCOMM details of the license agreement. Any use, reproduction, or
+XCOMM distribution of the program constitutes recipient's acceptance of
+XCOMM this agreement.
+XCOMM 
+XCOMM EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+XCOMM PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+XCOMM KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+XCOMM WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+XCOMM OR FITNESS FOR A PARTICULAR PURPOSE
+XCOMM 
+XCOMM EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+XCOMM NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+XCOMM INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+XCOMM DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+XCOMM AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+XCOMM LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+XCOMM ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+XCOMM EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+XCOMM POSSIBILITY OF SUCH DAMAGES.
+XCOMM 
+XCOMM 
+XCOMM HISTORY
+XCOMM $Log$
+XCOMM $XConsortium: Imakefile /main/10 1996/07/08 15:37:28 jakku $
+INCLUDES	 = -I. -I../bitmaps -I.. -I$(TESTCOMSRC) \
+	           -I../../../lib/
+DEFINES 	= TestDefines
+DEPLIBS 	= TestClientDepLibs
+LOCAL_LIBRARIES = TestClientLibs -L/X11/lib
+
+NormalLibraryObjectRule()
+
+RunTarget()
+MSimpleProgramTarget(ArrowBGad1)
+TestPPTarget(ArrowBGad1)
+MSimpleProgramTarget(ArrowBGad2)
+TestPPTarget(ArrowBGad2)
+MSimpleProgramTarget(ArrowBGad3)
+TestPPTarget(ArrowBGad3)
+MSimpleProgramTarget(ArrowBGad4)
+TestPPTarget(ArrowBGad4)
+MSimpleProgramTarget(ArrowBtn1)
+TestPPTarget(ArrowBtn1)
+MSimpleProgramTarget(ArrowBtn2)
+TestPPTarget(ArrowBtn2)
+MSimpleProgramTarget(DrawnBtn2)
+TestPPTarget(DrawnBtn2)
+MSimpleProgramTarget(PushBGad2)
+TestPPTarget(PushBGad2)
+MSimpleProgramTarget(PushBGad3)
+TestPPTarget(PushBGad3)
+MSimpleProgramTarget(PushBGad4)
+TestPPTarget(PushBGad4)
+MSimpleProgramTarget(PushBtn1)
+TestPPTarget(PushBtn1)
+MSimpleProgramTarget(PushBtn2)
+TestPPTarget(PushBtn2)
+MSimpleProgramTarget(ToggleBGad1)
+TestPPTarget(ToggleBGad1)
+MSimpleProgramTarget(ToggleBGad2)
+TestPPTarget(ToggleBGad2)
+MSimpleProgramTarget(ToggleBGad3)
+TestPPTarget(ToggleBGad3)
+MSimpleProgramTarget(ToggleBGad5)
+TestPPTarget(ToggleBGad5)
+MSimpleProgramTarget(ToggleBGad4)
+TestPPTarget(ToggleBGad4)
+MSimpleProgramTarget(ToggleBtn1)
+TestPPTarget(ToggleBtn1)
+MSimpleProgramTarget(ToggleBtn2)
+TestPPTarget(ToggleBtn2)
+MSimpleProgramTarget(ToggleBtn3)
+TestPPTarget(ToggleBtn3)
+MSimpleProgramTarget(ToggleBtn4)
+TestPPTarget(ToggleBtn4)
+MSimpleProgramTarget(ToggleBtn5)
+TestPPTarget(ToggleBtn5)
+MSimpleProgramTarget(ToggleBtn6)
+TestPPTarget(ToggleBtn6)
+MSimpleProgramTarget(ToggleBtn7)
+TestPPTarget(ToggleBtn7a)
+TestPPTarget(ToggleBtn7b)
+MSimpleProgramTarget(Button1)
+TestPPTarget(Button1a)
+TestPPTarget(Button1b)
+
+SRCS=  \
+	ArrowBGad1.c \
+	ArrowBGad2.c \
+	ArrowBGad3.c \
+	ArrowBGad4.c \
+	ArrowBtn1.c \
+	ArrowBtn2.c \
+	DrawnBtn2.c \
+	PushBGad2.c \
+	PushBGad3.c \
+	PushBGad4.c \
+	PushBtn1.c \
+	PushBtn2.c \
+	ToggleBGad1.c \
+	ToggleBGad2.c \
+	ToggleBGad3.c \
+	ToggleBGad4.c \
+	ToggleBGad5.c \
+	ToggleBtn1.c \
+	ToggleBtn2.c \
+	ToggleBtn3.c \
+	ToggleBtn4.c \
+	ToggleBtn5.c \
+	ToggleBtn6.c \
+        ToggleBtn7.c \
+	Button1.c
+	 
+DependTarget () 
+
+
+
+

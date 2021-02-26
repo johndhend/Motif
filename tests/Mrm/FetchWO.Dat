@@ -1,0 +1,18 @@
+
+#) This is the FetchWO test.
+C) 
+
+#) There should now be two buttons in the second window
+   The buttons' labels should read  TEST BTN1 &  TEST BTN2.      1         
+   The colors should be: background - yellow, foreground - red.
+   The window itself should be 200 pixels wide with a space of about 
+   forty pixels to the right of the right button.
+C)
+
+#) There should now be two additional buttons in the window.
+   The new buttons' labels should read  BTN1 TEST &  BTN2  TEST and        
+   The colors should be: background - red, foreground - yellow.
+   The second new button should have a wider shadow (6 pixels) around it.
+C)
+
+E)

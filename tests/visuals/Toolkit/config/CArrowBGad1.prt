@@ -1,0 +1,147 @@
+# $XConsortium: CArrowBGad1.prt /main/3 1995/07/19 20:40:25 drk $
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+#
+#
+# HISTORY
+TRACE:(1) CompareVisual PanedWindow1 
+TRACE:(2) LocatePointer ArrowButton1  
+TRACE:(3) PressMB Btn1 
+TRACE:(4) CompareVisual ArrowButton1 
+TRACE:(5) ReleaseMB Btn1 
+TRACE:(6) CompareVisual ArrowButton1 
+TRACE:(7) Continue
+TRACE:(8) LocatePointer ArrowButton1  
+TRACE:(9) ClickMB Btn1 
+TRACE:(10) LocatePointer ArrowButtonGadget1  
+TRACE:(11) PressMB Btn1 
+TRACE:(12) CompareVisual ArrowButtonGadget1 
+TRACE:(13) ReleaseMB Btn1 
+TRACE:(14) CompareVisual ArrowButtonGadget1 
+TRACE:(15) WindowResize Shell1 SouthEast 250 250
+TRACE:(16) CompareVisual ArrowButtonGadget1 
+TRACE:(17) LocatePointer PanedWindow1 RSash 0
+TRACE:(18) DragXYRelative Down 20 Btn1
+TRACE:(19) CompareVisual PanedWindow1 
+TRACE:(20) Continue
+TRACE:(21) LocatePointer ArrowButton1  
+TRACE:(22) ClickMB Btn1 
+TRACE:(23) LocatePointer ArrowButtonGadget1  
+TRACE:(24) ClickMB Btn1 
+TRACE:(25) LocatePointer ArrowButtonGadget2  
+TRACE:(26) PressMB Btn1 
+TRACE:(27) CompareVisual ArrowButtonGadget2 
+TRACE:(28) ReleaseMB Btn1 
+TRACE:(29) CompareVisual ArrowButtonGadget2 
+TRACE:(30) WindowResize Shell1 South 290
+TRACE:(31) CompareVisual ArrowButtonGadget2 
+TRACE:(32) LocatePointer PanedWindow1 RSash 0
+TRACE:(33) DragXYRelative Up 10 Btn1
+TRACE:(34) CompareVisual PanedWindow1 
+TRACE:(35) LocatePointer PanedWindow1 RSash 1
+TRACE:(36) DragXYRelative Up 10 Btn1
+TRACE:(37) CompareVisual PanedWindow1 
+TRACE:(38) Continue
+TRACE:(39) LocatePointer ArrowButton1  
+TRACE:(40) ClickMB Btn1 
+TRACE:(41) LocatePointer ArrowButtonGadget1  
+TRACE:(42) ClickMB Btn1 
+TRACE:(43) LocatePointer ArrowButtonGadget2  
+TRACE:(44) ClickMB Btn1 
+TRACE:(45) LocatePointer ArrowButtonGadget3  
+TRACE:(46) PressMB Btn1 
+TRACE:(47) CompareVisual ArrowButtonGadget3 
+TRACE:(48) ReleaseMB Btn1 
+TRACE:(49) CompareVisual ArrowButtonGadget3 
+TRACE:(50) LocatePointer PanedWindow1 RSash 0
+TRACE:(51) DragXYRelative Down 10 Btn1
+TRACE:(52) CompareVisual PanedWindow1 
+TRACE:(53) LocatePointer PanedWindow1 RSash 1
+TRACE:(54) DragXYRelative Up 20 Btn1
+TRACE:(55) CompareVisual PanedWindow1 
+TRACE:(56) LocatePointer PanedWindow1 RSash 2
+TRACE:(57) DragXYRelative Up 15 Btn1
+TRACE:(58) CompareVisual PanedWindow1 
+TRACE:(59) Continue
+TRACE:(60) LocatePointer ArrowButton1  
+TRACE:(61) ClickMB Btn1 
+TRACE:(62) LocatePointer ArrowButtonGadget1  
+TRACE:(63) ClickMB Btn1 
+TRACE:(64) LocatePointer ArrowButtonGadget2  
+TRACE:(65) ClickMB Btn1 
+TRACE:(66) LocatePointer ArrowButtonGadget3  
+TRACE:(67) ClickMB Btn1 
+TRACE:(68) LocatePointer ArrowButtonGadget4  
+TRACE:(69) PressMB Btn1 
+TRACE:(70) CompareVisual ArrowButtonGadget4 
+TRACE:(71) ReleaseMB Btn1 
+TRACE:(72) CompareVisual ArrowButtonGadget4 
+TRACE:(73) WindowResize Shell1 South 380
+TRACE:(74) CompareVisual Shell1 
+TRACE:(75) LocatePointer PanedWindow1 RSash 3
+TRACE:(76) PressMB Btn1 
+TRACE:(77) LocatePointer PanedWindow1  Down
+TRACE:(78) ReleaseMB Btn1 
+TRACE:(79) CompareVisual PanedWindow1 
+TRACE:(80) WindowResize Shell1 East 280
+TRACE:(81) CompareVisual PanedWindow1 
+TRACE:(82) WindowResize Shell1 South 400
+TRACE:(83) LocatePointer PanedWindow1 RSash 0
+TRACE:(84) PressMB Btn1 
+TRACE:(85) LocatePointer PanedWindow1  Up
+TRACE:(86) ReleaseMB Btn1 
+TRACE:(87) LocatePointer PanedWindow1 RSash 1
+TRACE:(88) PressMB Btn1 
+TRACE:(89) LocatePointer PanedWindow1  Up
+TRACE:(90) ReleaseMB Btn1 
+TRACE:(91) CompareVisual PanedWindow1 
+TRACE:(92) LocatePointer PanedWindow1 RSash 2
+TRACE:(93) PressMB Btn1 
+TRACE:(94) LocatePointer PanedWindow1  Down
+TRACE:(95) ReleaseMB Btn1 
+TRACE:(96) LocatePointer PanedWindow1 RSash 3
+TRACE:(97) PressMB Btn1 
+TRACE:(98) LocatePointer PanedWindow1  Down
+TRACE:(99) ReleaseMB Btn1 
+TRACE:(100) CompareVisual PanedWindow1 
+TRACE:(101) LocatePointer PanedWindow1 RSash 1
+TRACE:(102) DragXYRelative Down 80 Btn1
+TRACE:(103) LocatePointer PanedWindow1 RSash 0
+TRACE:(104) DragXYRelative Down 35 Btn1
+TRACE:(105) LocatePointer PanedWindow1 RSash 2
+TRACE:(106) DragXYRelative Up 80 Btn1
+TRACE:(107) LocatePointer PanedWindow1 RSash 3
+TRACE:(108) DragXYRelative Up 55 Btn1
+TRACE:(109) Exit
+Exiting Test...Please Standby...

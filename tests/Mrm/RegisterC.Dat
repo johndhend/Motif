@@ -1,0 +1,23 @@
+
+
+#) This is the RegisterC test.
+C)
+
+#) There should now be a Motif Browse widget in the second window.  This 
+   widget consists of four pushbutton widgets and a label widget displaying 
+   an image.  There are five such images, and they can be seen by using the 
+   Next andPrev buttons.  Note that pressing Next while viewing the last image
+   will have no effect.  This is also true for pressing Prev while viewing 
+   the first image.
+
+C)
+
+#) A summary message shpuld be printed on stdout.
+
+C)
+
+#) Test for MrmRegisterClass memory leaks if the same class
+   is registered more than once (CR 5573).
+
+E)
+

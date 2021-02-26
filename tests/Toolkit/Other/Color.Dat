@@ -1,0 +1,12 @@
+
+
+#) This test should be run on a monochrome display. 
+#) A Form containing a PushButton named "bye" should have appeared on your 
+   screen.
+#) If you click on "bye", the application context will be destroyed. This
+   means that both the window containing the PushButton, and the instruction
+   box will disappear. The test will then exit. No fatal errors should occur
+   after you click on the PushButton.
+#) Click on the PushButton. 
+E)
+

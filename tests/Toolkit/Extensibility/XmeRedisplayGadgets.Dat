@@ -1,0 +1,13 @@
+
+	This test starts by creating a widget with several push button
+	gadgets.  Please check the window.
+C)
+	Make sure that the window has now been "cleared".  The gadgets
+	should not be visible now.
+C)
+	Check that the gadgets have been redisplayed properly.
+C)
+	 Press Exit to end the test.  
+         Goodbye.
+E)
+

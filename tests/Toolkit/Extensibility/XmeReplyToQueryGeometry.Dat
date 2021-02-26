@@ -1,0 +1,27 @@
+
+	This test confirms the functionality of the XmeReplyToQueryGeometry
+	Extensibility function.  A bulletin board widget is created but will
+	not require intervention for the tests.
+#)
+	The first case checks that when the intended geometry (calculated 
+	by the parent) matches the desired geometry (requested by the child
+	widget) and the parent intends to use these values.
+
+#)	Make sure that no error messages are printed in the xterm window.
+
+C)
+	This test confirms the case when the desired geometry is the same size
+	as the existing widget.
+
+#)	Make sure that no error messages are printed in the xterm window.
+
+C)
+	This test confirms the functions response when neither of the
+	previous cases happen.
+
+#)	Make sure that no error messages are printed in the xterm window.
+
+C)
+	 Press Exit to end the test.  
+         Goodbye.
+E)

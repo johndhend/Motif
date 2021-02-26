@@ -1,0 +1,68 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: DrawArea2.dat /main/6 1995/07/13 18:30:00 drk $"
+*/
+!) This is a simple Drawing Area client. 
+#) The focus is on the button. Press TAB to put the focus
+   into the drawing area. Press any key on the keyboard.
+   You should see a message about a keypress being received
+   but not processed.
+   This is normal and desireable.
+#) The Drawing area is surrounded by a frame and
+   itself should have a shadow thickness of 5 pixels. 
+#) To use the client:  Click MB1 anywhere in the client. A line will be drawn
+   from 0,0 to your current location. Each time you click MB1, a line will be drawn from your
+   previous location to your current location. If you click MB2 or MB3, no line will be drawn, but the beginning
+   point will be reset to your current location.
+#) Click Btn1 one more time anywhere in the Drawing Area. 
+#) Press the Shift key. You should receive the message about keypress.
+#) Press any other key alone, then with the Shift key held down. You should
+receive the keypress message.
+#) Draw another line with Btn1 clicks.
+#) Press the PushButton. The DrawingArea will resize and several messages will
+be printed out. None of the messages should mention that an error has 
+been encountered.
+C)
+#) The way button and key presses has been modified internally to use 
+translations. Things should work the same way in the Drawing Area.
+C)
+#) An override shell has popped up, containing a label "Put the focus in
+this window." Move your pointer into the override shell window.
+E)

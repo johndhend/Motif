@@ -1,0 +1,94 @@
+# $XConsortium: ArrowBGad2.scr /main/6 1995/07/17 20:05:44 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+# A client with a drawing area should appear. The shell
+#  will then grow to contain a 4x4 matrix of ArrowButtonGadgets. 
+# Move the pointer over each ArrowButtonGadget. They should
+#  each display a highlight border in the light shadow color. 
+
+LocatePointer arrowButton0
+CompareVisual arrowButton0
+
+LocatePointer arrowButton1
+CompareVisual arrowButton1
+LocatePointer arrowButton2
+CompareVisual arrowButton2
+
+LocatePointer arrowButton3
+CompareVisual arrowButton3
+LocatePointer arrowButton4
+CompareVisual arrowButton4
+
+LocatePointer arrowButton5
+CompareVisual arrowButton5
+LocatePointer arrowButton6
+CompareVisual arrowButton6
+
+LocatePointer arrowButton7
+CompareVisual arrowButton7
+LocatePointer arrowButton8
+CompareVisual arrowButton8
+
+LocatePointer arrowButton9
+CompareVisual arrowButton9
+LocatePointer arrowButton10
+CompareVisual arrowButton10
+
+LocatePointer arrowButton11
+CompareVisual arrowButton11
+LocatePointer arrowButton12
+CompareVisual arrowButton12
+
+LocatePointer arrowButton13
+CompareVisual arrowButton13
+LocatePointer arrowButton14
+CompareVisual arrowButton14
+
+LocatePointer arrowButton15
+CompareVisual arrowButton15
+
+# Iconify the client window. Normalize the client window. 
+
+WindowIconify Shell1
+WindowDeiconify Shell1
+Exit
+
+
+

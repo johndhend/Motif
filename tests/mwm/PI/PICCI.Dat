@@ -1,0 +1,38 @@
+
+#) This is the PICCI test, to test targets supported by Mwm for the Client
+   Command Interface.
+#) Click on the 'All Windows &/^ Icons' toggle.
+#) Click on the 'Predefine1' PushButton.
+#) The following Text fields should be filled in with these values.
+
+	Parent ID : 0
+	Command ID : 1
+	Command Name : OCCUPY
+	Default Name : Occupy
+
+#) Click on the includeCommand PushButton.
+#) Post the menu of a window on the screen. The following commands should
+   have been added : ONE,TWO,THREE. Post the menu of an icon on the screen.
+   The same should be true for the icon menu.
+#) Click on the removeCommand PushButton.
+#) Post the window and icon menus again. The commands that had been added 
+   should be gone.
+C)
+
+
+#) Click on the 'root' toggle.
+#) Click on the 'Predefine1' PushButton.
+#) The following Text fields should be filled in with these values.
+
+	Parent ID : 0
+	Command ID : 1
+	Command Name : OCCUPY
+	Default Name : Occupy
+
+#) Click on the includeCommand PushButton.
+#) Post the root menu of a window on the screen. 
+   have been added : ONE,TWO,THREE. 
+C)
+
+
+

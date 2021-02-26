@@ -1,0 +1,49 @@
+
+#) This test tests the capabilities of the message box which layout
+   its non-standard children.
+
+#) A message box should appear, with a menubar, drawing area with scale,
+   standard control buttons, plus an additional pushbutto, toggle button,
+   arrow button and drawn button.
+C)
+
+#) Verify that the message box functions correctly.
+C)
+
+#) A Message Box should appear, created via XmCreateTemplateDialog.
+#) The message box should have as its symbol, a pixmap of a mountain.
+#) The message should read: "This is a test of the XmCreateTemplateDialog 
+     function"
+#) There should be a menu bar, with two pulldown menus labeled:
+     Rocky Mountain and Hilly Mountain.
+#) A Label contained within a RowColumn should appear in the middle
+     region and should say "Eye, Yi Yi Yi...\n I am a Frito Bandito".
+#) The buttons on the bottom of the message box should be in the
+     following order:
+
+      OK (pushbutton), Ticonderoga(pushbutton), 
+      arrowbutton(pointing up), and Oh Susanna(drawnbutton), followed by
+      the Cancel and Help buttons.
+
+#) The ToggleButton 'Guide Dogs?' should be on the MenuBar.
+
+C)
+
+#) A Message Box should appear, create via XmCreateMessageBox with
+   XmNdialogType set to XmDIALOG_TEMPLATE.
+#) The message should read "This is a XmDIALOG_TEMPLATE XmNdialogType 
+   MessageBox!\n  SMILE!".
+#) The symbol should be the smiley face.
+#) Buttons should be: Otay 'Panky, Watch the birdie!, Say Cheese..., Cancel,
+   and Help.
+#) A PanedWindow should appear above the buttons which has two panes;
+   one allows the selection of camera type.  The other allows the
+   selection of the style of poses.  A label should appear to the
+   right of the PanedWindow, with string "I got a Nikon camera, I can
+   take a photograph, Mama dont take my Kodachrome away..."
+
+C)
+#) A template dialog with no children has been created.
+#) There should be no children visible!
+C)
+E)

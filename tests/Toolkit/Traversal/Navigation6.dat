@@ -1,0 +1,77 @@
+/* 
+ *  @OPENGROUP_COPYRIGHT@
+ *  COPYRIGHT NOTICE
+ *  Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+ *  Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+ *  ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+ *  the full copyright text.
+ *  
+ *  This software is subject to an open license. It may only be
+ *  used on, with or for operating systems which are themselves open
+ *  source systems. You must contact The Open Group for a license
+ *  allowing distribution and sublicensing of this software on, with,
+ *  or for operating systems which are not Open Source programs.
+ *  
+ *  See http://www.opengroup.org/openmotif/license for full
+ *  details of the license agreement. Any use, reproduction, or
+ *  distribution of the program constitutes recipient's acceptance of
+ *  this agreement.
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+ *  PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+ *  WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+ *  OR FITNESS FOR A PARTICULAR PURPOSE
+ *  
+ *  EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+ *  NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+ *  INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ *  DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+ *  AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ *  ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+ *  EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+ *  POSSIBILITY OF SUCH DAMAGES.
+*/ 
+/* 
+ * HISTORY
+*/ 
+/*
+static char rcsid[] = "$XConsortium: Navigation6.dat /main/7 1995/07/13 19:44:20 drk $"
+*/
+!) This is a test of traversal behaviors.  
+#) Note where the focus is originally.
+#) The seven boxed groups of widgets are frames and Row Columns. 
+#) The empty frames are not traversable.
+#) The focus can be anywhere except on btn42 before you continue.
+C)
+#) The focus is on btn42.
+C)
+#) The focus has been restored to the spot where it was originally.
+C)
+#) A form containing two text widgets is managed. The focus is moved to the first text widget.
+#) Click on any other widget.  No other widget should receive the focus.
+#) Type a string into the first text field and then press Tab. Until you guess
+the password for Text1, the test will keep resetting the focus to Text1.
+C)
+#) The password is "meow".  Enter the password and press Tab.  The focus moves to the next text widget.
+#) Click on btn42. The focus goes back to Text1.
+#) Type "insensitive" into Text1 and hit tab. The widget becomes insensitive and the
+focus moves to the next text widget.
+C)
+#) Give the client window focus by clicking on the empty area below the
+empty frames and the text widgets.
+#) You should see only one active, blinking insertion cursor. The other text
+widget should have a stippled insertion cursor which does not blink.
+#) Click in the second text widget.
+#) Click in the first text widget.
+#) An error dialog should appear.
+#) Unmanage the dialog. There should be only one text insertion cursor.
+C)
+#) Two more text widgets are managed.
+#) Put the focus back into Text1.
+#) Click MB1 in Text2.
+#) Each time you try to put the focus into one of the other text widgets, it should set the focus back to Text1. If it cannot, it will issue a warning message.
+#) Click rapidly in different text widgets. Make sure the location cursor and the insertion cursor stay together.
+#) Try typing into the widgets as you click in them. Make sure the text goes where the insertion cursor and the location cursor are. At no point should you see multiple insertion cursors.
+E)

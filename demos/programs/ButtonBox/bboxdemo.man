@@ -1,0 +1,22 @@
+.TH BBOXDEMO 1X "MOTIF" "\fBbboxdemo\fR 1" "Demonstration programs"
+.SH NAME
+bboxdemo \- bboxdemo demo
+.SH SYNOPSIS
+\fBbboxdemo\fR  [X Toolkit options, \fB-display\fR, \fB-geom\fR, ...]
+.SH DESCRIPTION
+This demo demontrates Xm lib's ability to layout several Xt widgets
+(ie buttons) to automatically fit in the frame window's current size and
+all be visible and usable (which man X apps cannot do) dynamically - no C code
+need be written it is automatic.  It also to use X Resource hints for layout
+style (ie, verticle, horizontal) of the simple buttons form.
+.LP
+Other demos show use of uil to create a form.  User interface language
+script can be written by hand or by GUI IDE, ex. X-Designer or BX Pro.  The
+process of the demo creating two cusom forms using C is not what is
+being demonstrated.
+.LP
+.SH USAGE
+\fBbboxdemo\fR has help buttons that explain.  A form for choosing layouts appears.
+A second form with several button appears and it's layout dynamically changes
+adhering to hints or choice on the first form. 
+.LP

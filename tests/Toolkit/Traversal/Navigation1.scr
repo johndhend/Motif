@@ -1,0 +1,201 @@
+# $XConsortium: Navigation1.scr /main/5 1995/07/17 20:43:33 drk $
+# 
+# @OPENGROUP_COPYRIGHT@
+# COPYRIGHT NOTICE
+# Copyright (c) 1990, 1991, 1992, 1993 Open Software Foundation, Inc.
+# Copyright (c) 1996, 1997, 1998, 1999, 2000 The Open Group
+# ALL RIGHTS RESERVED (MOTIF). See the file named COPYRIGHT.MOTIF for
+# the full copyright text.
+# 
+# This software is subject to an open license. It may only be
+# used on, with or for operating systems which are themselves open
+# source systems. You must contact The Open Group for a license
+# allowing distribution and sublicensing of this software on, with,
+# or for operating systems which are not Open Source programs.
+# 
+# See http://www.opengroup.org/openmotif/license for full
+# details of the license agreement. Any use, reproduction, or
+# distribution of the program constitutes recipient's acceptance of
+# this agreement.
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS
+# PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY
+# WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY
+# OR FITNESS FOR A PARTICULAR PURPOSE
+# 
+# EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT
+# NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT,
+# INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED
+# AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE
+# EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGES.
+# 
+# 
+# HISTORY
+# 
+
+# Case 1
+#) A 1.1 Paned Window with buttons. Depress each button
+#   using the space key. Focus should go to   sash after each button.
+#) Move any sash with the up or down
+#   arrow keys. If you hold down the key, the sash will cause
+#   other sashes to move with it as it reaches them.
+
+WindowFocus Shell1
+CompareVisual button1
+ClickKey KSpace
+CompareVisual manager1
+ClickKey KTab
+ClickKey KSpace
+CompareVisual manager1
+ClickKey KTab
+ClickKey KSpace
+ClickKey KTab
+ClickKey KSpace
+ClickKey KTab
+ClickKey KSpace
+ClickKey KTab
+ClickKey KSpace
+CompareVisual manager1
+Continue
+
+# Case 2
+#) A 1.0 Paned Window with buttons. Focus should go to
+#   next button in the paned window. 
+#) Make every button insensitive,
+#   then resize slightly to see everything. Note carefully
+#   where the focus goes after each button is un-sensitized.
+
+WindowFocus Shell1
+CompareVisual mainWindow
+ClickKey KSpace
+CompareVisual manager1
+ClickKey KSpace
+ClickKey KSpace
+ClickKey KSpace
+ClickKey KSpace
+CompareVisual manager1
+ClickKey KSpace
+CompareVisual manager1
+CompareVisual rc2
+Continue
+
+# CASE 2a 
+# A 1.1 Paned Window with EXCLUSIVE_TAB_GROUP manager children.
+# Use the Tab key to move the focus from one tab group to another,
+# and the arrow keys to move between the children in the row columns.
+# You should not tab to the sash.
+
+WindowFocus Shell1
+CompareVisual manager1
+ClickKey KTab
+ClickKey KTab
+ClickKey KTab
+CompareVisual manager1
+ClickKey KDown
+ClickKey KDown
+CompareVisual manager1
+Continue
+
+# Case 3
+#) Execute this test just like the previous one. The only difference is 
+#   that this Paned Window
+#   is a 1.1-style widget. Make each button insensitive and check
+#   where the focus goes.
+
+WindowFocus Shell1
+CompareVisual mainWindow
+LocatePointer button1
+ClickMB Btn1
+CompareVisual manager1
+ClickKey KTab
+ClickKey KSpace
+CompareVisual manager1
+ClickKey KTab
+ClickKey KSpace
+ClickKey KTab
+ClickKey KSpace
+ClickKey KTab
+ClickKey KSpace
+ClickKey KTab
+ClickKey KSpace
+CompareVisual manager1
+Continue
+
+# Case 4
+#) A 1.0 Paned Window in a Form parent. Make sure space
+#   activates the buttons.
+
+WindowFocus Shell1
+CompareVisual mainWindow
+ClickKey KSpace
+CompareVisual manager1
+ClickKey KSpace
+ClickKey KSpace
+ClickKey KSpace
+ClickKey KSpace
+CompareVisual manager1
+ClickKey KSpace
+CompareVisual manager1
+Continue
+
+# Case 5
+#) A RowColumn. Focus should start on button1, and move to the next button
+#   as each becomes insensitive. Use the space key to make buttons insensitive.
+
+WindowFocus Shell1
+CompareVisual manager1
+ClickKey KSpace
+ClickKey KSpace
+CompareVisual manager1
+ClickKey KSpace
+ClickKey KSpace
+ClickKey KSpace
+ClickKey KSpace
+CompareVisual manager1
+Continue
+
+# Case 6
+#) The RowColumn's children were destroyed and recreated. Focus should appear
+#on a button as soon as you give the window focus. Move among the buttons and
+#make them insensitive.
+
+WindowFocus Shell1
+CompareVisual manager1
+ClickKey KSpace
+ClickKey KSpace
+CompareVisual manager1
+ClickKey KSpace
+ClickKey KSpace
+ClickKey KSpace
+ClickKey KSpace
+CompareVisual manager1
+Continue
+
+# Case 7
+#) The RowColumn's children were destroyed and recreated. Focus should appear
+#on a button as soon as you give the window focus. Now, pressing a button will
+#change its label but not make it insensitive. Traverse around using arrow
+#keys and make sure highlight moves properly.
+
+WindowFocus Shell1
+CompareVisual manager1
+ClickKey KDown
+ClickKey KDown
+ClickKey KDown
+CompareVisual manager1
+ClickKey KDown
+ClickKey KDown
+ClickKey KDown
+CompareVisual manager1
+ClickKey KDown
+ClickKey KSpace
+CompareVisual manager1
+Continue
+
+Exit
+
