@@ -171,7 +171,7 @@ install:
 	$(INSTALL) -d -g wheel -o root $(PREFIX)/Motif/share/man/man5 
 	$(INSTALL) -d -g wheel -o root $(PREFIX)/Motif/share/man/manm 
 	$(INSTALL) -g wheel -o root -s \
-`find . -type f -perm -0555 | $(GREP) -v "demos\|tests/\|config\|[.]sh\|[.]so"` \
+`find . -type f -perm -0555 | $(GREP) -v "demos\|tests/\|config\|[.]sh\|[.]so\|[.]git"` \
 $(PREFIX)/Motif/bin/
 	$(INSTALL) -g wheel -o root -s demos/programs/panner/panner \
 $(PREFIX)/Motif/bin/
@@ -224,7 +224,7 @@ $(LN) libM$(RM).so.2.1 libM$(RM).so)
 $(LN) libUil.so.2.1 libUil.so.2)
 	(cd $(PREFIX)/Motif/lib ; $(RM) -f libUil.so ; \
 $(LN) libUil.so.2.1 libUil.so)
-	(cd $(PREFIX)/Motif/lib ; ranlib *.a)
+	(cd $(PREFIX)/Motif/lib ; $(RANLIB) *.a)
 	$(CP) COPYRIGHT.MOTIF $(PREFIX)/Motif/
 	$(CP) EXTRA_DIST/Xdefaults $(PREFIX)/Motif/lib/X11/
 	$(CP) EXTRA_DIST/mwmrc $(PREFIX)/Motif/lib/X11/

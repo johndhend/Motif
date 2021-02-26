@@ -1052,7 +1052,9 @@ private_value
  									sar_private_error( &$$ );
  								  }
 							}
-    ;
+/* jdh - no semicolon here
+ *  ;
+ */
      | value							{ $$ = $1; 
  								  if ($$.b_type != sym_k_error_value)
  								  {
@@ -1062,14 +1064,15 @@ private_value
  								  }
  								}  
      ;
-/* jdh; *;
   
  non_export_value
      : COLOR_TABLE LEFT_PAREN color_list RIGHT_PAREN		{ sar_make_color_table( &$$, &$3, &$1); }
- 
+
+		;
+/* jdh semi-colon was missing here */
+
  /* END HaL fix CR 5427 */
  
-
 value
     : value_1
     | value OR value_1						{ $$ = $2; sar_binary_op( &$$, &$1, &$3 ); }

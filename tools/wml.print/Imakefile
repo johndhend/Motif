@@ -72,8 +72,9 @@ NormalLibraryObjectRule()
 all::	DONE
 
 DONE:	$(WMDTABLE) $(TARGETS)
-	(cd $(UILSRC); $(RM) $(TARGETS) UilDBDef.h)
-	cp $(TARGETS) UilDBDef.h $(UILSRC)
+	(cd $(UILSRC); $(RM) $(TARGETS))
+	diff -q UilDBDef.h $(UILSRC)/UilDBDef.h
+	cp $(TARGETS) $(UILSRC)
 	touch DONE
 
 NormalLibraryTarget(wml,$(OBJS2) $(OBJS1))
@@ -104,7 +105,7 @@ wmluiltok::	wmluiltok.l
 	$(LEX) wmluiltok.l
 	$(CC) $(CFLAGS) lex.yy.c $(LEXLIB) -o wmluiltok
 
-ifdef VERSION_IS_NOT_DEFINED
+#ifdef VERSION_IS_NOT_DEFINED
 $(TARGETS):	$(WMLTOOLS) $(TABLE)
 	$(RM) $(TARGETS) $(REPORT) wml-uil.mm
 	$(YACC) -d $(YACCFLAGS) Uil.y
@@ -114,7 +115,7 @@ $(TARGETS):	$(WMLTOOLS) $(TABLE)
 	$(RM) wml-uil.mm
 	$(CLIENTENVSETUP) ./wml $(TABLE)
 	$(RM) tokens.dat
-else
+#else
 $(TARGETS):	$(WMLTOOLS) $(TABLE)
 	$(RM) $(TARGETS) $(REPORT) wml-uil.mm
 	$(YACC) -d $(YACCFLAGS) Uil.y
@@ -127,21 +128,21 @@ $(TARGETS):	$(WMLTOOLS) $(TABLE)
 	$(RM) wml-uil.mm
 	$(CLIENTENVSETUP) ./wml $(TABLE)
 	$(RM) tokens.dat
-endif
-# PAN250 same (bison/flex) issue, see Makefile.am
+#endif
 
 $(WMDTABLE):	wmldbcreate
 	$(CLIENTENVSETUP) ./wmldbcreate -o $@
 
 clean::
+	(cd $(UILSRC); $(RM) $(TARGETS) Uil.c) || true
 	$(RM) $(TARGETS) $(WMDTABLE) $(REPORT) lex.yy.c libwml.a wml \
-	*.mm *.sdml *.txt wmlparse.c wmlparse.h wmluiltok wmllex.c \
-	tokens.dat DONE
+	*.mm *.sdml *.txt *.o wmlparse.c wmlparse.h wmluiltok wmllex.c \
+	tokens.dat wmldbcreate y.tab.* Uil.c DONE
  
 depend:: wmlparse.h 
 
 DependTarget()
 
 includes::	$(TARGETS)
-	(cd $(UILSRC); $(RM) $(TARGETS) UilDBDef.h)
-	cp $(TARGETS) UilDBDef.h $(UILSRC)
+	(cd $(UILSRC); $(RM) $(TARGETS))
+	cp $(TARGETS) $(UILSRC)
