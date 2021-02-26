@@ -1,4 +1,5 @@
 Motif/
+Motif/COPYRIGHT.MOTIF
 Motif/bin
 Motif/bin/xmbind
 Motif/bin/mwm
@@ -358,6 +359,7 @@ Motif/include/localdef.h
 Motif/include/config.h
 Motif/lib
 Motif/lib/X11
+Motif/lib/X11/Xdefaults
 Motif/lib/X11/bindings
 Motif/lib/X11/bindings/CDE
 Motif/lib/X11/bindings/Makefile
@@ -387,6 +389,7 @@ Motif/lib/X11/bindings/sun
 Motif/lib/X11/bindings/sun_at
 Motif/lib/X11/bindings/tek
 Motif/lib/X11/bindings/xmbind.alias
+Motif/lib/X11/mwmrc
 Motif/lib/X11/system.mwmrc
 Motif/lib/libWsm.a
 Motif/lib/libUil.a
