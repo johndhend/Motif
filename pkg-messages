@@ -1,0 +1,5 @@
+
+The Motif Window Manager's startup name is "mwm", see man wmw(1).
+Please see /usr/local/Motif/lib/X11 for example .Xdefaults and .mwmrc
+Please use "make demos" if you want demos.  LD_LIBRARY_PATH can be used.
+
