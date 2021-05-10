@@ -3,7 +3,7 @@ Mon Feb 22 16:20:59 EST 2021
 
 TOP NEWS
 
-  * for freeBSD 12.2 with Xorg installed sans Xprint (not in Xorg in 12.2)
+  * for freeBSD 13 with Xorg installed sans XPrint (not in 13 by default)
 
   * 64 bit build, remade simple 'weatherable ' Makefiles, just several seconds
     to make + install with demos.
@@ -13,7 +13,7 @@ TOP NEWS
   * also has imake cf build working w/quats outside of X tree, but suggest
     as not mainstream (not weatherable, tends to break due to OS changes)
 
-  * also "read to install" for freeBSD 12.2 amd64 (make install only)
+  * "easy to install" for freeBSD 12.2 amd64 (needs 'make install' only)
 
 ---------
 BELOW
@@ -28,20 +28,33 @@ BELOW
 
 ---------
   INSTALL:
-	$ make
+	$ env LANG=C make     # fails w/o known export LANG=C, or check .profile
+	$ make demos          # optional
 	$ make install        # as root
-	$ make demos          # not suggested as useful
+	$ make install-demos  # not suggested as useful - leave them in src dir
   
   INSTALL:  imake  config/cf/Imake.tmpl style
 	$ sh ./motif250.sh    # fixes stuff, sets env vars, imake, make
-	$ make install        # as root
+	$ make install        # as root; demos will be installed "the X cf/ way"
 	$ make install.man    # as root
+
+  RUN:
+	It's customary to add a new library path for .so but in FreeBSD be careful.
+	I suggest NOT running 'ldconfig' in FreeBSD 12/13 unless you've have a
+	manual; it is not like linux you might have your X11 system stop working
+	(learn 'ldconfig -m' or of rebuilding using -R).
+	$ export PATH="$PATH:/usr/local/Motif/bin"
+	$ export LD_LIBRARY_PATH="/usr/local/Motif/lib"
+	$ X & sleep 1 ; xterm & sleep 1 ; mwm &
 
   note: if tests/ is in Imakefile quats will build too, see that file.
 	quats are not automatic to use, are unwieldy, but build and work
 
 ---------
 NEWS
+
+  3 shortcomings fixed due to program environment differences;
+  this should build on a fresh 13 using fresh user account.
 
 openMotif-2.1.30
 openMotif-2.2.3  (nearly same as 2.1.30)

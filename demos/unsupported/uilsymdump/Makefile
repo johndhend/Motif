@@ -49,7 +49,7 @@ all:: $(PROG)
 
 $(PROG):  $(OBJS)
 	$(RM) $@ || true
-	$(LINK) ${INCLUDES} ${LIBS} ${CFLAGS} -L$(PROJ_DIR)/clients/uil-callable -lUil -L$(PROJ_DIR)/lib/Xm.so -lXm -L$(PROJ_DIR)/lib/Mrm.so -lMrm -L$(PROJ_DIR)/demos/lib/Exm -lExm -lExmMrm -L$(PROJ_DIR)/demos/lib/Xmd -lXmd -L$(PROJ_DIR)/demos/lib/Wsm -lWsm -L$(XLIBPATH) -lXt -lSM -lICE -lXext -lXmu -lX11 -L/usr/lib -lc -lm -o $(PROG) $(OBJS)
+	$(LINK) ${INCLUDES} ${LIBS} ${CFLAGS} -L$(PROJ_DIR)/clients/uil -lUil -L$(PROJ_DIR)/lib/Xm.so -lXm -L$(PROJ_DIR)/lib/Mrm.so -lMrm -L$(PROJ_DIR)/demos/lib/Exm -lExm -lExmMrm -L$(PROJ_DIR)/demos/lib/Xmd -lXmd -L$(PROJ_DIR)/demos/lib/Wsm -lWsm -L$(XLIBPATH) -lXt -lSM -lICE -lXext -lXmu -lX11 -L/usr/lib -lc -lm -o $(PROG) $(OBJS)
 
 
 .PHONY: clean

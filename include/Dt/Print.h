@@ -20,7 +20,10 @@
 #define _DtPrint_h
 
 #include <Xm/Xm.h>
+
+#ifndef NO_XP
 #include <X11/extensions/Print.h> 
+#endif
 
 #ifdef __cplusplus
 extern "C" {
@@ -31,12 +34,13 @@ extern "C" {
  */
 externalref WidgetClass dtPrintSetupBoxWidgetClass;
 
+#ifndef NO_XP
 typedef struct _DtPrintSetupBoxClassRec * DtPrintSetupBoxWidgetClass;
 typedef struct _DtPrintSetupBoxRec      * DtPrintSetupBoxWidget;
 
-
 #ifndef DtIsPrintSetupBox
 #define DtIsPrintSetupBox(w)  (XtIsSubclass (w, dtPrintSetupBoxWidgetClass))
+#endif
 #endif
 
 /*
@@ -53,6 +57,8 @@ typedef struct _DtPrintSetupBoxRec      * DtPrintSetupBoxWidget;
 #endif
 #define DtNoptionCount "optionCount"
 #define DtNoptions "options"
+
+#ifndef NO_XP
 #define DtNprintCallback "printCallback"
 #define DtNprintDestination "printDestination"
 #define DtNprinterInfoProc "printerInfoProc"
@@ -60,13 +66,18 @@ typedef struct _DtPrintSetupBoxRec      * DtPrintSetupBoxWidget;
 #define DtNprintSetupMode "printSetupMode"
 #define DtNselectFileProc "selectFileProc"
 #define DtNselectPrinterProc "selectPrinterProc"
-#define DtNsetupCallback "setupCallback"
 #define DtNverifyPrinterProc "verifyPrinterProc"
-#define DtNworkAreaLocation "workAreaLocation"
+#endif
 
+#define DtNsetupCallback "setupCallback"
+#define DtNworkAreaLocation "workAreaLocation"
 #define DtCCancelCallback "CancelCallback"
+
+#ifndef NO_XP
 #define DtCClosePrintDisplayCallback "ClosePrintDisplayCallback"
 #define DtCCopies "Copies"
+#endif
+
 #define DtCDescription "Description"
 #define DtCDestroyContextCallback "DestroyContextCallback"
 #define DtCFileName "FileName"
@@ -75,6 +86,8 @@ typedef struct _DtPrintSetupBoxRec      * DtPrintSetupBoxWidget;
 #endif
 #define DtCOptionCount "OptionCount"
 #define DtCOptions "Options"
+
+#ifndef NO_XP
 #define DtCPrintCallback "PrintCallback"
 #define DtCPrintDestination "PrintDestination"
 #define DtCPrinterInfoProc "PrinterInfoProc"
@@ -82,19 +95,22 @@ typedef struct _DtPrintSetupBoxRec      * DtPrintSetupBoxWidget;
 #define DtCPrintSetupMode "PrintSetupMode"
 #define DtCSelectFileProc "SelectFileProc"
 #define DtCSelectPrinterProc "SelectPrinterProc"
-#define DtCSetupCallback "SetupCallback"
 #define DtCVerifyPrinterProc "VerifyPrinterProc"
-#define DtCWorkAreaLocation "WorkAreaLocation"
-
 #define DtRPrintSetupProc "PrintSetupProc"
+#endif
+
+#define DtCWorkAreaLocation "WorkAreaLocation"
+#define DtCSetupCallback "SetupCallback"
 
 /*
  * DtNsetupMode Resource Values
  */
+#ifndef NO_XP
 enum {
     DtPRINT_SETUP_PLAIN,
     DtPRINT_SETUP_XP
 };
+#endif
 
 /*
  * DtNworkAreaLocation Resource Values
@@ -106,6 +122,7 @@ enum {
     DtWORK_AREA_BOTTOM
 };
 
+#ifndef NO_XP
 /*
  * DtNprintDestination Resource Values
  */
@@ -180,10 +197,13 @@ typedef struct _DtPrintSetupCallbackStruct
  * PrintSetupBox Procedure Resource Type Definition
  */
 typedef XtEnum (*DtPrintSetupProc)(Widget, DtPrintSetupData*);
+#endif
 
 /*
  * Public Function Declarations
  */
+
+#ifndef NO_XP
 extern Widget DtCreatePrintSetupBox(
 				    Widget p,
 				    String name,
@@ -205,6 +225,7 @@ extern void DtPrintFreeSetupData(
 extern XtEnum DtPrintResetConnection(
 				     Widget psub,
 				     DtPrintResetConnectionMode m);
+#endif
 
 #ifdef __cplusplus
 }  /* Close scope of 'extern "C"' declaration which encloses file. */

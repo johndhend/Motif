@@ -2,6 +2,7 @@
 
 # IMPORTANT: all subdirs depend on PROJ_DIR; insure it is somehow
 #            exported if using a MAKE that doesn't know .export
+# $ env LANG=C  make  [demos]
 
 # build directory, anywhere
 PROJ_DIR=${PWD}
@@ -89,6 +90,7 @@ DONE:
 	(cd clients/uil/ ; $(MAKE))
 	(cd clients/xmbind/ ; $(MAKE))
 	(cd clients/mwm/ ; $(MAKE))
+	(cd demos/programs/panner ; $(MAKE) || true)
 	@echo "DONE"
 
 .PHONY: demos
@@ -156,6 +158,8 @@ demos:
 
 .PHONY: install
 
+# todo: make a total list so find(1) is not used would be more direct and simple
+
 install:
 	$(INSTALL) -d -g wheel -o root $(PREFIX)/Motif/bin 
 	$(INSTALL) -d -g wheel -o root $(PREFIX)/Motif/include/Mrm 
@@ -174,7 +178,7 @@ install:
 `find . -type f -perm -0555 | $(GREP) -v "demos\|tests/\|config\|[.]sh\|[.]so\|[.]git"` \
 $(PREFIX)/Motif/bin/
 	$(INSTALL) -g wheel -o root -s demos/programs/panner/panner \
-$(PREFIX)/Motif/bin/
+$(PREFIX)/Motif/bin/ || true
 	$(INSTALL) -g wheel -o root \
 `find . -type f -name "*.so" -o -name "*.a" | $(GREP) -v "demos\|tests\|config\|[.]sh\|imports"`  $(PREFIX)/Motif/lib/
 	$(INSTALL) -g wheel -o root  localdef.h config.h  \
@@ -212,18 +216,12 @@ $(PREFIX)/Motif/share/man/man4/
 	$(INSTALL) -g wheel -o root  \
 `find doc/ -type f -name "*.5"`  \
 $(PREFIX)/Motif/share/man/man5/
-	(cd $(PREFIX)/Motif/lib ; $(RM) -f libXm.so.2 ; \
-$(LN) libXm.so.2.1 libXm.so.2)
-	(cd $(PREFIX)/Motif/lib ; $(RM) -f libXm.so ; \
-$(LN) libXm.so.2.1 libXm.so)
-	(cd $(PREFIX)/Motif/lib ; $(RM) -f libM$(RM).so.2 ; \
-$(LN) libM$(RM).so.2.1 libM$(RM).so.2)
-	(cd $(PREFIX)/Motif/lib ; $(RM) -f libM$(RM).so ; \
-$(LN) libM$(RM).so.2.1 libM$(RM).so)
-	(cd $(PREFIX)/Motif/lib ; $(RM) -f libUil.so.2 ; \
-$(LN) libUil.so.2.1 libUil.so.2)
-	(cd $(PREFIX)/Motif/lib ; $(RM) -f libUil.so ; \
-$(LN) libUil.so.2.1 libUil.so)
+	(cd $(PREFIX)/Motif/lib ; $(MV) libXm.so libXm.so.2.1 ; \
+$(LN) -s libXm.so.2.1 libXm.so.2 ; $(LN) -s libXm.so.2 libXm.so)
+	(cd $(PREFIX)/Motif/lib ; $(MV) libMrm.so libMrm.so.2.1 ; \
+$(LN) -s libMrm.so.2.1 libMrm.so.2 ; $(LN) -s libMrm.so.2 libMrm.so)
+	(cd $(PREFIX)/Motif/lib ; $(MV) libUil.so libUil.so.2.1 ; \
+$(LN) -s libUil.so.2.1 libUil.so.2 ; $(LN) -s libUil.so.2 libUil.so)
 	(cd $(PREFIX)/Motif/lib ; $(RANLIB) *.a)
 	$(CP) COPYRIGHT.MOTIF $(PREFIX)/Motif/
 	$(CP) EXTRA_DIST/Xdefaults $(PREFIX)/Motif/lib/X11/
