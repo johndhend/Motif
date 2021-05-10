@@ -1,0 +1,21 @@
+Motif 2.5.0
+
+  * Motif is a trim well made window manager (mwm) and also X-app dev
+    kit for (archaic: simplified) release of X apps using it.  Motif has
+    many X features yet no lib dependencies besides X.  Still in the list
+    of those seeking a trim, featured, and reliable window manager.
+
+  * For FreeBSD 13 with Xorg installed sans Xprint which was removed from Xorg
+
+  * 64 bit build, remade simple 'weatherable ' Makefiles, just several seconds
+    to make + install, no autoconfig
+
+  * Switch-Desktop app (panner) now has zoom in/out, stability improved.
+
+  * Optional imake cf build w/quats, but suggest as not default (not as
+    weatherable to OS changes, but also is working in freeBSD)
+
+  * A re-release of OpenGroup Motif 2.2.3 for freeBSD 12.2, Motif is no
+    no longer releasing new enhancements; the kit was release as open.
+
+  * For more About, and CHANGELOG, see NEWS in source tarball.
