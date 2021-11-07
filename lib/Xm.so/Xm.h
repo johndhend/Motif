@@ -59,7 +59,11 @@
 #include <X11/Intrinsic.h>
 #include <X11/Shell.h>
 #include <X11/Xatom.h>
+
+#ifndef NO_XP
 #include <X11/extensions/Print.h>
+#endif
+
 #include <Xm/XmStrDefs.h>
 #include <Xm/XmStrDefs22.h>
 #include <Xm/VirtKeys.h>
@@ -823,6 +827,8 @@ typedef struct
     XmStringTag		tag;
 } XmDisplayCallbackStruct;
 
+
+#ifndef NO_XP
 typedef struct
 {
     int		reason;	   /* XmCR_START_JOB, XmCR_END_JOB, XmCR_PAGE_SETUP */
@@ -831,6 +837,7 @@ typedef struct
     Boolean	last_page; /* in_out */
     XtPointer	detail;
 } XmPrintShellCallbackStruct;
+#endif
 
 
 /************************************************************************

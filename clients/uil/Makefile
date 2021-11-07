@@ -76,9 +76,9 @@ libUil.a:  $(OBJS) uil
 	$(COMPILE) -DCALLABLE UilParse.c
 	$(AR) libUil.a $(OBJS) UilParse.o
 
-libUil.so: $(SRC) libUil.a uil
+libUil.so: $(SRC) libUil.a uil UilParse.o
 	$(RM) libUil.so || true
-	$(LINK) -DCALLABLE -shared -fPIC -Wl,-soname,libUil.so.1 -o libUil.so ${INCLUDES} ${LIBS} ${CFLAGS} -L$(PROJ_DIR)/lib/Xm.so -lXm -L$(PROJ_DIR)/lib/Mrm.so -lMrm -L$(XLIBPATH) -lXt -lSM -lICE -lXext -lX11 -lXmu -L/usr/lib -lc $(SRC)
+	$(LINK) -DCALLABLE -shared -fPIC -Wl,-soname,libUil.so.1 -o libUil.so ${INCLUDES} ${LIBS} ${CFLAGS} -L$(PROJ_DIR)/lib/Xm.so -lXm -L$(PROJ_DIR)/lib/Mrm.so -lMrm -L$(XLIBPATH) -lXt -lSM -lICE -lXext -lX11 -lXmu -L/usr/lib -lc $(SRC) UilParse.c
 
 
 .PHONY: clean
