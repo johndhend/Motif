@@ -216,10 +216,10 @@ $(PREFIX)/Motif/share/man/man5/
 $(LN) libXm.so.2.1 libXm.so.2)
 	(cd $(PREFIX)/Motif/lib ; $(RM) -f libXm.so ; \
 $(LN) libXm.so.2.1 libXm.so)
-	(cd $(PREFIX)/Motif/lib ; $(RM) -f libM$(RM).so.2 ; \
-$(LN) libM$(RM).so.2.1 libM$(RM).so.2)
-	(cd $(PREFIX)/Motif/lib ; $(RM) -f libM$(RM).so ; \
-$(LN) libM$(RM).so.2.1 libM$(RM).so)
+	(cd $(PREFIX)/Motif/lib ; $(RM) -f libMrm.so.2 ; \
+$(LN) libMrm.so.2.1 libMrm.so.2)
+	(cd $(PREFIX)/Motif/lib ; $(RM) -f libMrm.so ; \
+$(LN) libMrm.so.2.1 libMrm.so)
 	(cd $(PREFIX)/Motif/lib ; $(RM) -f libUil.so.2 ; \
 $(LN) libUil.so.2.1 libUil.so.2)
 	(cd $(PREFIX)/Motif/lib ; $(RM) -f libUil.so ; \
