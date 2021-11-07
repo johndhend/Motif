@@ -1,5 +1,6 @@
 Wed May  7 08:35:18 EDT 2015
 Mon Feb 22 16:20:59 EST 2021
+Sun Nov  7 02:32:45 EST 2021
 
 TOP NEWS
 
@@ -13,7 +14,7 @@ TOP NEWS
   * also has imake cf build working w/quats outside of X tree, but suggest
     as not mainstream (not weatherable, tends to break due to OS changes)
 
-  * "easy to install" for freeBSD 12.2 amd64 (needs 'make install' only)
+  * "easy to install" for freeBSD 13 amd64 (needs 'make install' only)
 
 ---------
 BELOW
